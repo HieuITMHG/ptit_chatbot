@@ -1,39 +1,34 @@
 import requests
-from helpers import load_site_map, csv_to_dict
+from .helpers import load_site_map, parse_datatime, normalize_dt
 from pathlib import Path
-import boto3
-from botocore.config import Config
 import csv
-import pandas as pd
+
+from core.boto_client import s3
+from core.config import settings
+
+from model.page import Page
+from model.sitemap import Sitemap
+
+from repositories.page_repository import save_page, find_one_page, updata_page_last_mod
+from repositories.sitemap_repository import save_sitemap, find_one_sitemap, updata_sitemap_last_mod
+
+from datetime import datetime
+from datetime import timezone
 
 current_file = Path(__file__)
 
 BASE_DIR = current_file.parent
-root_csv_path = BASE_DIR / "index/sitemap_index.csv"
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
-
-sitemap_index_url = "https://ptithcm.edu.vn/sitemap_index.xml"
-
-s3 = boto3.client(
-    's3',
-    endpoint_url='http://localhost:9000',
-    aws_access_key_id='admin',         
-    aws_secret_access_key='admin123',  
-    region_name='us-east-1',
-    config=Config(s3={'addressing_style': 'path'})
-)
-
-BUCKET_NAME = "raw-html"
 
 def save_html(url):
     try:
         response = requests.get(url=url, headers=headers, verify=False)
         object_name = url.replace("https://ptithcm.edu.vn", "")
         s3.put_object(
-            Bucket=BUCKET_NAME,
+            Bucket=settings.bucket_name,
             Key=object_name,
             Body=response.content,
             ContentType='text/html'
@@ -42,159 +37,71 @@ def save_html(url):
     except Exception as e:
         print(f"Error while save html object to s3: {e}")
 
+def initiate_data(sitemap_index_url):
+    url_tags, last_mod_tags = load_site_map(url=sitemap_index_url)
 
-def first_load(index_url):
-    root_url_tags, root_lastmod_tags = load_site_map(url=index_url)
+    for url, last_mod in zip(url_tags, last_mod_tags):
+        sitemap = Sitemap(url=url.text.replace("https://ptithcm.edu.vn", ""), last_mod=last_mod.text)
+    
+        page_url_tags, page_last_mod_tags = load_site_map(url=url.text)
 
-    with open(root_csv_path, "w", newline="", encoding="utf-8") as root_file:
-        writer = csv.writer(root_file)
-        writer.writerow(["url_path", "last_mod"])
+        for page_url, page_last_mod in zip(page_url_tags, page_last_mod_tags):
+            page = Page(url=page_url.text.replace("https://ptithcm.edu.vn", ""),
+                        sitemap_url=sitemap.url,
+                        last_mod=page_last_mod.text)
+            # save_html(page_url)
+            try:
+                print(f"Đang lưu page {page_url.text} và db")
+                save_page(page=page)
+                print("Lưu thành công")
+            except Exception as e:
+                print(e)
+        try:
+            print(f"Đã lưu xong site map {url.text}")
+            save_sitemap(sitemap=sitemap)
+            print("Lưu thành công")
+        except Exception as e:
+            print(e)
 
-        for root_url, root_lastmod in zip(root_url_tags, root_lastmod_tags):
+def crawl_raw_html(sitemap_index_url):
+    url_tags, last_mod_tags = load_site_map(url=sitemap_index_url)
 
-            sitemap_full_url = root_url.text
-            sitemap_id = sitemap_full_url.replace("https://ptithcm.edu.vn", "")
-            last_mod = root_lastmod.text
+    for url, last_mod in zip(url_tags, last_mod_tags):
+        save_url = url.text.replace("https://ptithcm.edu.vn", "")
+        sitemap = find_one_sitemap(url=save_url)
+        page_urls, page_last_mods = load_site_map(url=url.text)
+        if sitemap:
+            web_last_mod = normalize_dt(parse_datatime(last_mod))
+            db_last_mod = normalize_dt(sitemap["last_mod"])
 
-            writer.writerow([sitemap_id, last_mod])
+            if web_last_mod.timestamp() != db_last_mod.timestamp():
+                for purl, plast_mod in zip(page_urls, page_last_mods):
+                    save_purl = purl.text.replace("https://ptithcm.edu.vn", "")
+                    page = find_one_page(save_purl)
+                    web_plast_mod = normalize_dt(parse_datatime(plast_mod))
+                    db_page_last_mod = normalize_dt(page["last_mod"])
 
-            file_name = sitemap_id.replace(".xml", "").replace("/", "")
-            sitemap_csv_path = BASE_DIR / f"index/{file_name}.csv"
-
-            lst_url, lst_last_mod = load_site_map(url=sitemap_full_url)
-
-            with open(sitemap_csv_path, "w", newline="", encoding="utf-8") as sitemap_file:
-                sitemap_writer = csv.writer(sitemap_file)
-                sitemap_writer.writerow(["url_path", "last_mod"])
-
-                for url, lastmod in zip(lst_url, lst_last_mod):
-                    page_path = url.text.replace("https://ptithcm.edu.vn", "")
-                    sitemap_writer.writerow([page_path, lastmod.text])
-
-                    save_html(url=url.text)
-
-            print(f"Created {sitemap_csv_path.name}")
-
-    print("First load completed!")
-
-def check_index(index_url, root_csv_path):
-    need_process_lst = []
-    root_url_tags, root_lastmod_tags = load_site_map(url=index_url)
-    saved_index = csv_to_dict(root_csv_path)
-
-
-    for root_url, root_lastmod in zip(root_url_tags, root_lastmod_tags):
-
-        root_id = root_url.text.replace("https://ptithcm.edu.vn", "")
-
-        if root_id in saved_index:
-            old_sitemap = {}
-            old_sitemap[root_url.text] = root_lastmod.text #Bố
-            if root_lastmod.text != saved_index[root_id]:
-                url_tags, lastmod_tags = load_site_map(root_url.text)
-                csv_path = BASE_DIR / f"index/{root_id.replace(".xml", "").replace("/", "")}.csv"
-                child_index = csv_to_dict(csv_path)
-                for url, lastmod in zip(url_tags, lastmod_tags):
-                    id = url.text.replace("https://ptithcm.edu.vn", "")
-                    if id in child_index:
-                        if lastmod.text != child_index[id]:
-                            old_sitemap[url.text] = lastmod.text
-                    else:
-                        old_sitemap[url.text] = lastmod.text
-
-                need_process_lst.append(old_sitemap)
+                    if page == None:
+                        page = Page(url=save_purl,
+                                    sitemap_url=save_url,
+                                    last_mod=plast_mod.text)
+                        save_html(purl.text)
+                        save_page(page)
+                    elif web_plast_mod.timestamp() != db_page_last_mod.timestamp():
+                        updata_page_last_mod(url=save_purl, new_last_mod=plast_mod.text)
+                        save_html(page)
+                updata_sitemap_last_mod(url=save_url, new_last_mod=last_mod.text)
         else:
-                new_sitemap = {}
-                new_sitemap[root_url.text] = root_lastmod.text
-                need_process_lst.append(new_sitemap)
-    return need_process_lst
-
-def crawl_raw_html(sitemap_index_url, root_csv_path):
-    link_lst = check_index(index_url=sitemap_index_url, root_csv_path=root_csv_path)
-    count = 0
-    for item in link_lst:
-
-        dad_url, dad_last_mod = next(
-            (k, v) for k, v in item.items() if k.endswith(".xml")
-        )
-
-        dad_id = dad_url.replace("https://ptithcm.edu.vn", "")
-        dad_name = dad_id.replace(".xml", "").replace("/", "")
-        dad_csv_path = BASE_DIR / f"index/{dad_name}.csv"
-
-        if len(item) == 1:
-
-            print(f"Sitemap mới: {dad_id}")
-
-            # Update root index bằng pandas
-            df_root = pd.read_csv(root_csv_path)
-
-            if dad_id not in df_root["url_path"].values:
-                df_root = pd.concat([
-                    df_root,
-                    pd.DataFrame([{
-                        "url_path": dad_id,
-                        "last_mod": dad_last_mod
-                    }])
-                ], ignore_index=True)
-
-                df_root.to_csv(root_csv_path, index=False)
-
-            # Crawl toàn bộ sitemap con
-            url_tags, last_mod_tags = load_site_map(dad_url)
-
-            rows = []
-
-            for url, last_mod in zip(url_tags, last_mod_tags):
-                page_id = url.text.replace("https://ptithcm.edu.vn", "")
-                rows.append({
-                    "url_path": page_id,
-                    "last_mod": last_mod.text
-                })
-                save_html(url.text)
-                count +=1
-
-            pd.DataFrame(rows).to_csv(dad_csv_path, index=False)
-
-        else:
-
-            print(f"Cập nhật sitemap: {dad_id}")
-
-            # Update sitemap cha
-            df_root = pd.read_csv(root_csv_path)
-            df_root.loc[df_root["url_path"] == dad_id, "last_mod"] = dad_last_mod
-            df_root.to_csv(root_csv_path, index=False)
-
-            # Load sitemap con 1 lần duy nhất
-            df_child = pd.read_csv(dad_csv_path)
-
-            for key, value in item.items():
-
-                if key.endswith(".xml"):
-                    continue
-
-                page_id = key.replace("https://ptithcm.edu.vn", "")
-
-                if page_id in df_child["url_path"].values:
-                    df_child.loc[
-                        df_child["url_path"] == page_id,
-                        "last_mod"
-                    ] = value
-                else:
-                    df_child = pd.concat([
-                        df_child,
-                        pd.DataFrame([{
-                            "url_path": page_id,
-                            "last_mod": value
-                        }])
-                    ], ignore_index=True)
-
-                save_html(key)
-                count += 1
-
-            df_child.to_csv(dad_csv_path, index=False)
-    print(f"Đã crawl lại {count} bài post")
+            sitemap = Sitemap(url=save_url, last_mod=last_mod.text)
+            for url, last_mod in zip(page_urls, page_last_mods):
+                save_url = url.text.replace("https://ptithcm.edu.vn", "")
+                page = Page(url=save_url, sitemap_url=sitemap.url, last_mod=last_mod.text)
+                save_html(url=url.text)
+                save_page(page=page)
+            save_sitemap(sitemap=sitemap)
 
 if __name__ == "__main__":
     # first_load(index_url=sitemap_index_url)
-    crawl_raw_html(sitemap_index_url=sitemap_index_url, root_csv_path=root_csv_path)
+    # crawl_raw_html(sitemap_index_url=settings.sitemap_index_url, root_csv_path=settings.root_csv)
+    # initiate_data(settings.sitemap_index_url)
+    crawl_raw_html(sitemap_index_url=settings.sitemap_index_url)

@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 import csv
+from datetime import datetime, timezone
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -52,3 +52,17 @@ def csv_to_dict(file_path):
             data[row["url_path"]] = row["last_mod"]
 
     return data
+
+def parse_datatime(last_mod):
+    return datetime.fromisoformat(last_mod.text)
+
+def normalize_dt(dt):
+    # Nếu là string → parse
+    if isinstance(dt, str):
+        dt = datetime.fromisoformat(dt)
+
+    # Nếu naive → gắn UTC
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+
+    return dt
