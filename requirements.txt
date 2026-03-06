@@ -7,3 +7,5 @@ boto3==.42.59
 pandas==3.0.1
 pydantic-settings==2.13.1
 pymongo==4.16.0
+docling==2.76.0
+trafilatura=2.0.0

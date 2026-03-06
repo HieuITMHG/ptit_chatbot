@@ -2,10 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 from datetime import datetime, timezone
+from docling.document_converter import DocumentConverter, InputFormat
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
+
+converter = DocumentConverter()
 
 def load_site_map(url):
     response = requests.get(url=url, headers=headers, verify=False)
@@ -66,3 +69,13 @@ def normalize_dt(dt):
         dt = dt.replace(tzinfo=timezone.utc)
 
     return dt
+
+def html_to_markdown(html_content: str) -> str:
+    
+    result = converter.convert_string(
+        html_content,
+        format=InputFormat.HTML
+    )
+    
+    markdown = result.document.export_to_markdown()
+    return markdown

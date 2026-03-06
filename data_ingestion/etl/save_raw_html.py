@@ -1,7 +1,6 @@
 import requests
 from .helpers import load_site_map, parse_datatime, normalize_dt
 from pathlib import Path
-import csv
 
 from core.boto_client import s3
 from core.config import settings
@@ -11,9 +10,6 @@ from model.sitemap import Sitemap
 
 from repositories.page_repository import save_page, find_one_page, updata_page_last_mod
 from repositories.sitemap_repository import save_sitemap, find_one_sitemap, updata_sitemap_last_mod
-
-from datetime import datetime
-from datetime import timezone
 
 current_file = Path(__file__)
 
@@ -64,6 +60,8 @@ def initiate_data(sitemap_index_url):
             print(e)
 
 def crawl_raw_html(sitemap_index_url):
+    print("start cào html")
+    need_parse = []
     url_tags, last_mod_tags = load_site_map(url=sitemap_index_url)
 
     for url, last_mod in zip(url_tags, last_mod_tags):
@@ -79,7 +77,6 @@ def crawl_raw_html(sitemap_index_url):
                     save_purl = purl.text.replace("https://ptithcm.edu.vn", "")
                     page = find_one_page(save_purl)
                     web_plast_mod = normalize_dt(parse_datatime(plast_mod))
-                    db_page_last_mod = normalize_dt(page["last_mod"])
 
                     if page == None:
                         page = Page(url=save_purl,
@@ -87,10 +84,18 @@ def crawl_raw_html(sitemap_index_url):
                                     last_mod=plast_mod.text)
                         save_html(purl.text)
                         save_page(page)
-                    elif web_plast_mod.timestamp() != db_page_last_mod.timestamp():
-                        updata_page_last_mod(url=save_purl, new_last_mod=plast_mod.text)
-                        save_html(page)
+                        print(f"Page mới {save_purl}")
+                        need_parse.append(page)
+                    else:
+                        db_page_last_mod = normalize_dt(page["last_mod"])
+                        if web_plast_mod.timestamp() != db_page_last_mod.timestamp():
+                            updata_page_last_mod(url=save_purl, new_last_mod=plast_mod.text)
+                            save_html(page)
+                            need_parse.append(page)
+                            print(f"Modify page {save_purl}")
                 updata_sitemap_last_mod(url=save_url, new_last_mod=last_mod.text)
+            else:
+                print("Éo có gì mới")
         else:
             sitemap = Sitemap(url=save_url, last_mod=last_mod.text)
             for url, last_mod in zip(page_urls, page_last_mods):
@@ -98,10 +103,11 @@ def crawl_raw_html(sitemap_index_url):
                 page = Page(url=save_url, sitemap_url=sitemap.url, last_mod=last_mod.text)
                 save_html(url=url.text)
                 save_page(page=page)
+                need_parse.append(page)
             save_sitemap(sitemap=sitemap)
+    return need_parse
 
-if __name__ == "__main__":
-    # first_load(index_url=sitemap_index_url)
-    # crawl_raw_html(sitemap_index_url=settings.sitemap_index_url, root_csv_path=settings.root_csv)
-    # initiate_data(settings.sitemap_index_url)
-    crawl_raw_html(sitemap_index_url=settings.sitemap_index_url)
+# if __name__ == "__main__":
+#     crawl_raw_html(sitemap_index_url=settings.sitemap_index_url, root_csv_path=settings.root_csv)
+#     initiate_data(settings.sitemap_index_url)
+#     crawl_raw_html(sitemap_index_url=settings.sitemap_index_url)
