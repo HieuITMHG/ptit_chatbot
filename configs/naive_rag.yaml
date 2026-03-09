@@ -1,0 +1,13 @@
+pipeline: rag
+
+chunking:
+  type: fixed
+  chunk_size: 500
+  overlap: 50
+
+retriever:
+  type: dense
+  top_k: 5
+
+reranker:
+  type: none

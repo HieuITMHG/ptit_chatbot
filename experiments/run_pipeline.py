@@ -1,21 +1,32 @@
-import yaml
-from pipelines.factory import build_retriever, build_reranker
+from core.database import db
+from core.config_loader import PipelineConfig
+from data_ingestion.chunking.chunker_factory import build_chunker
 
+from model.chunk import Chunk
+from data_ingestion.chunking.helpers import length_function
+from repositories.chunk_repository import save_chunk
 
-def load_config(path):
-    with open(path) as f:
-        return yaml.safe_load(f)
+documents_collection = db["documents"]
+chunks_collection = db["chunks"]
 
+if __name__ == "__main__":
+    config = PipelineConfig("configs/naive_rag.yaml")
+    chunker = build_chunker(config.chunking)
+    docs = documents_collection.find({})
 
-cfg = load_config("configs/naive_rag.yaml")
+    for doc in docs:
+        chunks = chunker.split_text(doc["content"])
 
-retriever = build_retriever(cfg["retriever"])
-reranker = build_reranker(cfg["reranker"])
-
-query = "Học phí PTIT bao nhiêu?"
-
-docs = retriever.search(query)
-
-docs = reranker.rerank(query, docs)
-
-print(docs)
+        for idx, c in enumerate(chunks):
+            print(idx)
+            print(doc["source_url"])
+            _,  count = length_function(c)
+            chunk = Chunk(document_url=doc["source_url"],
+                          chunk_index=idx,
+                          token_count=count,
+                          title=doc["title"],
+                          chunk_content=c,
+                          author=doc["author"],
+                          published_date=doc["published_date"])
+            
+            save_chunk(chunk=chunk)
