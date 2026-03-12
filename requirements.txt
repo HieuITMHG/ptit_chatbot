@@ -10,3 +10,7 @@ pymongo==4.16.0
 docling==2.76.0
 trafilatura=2.0.0
 tiktoken==0.12.0
+qdrant-client==1.17.0
+sentence-transformers==5.2.3
+openai==2.24.0
+rapidfuzz==3.14.3

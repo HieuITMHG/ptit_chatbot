@@ -1,0 +1,14 @@
+dataset_path: data/pages.json
+
+embedding:
+  provider: openai
+  model: text-embedding-3-small
+
+vectorstore:
+  type: qdrant
+  path: data/vector_index
+
+generator:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0

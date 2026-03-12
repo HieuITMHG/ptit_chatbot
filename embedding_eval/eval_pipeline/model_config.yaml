@@ -1,0 +1,29 @@
+m-e5-large:
+  size: 560M
+  dim: 1024
+  col_name: m-e5-large
+  model_name: intfloat/multilingual-e5-large
+
+LaBSE:
+  size: 471M
+  dim: 768
+  col_name: LaBSE
+  model_name: sentence-transformers/LaBSE
+
+gte-multilingual-base:
+  size: 305M
+  dim: 768
+  col_name: gte-multilingual-base
+  model_name: Alibaba-NLP/gte-multilingual-base
+
+m-e5-base:
+  size: 278M
+  dim: 768
+  col_name: m-e5-base
+  model_name: intfloat/multilingual-e5-base
+
+bge-m3:
+  size: 568M
+  dim: 1024
+  col_name: bge-m3
+  model_name: BAAI/bge-m3

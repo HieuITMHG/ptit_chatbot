@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     bucket_name:str
     mongodb_url:str
     database_name:str
+    openai_key:str
     class Config:
         env_file = ".env"
     

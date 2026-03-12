@@ -1,0 +1,26 @@
+Expecting value: line 1 column 1 (char 0)  + 
+
+ + ```json
+[
+  {
+    "query": "Địa chỉ trụ sở chính của Khoa Kỹ thuật điện tử 2 ở đâu?",
+    "quotes": [
+      "Trụ sở chính: 11 Nguyễn Đình Chiểu, phường Sài Gòn, TP. Hồ Chí Minh"
+    ]
+  },
+  {
+    "query": "Cơ sở đào tạo của Khoa Kỹ thuật điện tử 2 nằm ở đâu tại TP. Hồ Chí Minh?",
+    "quotes": [
+      "Cơ sở đào tạo: 97 Man Thiện, phường Tăng Nhơn Phú, TP. Hồ Chí Minh"
+    ]
+  },
+  {
+    "query": "Khoa Kỹ thuật điện tử 2 thuộc học viện nào và có cơ sở nào tại TP. Hồ Chí Minh?",
+    "quotes": [
+      "Khoa Kỹ thuật điện tử 2 là Khoa đào tạo thuộc Học viện Công nghệ Bưu chính Viễn thông - ...",
+      "Trụ sở chính: 11 Nguyễn Đình Chiểu, phường Sài Gòn, TP. Hồ Chí Minh",
+      "Cơ sở đào tạo: 97 Man Thiện, phường Tăng Nhơn Phú, TP. Hồ Chí Minh"
+    ]
+  }
+]
+```

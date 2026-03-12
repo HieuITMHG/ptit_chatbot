@@ -7,7 +7,6 @@ class PipelineConfig:
 
     def __init__(self, path: str):
         config_path = BASE_DIR / path
-        print(config_path)
 
         with open(config_path, "r", encoding="utf-8") as f:
             self.config = yaml.safe_load(f) 
@@ -15,3 +14,7 @@ class PipelineConfig:
     @property
     def chunking(self):
         return self.config.get("chunking", {})
+    
+    @property
+    def embedding(self):
+        return self.config.get("embedding", {})
