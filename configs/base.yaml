@@ -1,8 +1,14 @@
 dataset_path: data/pages.json
 
+chunking:
+  type: semantic
+  chunk_size: 500
+  overlap: 50
+  embedder: BAAI/bge-m3
+
 embedding:
   provider: openai
-  model: text-embedding-3-small
+  model:
 
 vectorstore:
   type: qdrant

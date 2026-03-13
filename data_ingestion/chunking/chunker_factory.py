@@ -2,7 +2,6 @@ from .fixed_chunker import FixedSizeChunker
 from .semantic_chunker import SemanticChunker
 from enums.chunk_type import ChunkType
 from .helpers import length_function, encoding
-from sentence_transformers import SentenceTransformer
 
 def build_chunker(config):
 
