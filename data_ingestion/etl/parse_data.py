@@ -2,6 +2,8 @@ from core.boto_client import s3
 from bs4 import BeautifulSoup
 import trafilatura
 import time
+import re
+import unicodedata
 
 from core.config import settings
 from core.database import db
@@ -49,6 +51,8 @@ def parse_from_html(page: str):
             include_images=True,
             include_links=True
     )
+    markdown_content = re.sub(r"\n+", " ", doc["content"]).strip()
+    markdown_content = unicodedata.normalize("NFC", markdown_content)
 
     if (len(markdown_content) < 500):
         print("Nội dung không đủ dài")

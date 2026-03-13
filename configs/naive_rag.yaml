@@ -1,9 +1,10 @@
 pipeline: rag
 
 chunking:
-  type: fixed
+  type: semantic
   chunk_size: 500
   overlap: 50
+  embedder: BAAI/bge-m3
 
 retriever:
   type: dense
