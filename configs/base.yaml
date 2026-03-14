@@ -7,8 +7,8 @@ chunking:
   embedder: BAAI/bge-m3
 
 embedding:
-  provider: openai
-  model:
+  col_name: main_collection
+  model: BAAI/bge-m3
 
 vectorstore:
   type: qdrant

@@ -1,7 +1,7 @@
 from .fixed_chunker import FixedSizeChunker
 from .semantic_chunker import SemanticChunker
 from enums.chunk_type import ChunkType
-from .helpers import length_function, encoding
+from .helpers import length_function, encoding, embedder
 
 def build_chunker(config):
 
@@ -15,8 +15,8 @@ def build_chunker(config):
             length_function=length_function
         )
     if chunk_type == ChunkType.SEMANTIC.value:
-        return  SemanticChunker(embedder=config["embedder"],
-                                encoding=encoding,
+        return  SemanticChunker(encoding=encoding,
+                                embedder=embedder,
                                 chunk_size=config["chunk_size"],
                                 chunk_overlap=config["overlap"],
                                 length_function=length_function)

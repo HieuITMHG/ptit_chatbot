@@ -2,10 +2,15 @@ from core.config_loader import PipelineConfig
 from core.database import db
 from data_ingestion.chunking.chunker_factory import build_chunker
 from model.chunk import Chunk
+from core.qdrant import client
+from qdrant_client.models import VectorParams, Distance
+from data_ingestion.chunking.helpers import embedder
+
 
 documents_collection = db["documents"]
 semantic_chunks_collection = db["semantic_chunks"]
 
+BATCH_SIZE = 64
 
 def chunking_pipeline(config):
     chunker = build_chunker(config=config)
@@ -31,7 +36,60 @@ def chunking_pipeline(config):
         except Exception as e:
             print(f"Lỗi khi insert các chunk của doc {doc["source_url"]}: {e}")
 
+def embedding_pipeline(config):
+    if client.collection_exists(collection_name=config["col_name"]):
+        print("Collection đã tồn tại")
+    else:
+        client.create_collection(collection_name=config["col_name"],
+                                 vectors_config=VectorParams(size=embedder.get_sentence_embedding_dimension(),
+                                                             distance=Distance.COSINE))
+        print(f"Đã tạo collection {config["col_name"]}")
+
+    chunks = semantic_chunks_collection.find({}, {"_id": 0}).batch_size(512)
+    batch = []
+    for chunk in chunks:
+        print(chunk["document_url"])
+        batch.append(chunk)
+
+        if len(batch) == BATCH_SIZE:
+            texts = [c["chunk_content"] for c in batch]
+
+            vectors = embedder.encode(texts)
+
+            points = []
+
+            for i, vec in enumerate(vectors):
+                points.append({
+                    "id": f"{batch[i]['document_url']}_{batch[i]['chunk_index']}",
+                    "vector": vec,
+                    "payload": batch[i]
+                })
+                
+            client.upsert(
+                collection_name=config["col_name"],
+                points=points
+            )
+
+            batch = []
+    if batch:
+        texts = [c["chunk_content"] for c in batch]
+        vectors = embedder.encode(texts)
+
+        points = []
+        for i, vec in enumerate(vectors):
+            points.append({
+                "id": f"{batch[i]['document_url']}_{batch[i]['chunk_index']}",
+                "vector": vec,
+                "payload": batch[i]
+            })
+
+        client.upsert(
+            collection_name=config["col_name"],
+            points=points
+        )
+
 if __name__ == "__main__":
     config = PipelineConfig("configs/base.yaml")
-    chunking_pipeline(config.chunking)
+    # chunking_pipeline(config.chunking)
+    embedding_pipeline(config.embedding)
 

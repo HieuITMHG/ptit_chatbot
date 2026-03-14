@@ -3,8 +3,6 @@ import re
 from core.database import db
 from .fixed_chunker import FixedSizeChunker
 from sklearn.metrics.pairwise import paired_cosine_distances
-from sentence_transformers import SentenceTransformer
-from .helpers import length_function, encoding
 
 documents_collection = db["documents"]
 semantic_chunk = db["semantic_chunks"]
@@ -21,7 +19,7 @@ class SemanticChunker(BaseChunker):
                  min_chunk_size = 100):
         super().__init__(encoding, chunk_size, chunk_overlap, length_function)
         self.threshold = threshold
-        self.embedder = SentenceTransformer(embedder)
+        self.embedder = embedder
         self.drop = drop
         self.fixed_chunk_split = FixedSizeChunker(encoding=self.encoding,
                                                   chunk_size=self.chunk_size,
