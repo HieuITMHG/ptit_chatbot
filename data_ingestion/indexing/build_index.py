@@ -64,7 +64,7 @@ def embedding_pipeline(config):
 
             for i, vec in enumerate(vectors):
                 points.append({
-                    "id": make_point_id(batch[i]["document_url"], batch["chunk_index"]),
+                    "id": make_point_id(batch[i]["document_url"], batch[i]["chunk_index"]),
                     "vector": vec,
                     "payload": batch[i]
                 })
@@ -82,7 +82,7 @@ def embedding_pipeline(config):
         points = []
         for i, vec in enumerate(vectors):
             points.append({
-                "id": make_point_id(batch[i]["document_url"], batch["chunk_index"]),
+                "id": make_point_id(batch[i]["document_url"], batch[i]["chunk_index"]),
                 "vector": vec,
                 "payload": batch[i]
             })
