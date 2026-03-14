@@ -5,7 +5,11 @@ from model.chunk import Chunk
 from core.qdrant import client
 from qdrant_client.models import VectorParams, Distance
 from data_ingestion.chunking.helpers import embedder
+import hashlib
 
+def make_point_id(url, chunk_index):
+    raw = f"{url}_{chunk_index}"
+    return hashlib.md5(raw.encode()).hexdigest()
 
 documents_collection = db["documents"]
 semantic_chunks_collection = db["semantic_chunks"]
@@ -60,7 +64,7 @@ def embedding_pipeline(config):
 
             for i, vec in enumerate(vectors):
                 points.append({
-                    "id": f"{batch[i]['document_url']}_{batch[i]['chunk_index']}",
+                    "id": make_point_id(batch[i]["document_url"], batch["chunk_index"]),
                     "vector": vec,
                     "payload": batch[i]
                 })
@@ -78,7 +82,7 @@ def embedding_pipeline(config):
         points = []
         for i, vec in enumerate(vectors):
             points.append({
-                "id": f"{batch[i]['document_url']}_{batch[i]['chunk_index']}",
+                "id": make_point_id(batch[i]["document_url"], batch["chunk_index"]),
                 "vector": vec,
                 "payload": batch[i]
             })
