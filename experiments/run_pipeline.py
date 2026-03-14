@@ -1,41 +1,40 @@
-from core.database import db
-from core.config_loader import PipelineConfig
-from data_ingestion.chunking.chunker_factory import build_chunker
+from core.config import settings
+from core.qdrant import client
+from data_ingestion.chunking.helpers import embedder
+from openai import OpenAI
 
-from model.chunk import Chunk
-from data_ingestion.chunking.helpers import length_function
-from repositories.chunk_repository import save_chunk
+openai_client = OpenAI(api_key=settings.openai_key)
 
-documents_collection = db["documents"]
-chunks_collection = db["chunks"]
-semantic_chunks_collection = db["semantic_chunks"]
+prompt_template = """
+Bạn là trợ lý AI của PTIT.
 
-def chunking_pipeline(config):
-    chunker = build_chunker(config.chunking)
-    docs = documents_collection.find({})
+Context:
+{context}
 
-    for doc in docs:
-        chunks = chunker.split_text(doc["content"])
+Question:
+{question}
 
-        for idx, c in enumerate(chunks):
-            print(idx)
-            print(doc["source_url"])
-            _,  count = length_function(c)
-            chunk = Chunk(document_url=doc["source_url"],
-                          chunk_index=idx,
-                          token_count=count,
-                          title=doc["title"],
-                          chunk_content=c,
-                          author=doc["author"],
-                          published_date=doc["published_date"])
-            
-            save_chunk(chunk=chunk)
-
-def embedding_pipeline(config):
-    pass
-
+Hãy trả lời dựa trên context trên.
+"""
 
 if __name__ == "__main__":
-    config = PipelineConfig("configs/naive_rag.yaml")
-    base_config = PipelineConfig("configs/base.yaml")
-    chunking_pipeline(config=config)
+    request = input("Nhập prompt: ")
+
+    contexts = client.query_points(
+        collection_name="main_collection",
+        query = embedder.encode(request),
+        with_payload=True,
+        limit=5
+    )
+
+    prompt = prompt_template.format(
+        context=contexts.points[0].payload["chunk_content"],
+        question=request
+    )
+
+    response = openai_client.responses.create(
+            model="gpt-5-nano",
+            input=prompt,
+        )
+
+    print(response.output_text)
