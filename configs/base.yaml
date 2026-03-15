@@ -1,13 +1,13 @@
 dataset_path: data/pages.json
 
 chunking:
-  type: semantic
+  type: enrich_hybrid
   chunk_size: 500
   overlap: 50
   embedder: BAAI/bge-m3
 
 embedding:
-  col_name: main_collection
+  col_name: enrich_hybrid_collection
   model: BAAI/bge-m3
 
 vectorstore:

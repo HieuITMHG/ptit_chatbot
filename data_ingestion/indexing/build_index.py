@@ -12,7 +12,7 @@ def make_point_id(url, chunk_index):
     return hashlib.md5(raw.encode()).hexdigest()
 
 documents_collection = db["documents"]
-semantic_chunks_collection = db["semantic_chunks"]
+enrich_hybrids_collection = db["enrich_hybrids"]
 
 BATCH_SIZE = 64
 
@@ -22,10 +22,10 @@ def chunking_pipeline(config):
     docs = documents_collection.find({})
 
     for doc in docs:
-        chunks = chunker.split_text(doc["content"])
+        chunks = chunker.split_text(doc["content"], title=doc["title"])
         chunk_lst = []
         for idx, chunk in enumerate(chunks):
-            ch = Chunk(id=make_point_id(url=chunk["document_url"], chunk_index=chunk["chunk_index"]),
+            ch = Chunk(id=make_point_id(url=doc["source_url"], chunk_index=idx),
                         document_url=doc["source_url"],
                        chunk_index=idx,
                        token_count=chunk["token_count"],
@@ -36,7 +36,7 @@ def chunking_pipeline(config):
             chunk_lst.append(ch.model_dump())
             
         try:
-            semantic_chunks_collection.insert_many(chunk_lst)
+            enrich_hybrids_collection.insert_many(chunk_lst)
             print(f"Đã lưu lưu của {doc["source_url"]}")
         except Exception as e:
             print(f"Lỗi khi insert các chunk của doc {doc["source_url"]}: {e}")
@@ -50,7 +50,7 @@ def embedding_pipeline(config):
                                                              distance=Distance.COSINE))
         print(f"Đã tạo collection {config["col_name"]}")
 
-    chunks = semantic_chunks_collection.find({}, {"_id": 0}).batch_size(512)
+    chunks = enrich_hybrids_collection.find({}, {"_id": 0}).batch_size(512)
     batch = []
     for chunk in chunks:
         print(chunk["document_url"])
@@ -95,6 +95,6 @@ def embedding_pipeline(config):
 
 if __name__ == "__main__":
     config = PipelineConfig("configs/base.yaml")
-    # chunking_pipeline(config.chunking)
+    chunking_pipeline(config.chunking)
     embedding_pipeline(config.embedding)
 
