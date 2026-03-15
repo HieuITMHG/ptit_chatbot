@@ -3,6 +3,7 @@ from datetime import datetime
 from typing import Optional
 
 class Chunk(BaseModel):
+    id: str
     document_url: str
     chunk_index: int
     token_count: int

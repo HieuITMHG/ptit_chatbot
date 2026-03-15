@@ -25,7 +25,8 @@ def chunking_pipeline(config):
         chunks = chunker.split_text(doc["content"])
         chunk_lst = []
         for idx, chunk in enumerate(chunks):
-            ch = Chunk(document_url=doc["source_url"],
+            ch = Chunk(id=make_point_id(url=chunk["document_url"], chunk_index=chunk["chunk_index"]),
+                        document_url=doc["source_url"],
                        chunk_index=idx,
                        token_count=chunk["token_count"],
                        title=doc["title"],
@@ -64,7 +65,7 @@ def embedding_pipeline(config):
 
             for i, vec in enumerate(vectors):
                 points.append({
-                    "id": make_point_id(batch[i]["document_url"], batch[i]["chunk_index"]),
+                    "id": batch[i]["id"],
                     "vector": vec,
                     "payload": batch[i]
                 })
@@ -82,7 +83,7 @@ def embedding_pipeline(config):
         points = []
         for i, vec in enumerate(vectors):
             points.append({
-                "id": make_point_id(batch[i]["document_url"], batch[i]["chunk_index"]),
+                "id": batch[i]["id"],
                 "vector": vec,
                 "payload": batch[i]
             })

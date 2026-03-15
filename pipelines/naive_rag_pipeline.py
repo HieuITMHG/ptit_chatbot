@@ -10,15 +10,16 @@ class NaiveRag:
         self.embedding_model = SentenceTransformer(embedding_model)
         self.collection_name = collection_name
 
-    def retriever(self, query: str): 
+    def retriever(self, query: str, top_k: int): 
         contexts = client.query_points(collection_name=self.collection_name,
                                        query=self.embedding_model.encode(query),
                                        with_payload=True,
-                                       limit=10)
+                                       limit=top_k)
         result =  []
         for point in contexts.points:
             payload = point.payload
             result.append({
+                "id": point.id.replace("-", ""),
                 "doc_url": payload["document_url"],
                 "chunk_index": payload["chunk_index"],
                 "token_count": payload["token_count"],
@@ -70,17 +71,21 @@ class NaiveRag:
 
         return response.output_text
 
-
-
-
 if __name__ == "__main__":
     rag_engine = NaiveRag(embedding_model="BAAI/bge-m3",
                           collection_name="main_collection")
     
-    query = "Hãy tổng hợp cho tôi các hoạt động của đoàn trường năm 2025"
+    query = "Những ai đủ điều kiện để nộp hồ sơ đăng ký dự thi cao học đợt 2 năm 2016 và thời hạn nộp hồ sơ đến khi nào?"
     
-    results = rag_engine.retriever(query=query)
+    results = rag_engine.retriever(query=query, top_k=10)
 
-    res = rag_engine.generator(query=query, contexts=results)
+    for result in results:
+        print(result["id"])
 
-    print(res)
+    # res = rag_engine.generator(query=query, contexts=results)
+
+    # print(res)
+    
+    # 0594729d4088417728a3cae467f43575
+    # 15c8df962eb0ec9f62162e5d162301d6
+    # 2543a01d345b92f25859b667a813582f

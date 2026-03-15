@@ -1,0 +1,5 @@
+recall@5: 0.22952380952380952
+precision@5: 0.104
+
+recall@10: 0.32095238095238093 (rõ ràng tăng k thì dể tìm thấy relevance hơn)
+precision@10: 0.07428571428571429 (tăng k làm cho mẫu số gánh thêm 1 số irrelevance nữa)
