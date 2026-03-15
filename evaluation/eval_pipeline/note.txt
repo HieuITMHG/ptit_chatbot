@@ -1,5 +1,24 @@
+Dataset củ chưa enrich
+
 recall@5: 0.22952380952380952
 precision@5: 0.104
 
 recall@10: 0.32095238095238093 (rõ ràng tăng k thì dể tìm thấy relevance hơn)
 precision@10: 0.07428571428571429 (tăng k làm cho mẫu số gánh thêm 1 số irrelevance nữa)
+
+========================================================================================
+
+Dataset mới
+
+recall@5: 0.3025
+precision@5:  0.134
+
+recall@10: 0.38166666666666665 
+precision@10: 0.0855
+
+{'precision@5': 0.134, 
+'recall@5': 0.355, 
+'hit@5': 0.565, 
+'ndcg@5': 0.31606404882968714, 
+'grade_ndcg@5': 0.3320554862284418, 
+'MRR': 0.3973333333333333}

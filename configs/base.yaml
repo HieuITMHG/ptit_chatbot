@@ -5,6 +5,8 @@ chunking:
   chunk_size: 500
   overlap: 50
   embedder: BAAI/bge-m3
+  queries_col_name: hybrid_queries
+  qrels_col_name: hybrid_qrels
 
 embedding:
   col_name: enrich_hybrid_collection

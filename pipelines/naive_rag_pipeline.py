@@ -10,7 +10,7 @@ class NaiveRag:
         self.embedding_model = SentenceTransformer(embedding_model)
         self.collection_name = collection_name
 
-    def retriever(self, query: str, top_k: int): 
+    def retrieve(self, query: str, top_k: int): 
         contexts = client.query_points(collection_name=self.collection_name,
                                        query=self.embedding_model.encode(query),
                                        with_payload=True,
@@ -31,7 +31,7 @@ class NaiveRag:
 
         return result
     
-    def generator(self, query, contexts):
+    def generate(self, query, contexts):
         prompt_template = """
             Bạn là trợ lý ảo hỗ trợ trả lời câu hỏi cho sinh viên và thành viên của 
             Học viện Công nghệ Bưu chính Viễn thông (PTIT) cơ sở TP.HCM.
@@ -73,19 +73,14 @@ class NaiveRag:
 
 if __name__ == "__main__":
     rag_engine = NaiveRag(embedding_model="BAAI/bge-m3",
-                          collection_name="main_collection")
+                          collection_name="enrich_hybrid_collection")
     
-    query = "Những ai đủ điều kiện để nộp hồ sơ đăng ký dự thi cao học đợt 2 năm 2016 và thời hạn nộp hồ sơ đến khi nào?"
+    query = "Điểm chuẩn để đỗ vào trường PTIT cơ sở phía Nam năm 2017, 2019 và 2023 có xét điểm cộng ưu tiên hay không và xem ở đâu?"
     
-    results = rag_engine.retriever(query=query, top_k=10)
+    results = rag_engine.retrieve(query=query, top_k=10)
 
     for result in results:
         print(result["id"])
 
-    # res = rag_engine.generator(query=query, contexts=results)
 
-    # print(res)
     
-    # 0594729d4088417728a3cae467f43575
-    # 15c8df962eb0ec9f62162e5d162301d6
-    # 2543a01d345b92f25859b667a813582f

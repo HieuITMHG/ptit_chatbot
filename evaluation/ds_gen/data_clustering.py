@@ -3,8 +3,8 @@ import numpy as np
 from sklearn.cluster import KMeans
 from core.qdrant import client # Import client của bạn
 
-collection_name = "main_collection"
-num_clusters = 3
+collection_name = "enrich_hybrid_collection"
+num_clusters = 4
 
 if __name__ == "__main__":
     print(f"Bắt đầu tải dữ liệu từ collection '{collection_name}'...")
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     # Bước 5: Ghi mỗi list payload vào một file JSON riêng biệt
     print("\nĐang lưu kết quả ra file JSON...")
     for cluster_id, payloads in clusters_data.items():
-        filename = f"cluster_{cluster_id}.json"
+        filename = f"cluster_enrich_{cluster_id}.json"
         
         with open(filename, "w", encoding="utf-8") as f:
             # Lưu ý dùng ensure_ascii=False để không bị lỗi font tiếng Việt

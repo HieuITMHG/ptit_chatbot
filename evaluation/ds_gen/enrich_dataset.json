@@ -1,0 +1,3572 @@
+[
+  {
+    "query_id": 1,
+    "query": "Điểm chuẩn để đỗ vào trường PTIT cơ sở phía Nam năm 2017, 2019 và 2023 có xét điểm cộng ưu tiên hay không và xem ở đâu?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "002d98de3fc9938680f4d1045675b342",
+        "relevance_score": 1.0,
+        "reasoning": "Chứa kết quả điểm chuẩn của cơ sở TP.HCM dựa trên điểm thi tốt nghiệp THPT năm 2023."
+      },
+      {
+        "chunk_id": "0059f203c350abbb505c98248920fedb",
+        "relevance_score": 1.0,
+        "reasoning": "Chứa thông báo và mức điểm chuẩn đại học chính quy đợt 1 năm 2019."
+      },
+      {
+        "chunk_id": "00715d4522b2fac57a25221eec0756d1",
+        "relevance_score": 0.8,
+        "reasoning": "Cung cấp quy chế về diện ưu tiên xét tuyển thẳng cho năm 2017."
+      }
+    ]
+  },
+  {
+    "query_id": 2,
+    "query": "tư vấn tuyển sinh đại học cao đẳng ptit 2014 2025",
+    "relevant_chunks": [
+      {
+        "chunk_id": "00924e24cb27d09081e12b98a3c6b059",
+        "relevance_score": 1.0,
+        "reasoning": "Nội dung trả lời trực tiếp thắc mắc của thí sinh về kỳ tuyển sinh 2014."
+      },
+      {
+        "chunk_id": "0093bf014e1108452c89166a82d23d3e",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp các điểm mới và thông tin tư vấn cho lứa thí sinh dự tuyển 2025."
+      },
+      {
+        "chunk_id": "0096f4d9990aa296e69c0fb8fd47247d",
+        "relevance_score": 0.8,
+        "reasoning": "Thêm thông tin phản hồi từ bộ phận tư vấn tuyển sinh hệ chính quy năm 2014."
+      }
+    ]
+  },
+  {
+    "query_id": 3,
+    "query": "Chỉ tiêu đầu vào của chương trình CNTT chất lượng cao năm 2022 và phương thức xét tuyển các đợt 2016, 2022 có khác biệt gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "00ae22fe6657cab68b242016b16feb3c",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập trực tiếp mức chỉ tiêu tuyển sinh cho khối ngành Công nghệ thông tin định hướng chất lượng cao."
+      },
+      {
+        "chunk_id": "01339c27413b93088e9bd422062c67a9",
+        "relevance_score": 0.9,
+        "reasoning": "Liệt kê chi tiết các phương án và điều kiện xét tuyển đại học năm 2022."
+      },
+      {
+        "chunk_id": "015b75554f76691e560b8a22ca4eec43",
+        "relevance_score": 0.7,
+        "reasoning": "Mô tả đợt 1 quy trình xét tuyển năm 2016 để đối chiếu phương thức."
+      }
+    ]
+  },
+  {
+    "query_id": 4,
+    "query": "Sinh viên khóa 2010 theo học từ xa khi nào thì nhập học và lễ trao bằng diễn ra ở đâu?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "01739c35b0c95c7efd4cc48d55b3d6ec",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp danh sách trúng tuyển và mốc thời gian nhập học của hệ từ xa đợt 1-2010."
+      },
+      {
+        "chunk_id": "020d32d3409aa289753c0635d5d852ec",
+        "relevance_score": 0.9,
+        "reasoning": "Chứa thông báo chung về địa điểm và lịch trình buổi lễ tốt nghiệp của Học viện."
+      },
+      {
+        "chunk_id": "022584cb4e8ddf92a90a3d9b920f958f",
+        "relevance_score": 0.5,
+        "reasoning": "Đề cập việc cập nhật và thay đổi các đề án, hỗ trợ đối chiếu với các quy chế sinh viên."
+      }
+    ]
+  },
+  {
+    "query_id": 5,
+    "query": "Thời gian thi liên thông lên ĐH và lịch tuyển sinh văn bằng hai khối VLVH có thay đổi gì theo đề án mới nhất?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "02283e65b2ee8c253ccc83659fd1e324",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp chính xác ngày giờ thi dành cho hệ liên thông CĐ-ĐH năm 2012."
+      },
+      {
+        "chunk_id": "0264998242fef33841a8b04181885baa",
+        "relevance_score": 1.0,
+        "reasoning": "Quy định về việc lấy bằng thứ 2 dưới dạng vừa làm vừa học năm 2014."
+      },
+      {
+        "chunk_id": "027a8d6a7adb3b0e6d33c9c9b99c6ff8",
+        "relevance_score": 0.8,
+        "reasoning": "Bổ sung và hiệu chỉnh thông tin liên quan đến các đề án tuyển sinh để đối chiếu."
+      }
+    ]
+  },
+  {
+    "query_id": 6,
+    "query": "Học viện Bưu chính chỉ áp dụng một kiểu xét tuyển duy nhất vào năm nào và chính sách đối với bậc Thạc sĩ đợt 1 năm 2021, 2022 ra sao?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "02bbe5e10a27f9c9fd280f239de97532",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập đến chính sách chỉ dùng một phương thức duy nhất để lọc thí sinh đầu vào."
+      },
+      {
+        "chunk_id": "0297a59cff3a48662cc7645184a1b62e",
+        "relevance_score": 0.9,
+        "reasoning": "Quy định và thông tin tuyển đầu vào cho bậc Thạc sĩ đợt đầu của năm 2022."
+      },
+      {
+        "chunk_id": "030b1cd8c65a397f6cc300eff090fc6c",
+        "relevance_score": 0.9,
+        "reasoning": "Cung cấp yêu cầu đầu vào cho hệ cao học đợt 1 năm 2021."
+      }
+    ]
+  },
+  {
+    "query_id": 7,
+    "query": "điểm chuẩn trúng tuyển đề án 2019 2020",
+    "relevant_chunks": [
+      {
+        "chunk_id": "031dba25919fd23ce3e8b998cfeb1245",
+        "relevance_score": 1.0,
+        "reasoning": "Bản chi tiết đề án tuyển sinh năm 2020 của cơ sở phía Nam."
+      },
+      {
+        "chunk_id": "03a8ced0afffc99f6a7150662c60de71",
+        "relevance_score": 1.0,
+        "reasoning": "Văn bản công bố kết quả và điều kiện đỗ đợt 1 kỳ tuyển sinh 2019."
+      },
+      {
+        "chunk_id": "036b1b7a3c4ad1181edd0f2a7dbf15b0",
+        "relevance_score": 0.9,
+        "reasoning": "Định nghĩa và giải thích cách xác định điểm đủ điều kiện trúng tuyển."
+      }
+    ]
+  },
+  {
+    "query_id": 8,
+    "query": "Lịch phát bằng năm 2022 diễn ra vào lúc nào và quy chế nào áp dụng cho hệ cao học 2024 và tại chức cũ 2012?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "03a8ed121bce038c3170d93b2913e9fa",
+        "relevance_score": 1.0,
+        "reasoning": "Nội dung thông báo thời gian và thủ tục cấp phát bằng tốt nghiệp năm 2022."
+      },
+      {
+        "chunk_id": "03c1323ff7947d7af5b714d156c09808",
+        "relevance_score": 0.9,
+        "reasoning": "Quy chế và thông báo mở lớp Thạc sĩ đợt 2 của năm 2024."
+      },
+      {
+        "chunk_id": "03aee2f5e67d5b65a5cd9827fc0c55d2",
+        "relevance_score": 0.8,
+        "reasoning": "Chứa thông tin về quy chế hệ vừa làm vừa học (tại chức cũ) tuyển sinh năm 2012."
+      }
+    ]
+  },
+  {
+    "query_id": 9,
+    "query": "Học phí và lệ phí đăng ký thi Thạc sĩ đợt 1 năm 2018 và đợt 2 năm 2023 là bao nhiêu, và hệ VLVH năm 2024 sử dụng tổ hợp môn nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "040d316d68954e1439183d790d8d6452",
+        "relevance_score": 1.0,
+        "reasoning": "Trình bày rõ các khoản lệ phí hồ sơ và phí thi cao học đợt 2 năm 2023."
+      },
+      {
+        "chunk_id": "044dbe8a88cf2dacb4e83faa01b81b2a",
+        "relevance_score": 0.9,
+        "reasoning": "Đề cập các thông tin tuyển sinh và chi phí dự kiến cho bậc Thạc sĩ đầu năm 2018."
+      },
+      {
+        "chunk_id": "03ce132257a4929b58027f4dded5162f",
+        "relevance_score": 0.8,
+        "reasoning": "Chỉ định danh sách tổ hợp môn được dùng để xét hồ sơ hệ VLVH 2024."
+      }
+    ]
+  },
+  {
+    "query_id": 10,
+    "query": "Đối tượng nào được miễn giảm chi phí học tập năm 2025-2026, và ngành Marketing yêu cầu môn gì để vào học?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "04617a12cf45449741d606994e9894ed",
+        "relevance_score": 1.0,
+        "reasoning": "Chứa danh sách đối tượng sinh viên được hỗ trợ chi phí học tập và miễn giảm học phí."
+      },
+      {
+        "chunk_id": "0462e678a3bb6dc7f5f85bf655ee4e80",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các tổ hợp xét tuyển bắt buộc nếu muốn học ngành Marketing."
+      },
+      {
+        "chunk_id": "0453d77fc781825ac2aaae8e56d24fb9",
+        "relevance_score": 0.5,
+        "reasoning": "Thông báo phụ về đợt 2 thi thạc sĩ 2013, đóng vai trò nền cảnh."
+      }
+    ]
+  },
+  {
+    "query_id": 11,
+    "query": "Người học nghiên cứu sinh năm 2024 được hưởng chính sách ưu tiên ra sao và có phải tuân theo quy chế sinh viên hiện hành không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "04e82e62a17b6340383c9325ad6e2e91",
+        "relevance_score": 1.0,
+        "reasoning": "Chi tiết quy trình tiếp nhận hồ sơ nghiên cứu sinh Tiến sĩ đợt 1 năm 2024."
+      },
+      {
+        "chunk_id": "046b41540b0efad5ccb0591c7d9340e2",
+        "relevance_score": 0.9,
+        "reasoning": "Mô tả điểm cộng ưu tiên và chính sách dành cho người dự tuyển hệ sau đại học."
+      },
+      {
+        "chunk_id": "04d17295cc4e41383fd25d6ef1d950d8",
+        "relevance_score": 0.8,
+        "reasoning": "Văn bản gốc chứa quy chế quyền và nghĩa vụ của sinh viên đang theo học."
+      }
+    ]
+  },
+  {
+    "query_id": 12,
+    "query": "Số tiền cần nộp khi nộp hồ sơ thi Tiến sĩ đợt 2 năm 2024 và làm sao để nhận học bổng cho người có điểm số cao đợt 1 2016?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0504f3c6297e523b82208d263db53eaf",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp khung lệ phí thi và các khoản nộp khi ứng tuyển Tiến sĩ cuối năm 2024."
+      },
+      {
+        "chunk_id": "0507677b889298f84ea9b453afee5ba8",
+        "relevance_score": 1.0,
+        "reasoning": "Giải thích các mức học bổng khuyến khích cho cá nhân có học lực xuất sắc."
+      },
+      {
+        "chunk_id": "0522e5eaf6cb353dc1af7f3194d4e9b3",
+        "relevance_score": 0.7,
+        "reasoning": "Quy chế đợt 1 năm 2016 giúp xác định mốc thời gian đối chiếu kết quả."
+      }
+    ]
+  },
+  {
+    "query_id": 13,
+    "query": "Tôi muốn biết ai đã đỗ hệ từ xa năm 2012 và quy định ứng tuyển hệ liên thông đợt năm 2015, cao học năm 2016.",
+    "relevant_chunks": [
+      {
+        "chunk_id": "05b6ba402b372fbc33dabeff3e4879e5",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp kết quả danh sách thí sinh chính thức trúng hệ từ xa năm 2012."
+      },
+      {
+        "chunk_id": "057c8070128a1d6e5537fbfdf653845b",
+        "relevance_score": 0.9,
+        "reasoning": "Thông tin về đợt nhận hồ sơ lên đại học chính quy từ cao đẳng năm 2015."
+      },
+      {
+        "chunk_id": "0594729d4088417728a3cae467f43575",
+        "relevance_score": 0.8,
+        "reasoning": "Thông báo mở lớp cao học Thạc sĩ lần 2 của năm 2016."
+      }
+    ]
+  },
+  {
+    "query_id": 14,
+    "query": "Lịch thi lại môn nợ hệ Liên thông khoá 2011 và điểm chuẩn xét tốt nghiệp THPT vào đại học đợt 1 2020?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "05bd94e66308579c80831ddba6693bf0",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp mốc thời gian thi trả nợ môn dành cho sinh viên liên thông khóa cũ (2011)."
+      },
+      {
+        "chunk_id": "05fbc77db504e4b05915d5cf7d97af13",
+        "relevance_score": 1.0,
+        "reasoning": "Quy định đánh giá điểm trúng tuyển năm 2020 dựa trên bài thi cấp 3 quốc gia."
+      },
+      {
+        "chunk_id": "05bcc851195716fcc76c349866df016f",
+        "relevance_score": 0.6,
+        "reasoning": "Bổ sung thời gian thi Thạc sĩ đợt 2 năm 2014."
+      }
+    ]
+  },
+  {
+    "query_id": 15,
+    "query": "Các khối ngành đào tạo nào mở đợt nhập học hệ thạc sĩ cuối 2019 và người học CĐ lên ĐH VLVH 2013 được chọn chuyên ngành nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "061e4650aa4b1392a4d83bb62ca35813",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê tất cả các mã chuyên ngành được mở đào tạo ở cấp bậc đại học."
+      },
+      {
+        "chunk_id": "060037394f8c7edda00d7cac336340b0",
+        "relevance_score": 0.9,
+        "reasoning": "Chỉ dẫn quy trình làm thủ tục nhập học sau khi trúng tuyển cao học đợt 2 năm 2019."
+      },
+      {
+        "chunk_id": "064660edd544b2def242f53a4bba3c3a",
+        "relevance_score": 0.9,
+        "reasoning": "Hướng dẫn đăng ký học liên thông hệ vừa học vừa làm năm 2013."
+      }
+    ]
+  },
+  {
+    "query_id": 16,
+    "query": "ptit hcm đề án 2024 2025 các đợt 1 2019",
+    "relevant_chunks": [
+      {
+        "chunk_id": "06609a07eadbcd16366fed87186248f0",
+        "relevance_score": 1.0,
+        "reasoning": "Tài liệu chính thức về đề án cho khóa năm 2024."
+      },
+      {
+        "chunk_id": "064c5b3450f2603f438579c08c7dcd46",
+        "relevance_score": 1.0,
+        "reasoning": "Cập nhật các phương án đánh giá năng lực ứng viên cho năm 2025."
+      },
+      {
+        "chunk_id": "065199b08649c64263960aec546aac3d",
+        "relevance_score": 0.8,
+        "reasoning": "Thông tin xét đợt 1 lịch sử năm 2019 để so sánh cơ chế."
+      }
+    ]
+  },
+  {
+    "query_id": 17,
+    "query": "Yêu cầu hồ sơ để trở thành Master Trainer tại PTIT là gì và nếu muốn học ngành Công nghệ IoT thì tìm thông tin ở đề án 2019 có không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "06ca32ec694a6e064906eaba974e2b18",
+        "relevance_score": 1.0,
+        "reasoning": "Chứa mô tả công việc, tiêu chí ứng tuyển vị trí Master Trainer."
+      },
+      {
+        "chunk_id": "06c0676efd2faa029201820405af83aa",
+        "relevance_score": 1.0,
+        "reasoning": "Giới thiệu tổng quan về mã ngành và chương trình học Công nghệ Internet vạn vật (IoT)."
+      },
+      {
+        "chunk_id": "06db0246a09056f1b13614cc76c6edea",
+        "relevance_score": 0.8,
+        "reasoning": "Đề án năm 2019 cho thấy các ngành được phép mở thời điểm đó."
+      }
+    ]
+  },
+  {
+    "query_id": 18,
+    "query": "Để nộp nguyện vọng năm 2022 và học hệ VLVH năm 2013, thí sinh cần hoàn tất những bước đăng ký nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "06e438adcce6c49229c14e1cd8f74e22",
+        "relevance_score": 1.0,
+        "reasoning": "Trình bày cách thức điền biểu mẫu trực tuyến để đăng ký vào trường năm 2022."
+      },
+      {
+        "chunk_id": "06fba40e7a8ff32540418f9c616fa3f8",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp điều kiện và hồ sơ cần chuẩn bị nếu chọn hình thức học buổi tối/cuối tuần năm 2013."
+      },
+      {
+        "chunk_id": "0706ec9954c37dfe55a495a9c498b915",
+        "relevance_score": 0.5,
+        "reasoning": "Mô tả định hướng và thành tựu chung của học viện giai đoạn 2020-2025."
+      }
+    ]
+  },
+  {
+    "query_id": 19,
+    "query": "Học viện tuyển bao nhiêu nghiên cứu sinh năm 2013 và sinh viên khoa Công nghệ thông tin khóa 2020 học những gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0728ee7522f8c715eb576f2c0e419a66",
+        "relevance_score": 1.0,
+        "reasoning": "Thông tin số lượng và điều kiện để làm luận án Tiến sĩ năm 2013."
+      },
+      {
+        "chunk_id": "07282dc1214c2c16e450524e3a62538c",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả chuẩn đầu ra và các môn học thuộc khoa CNTT."
+      },
+      {
+        "chunk_id": "0782b4b04304cfe511c9aae9f45584e1",
+        "relevance_score": 0.9,
+        "reasoning": "Chi tiết quy chế mở hồ sơ dành cho bậc cử nhân năm 2020."
+      }
+    ]
+  },
+  {
+    "query_id": 20,
+    "query": "lịch học bổ sung kiến thức liên thông 2010 thi tiến sĩ đợt 2 2024",
+    "relevant_chunks": [
+      {
+        "chunk_id": "07867264c80aa018d9030abd7141cd73",
+        "relevance_score": 1.0,
+        "reasoning": "Bản điều chỉnh thời khóa biểu các lớp bổ sung tín chỉ hệ CĐ-ĐH đợt 2/2010."
+      },
+      {
+        "chunk_id": "07c6fbef29a7a0631d2869f26a35f5f1",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo mở lớp và hồ sơ ứng tuyển chương trình Tiến sĩ nửa cuối năm 2024."
+      },
+      {
+        "chunk_id": "07b9ec9ecb52e1df026bb5c058df1030",
+        "relevance_score": 0.6,
+        "reasoning": "Một số thay đổi luật tuyển sinh 2014 không quá liên quan nhưng bổ trợ quy chế."
+      }
+    ]
+  },
+  {
+    "query_id": 21,
+    "query": "Cho biết quy chế mới năm 2024 áp dụng cho bậc đại học và đợt thi cao học thứ 2 của năm 2015 yêu cầu bằng cấp gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "07c7564a7b2debff2a71aa0ce4f240f5",
+        "relevance_score": 1.0,
+        "reasoning": "Chi tiết các cách thức ứng tuyển sẽ được dùng trong năm 2024."
+      },
+      {
+        "chunk_id": "07d518c94570073916a3801a7a451b8d",
+        "relevance_score": 1.0,
+        "reasoning": "Văn bản gốc thông báo tổ chức tuyển đầu vào hệ Thạc sĩ đợt 2-2015."
+      },
+      {
+        "chunk_id": "07d927f73f8817b43ab0fea7240ee15b",
+        "relevance_score": 0.9,
+        "reasoning": "Các sửa đổi bổ sung của quy chế Thạc sĩ cuối năm 2015."
+      }
+    ]
+  },
+  {
+    "query_id": 22,
+    "query": "Quy trình xác nhận nhập học kết hợp (năm 2021) có phức tạp hơn việc nộp hồ sơ liên thông từ cao đẳng năm 2013 không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "080188d543d010b2b10a5186868184e5",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp các bước xác nhận qua mạng hoặc bưu điện đối với hình thức xét tuyển kết hợp 2021."
+      },
+      {
+        "chunk_id": "07dadac30858b37ba86180f0bb6f9724",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê quy trình và giấy tờ để đăng ký học liên thông năm 2013."
+      },
+      {
+        "chunk_id": "08052e70a4dd19e508839a8f28e94685",
+        "relevance_score": 0.5,
+        "reasoning": "Tư vấn chung năm 2014."
+      }
+    ]
+  },
+  {
+    "query_id": 23,
+    "query": "kết quả điểm thi THPT 2025 xem ở đâu giải thưởng ACM/ICPC 2013",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0842ce5c314d95f3f0e81f86d36bb4b9",
+        "relevance_score": 1.0,
+        "reasoning": "Hướng dẫn các đường link và cú pháp để xem điểm thi tốt nghiệp năm 2025."
+      },
+      {
+        "chunk_id": "08181d38f45c9d2508dd3bda50a39a73",
+        "relevance_score": 1.0,
+        "reasoning": "Tài liệu về kỳ thi lập trình viên quốc tế tổ chức tại học viện năm 2013."
+      },
+      {
+        "chunk_id": "083d383b045c875dc4c365ee3af1a8de",
+        "relevance_score": 0.6,
+        "reasoning": "Đề cập đến nguồn dữ liệu phục vụ xét tuyển năm 2019."
+      }
+    ]
+  },
+  {
+    "query_id": 24,
+    "query": "Sinh viên khóa D25 khi mới vào trường cần lưu ý quy định nhập học nào và có khác gì so với yêu cầu đầu vào cao học 2020?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0885de1b8fffe6973db523520924506e",
+        "relevance_score": 1.0,
+        "reasoning": "Cẩm nang hướng dẫn đầy đủ từ A-Z cho lứa tân sinh viên năm D25."
+      },
+      {
+        "chunk_id": "08aface7f99950e2735496add815251a",
+        "relevance_score": 1.0,
+        "reasoning": "Công bố các điều kiện cần để được tham dự kỳ thi Thạc sĩ đầu năm 2020."
+      },
+      {
+        "chunk_id": "08841b74d5761a1ed982bbe11b4e9593",
+        "relevance_score": 0.7,
+        "reasoning": "Một số câu trả lời từ phòng công tác sinh viên năm 2014, có thể tham chiếu."
+      }
+    ]
+  },
+  {
+    "query_id": 25,
+    "query": "Ứng viên thạc sĩ có bằng giỏi có được cộng điểm ưu tiên đợt 1 năm 2022 và đợt 2 năm 2023 không, và hệ E-learning năm 2022 nhận hồ sơ kiểu gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "08c0a603231e9cd1ef4ed4d064d95c85",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê mức điểm cộng và chính sách ưu đãi hồ sơ cho thạc sĩ đợt 1/2022."
+      },
+      {
+        "chunk_id": "0907a62c2b10c27490480c64834de081",
+        "relevance_score": 0.9,
+        "reasoning": "Nêu tiêu chuẩn về bằng cấp đại học đối với đầu vào cao học đợt 2/2023."
+      },
+      {
+        "chunk_id": "09844acab1b785af921fcac324e82c72",
+        "relevance_score": 1.0,
+        "reasoning": "Giải thích các hình thức xét tuyển chương trình đào tạo từ xa (online) trong năm 2022."
+      }
+    ]
+  },
+  {
+    "query_id": 26,
+    "query": "Thủ tục lên ký túc xá cho tân sinh viên có xét thêm yếu tố phòng dịch Covid-19 không và hướng dẫn cho năm 2016 khác gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "099c7a03338d093b274e3866eee45176",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp quy chế riêng đảm bảo an toàn y tế khi đăng ký ở KTX trong mùa dịch."
+      },
+      {
+        "chunk_id": "0992b4d296a8ea5d76b8040746328ae4",
+        "relevance_score": 1.0,
+        "reasoning": "Quy trình thủ tục nhập học thông thường năm 2016 để thí sinh đối chiếu."
+      },
+      {
+        "chunk_id": "09ad44d6f1ef4e4f27a703412fdf43cf",
+        "relevance_score": 0.6,
+        "reasoning": "Tài liệu phụ liên quan đến thông báo nhập học."
+      }
+    ]
+  },
+  {
+    "query_id": 27,
+    "query": "Điều kiện tiếng Anh để học thạc sĩ 2024 và mức điểm sàn 2016 cho đợt 2 cao học là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "09b573df769d0857065e6e33870d27db",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo quy định bài thi đánh giá chuẩn đầu vào năng lực ngoại ngữ kỳ 1/2024."
+      },
+      {
+        "chunk_id": "0a083589fb75fc4c8b77f8a615c3f317",
+        "relevance_score": 1.0,
+        "reasoning": "Điểm chuẩn đỗ chính thức cho cao học đợt cuối năm 2016."
+      },
+      {
+        "chunk_id": "09c84517a1c2e5bc5401a35db3e85f5d",
+        "relevance_score": 0.7,
+        "reasoning": "Chứa đề án chung tuyển sinh 2021 làm căn cứ tham khảo cách tính điểm."
+      }
+    ]
+  },
+  {
+    "query_id": 28,
+    "query": "thời gian nhận hồ sơ xét tuyển bổ sung 2012 và lịch tựu trường khóa 2018",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0a2700789fa76083646f25acfdb3fc7b",
+        "relevance_score": 1.0,
+        "reasoning": "Cập nhật thay đổi về hạn chót nhận giấy báo điểm nguyện vọng 2 năm 2012."
+      },
+      {
+        "chunk_id": "0a2126c145b6b867ebcd0c713ea6b9fe",
+        "relevance_score": 1.0,
+        "reasoning": "Kế hoạch thời gian tiếp đón tân sinh viên nhập học năm 2018."
+      },
+      {
+        "chunk_id": "0a775e9a4de51d38de08b7067be00bc8",
+        "relevance_score": 0.6,
+        "reasoning": "Thông tin phụ về lễ tốt nghiệp."
+      }
+    ]
+  },
+  {
+    "query_id": 29,
+    "query": "Năm 2024, thời hạn để chốt phương án xét tuyển bằng Ielts hay đánh giá năng lực có bị dời lại không và học phí 2021 thay đổi ra sao?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0a9940da65cb84a6cc2ae32a8eb0690b",
+        "relevance_score": 1.0,
+        "reasoning": "Công bố việc điều chỉnh deadline nộp nguyện vọng theo các diện tuyển sớm năm 2024."
+      },
+      {
+        "chunk_id": "0ad06e95fe52136b6a895889c49fb40e",
+        "relevance_score": 1.0,
+        "reasoning": "Văn bản ban hành mức biểu phí đào tạo và phụ thu áp dụng cho khóa 2021-2022."
+      },
+      {
+        "chunk_id": "0aa9426998facf92342a6ea4f34f312d",
+        "relevance_score": 0.8,
+        "reasoning": "Giải thích thêm về chính sách dành riêng cho lớp Kỹ sư CNTT CLC."
+      }
+    ]
+  },
+  {
+    "query_id": 30,
+    "query": "Lợi ích của việc nộp hồ sơ xét tuyển sớm và quy chế 2013 sửa đổi điểm nào so với đợt I 2016?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0ad535b6fb4c5d5456ed67c9026c1b57",
+        "relevance_score": 1.0,
+        "reasoning": "Giải đáp lý do vì sao thí sinh nên nộp hồ sơ bằng phương thức sớm để tăng cơ hội."
+      },
+      {
+        "chunk_id": "0ad140d02f31d2458f071714cc06c9db",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp nội dung văn bản sửa đổi các quy chế thi đại học năm 2013."
+      },
+      {
+        "chunk_id": "0aea2988f7b9f3ff0a73e53ac431f35a",
+        "relevance_score": 0.8,
+        "reasoning": "Quy chế thi đợt I năm 2016 để thấy sự thay đổi chính sách."
+      }
+    ]
+  },
+  {
+    "query_id": 31,
+    "query": "Tôi muốn biết sinh viên học từ xa khóa 2010 bao giờ bị gọi về học và thạc sĩ đợt 2 năm 2022 yêu cầu gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0aea442f7992702ed8727d0dc90dfb37",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo lệnh triệu tập học viên hệ từ xa đợt 2010-2013 về cơ sở."
+      },
+      {
+        "chunk_id": "0af9fc1208077da23c14a350ca130b6c",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các yêu cầu nhập học chương trình thạc sĩ cuối năm 2022."
+      },
+      {
+        "chunk_id": "0af3cad5c1bc253c98131781b9403eec",
+        "relevance_score": 0.7,
+        "reasoning": "Yêu cầu cho thạc sĩ đợt 1 năm 2022 có sự tương đồng."
+      }
+    ]
+  },
+  {
+    "query_id": 32,
+    "query": "ngưỡng điểm trúng tuyển phương thức kết hợp 2020 hoạt động tư vấn 2023",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0afb24638e08fbb93eeb5d1efa77a3e2",
+        "relevance_score": 1.0,
+        "reasoning": "Công bố điểm sàn và điều kiện đậu cho thí sinh dùng phương án kết hợp năm 2020."
+      },
+      {
+        "chunk_id": "0b046905bcbf90a464daf3f12eaeb25e",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập chuỗi sự kiện tư vấn tuyển sinh tại các tỉnh thành cho lứa 2023."
+      },
+      {
+        "chunk_id": "0b06a947740a756151b356c509caa39a",
+        "relevance_score": 0.9,
+        "reasoning": "Phiên bản thông báo ngưỡng điểm sàn kết hợp tương tự năm 2020."
+      }
+    ]
+  },
+  {
+    "query_id": 33,
+    "query": "Minh chứng đối tượng chính sách để được ưu tiên cần chuẩn bị những bản sao nào và hệ đại học online năm 2022 còn tuyển không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0b1d39c545225cfb119a26f8a11552c5",
+        "relevance_score": 1.0,
+        "reasoning": "Hướng dẫn chi tiết bộ hồ sơ minh chứng (sổ hộ khẩu, giấy chứng nhận) để cộng điểm."
+      },
+      {
+        "chunk_id": "0b0e918db7cbf21b56e15016824a7545",
+        "relevance_score": 1.0,
+        "reasoning": "Chứa đề án nhận hồ sơ hệ cử nhân qua mạng (E-learning/Từ xa) năm 2022."
+      },
+      {
+        "chunk_id": "0b62b416635c6c8c8df76e962afe6a38",
+        "relevance_score": 0.5,
+        "reasoning": "Thông báo phụ về tốt nghiệp."
+      }
+    ]
+  },
+  {
+    "query_id": 34,
+    "query": "Năm 2023 thí sinh đăng ký nguyện vọng đại học trên hệ thống như thế nào cho hiệu quả so với đợt xét tuyển thi THPT đợt 1 năm 2020?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0b9207fb3219e84a9d8cb9910d2bf66c",
+        "relevance_score": 1.0,
+        "reasoning": "Chia sẻ các mẹo và cách thao tác chọn trường hiệu quả trên cổng thông tin năm 2023."
+      },
+      {
+        "chunk_id": "0b66561b27e94cc9f48b492c92c81e2b",
+        "relevance_score": 1.0,
+        "reasoning": "Quy chế dùng điểm THPT quốc gia để trúng tuyển đợt 1 khóa 2020."
+      },
+      {
+        "chunk_id": "0b84ecfe0d6076b15e592d532c005e41",
+        "relevance_score": 0.6,
+        "reasoning": "Quy chế chung về cách thức tuyển sinh năm 2013."
+      }
+    ]
+  },
+  {
+    "query_id": 35,
+    "query": "nhận giấy báo thi liên thông 2011 thạc sĩ đợt 1 2018",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0bc213ab2c41f5da094bf6a967e23970",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo lịch trả thẻ dự thi cho thí sinh thi liên thông cuối năm 2011."
+      },
+      {
+        "chunk_id": "0bc117971212ba72bb274419a8f0fffe",
+        "relevance_score": 1.0,
+        "reasoning": "Nội dung tuyển sinh và kế hoạch đợt thi đầu tiên năm 2018 bậc cao học."
+      },
+      {
+        "chunk_id": "0be108994a8f0982f441f7bcc138f087",
+        "relevance_score": 0.8,
+        "reasoning": "Thông báo phụ trợ về việc làm thủ tục sau khi đậu liên thông 2010."
+      }
+    ]
+  },
+  {
+    "query_id": 36,
+    "query": "Kỹ sư tự động hóa có thể ứng tuyển vào các vị trí nào tại học viện và môn thi cao học đầu vào 2020 có chuyên ngành này không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0c380ebe531ea190740046a4c653c3e4",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả nghề nghiệp và cơ hội việc làm của ngành Kỹ thuật điều khiển và tự động hóa."
+      },
+      {
+        "chunk_id": "0c70c8922ee630ef6b15a460ad75dbbc",
+        "relevance_score": 1.0,
+        "reasoning": "Bảng mô tả yêu cầu vị trí nhân sự mà học viện đang tìm kiếm ứng viên."
+      },
+      {
+        "chunk_id": "0c13748f3858aa71bb4cd5ac095c29be",
+        "relevance_score": 0.9,
+        "reasoning": "Cung cấp danh mục các ngành học thạc sĩ mở đợt 1 năm 2020."
+      }
+    ]
+  },
+  {
+    "query_id": 37,
+    "query": "Đề án tuyển sinh 2023, 2024 có điểm mới nổi bật nào và giấy chứng nhận học bổ sung năm 2013 lấy ở đâu?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0c91d452b1acf54cc14cbba78e2f16c0",
+        "relevance_score": 1.0,
+        "reasoning": "Tóm tắt các quy định mới mẻ và sự thay đổi trong cách xét tuyển sinh viên khóa 2024."
+      },
+      {
+        "chunk_id": "0c95db1fdb2664849114f7cd28cff8ab",
+        "relevance_score": 1.0,
+        "reasoning": "Văn bản chính thức khởi động kỳ tuyển sinh đại học hệ chính quy 2023."
+      },
+      {
+        "chunk_id": "0c89920df72cfa1fa9b83c21c5026282",
+        "relevance_score": 0.8,
+        "reasoning": "Hướng dẫn thí sinh tới nhận chứng nhận hoàn tất môn học bổ sung năm 2013."
+      }
+    ]
+  },
+  {
+    "query_id": 38,
+    "query": "Giải bóng đá Đoàn thanh niên khoa QTKD có ảnh hưởng đến chỉ tiêu tuyển sinh 2015 và đợt thạc sĩ 2024 không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0cade7d8a1b76c0a02e7b1f6a154e8bd",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp thể lệ và thông báo về giải giao hữu thể thao sinh viên."
+      },
+      {
+        "chunk_id": "0ca45f9ac0025a44b9647b2671343851",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê bảng chỉ tiêu tối đa cho các mã ngành đại học năm 2015."
+      },
+      {
+        "chunk_id": "0cb90766efc56eefe12898313aa54ce9",
+        "relevance_score": 0.8,
+        "reasoning": "Bảng phân bổ chỉ tiêu và lệ phí cho người học thạc sĩ 2024."
+      }
+    ]
+  },
+  {
+    "query_id": 39,
+    "query": "Muốn lấy bằng cử nhân trực tuyến (từ xa) năm 2025 thì theo dõi thông tin ở văn bản nào và khác gì với tuyển sinh thạc sĩ 2016?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0cd868cb71dfd1c622278f804fe1d0dd",
+        "relevance_score": 1.0,
+        "reasoning": "Nội dung tuyển sinh riêng biệt cho hệ đào tạo từ xa dự kiến năm 2025."
+      },
+      {
+        "chunk_id": "0cdc7df33190a18b5f940ee298673136",
+        "relevance_score": 0.9,
+        "reasoning": "Văn bản quy định khung quy chế chung để vào đại học."
+      },
+      {
+        "chunk_id": "0ce2695831936057bca9501e3daf492d",
+        "relevance_score": 0.8,
+        "reasoning": "Quy chế cao học đợt 1 năm 2016 làm tham chiếu so sánh hệ đào tạo."
+      }
+    ]
+  },
+  {
+    "query_id": 40,
+    "query": "kế hoạch trả giấy báo nv bổ sung 2013 kinh phí khóa 2022",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0cf2552ecd06fd3427fa63bfbfee4253",
+        "relevance_score": 1.0,
+        "reasoning": "Quy định về thời điểm nhà trường phát thư phản hồi kết quả đợt 2 bổ sung năm 2013."
+      },
+      {
+        "chunk_id": "0cf0ce428a5f02b173050003414249d4",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo yêu cầu đóng các khoản thu đầu năm đối với K22."
+      },
+      {
+        "chunk_id": "0d2ab40200018a3a2c9d63843b26b141",
+        "relevance_score": 0.7,
+        "reasoning": "Giới thiệu thông tin mùa tuyển sinh 2012."
+      }
+    ]
+  },
+  {
+    "query_id": 41,
+    "query": "Sinh viên thi đại học năm 2022 được phân bổ tổng chỉ tiêu bao nhiêu và ai đủ điều kiện nhận học bổng VNG?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0d4057c64a2a44324850241b2918051a",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp con số giới hạn số lượng sinh viên đầu vào theo từng khoa năm 2022."
+      },
+      {
+        "chunk_id": "0d320744294a07d1f5f18224c2e3f5ef",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả điều kiện tham gia và quy trình cấp xét học bổng tài trợ từ tập đoàn VNG."
+      },
+      {
+        "chunk_id": "0d3b7e3ecf3644762d7c0ba25928f166",
+        "relevance_score": 0.6,
+        "reasoning": "Bổ sung chính sách tuyển thẳng của kỳ tuyển 2013."
+      }
+    ]
+  },
+  {
+    "query_id": 42,
+    "query": "Nếu muốn trúng tuyển thẳng hoặc xin cấp học bổng ĐH Middlesex tại London, sinh viên khóa 2014, 2024 cần đáp ứng chứng chỉ gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0d882ece391e402c0177ba95afda3cae",
+        "relevance_score": 1.0,
+        "reasoning": "Trình bày cách thức đăng ký chương trình học bổng 100% học phí của ĐH Middlesex."
+      },
+      {
+        "chunk_id": "0d882ca452a422505d1cc704581d5761",
+        "relevance_score": 1.0,
+        "reasoning": "Danh sách các cá nhân có hồ sơ đẹp được tuyển thẳng vào PTIT năm 2014."
+      },
+      {
+        "chunk_id": "0d62e514005efc9c0c5791f57544eaed",
+        "relevance_score": 0.9,
+        "reasoning": "Yêu cầu bằng cấp và chứng chỉ quốc tế xét tuyển của hệ đại học 2024."
+      }
+    ]
+  },
+  {
+    "query_id": 43,
+    "query": "Thủ tục lên lớp buổi đầu cho tân học viên cao học năm 2019 và cách đăng ký hệ VLVH 2025 có tuân theo đề án 2023 không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0dcf481cd889e3deee51e0c73e3067b7",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo lịch làm việc để thu hồ sơ trúng tuyển Thạc sĩ 2019."
+      },
+      {
+        "chunk_id": "0dd2ba3c9c777e6e378ecb8d44c83896",
+        "relevance_score": 1.0,
+        "reasoning": "Công bố các điều kiện cần để theo học hệ vừa làm vừa học khóa 2025."
+      },
+      {
+        "chunk_id": "0ddebeac316dcde21dfc6b96e88c5752",
+        "relevance_score": 0.9,
+        "reasoning": "Các phương pháp được chấp nhận để xét đại học theo đề án 2023."
+      }
+    ]
+  },
+  {
+    "query_id": 44,
+    "query": "Chương trình thạc sĩ 2018 và hệ cao đẳng 2013 khác với đề án ĐH 2020 ở số lượng môn thi như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0e0f0432ac21b704987bc49afcd10efa",
+        "relevance_score": 1.0,
+        "reasoning": "Công bố lịch nộp chứng chỉ và đăng ký ôn môn thạc sĩ đợt 2/2018."
+      },
+      {
+        "chunk_id": "0df2d5abf32e7b5efbec52ad54aa5a97",
+        "relevance_score": 1.0,
+        "reasoning": "Trình bày cụ thể cách tính điểm 3 môn thi để vào CĐ năm 2013."
+      },
+      {
+        "chunk_id": "0e232ebcc97781340ab7a7b9831528ce",
+        "relevance_score": 1.0,
+        "reasoning": "Toàn văn đề án chi tiết hướng dẫn tính điểm xét tuyển đại học 2020."
+      }
+    ]
+  },
+  {
+    "query_id": 45,
+    "query": "danh sách thạc sĩ trúng tuyển 2012 kết quả xét thẳng utxt đại học 2025 2021",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0e4e5ed3e39216b4986c2993a13baaf2",
+        "relevance_score": 1.0,
+        "reasoning": "Văn bản xác nhận điểm thi của nhóm được ưu tiên tuyển thẳng năm 2025."
+      },
+      {
+        "chunk_id": "0e48e8a8c24ae5b2b07de5193852429b",
+        "relevance_score": 1.0,
+        "reasoning": "Quyết định công nhận các ứng viên đỗ kỳ thi sau đại học năm 2012."
+      },
+      {
+        "chunk_id": "0e340c19f17f986623f2602d64f0b492",
+        "relevance_score": 0.8,
+        "reasoning": "Thông báo mở cổng hồ sơ cho đợt thi đại học năm 2021."
+      }
+    ]
+  },
+  {
+    "query_id": 46,
+    "query": "Tổng quy mô sinh viên dự kiến theo đề án 2017 là bao nhiêu và khác biệt so với mức phân bổ năm 2013, 2023 thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0eca068726448fdfde5ac4428d4ecd06",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp bảng số liệu về quy mô đào tạo từng ngành học giai đoạn 2017."
+      },
+      {
+        "chunk_id": "0ec26dba7d84fa787a3d077d6b60d81f",
+        "relevance_score": 1.0,
+        "reasoning": "Chỉ tiêu và mục tiêu tuyển sinh chính thức dành cho lứa sinh viên 2023."
+      },
+      {
+        "chunk_id": "0ea40a7f8cac67da77b3e52366b0e53f",
+        "relevance_score": 0.9,
+        "reasoning": "Cung cấp thông tin lịch sử về mùa tuyển sinh năm 2013 để đối chiếu quy mô."
+      }
+    ]
+  },
+  {
+    "query_id": 47,
+    "query": "Tiêu chí để nộp đơn làm nghiên cứu sinh tiến sĩ năm 2011 có phải chuẩn bị hồ sơ như sinh viên trúng tuyển năm 2016, 2023 không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0ecbf2e057ec036f1083b6dadbf46114",
+        "relevance_score": 1.0,
+        "reasoning": "Yêu cầu chi tiết giấy tờ cần thiết để báo cáo đề tài Tiến sĩ năm 2011."
+      },
+      {
+        "chunk_id": "0f218aebbc39a2f4578fe67cc03f11d1",
+        "relevance_score": 1.0,
+        "reasoning": "Các giấy tờ hành chính cần có để lập hồ sơ tân sinh viên năm 2016."
+      },
+      {
+        "chunk_id": "0f1766c0d152f502bde27c36535502c5",
+        "relevance_score": 0.8,
+        "reasoning": "Thông báo về điểm và quy trình trúng tuyển năm 2023."
+      }
+    ]
+  },
+  {
+    "query_id": 48,
+    "query": "buổi trực tuyến giải đáp nguyện vọng 2014 điểm chuẩn 2012 học bổng bán phần",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0f66ee78b485fad19a5f0c30c2c6c88c",
+        "relevance_score": 1.0,
+        "reasoning": "Lịch tổ chức giao lưu tư vấn online để giải đáp về việc đổi nguyện vọng 2014."
+      },
+      {
+        "chunk_id": "0f4eae50d0a773ffb9399cd55f5091a3",
+        "relevance_score": 1.0,
+        "reasoning": "Kết quả mức điểm sàn đầu vào cho khối CĐ và ĐH năm học 2012-2013."
+      },
+      {
+        "chunk_id": "0f4b999a0ef6edeac060cb628e3cb7ce",
+        "relevance_score": 0.9,
+        "reasoning": "Tài liệu FAQs giải thích trường hợp nào được trao học bổng hỗ trợ bán phần."
+      }
+    ]
+  },
+  {
+    "query_id": 49,
+    "query": "Muốn học bằng liên thông cao đẳng 2013 thì có thể hỏi bộ phận tư vấn nguyện vọng 2021 không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "1018eadd9703552a6ca9dfe7f5d4f0fc",
+        "relevance_score": 1.0,
+        "reasoning": "Thông tin gốc hướng dẫn cách thức xét lên bậc đại học năm 2013."
+      },
+      {
+        "chunk_id": "104b979a4689aa48f0dcc5dd7dcc7912",
+        "relevance_score": 1.0,
+        "reasoning": "Chuyên mục trả lời phản hồi cho ứng viên có nhu cầu nộp thêm NV bổ sung."
+      },
+      {
+        "chunk_id": "10577c641646bbac0b37a5ecd03e0162",
+        "relevance_score": 0.8,
+        "reasoning": "Chứa cách liên hệ ban tuyển sinh để thắc mắc các khóa mới năm 2021."
+      }
+    ]
+  },
+  {
+    "query_id": 50,
+    "query": "Hạn nộp đơn đề nghị giảm học phí cho kỳ 1 2025-2026 là ngày nào và quy trình nhận bằng gốc khác gì với xác nhận nhập học?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "10619879b5fb2d2a52d62c704a2be61f",
+        "relevance_score": 1.0,
+        "reasoning": "Văn bản hướng dẫn nộp các giấy tờ xin tài trợ hoặc miễn học phí cho năm học mới."
+      },
+      {
+        "chunk_id": "1093d84c9964e25b800f06aa5a0a1b41",
+        "relevance_score": 1.0,
+        "reasoning": "Quy định về cách lên trường nhận bằng tốt nghiệp khi ra trường."
+      },
+      {
+        "chunk_id": "1094e82cc5a6b19d5606c86332fe6e27",
+        "relevance_score": 0.9,
+        "reasoning": "Quy chế xử lý nếu thí sinh vắng mặt không hoàn tất thủ tục chốt nhập học đại học."
+      }
+    ]
+  },
+  {
+    "query_id": 51,
+    "query": "Học viện từng tổ chức những hội nghị quốc tế nào của IEEE vào năm 2018 và vị thế của trường trong lĩnh vực ICT được khẳng định ra sao?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "01726360972a748a50a90ff5c2b22206",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê trực tiếp 3 hội nghị IEEE năm 2018: SigTelCom, ATC và KSE."
+      },
+      {
+        "chunk_id": "0a08e678e79d2eaa2cba65de95b10436",
+        "relevance_score": 0.7,
+        "reasoning": "Khẳng định vị thế trường đại học tốp đầu về đào tạo và nghiên cứu đa ngành."
+      }
+    ]
+  },
+  {
+    "query_id": 52,
+    "query": "Thí sinh muốn ứng tuyển vị trí giảng viên ngành An toàn thông tin năm 2020 cần đáp ứng tiêu chuẩn ngoại ngữ gì và nộp hồ sơ về địa chỉ nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "20beee1582670d456d2887be91cb41ce",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận vị trí tuyển dụng giảng viên An toàn thông tin đợt 4 năm 2020."
+      },
+      {
+        "chunk_id": "0136183158e62dfd79a15ecd3d2b40f2",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp địa chỉ nhận hồ sơ tại 97 Man Thiện và các vòng tuyển dụng."
+      },
+      {
+        "chunk_id": "bb97c7d0f0318d36f802b23b7edab953",
+        "relevance_score": 0.8,
+        "reasoning": "Nêu chi tiết yêu cầu IELTS 5.5 trở lên cho giảng viên CNTT/ATTT."
+      }
+    ]
+  },
+  {
+    "query_id": 53,
+    "query": "Trong đợt dịch Covid-19 đầu năm 2020, sinh viên được thông báo nghỉ đến khi nào và cần liên hệ những ai nếu có vấn đề phát sinh?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0110d15c90131ae30f2add69e90c1376",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo nghỉ học đến hết 08/03/2020 và đi học lại từ 09/03/2020."
+      },
+      {
+        "chunk_id": "95e9e7b633b3ead0d3a4b123a83daec0",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp danh sách các cá nhân phụ trách (ông Soát, ông Vân, ông Minh) để liên hệ khi cần."
+      }
+    ]
+  },
+  {
+    "query_id": 54,
+    "query": "Học viện đã đạt được những danh hiệu cao quý nào từ Nhà nước trong giai đoạn kỷ niệm 20 năm thành lập và đơn vị tiền thân của trường là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "3f23ea40b4ea6dbbd9f45544a06c83ee",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập lễ kỷ niệm 20 năm (1997-2017) và đón nhận Huân chương Lao động hạng Nhất."
+      },
+      {
+        "chunk_id": "02b357743e28c844ac40d27c28154f61",
+        "relevance_score": 0.9,
+        "reasoning": "Bổ sung thông tin danh hiệu Anh hùng Lao động năm 2013."
+      },
+      {
+        "chunk_id": "201af6262d9fb19e7e2d66278739b0a9",
+        "relevance_score": 0.8,
+        "reasoning": "Xác nhận đơn vị tiền thân là Trường Bưu điện - Vô tuyến điện thành lập năm 1953."
+      }
+    ]
+  },
+  {
+    "query_id": 55,
+    "query": "Các suất học bổng tài trợ cho sinh viên nghèo vượt khó năm 2019 và 2023 có sự tham gia của những đơn vị đối tác nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "30e6808e55be62e4129609448d4878e4",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các nhà tài trợ năm 2023: VNPT, Agribank, TEL4VN, HTC, F.O.X."
+      },
+      {
+        "chunk_id": "0940cd8c321d3115539983b657bc6b82",
+        "relevance_score": 0.9,
+        "reasoning": "Thông tin về lễ trao 212 suất học bổng đợt 1 năm 2019 cho sinh viên khó khăn."
+      },
+      {
+        "chunk_id": "002950f09acd4b9e02617b964e0fad31",
+        "relevance_score": 0.7,
+        "reasoning": "Danh sách các đơn vị tài trợ học bổng lâu năm như VNPT TPHCM, TMA, Mobifone."
+      }
+    ]
+  },
+  {
+    "query_id": 56,
+    "query": "Quy trình tuyển dụng giảng viên tại Học viện gồm mấy vòng và yêu cầu hồ sơ dự tuyển bao gồm những loại giấy tờ gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "044bf918dcc7882718410bd07067fdda",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả chi tiết 2 vòng tuyển dụng: xét hồ sơ và kiểm tra sát hạch (phỏng vấn, giảng thử)."
+      },
+      {
+        "chunk_id": "002755cbed26cafd33d1b466cf5bdd14",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê đầy đủ các loại giấy tờ: đơn xin việc viết tay, sơ yếu lý lịch, giấy khám sức khỏe, bằng cấp công chứng..."
+      }
+    ]
+  },
+  {
+    "query_id": 57,
+    "query": "Vào năm 2017, Học viện đã triển khai các hoạt động đào tạo và hợp tác nào dành riêng cho lưu học sinh Lào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "33dc689d023f034336c2e3612503923a",
+        "relevance_score": 1.0,
+        "reasoning": "Số liệu cụ thể về 129 lưu học sinh Lào đang học đại học/thạc sĩ tính đến tháng 9/2017."
+      },
+      {
+        "chunk_id": "33dc689d023f034336c2e3612503923a",
+        "relevance_score": 0.8,
+        "reasoning": "Đề cập việc ký kết biên bản ghi nhớ với Viện CNTT&TT Lào (IICT)."
+      }
+    ]
+  },
+  {
+    "query_id": 58,
+    "query": "Những sinh viên ngành Điện tử truyền thông muốn thực tập hoặc làm việc tại Renesas và Vietnam Airlines có thể tìm kiếm thông tin ở đâu?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0c7ec96b0f8f7dac74346cc39e744595",
+        "relevance_score": 1.0,
+        "reasoning": "Thông tin về chương trình tham quan và cơ hội thăng tiến tại Renesas Việt Nam."
+      },
+      {
+        "chunk_id": "737b31cbaad336d9223283320d5fa086",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo tuyển dụng kỹ sư kỹ thuật tại Trung tâm Huấn luyện bay - Vietnam Airlines."
+      }
+    ]
+  },
+  {
+    "query_id": 59,
+    "query": "Công đoàn Học viện đã thực hiện những hoạt động gì để chăm lo đời sống cho cán bộ viên chức trong giai đoạn 2023-2025?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "6a9f60d6e159c3f3b9a22f7a0b660c2a",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu rõ vai trò công đoàn trong việc nâng cao đời sống vật chất, tinh thần và bảo vệ quyền lợi hợp pháp."
+      },
+      {
+        "chunk_id": "dd5a88a240a149926574b9e79d9227a0",
+        "relevance_score": 0.9,
+        "reasoning": "Đề cập đến việc trợ cấp khó khăn đột xuất và định kỳ cho 706 đoàn viên."
+      },
+      {
+        "chunk_id": "b9a8826f891d46c670def482c3e8b1d2",
+        "relevance_score": 0.8,
+        "reasoning": "Danh sách nhân sự BCH Công đoàn nhiệm kỳ VIII (2023-2028)."
+      }
+    ]
+  },
+  {
+    "query_id": 60,
+    "query": "Sinh viên tham gia cuộc thi 'Tìm hiểu IT' của khoa CNTT II năm 2011 cần lưu ý những mốc thời gian và cách thức liên hệ nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "05cbae2022df7227e958b44956fea958",
+        "relevance_score": 1.0,
+        "reasoning": "Thông báo mốc thời gian gặp BTC (16/04/2011) và thông tin liên hệ Bí thư Trần Anh Vũ."
+      },
+      {
+        "chunk_id": "c01dabb6a45967e35487eca7ac4f5e5c",
+        "relevance_score": 0.9,
+        "reasoning": "Mô tả cấu trúc phần thi: giới thiệu chi đoàn và giao lưu công ty/cựu sinh viên."
+      }
+    ]
+  },
+  {
+    "query_id": 61,
+    "query": "Cuộc thi lập trình quốc tế Samsung (SCPC) năm 2019 yêu cầu thí sinh sử dụng ngôn ngữ gì và phần thưởng cho top 10 Việt Nam là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "ab04ae48c5991823126f582c309101d2",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận ngôn ngữ thi là C, C++, Java và giải thưởng du lịch Hàn Quốc cho top 10."
+      },
+      {
+        "chunk_id": "0851212f266dc277feb0b810957dea93",
+        "relevance_score": 0.7,
+        "reasoning": "Bối cảnh về chương trình hợp tác giữa Học viện và Samsung Việt Nam."
+      }
+    ]
+  },
+  {
+    "query_id": 62,
+    "query": "Lịch ôn thi và thời gian bảo vệ đồ án tốt nghiệp cho sinh viên hệ chính quy khóa 2004-2009 được tổ chức như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0cba04a48511a81cda822b06b0f0b810",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp mốc bảo vệ đồ án từ 08/12 đến 12/12/2008."
+      },
+      {
+        "chunk_id": "00da8a5531566950d07491ade9a4198f",
+        "relevance_score": 0.6,
+        "reasoning": "Bối cảnh khai giảng lớp cao học niên khóa 2008-2011, liên quan đến giai đoạn này."
+      }
+    ]
+  },
+  {
+    "query_id": 63,
+    "query": "Những chuyên ngành nào được tư vấn sâu tại Ngày hội tư vấn tuyển sinh năm 2017 và cơ hội nghề nghiệp tương lai cho học sinh?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "b0aae98f9b195a3ae877f850e1482ed3",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các ngành: Kỹ thuật điện tử, ATTT, Đa phương tiện, QTKD, Marketing, Kế toán..."
+      },
+      {
+        "chunk_id": "02542cfe571dae69e618f568e1f83cfb",
+        "relevance_score": 0.7,
+        "reasoning": "Thông tin về ngày hội tư vấn hướng nghiệp và quy mô tuyển sinh của Học viện cơ sở."
+      }
+    ]
+  },
+  {
+    "query_id": 64,
+    "query": "Học viện cơ sở đã đạt được những thành tựu gì trong công tác nghiên cứu khoa học giảng viên và sinh viên năm 2022?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "04a18b7b632a31d57a65f75b3523b7a4",
+        "relevance_score": 1.0,
+        "reasoning": "Số liệu 80 công trình khoa học năm 2022, trong đó 34 công bố ISI/Scopus."
+      },
+      {
+        "chunk_id": "05a0b7193580da502c217dc191931f49",
+        "relevance_score": 1.0,
+        "reasoning": "Thành tích thực hiện 73 đề tài NCKH sinh viên (đạt tỷ lệ 96.05%) với các đề tài tiêu biểu."
+      }
+    ]
+  },
+  {
+    "query_id": 65,
+    "query": "VNG Corporation tổ chức chương trình học bổng và tuyển dụng nào cho sinh viên sắp tốt nghiệp, yêu cầu chính là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "251bfff9cb7b1d3b91fa8c6f1fd1407c",
+        "relevance_score": 1.0,
+        "reasoning": "Thông tin về chương trình học bổng 'Dám đương đầu, dám thách thức' của VNG."
+      },
+      {
+        "chunk_id": "013911879065bee0799d720b11e5f7ae",
+        "relevance_score": 1.0,
+        "reasoning": "Thông tin tuyển dụng sinh viên chuẩn bị đi thực tập hoặc sắp ra trường."
+      },
+      {
+        "chunk_id": "0d950c9baa240089e233f490d5169b9a",
+        "relevance_score": 0.9,
+        "reasoning": "Giới thiệu chương trình VNG Fresher và cơ hội trở thành nhân viên chính thức."
+      }
+    ]
+  },
+  {
+    "query_id": 66,
+    "query": "Cơ sở vật chất của Ký túc xá tại Học viện Cơ sở có gì nổi bật và mức phí lưu trú hàng tháng là bao nhiêu?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "befbe76f0d4943f68d9be97fe76b0d49",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả tiện ích phòng: vệ sinh khép kín, khuôn viên cây xanh, gần trung tâm thương mại."
+      },
+      {
+        "chunk_id": "befbe76f0d4943f68d9be97fe76b0d49",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp bảng giá chi tiết: 360.000đ hoặc 430.000đ/sinh viên/tháng tùy loại phòng."
+      }
+    ]
+  },
+  {
+    "query_id": 67,
+    "query": "Để chuẩn bị cho Lễ tốt nghiệp đợt 1 năm 2014, sinh viên cần làm những thủ tục gì và liên hệ phòng ban nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "04ae847314dd58c7a28536fd5240506a",
+        "relevance_score": 1.0,
+        "reasoning": "Hướng dẫn thủ tục nhận bằng tại phòng Giáo vụ và mượn lễ phục tại Trung tâm CSVC&DV."
+      },
+      {
+        "chunk_id": "062bb5aedaacdc84799e8e5c1b9914c4",
+        "relevance_score": 0.8,
+        "reasoning": "Tham chiếu thêm thời gian nhận bằng tương tự đợt 2013 (từ 8:00 đến 16:00)."
+      }
+    ]
+  },
+  {
+    "query_id": 68,
+    "query": "Ngành đào tạo mới nào của Học viện sẽ được chú trọng phát triển trong năm 2024 theo chỉ đạo của Giám đốc Đặng Hoài Bắc?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "06fd591e2c471a5e8bd0fe5c63223a22",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu đích danh các ngành mới: thiết kế vi mạch và thiết kế game."
+      },
+      {
+        "chunk_id": "0488d317ad24c809c8a90f4e454568b2",
+        "relevance_score": 0.8,
+        "reasoning": "Sơ kết công tác năm 2023 và định hướng mô hình phát triển Học viện cơ sở."
+      }
+    ]
+  },
+  {
+    "query_id": 69,
+    "query": "Cuộc thi 'Thử thách lập trình Naver' (Naver Up Coding Challenge) năm 2023 có đối tượng và hoạt động hỗ trợ nào đi kèm?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0829959aa9cfa38329082de1a7d1b01a",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận sự kiện Naver Up Coding Challenge 2023."
+      },
+      {
+        "chunk_id": "019a4b97f9ce35c58752872fd34e5e2f",
+        "relevance_score": 1.0,
+        "reasoning": "Đào tạo các lớp chuyên đề AI (Thuật toán, Python) do tập đoàn Naver tài trợ."
+      },
+      {
+        "chunk_id": "3dc689d023f034336c2e3612503923a",
+        "relevance_score": 0.9,
+        "reasoning": "Hỗ trợ học bổng và khởi nghiệp đổi mới sáng tạo cho sinh viên HVCS từ Naver."
+      }
+    ]
+  },
+  {
+    "query_id": 70,
+    "query": "Những yêu cầu về trình độ và kinh nghiệm đối với ứng viên giảng viên ngành Marketing tại Học viện trong các đợt tuyển dụng năm 2021-2022 là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "bb97c7d0f0318d36f802b23b7edab953",
+        "relevance_score": 1.0,
+        "reasoning": "Yêu cầu Thạc sĩ trở lên, đào tạo đúng chuyên ngành Marketing, IELTS 5.5."
+      },
+      {
+        "chunk_id": "0e2d3612503923a4921029230103923a",
+        "relevance_score": 1.0,
+        "reasoning": "Ưu tiên ứng viên có kinh nghiệm viết bài báo tạp chí và nghiên cứu khoa học."
+      },
+      {
+        "chunk_id": "0762d67e1e49534049dc814a7956a7b5",
+        "relevance_score": 0.8,
+        "reasoning": "Bổ sung điều kiện tốt nghiệp loại giỏi và đào tạo tại nước ngoài."
+      }
+    ]
+  },
+  {
+    "query_id": 71,
+    "query": "Vị trí nhân viên bảo vệ tại Học viện cơ sở năm 2012 có tiêu chuẩn tuyển chọn và chế độ đãi ngộ ra sao?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0139b984c14bf2280e16867f376c5035",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả tiêu chuẩn: nam, 25-45 tuổi, cao trên 1.6m, tốt nghiệp 12/12, ưu tiên bộ đội/công an xuất ngũ."
+      },
+      {
+        "chunk_id": "0139b984c14bf2280e16867f376c5035",
+        "relevance_score": 1.0,
+        "reasoning": "Chế độ: Hợp đồng chính thức, BHXH, BHYT, lương thưởng theo quy định Tập đoàn VNPT."
+      }
+    ]
+  },
+  {
+    "query_id": 72,
+    "query": "Học viện cơ sở đã phối hợp với các đơn vị nào để thực hiện chiến dịch 'Mùa hè xanh' và hoạt động tình nguyện tại Long An?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "9ca3510f548fc7fa398514981e781e5b",
+        "relevance_score": 1.0,
+        "reasoning": "Hoạt động dạy tin học cho học sinh tiểu học và THCS tại trường Hướng Bình."
+      },
+      {
+        "chunk_id": "c4526bfc395aa478d0afd24b9b9abe2",
+        "relevance_score": 0.6,
+        "reasoning": "Hoạt động tình nguyện uống nước nhớ nguồn và mùa hè xanh năm 2025."
+      }
+    ]
+  },
+  {
+    "query_id": 73,
+    "query": "Trong quá trình đào tạo hệ Vừa làm vừa học ngành CNTT và Quản trị kinh doanh, sinh viên được học theo khung chương trình và mã ngành nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0658f5575deb61a758b5534fa75a012f",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp mã ngành CNTT (7480201) và các chuyên ngành liên quan."
+      },
+      {
+        "chunk_id": "0bccd4d444dd6d6d4542808bc063c4ed",
+        "relevance_score": 1.0,
+        "reasoning": "Danh mục mã ngành đào tạo VLVH cho cả CNTT và Quản trị kinh doanh (7340101)."
+      }
+    ]
+  },
+  {
+    "query_id": 74,
+    "query": "Giải thưởng sinh viên nghiên cứu khoa học Euréka năm 2012 quy định đối tượng tham gia và bố cục công trình nghiên cứu như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "20059f9425146335a7249cfcf895ee09",
+        "relevance_score": 1.0,
+        "reasoning": "Đối tượng: sinh viên cá nhân hoặc tập thể (không quá 5 người), thông qua đơn vị trường."
+      },
+      {
+        "chunk_id": "b3a4caa924510145b7c309ab2c546615",
+        "relevance_score": 1.0,
+        "reasoning": "Bố cục: Đặt vấn đề, Tổng quan tài liệu, Mục tiêu-Phương pháp, Kết quả, Kết luận."
+      }
+    ]
+  },
+  {
+    "query_id": 75,
+    "query": "Hội đồng Học viện đã thông qua quyết định sáp nhập đơn vị nào để thành lập phòng Tổ chức – Hành chính – Quản trị và vào thời gian nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "05de75b2144a23fae2cf754cb4e9bb0a",
+        "relevance_score": 1.0,
+        "reasoning": "Sáp nhập phòng Tổ chức - Hành chính và Trung tâm Cơ sở vật chất và dịch vụ (đầu năm 2023)."
+      },
+      {
+        "chunk_id": "0a4279fdaa794c3b98866bd4ec9e1259",
+        "relevance_score": 0.8,
+        "reasoning": "Chức năng nhiệm vụ phối hợp xây dựng kế hoạch công tác của phòng mới thành lập."
+      }
+    ]
+  },
+  {
+    "query_id": 76,
+    "query": "Các chương trình đào tạo ngắn hạn tại Trung tâm Đào tạo BCVT 2 gồm những lớp nào và có sự tham gia của giảng viên nước ngoài không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "253c1d9546b8764e3a2491d4f445c752",
+        "relevance_score": 1.0,
+        "reasoning": "Lớp đào tạo 'Nhân viên dịch vụ viễn thông chuyên nghiệp' cung ứng cho VNPT."
+      },
+      {
+        "chunk_id": "99cd9ce5c5e58cd53381c12385443c35",
+        "relevance_score": 0.8,
+        "reasoning": "Báo cáo sự phát triển của các lớp đào tạo ngắn hạn thuộc Học viện và Viện CNTT-TT năm 2018."
+      }
+    ]
+  },
+  {
+    "query_id": 77,
+    "query": "Những cán bộ lãnh đạo nào đã được bổ nhiệm vào các vị trí chủ chốt của Học viện vào tháng 7 năm 2020?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0da6b3800baf3c390bb2e7c6a5c7e64f",
+        "relevance_score": 1.0,
+        "reasoning": "Bổ nhiệm ông Vũ Tuấn Lâm và ông Trần Quang Anh giữ chức Phó Giám đốc Học viện."
+      },
+      {
+        "chunk_id": "0da6b3800baf3c390bb2e7c6a5c7e64f",
+        "relevance_score": 0.9,
+        "reasoning": "Gia hạn thời gian giữ chức vụ cho ông Hoàng Đăng Hải."
+      }
+    ]
+  },
+  {
+    "query_id": 78,
+    "query": "Yêu cầu kỹ năng lập trình và trình độ ngoại ngữ đối với sinh viên muốn tham gia chương trình 'FRESHER' của Harvey Nash Việt Nam là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "5f959dd6a67bfd69d1e8d4fae1d9614b",
+        "relevance_score": 1.0,
+        "reasoning": "Giới thiệu chương trình tuyển dụng Fresher dành cho sinh viên ngành CNTT."
+      },
+      {
+        "chunk_id": "0c4526bfc395aa478d0afd24b9b9abe2",
+        "relevance_score": 0.9,
+        "reasoning": "Nêu nội dung hội thảo về kỹ năng chuyên nghiệp và cơ hội làm bài test thử."
+      }
+    ]
+  },
+  {
+    "query_id": 79,
+    "query": "Học viện cơ sở có trụ sở chính và các cơ sở đào tạo đặt tại những địa chỉ cụ thể nào trên địa bàn TP. Hồ Chí Minh?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "00c0487143ce89ed32a9483c493521f0",
+        "relevance_score": 1.0,
+        "reasoning": "Trụ sở chính tại 11 Nguyễn Đình Chiểu, Quận 1 và cơ sở 97 Man Thiện, Quận 9."
+      },
+      {
+        "chunk_id": "0d7c46f80265e51bfecb88344b962822",
+        "relevance_score": 0.9,
+        "reasoning": "Chi tiết số điện thoại liên hệ tại các cơ sở Quận 1 và Thủ Đức (Quận 9 cũ)."
+      }
+    ]
+  },
+  {
+    "query_id": 80,
+    "query": "Kế hoạch nâng cấp Học viện cơ sở TPHCM thành Phân hiệu được triển khai ra sao trong báo cáo công tác năm 2023?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0488d317ad24c809c8a90f4e454568b2",
+        "relevance_score": 1.0,
+        "reasoning": "Đề án chuyển đổi mô hình Học viện cơ sở sang hướng Phân hiệu đã được thống nhất."
+      },
+      {
+        "chunk_id": "06fd591e2c471a5e8bd0fe5c63223a22",
+        "relevance_score": 0.7,
+        "reasoning": "Sơ kết tình hình thực hiện nhiệm vụ và triển khai kế hoạch năm 2024."
+      }
+    ]
+  },
+  {
+    "query_id": 81,
+    "query": "Phó Thủ tướng Vũ Đức Đam đã có những nhắn nhủ gì cho cán bộ và sinh viên nhân lễ kỷ niệm 20 năm ngày thành lập Học viện?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "3f23ea40b4ea6dbbd9f45544a06c83ee",
+        "relevance_score": 1.0,
+        "reasoning": "Thông điệp về việc cổ vũ sức sáng tạo của đội ngũ thầy cô và sinh viên để lan tỏa ra xã hội."
+      },
+      {
+        "chunk_id": "09586289a1f6bf98b7bb64dda466a526",
+        "relevance_score": 0.6,
+        "reasoning": "Bối cảnh Học viện là tổ chức tiên phong gắn kết đào tạo và nghiên cứu từ khi thành lập."
+      }
+    ]
+  },
+  {
+    "query_id": 82,
+    "query": "Lễ kỷ niệm Ngày Nhà giáo Việt Nam 20/11 hàng năm tại Học viện thường mời những thành phần khách mời đặc biệt nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0cb10291174dc82d424f824c09104373",
+        "relevance_score": 1.0,
+        "reasoning": "Danh sách khách mời: Lãnh đạo qua các thời kỳ, giảng viên hưu trí, thỉnh giảng, chính quyền địa phương."
+      },
+      {
+        "chunk_id": "73a2d27251407d5f50ff508de45c4584",
+        "relevance_score": 0.8,
+        "reasoning": "Sự hiện diện của nguyên lãnh đạo trường Bưu Điện, Trung tâm Đào tạo 2 và Học viện."
+      }
+    ]
+  },
+  {
+    "query_id": 83,
+    "query": "Quy định số 1057 của Giám đốc Học viện về xử lý kết quả học tập bao gồm những mẫu đơn xin nghỉ học hay miễn thi nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "76e7cdf482b59405da08a9aae6e6a9b0",
+        "relevance_score": 1.0,
+        "reasoning": "Mẫu đơn xin miễn học, miễn thi môn GDTC và GDQP."
+      },
+      {
+        "chunk_id": "976116f9279a4a52be24a0fb44b0fecf",
+        "relevance_score": 0.9,
+        "reasoning": "Các mẫu đơn xin bảo lưu, đơn xin học môn thay thế."
+      },
+      {
+        "chunk_id": "0750fb4eff76149d57b4e36bbceea193",
+        "relevance_score": 0.8,
+        "reasoning": "Mẫu đơn đăng ký học môn tự chọn và đơn xin thi lại môn tốt nghiệp."
+      }
+    ]
+  },
+  {
+    "query_id": 84,
+    "query": "Cty Fujinet tuyển dụng kỹ sư phần mềm yêu cầu sinh viên năm nào và có cung cấp chương trình đào tạo bổ sung không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "1ccb5ebccf0e897332f68d9adf95c0ce",
+        "relevance_score": 1.0,
+        "reasoning": "Thông tin Fujinet tuyển dụng Kỹ sư phần mềm."
+      },
+      {
+        "chunk_id": "07effe715d535e1427803d7368a3afb5",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp chi tiết chương trình Huấn luyện lập trình viên cho ứng viên."
+      },
+      {
+        "chunk_id": "30ad352cee1b187ca343bdf83dc0d1e3",
+        "relevance_score": 0.8,
+        "reasoning": "Thông báo nhu cầu tuyển dụng Kỹ sư phần mềm đợt tháng 12/2016."
+      }
+    ]
+  },
+  {
+    "query_id": 85,
+    "query": "Sinh viên khóa 2023 của Học viện tham gia học tập Giáo dục Quốc phòng và An ninh được trang bị những nội dung chính nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "2149759636bb6c410a9f8fc245ef1831",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu chi tiết nội dung: đường lối quốc phòng, kỹ thuật chiến thuật quân sự, phòng thủ dân sự..."
+      },
+      {
+        "chunk_id": "2149759636bb6c410a9f8fc245ef1831",
+        "relevance_score": 0.9,
+        "reasoning": "Phát biểu của ông Nguyễn Chí Thành về mục tiêu rèn luyện tác phong quân đội cho sinh viên."
+      }
+    ]
+  },
+  {
+    "query_id": 86,
+    "query": "Những ai đủ điều kiện tham gia cuộc thi 'Vô địch thế giới về tin học văn phòng' (Microsoft Office World Champion) năm 2012?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "04dd09387707f907d9ea35a2956dc199",
+        "relevance_score": 1.0,
+        "reasoning": "Độ tuổi từ 13-22, là học sinh sinh viên các trường ĐH, CĐ, THPT, THCS tại Việt Nam."
+      },
+      {
+        "chunk_id": "bbbbf2eb8c26fb9496feb6f8698dbb62",
+        "relevance_score": 0.8,
+        "reasoning": "Mốc thời gian dự thi chính thức là 8h sáng thứ 6 ngày 30/03/2012."
+      }
+    ]
+  },
+  {
+    "query_id": 87,
+    "query": "Vào năm 2008-2009, Học viện cơ sở đã tổ chức những hội thao và hội diễn văn nghệ nào cho toàn thể CB-GV-CNV?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "59636bb6c410a9f8fc245ef183103923",
+        "relevance_score": 1.0,
+        "reasoning": "Hội diễn văn nghệ chào mừng 20/11 ngày 17/11/2008."
+      },
+      {
+        "chunk_id": "02d8ba0873f0cda9827213760bfca604",
+        "relevance_score": 1.0,
+        "reasoning": "Hội thao CB-GV-CNV chào mừng 20/11 tại cơ sở Quận 9."
+      },
+      {
+        "chunk_id": "08fb1b8f058658625e045ef06e0892a8",
+        "relevance_score": 0.9,
+        "reasoning": "Lịch thi đấu cụ thể các môn hội thao năm 2008."
+      }
+    ]
+  },
+  {
+    "query_id": 88,
+    "query": "Đợt thi tuyển của công ty Aricent Việt Nam vào tháng 4/2013 có cấu trúc đề thi gồm những phần nào và đối tượng là ai?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0244434aab18a9cc2382c6c2521cbbe2",
+        "relevance_score": 1.0,
+        "reasoning": "Đề thi: Analytical Ability, Attention to Detail, Data Structures and Algorithms, C Programming."
+      },
+      {
+        "chunk_id": "0244434aab18a9cc2382c6c2521cbbe2",
+        "relevance_score": 1.0,
+        "reasoning": "Đối tượng: Sinh viên năm cuối hoặc mới tốt nghiệp các khối ngành CNTT, Toán, Lý, Điện tử."
+      }
+    ]
+  },
+  {
+    "query_id": 89,
+    "query": "Thông tin về dự án khảo sát xu hướng việc làm sinh viên MOTIVE được tổ chức tại Học viện vào năm 2023 như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "1be7a9b661c55f684b8a771cf6d2f458",
+        "relevance_score": 1.0,
+        "reasoning": "Hội thảo phổ biến kết quả dự án MOTIVE diễn ra ngày 21/9 và 22/9/2023."
+      },
+      {
+        "chunk_id": "1be7a9b661c55f684b8a771cf6d2f458",
+        "relevance_score": 0.9,
+        "reasoning": "Xác nhận dự án khảo sát việc làm của sinh viên Việt Nam sau tốt nghiệp."
+      }
+    ]
+  },
+  {
+    "query_id": 90,
+    "query": "Chương trình 'Career Day' của Axon Active năm 2013-2014 dành cho đối tượng nào và yêu cầu kỹ năng tiếng Anh ra sao?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "03a67fc27354a303c07de0cd806a5b91",
+        "relevance_score": 1.0,
+        "reasoning": "Đợt tuyển dụng sinh viên năm cuối, chuẩn bị tốt nghiệp Career Day 2013."
+      },
+      {
+        "chunk_id": "024b8ec12a0a9176654dc1bda32d3ac1",
+        "relevance_score": 1.0,
+        "reasoning": "Yêu cầu cho Career Day 2014: tốt nghiệp ngành CNTT, sẵn sàng làm full-time, mong muốn học tiếng Anh."
+      }
+    ]
+  },
+  {
+    "query_id": 91,
+    "query": "Đội ngũ giảng viên của Học viện có sự gia tăng về số lượng Giáo sư và Phó Giáo sư như thế nào tính đến năm 2018?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "cce654b12429088f2cbc847f1c953bbc",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận tính đến 2018 Học viện có 21 Giáo sư và Phó Giáo sư."
+      },
+      {
+        "chunk_id": "a4cd4449219323a4921029230103923a",
+        "relevance_score": 0.9,
+        "reasoning": "Lễ trao quyết định đạt chuẩn chức danh Phó Giáo sư cho TS. Vũ Văn San."
+      }
+    ]
+  },
+  {
+    "query_id": 92,
+    "query": "Sinh viên tham dự hội thảo 'Kỹ năng làm việc chuyên nghiệp' năm 2015 cần lưu ý gì về việc điểm danh và quyền lợi rèn luyện?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0c4526bfc395aa478d0afd24b9b9abe2",
+        "relevance_score": 1.0,
+        "reasoning": "Ban cán sự các lớp điểm danh SV tham dự để làm cơ sở chấm điểm rèn luyện năm học 2014-2015."
+      },
+      {
+        "chunk_id": "5f959dd6a67bfd69d1e8d4fae1d9614b",
+        "relevance_score": 0.8,
+        "reasoning": "Hợp tác giữa Học viện và công ty Talent Mint, Harvey Nash tổ chức hội thảo."
+      }
+    ]
+  },
+  {
+    "query_id": 93,
+    "query": "Những dự án NCKH nào của sinh viên được đánh giá tiêu biểu và đạt tỷ lệ hoàn thành cao trong năm 2022?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "05a0b7193580da502c217dc191931f49",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các đề tài: hệ thống thi CTF, website tính tiền giờ giảng, phim hoạt hình ngắn..."
+      },
+      {
+        "chunk_id": "05a0b7193580da502c217dc191931f49",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận tỷ lệ hoàn thành đề tài đạt 96.05%."
+      }
+    ]
+  },
+  {
+    "query_id": 94,
+    "query": "Hoạt động 'Chào tân sinh viên' năm 2018 và 2019 diễn ra vào thời gian nào và có những tiết mục đặc sắc gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "4f56ce21afafa79963263cb06513eef9",
+        "relevance_score": 1.0,
+        "reasoning": "Hội trại Chào sinh viên 2018 diễn ra ngày 27-28/10 với các trò chơi, lửa trại, văn nghệ."
+      },
+      {
+        "chunk_id": "21957fffe03288c03923a103923a1039",
+        "relevance_score": 0.9,
+        "reasoning": "Hội trại CHÀO! sinh viên khóa 2019 và bối cảnh lễ khai giảng năm học mới."
+      }
+    ]
+  },
+  {
+    "query_id": 95,
+    "query": "Thông tin về học phí của Học viện trong các năm 2007 và 2022-2023 có những thay đổi đáng chú ý nào theo nghị quyết Chính phủ?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "b7c7d507c1de6a3b328d8399c5217708",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận Học viện thí điểm thu học phí từ năm học 2007-2008."
+      },
+      {
+        "chunk_id": "05de75b2144a23fae2cf754cb4e9bb0a",
+        "relevance_score": 1.0,
+        "reasoning": "Tuân thủ Nghị quyết 165/NQ-CP năm 2022 về học phí đối với cơ sở giáo dục công lập."
+      },
+      {
+        "chunk_id": "074d0658f3f30bf3b4044ae8564d1522",
+        "relevance_score": 0.8,
+        "reasoning": "Quyết định ban hành mức học phí mới cho năm học 2025-2026."
+      }
+    ]
+  },
+  {
+    "query_id": 96,
+    "query": "Cơ hội việc làm tại VNPT TP. Hồ Chí Minh năm 2022 dành cho những vị trí nhân sự nào và số lượng cụ thể là bao nhiêu?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "20fe8d11617719742eed36a4d3b747fb",
+        "relevance_score": 1.0,
+        "reasoning": "Tuyển 25 nhân sự Kỹ thuật Viễn thông, 8 Phát triển phần mềm và 2 hỗ trợ CNTT."
+      },
+      {
+        "chunk_id": "d6bc44c834306f76cdbc2759539f5513",
+        "relevance_score": 0.8,
+        "reasoning": "Thông báo tuyển dụng 50 nhân viên chính thức với yêu cầu tuổi dưới 28."
+      }
+    ]
+  },
+  {
+    "query_id": 97,
+    "query": "Học viện cơ sở đã triển khai nghị quyết 57-ND/TW về chuyển đổi số quốc gia vào thời gian và địa điểm nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "01dd3dc59b2a39046875c05504b53fe1",
+        "relevance_score": 1.0,
+        "reasoning": "Thời gian: 9h ngày 23/04/2025. Địa điểm: Hội trường A001 - 11 Nguyễn Đình Chiểu."
+      },
+      {
+        "chunk_id": "01dd3dc59b2a39046875c05504b53fe1",
+        "relevance_score": 0.9,
+        "reasoning": "Nội dung: Đẩy mạnh ứng dụng công nghệ, đổi mới sáng tạo và chuyển đổi số."
+      }
+    ]
+  },
+  {
+    "query_id": 98,
+    "query": "Các thí sinh đạt giải Nhì và giải Ba tại cuộc thi 'Sinh viên với An toàn thông tin ASEAN 2019' khu vực miền Nam đến từ những lớp nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "63ba1ade556a21ec1958f6023e72a825",
+        "relevance_score": 1.0,
+        "reasoning": "Đội H2DP (Giải Nhì) gồm thành viên các lớp D15CQAT01-N, D16CQAT01-N và D17CQAT01-N."
+      },
+      {
+        "chunk_id": "63ba1ade556a21ec1958f6023e72a825",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận đội PowerOfFriendship đạt giải Ba miền Nam."
+      }
+    ]
+  },
+  {
+    "query_id": 99,
+    "query": "Ban chấp hành Đảng bộ Học viện cơ sở nhiệm kỳ 2020-2025 gồm bao nhiêu thành viên và ai là Bí thư Đảng ủy?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "054edc856ec7c4b43415cd9599747165",
+        "relevance_score": 1.0,
+        "reasoning": "Bầu cử BCH Đảng bộ gồm 7 đồng chí."
+      },
+      {
+        "chunk_id": "0c3132fc77a2b4400ba4e90bfb281257",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận TS. Nguyễn Lương Nhật giữ chức vụ Bí thư Đảng ủy Học viện Cơ sở."
+      }
+    ]
+  },
+  {
+    "query_id": 100,
+    "query": "Thủ khoa tuyển sinh đồng thời là thủ khoa ngành CNTT đã phát biểu trong buổi lễ tốt nghiệp nào của Học viện?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "4f315c04207e540f977a87509bfb7311",
+        "relevance_score": 1.0,
+        "reasoning": "Thủ khoa ngành CNTT đại diện tân Thạc sĩ, Kỹ sư phát biểu tại lễ tốt nghiệp ngày 21/4/2017."
+      },
+      {
+        "chunk_id": "e1d41392dfb94e2bfdd69afb928c329e",
+        "relevance_score": 0.6,
+        "reasoning": "Tham chiếu thêm về quy mô đào tạo sau đại học và lễ trao bằng năm 2023."
+      }
+    ]
+  },
+  {
+    "query_id": 101,
+    "query": "Học viện đặt mục tiêu gì trong chiến lược phát triển đến năm 2025 và tầm nhìn 2030 về quy mô sinh viên cũng như vị thế trong khu vực?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "01f791e43763713c5180c7de8bc00b45",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp chi tiết số lượng mục tiêu 20.000 sinh viên chính quy và vị thế hàng đầu về công nghệ số."
+      },
+      {
+        "chunk_id": "fe85338c4db738c8d113d9accbe5447d",
+        "relevance_score": 0.9,
+        "reasoning": "Xác nhận mục tiêu vào nhóm 5 trường đại học hàng đầu Đông Nam Á về công nghệ số."
+      },
+      {
+        "chunk_id": "01f605dad67a49891914dbaf2ca681e2",
+        "relevance_score": 0.7,
+        "reasoning": "Đề cập đến việc Học viện vừa được công nhận là 1 trong 5 trường trọng điểm quốc gia, hỗ trợ bối cảnh chiến lược."
+      }
+    ]
+  },
+  {
+    "query_id": 102,
+    "query": "Lịch sử hình thành và các tên gọi cũ của trường tiền thân của PTIT qua các thời kỳ kháng chiến là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "014a0d9a6c520b02ba8ea12aa9869525",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu rõ trường Bưu điện – Vô tuyến điện được thành lập năm 1953 tại Thái Nguyên."
+      },
+      {
+        "chunk_id": "ed896c42da6e21fc565fb6a5d856ea7e",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê đầy đủ các tên gọi: Trường Chuyên nghiệp Bưu điện, Đại học Kỹ thuật Thông tin Liên lạc..."
+      },
+      {
+        "chunk_id": "daf818bce3cc9c5843934efe403f839f",
+        "relevance_score": 0.8,
+        "reasoning": "Thông tin về trường Lý Tự Trọng - tiền thân của Học viện tại miền Nam."
+      }
+    ]
+  },
+  {
+    "query_id": 103,
+    "query": "Các chương trình liên kết đào tạo quốc tế của PTIT hiện nay hợp tác với những quốc gia nào và lĩnh vực gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "08b6cf767b03e760723725f7471a8944",
+        "relevance_score": 1.0,
+        "reasoning": "Hợp tác với ĐH Chung Ang (Hàn Quốc) về Đa phương tiện và Game."
+      },
+      {
+        "chunk_id": "511116c49800e84b2c1f71a8bc8f83b2",
+        "relevance_score": 1.0,
+        "reasoning": "Chương trình 2+2 với Đại học La Trobe (Úc) ngành Công nghệ thông tin."
+      },
+      {
+        "chunk_id": "cabaafa21b11254d70193d5c6cc5e719",
+        "relevance_score": 0.9,
+        "reasoning": "Hợp tác với ĐH Bellevue (Hoa Kỳ) về An toàn thông tin và Khoa học dữ liệu."
+      },
+      {
+        "chunk_id": "d825c8e31c828d5f30e6e22e03fc3f9",
+        "relevance_score": 0.8,
+        "reasoning": "Khóa học thường niên với ĐH Huddersfield (Anh) về Fintech."
+      }
+    ]
+  },
+  {
+    "query_id": 104,
+    "query": "Chiến lược chuyển đổi số của Học viện tập trung vào những mảng kiến trúc nào và kết quả bước đầu ra sao?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "c5567d2642502f23b7e71618cb33e20a",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả kiến trúc gồm 3 nhóm: quản trị số, dịch vụ số và xã hội số."
+      },
+      {
+        "chunk_id": "0263c0a6dc2eb0f294f2e5139cb5d6ec",
+        "relevance_score": 0.9,
+        "reasoning": "Liệt kê các sản phẩm thực tế như Nền tảng đại học số, D-Lab, PTIT-MOOC."
+      },
+      {
+        "chunk_id": "423e1e688fd2687c11c0e6500b9a00cd",
+        "relevance_score": 0.7,
+        "reasoning": "Định hướng hình mẫu Đại học số và trung tâm đào tạo nguồn nhân lực số."
+      }
+    ]
+  },
+  {
+    "query_id": 105,
+    "query": "Hệ sinh thái AI phục vụ giáo dục tại PTIT có những phân hệ tiêu biểu nào hỗ trợ việc tự học của sinh viên?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "a33415cf4550421b4d4c4399a2f307f2",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu rõ phân hệ 'AI trợ giảng các môn lập trình' và môi trường học tập mở."
+      },
+      {
+        "chunk_id": "071a79fe0ae6c1bf5da621214043b308",
+        "relevance_score": 0.8,
+        "reasoning": "Đề cập đến vai trò AI làm trợ lý cho con người và ứng dụng TLA."
+      },
+      {
+        "chunk_id": "70b55566a40c7675e9de55f5",
+        "relevance_score": 0.6,
+        "reasoning": "Nói về việc sử dụng AI trong thực tế qua bài phát biểu của lãnh đạo."
+      }
+    ]
+  },
+  {
+    "query_id": 106,
+    "query": "Cổng tri thức PTIT cung cấp những nguồn tài liệu học thuật và công cụ hỗ trợ nào cho cộng đồng?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "078258fa4ba8de293ae907064075cf39",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các kho tri thức: bài báo ISI/Scopus, sản phẩm NCKH, khóa học MOOCs."
+      },
+      {
+        "chunk_id": "14b7b0b0c1be6026217ef46c5b27272e",
+        "relevance_score": 0.8,
+        "reasoning": "Nhấn mạnh vai trò của học liệu số trong việc phát huy năng lực tự nghiên cứu."
+      }
+    ]
+  },
+  {
+    "query_id": 107,
+    "query": "Các doanh nghiệp công nghệ lớn đã hỗ trợ PTIT như thế nào trong việc xây dựng phòng Lab và chương trình đào tạo thực tế?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "08d7d55140ffdbf3d05a238d8646f392",
+        "relevance_score": 1.0,
+        "reasoning": "Viettel trao tặng phòng Lab mạng di động 4G để sinh viên thực hành."
+      },
+      {
+        "chunk_id": "076bdf2bfd440dacb05f7fa90d3124f3",
+        "relevance_score": 0.9,
+        "reasoning": "Samsung ký kết hợp tác vận hành Lab và cấp học bổng STP."
+      },
+      {
+        "chunk_id": "65fea37acfc724c79ff09c611f5f9153",
+        "relevance_score": 0.8,
+        "reasoning": " Siemens hợp tác xây dựng Trung tâm trải nghiệm số 4.0 và phòng Lab tự động hóa."
+      }
+    ]
+  },
+  {
+    "query_id": 108,
+    "query": "Thông tin về giải thưởng và thành tích của sinh viên PTIT tại các kỳ thi công nghệ uy tín thế giới năm 2025?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0837ceb107a42d21ee7b35ecca1294b0",
+        "relevance_score": 1.0,
+        "reasoning": "Sinh viên Đỗ Hải Long giành Huy chương Vàng MOS World Championship 2025 tại Hoa Kỳ."
+      },
+      {
+        "chunk_id": "a3550b008a1c8c489e607d59fc2246bf",
+        "relevance_score": 0.9,
+        "reasoning": "Sinh viên PTIT đạt giải Quán quân cuộc thi TVCreate 2025."
+      }
+    ]
+  },
+  {
+    "query_id": 109,
+    "query": "PTIT đóng góp như thế nào vào việc đào tạo nguồn nhân lực CNTT cho nước bạn Lào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "069ee8be39a0a5bd9e090f1550c58bfa",
+        "relevance_score": 1.0,
+        "reasoning": "Đào tạo hơn 200 kỹ sư, thạc sĩ cho Lào; là trường ĐH Việt Nam đầu tiên đào tạo lĩnh vực này cho Lào."
+      },
+      {
+        "chunk_id": "069ee8be39a0a5bd9e090f1550c58bfa",
+        "relevance_score": 0.8,
+        "reasoning": "Tiếp nhận thêm lưu học sinh ngành khoa học máy tính năm 2023."
+      }
+    ]
+  },
+  {
+    "query_id": 110,
+    "query": "Tại sự kiện Vietnam Gameverse 2024, PTIT đã có những công bố quan trọng nào về ngành công nghệ trò chơi?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "01ba55c7761304d111b5d0f4f569710f",
+        "relevance_score": 1.0,
+        "reasoning": "Công bố chương trình Thiết kế và Phát triển Game trình độ Đại học với 200 chỉ tiêu."
+      },
+      {
+        "chunk_id": "0207de92a50e35373bdb8198e7abafbb",
+        "relevance_score": 0.8,
+        "reasoning": "Đề xuất mở bộ môn mới chuyên đào tạo nhân lực ngành game lên Bộ GD&ĐT."
+      }
+    ]
+  },
+  {
+    "query_id": 111,
+    "query": "Chương trình thực tập sinh 'Viettel Digital Talent' có lộ trình triển khai và những quyền lợi gì cho sinh viên?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "f0d5f6f0e1fd3ea8ba1a1b9882d8ffb4",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả 2 giai đoạn thực tập (bán thời gian và toàn thời gian) cùng các giải thưởng tiền mặt hấp dẫn."
+      },
+      {
+        "chunk_id": "f0d5f6f0e1fd3ea8ba1a1b9882d8ffb4",
+        "relevance_score": 0.9,
+        "reasoning": "Nêu rõ 6 lĩnh vực đào tạo: Cloud, AI, IoT, 5G..."
+      }
+    ]
+  },
+  {
+    "query_id": 112,
+    "query": "Chính sách học bổng của các doanh nghiệp đối tác dành cho sinh viên PTIT tại cơ sở TP.HCM năm 2025 gồm những gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "08cfee2bb0773887702e08020047260b",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê tài trợ từ VNPT, Agribank và 30 suất học bổng tiếng Anh của Weset."
+      },
+      {
+        "chunk_id": "08d37c4e1fe6e38f0379ca27466aa462",
+        "relevance_score": 0.8,
+        "reasoning": "Thông tin về 4 doanh nghiệp trao học bổng cho sinh viên khoa QTKD2."
+      }
+    ]
+  },
+  {
+    "query_id": 113,
+    "query": "Dự án liên minh 5 trường đại học hàng đầu về đào tạo chip bán dẫn tập trung vào những nội dung hợp tác nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0180e5e2c232b018ffb291b67c12b4f9",
+        "relevance_score": 1.0,
+        "reasoning": "Xây dựng chương trình sau đại học và chia sẻ cơ sở vật chất phòng Lab dùng chung."
+      },
+      {
+        "chunk_id": "04df927eaf1593bedd35ffde0fad96e7",
+        "relevance_score": 0.9,
+        "reasoning": "Thống nhất cơ chế trao đổi sinh viên công nhận tín chỉ và dùng chung học liệu số về vi mạch."
+      }
+    ]
+  },
+  {
+    "query_id": 114,
+    "query": "Cơ cấu tổ chức và vai trò của Hội đồng Học viện trong giai đoạn 2021-2025 được quy định như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "007609aa4f40680bfb9d4ad108b8e4a1",
+        "relevance_score": 1.0,
+        "reasoning": "Nhiệm vụ xây dựng quy chế hoạt động, khung chiến lược 5 năm và hệ thống giám sát."
+      },
+      {
+        "chunk_id": "bd000e06772cd4ebd62d37602ac67f52",
+        "relevance_score": 0.9,
+        "reasoning": "Sự tham gia của đại diện Bộ TT&TT và 3 tập đoàn công nghệ lớn trong Hội đồng."
+      }
+    ]
+  },
+  {
+    "query_id": 115,
+    "query": "Những hoạt động nào được triển khai trong phong trào 'Bình dân học vụ số' tại tỉnh Bình Phước do PTIT phối hợp thực hiện?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "02ed9a3eef4816fdb136b2c0d4ac9bbc",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu các nội dung đào tạo AI cho lãnh đạo tỉnh, quản trị cơ sở và công vụ hành chính."
+      },
+      {
+        "chunk_id": "0804f54772a9c3402aef11affbaf29df",
+        "relevance_score": 0.8,
+        "reasoning": "Sinh viên tình nguyện hỗ trợ người dân thực hiện dịch vụ công trực tuyến tại trung tâm hành chính."
+      }
+    ]
+  },
+  {
+    "query_id": 116,
+    "query": "Dự án CESDT Việt Nam tại cơ sở TP.HCM đã đạt được kết quả đào tạo thực tế như thế nào sau một năm vận hành?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0a0a4c0690cb99c8fe3c63bbe3768053",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp con số 761 sinh viên hoàn thành e-learning và các workshop về An ninh mạng."
+      },
+      {
+        "chunk_id": "0a0a4c0690cb99c8fe3c63bbe3768053",
+        "relevance_score": 0.9,
+        "reasoning": "Hệ thống hạ tầng máy chủ và phần mềm bản quyền do Ấn Độ hỗ trợ thiết lập."
+      }
+    ]
+  },
+  {
+    "query_id": 117,
+    "query": "Học viện đã nhận được những danh hiệu cao quý nào từ Đảng và Nhà nước ghi nhận đóng góp trong lĩnh vực ICT?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0a6bf18cc8ac39e4a3a979d4cd1d868b",
+        "relevance_score": 1.0,
+        "reasoning": "Học viện là trường đầu tiên duy nhất trong lĩnh vực ICT nhận danh hiệu Anh hùng Lao động (2013)."
+      },
+      {
+        "chunk_id": "6aa7a6ce81807b4e6f75f8dfed9e8688",
+        "relevance_score": 0.9,
+        "reasoning": "Đón nhận Huân chương Lao động hạng Nhất nhân dịp kỷ niệm 20 năm thành lập."
+      }
+    ]
+  },
+  {
+    "query_id": 118,
+    "query": "Yêu cầu và quyền lợi đối với sinh viên tham gia chương trình thực tập gPBL tại Nhật Bản là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "00576dda1454d6ef5d2d00cd6e9a6945",
+        "relevance_score": 1.0,
+        "reasoning": "Yêu cầu GPA từ 2.5, kỹ năng lập trình, ngoại ngữ và quy trình tuyển chọn phỏng vấn."
+      },
+      {
+        "chunk_id": "00576dda1454d6ef5d2d00cd6e9a6945",
+        "relevance_score": 0.9,
+        "reasoning": "Quyền lợi tham gia nghiên cứu đề tài AI cùng sinh viên quốc tế và chuyên gia Shibaura."
+      }
+    ]
+  },
+  {
+    "query_id": 119,
+    "query": "Các ngành học mới mang tính 'lai ghép' đa lĩnh vực nào được PTIT mở ra để đáp ứng nhu cầu kinh tế số?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0e5627715f8526bfe2b8c1d3c66bbb5e",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các ngành: Fintech, Thương mại điện tử, Logistics, Báo chí số, Công nghệ Game."
+      },
+      {
+        "chunk_id": "0056a3abcd940c64acbfcdf342476ec4",
+        "relevance_score": 0.8,
+        "reasoning": "Đề cập đến Robotics, IoT là các ngành đào tạo mới đáp ứng nhu cầu xã hội."
+      }
+    ]
+  },
+  {
+    "query_id": 120,
+    "query": "Cổng thông tin đào tạo trực tuyến hỗ trợ sinh viên quản lý các đầu việc học tập cá nhân như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "01149c8dd9e48c94afa2bcaec446e6fd",
+        "relevance_score": 1.0,
+        "reasoning": "Các chức năng: xem thời khóa biểu, học phí, lịch thi, tra cứu điểm và phản hồi."
+      },
+      {
+        "chunk_id": "01149c8dd9e48c94afa2bcaec446e6fd",
+        "relevance_score": 0.9,
+        "reasoning": "Khả năng cá nhân hóa lộ trình học tập và theo dõi thông báo sự kiện, học bổng."
+      }
+    ]
+  },
+  {
+    "query_id": 121,
+    "query": "Tầm quan trọng của hoạt động nghiên cứu khoa học sinh viên trong việc xin học bổng và cơ hội việc làm theo chia sẻ của cựu sinh viên?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "04c6fc05196487b2439b20f849e529b6",
+        "relevance_score": 1.0,
+        "reasoning": "NCKH giúp làm đẹp CV, dễ xin học bổng du học và rèn luyện kỹ năng mềm cho doanh nghiệp."
+      },
+      {
+        "chunk_id": "32819505170126a8ea06eab6394b9545",
+        "relevance_score": 0.8,
+        "reasoning": "NCKH giúp nắm vững phương pháp luận và vận dụng thực tiễn công tác sau này."
+      }
+    ]
+  },
+  {
+    "query_id": 122,
+    "query": "Học viện đã đạt được vị trí nào trong các bảng xếp hạng đại học uy tín như SCIMAGO và Webometrics năm 2022?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "073c032b4da273b2f3ec845a1cf304c7",
+        "relevance_score": 1.0,
+        "reasoning": "Xếp thứ 20 tại Việt Nam theo SCIMAGO và vào Top 10 theo Webometrics năm 2022."
+      },
+      {
+        "chunk_id": "46fb51ef464717214a6227fc0574d026",
+        "relevance_score": 0.7,
+        "reasoning": "Thông tin lịch sử về việc tăng hạng Webometrics lên vị trí thứ 12 vào năm 2018."
+      }
+    ]
+  },
+  {
+    "query_id": 123,
+    "query": "Nội dung đào tạo thực tế của chương trình Kỹ sư Công nghệ thông tin hợp tác với doanh nghiệp Rikkeisoft là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "022475be176c5adebea18659d16a3538",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp kiến thức chuyên sâu và kỹ năng thực hành sẵn sàng cho môi trường làm việc chuyên nghiệp."
+      },
+      {
+        "chunk_id": "67b876fc9b22a9f7dfa6978f85f8c15",
+        "relevance_score": 0.8,
+        "reasoning": "Mô hình đào tạo gắn kết giúp sinh viên thực chiến sớm tại doanh nghiệp."
+      }
+    ]
+  },
+  {
+    "query_id": 124,
+    "query": "Tỉ lệ cán bộ chủ chốt tại các tập đoàn lớn như VNPT và Viettel là cựu sinh viên PTIT chiếm bao nhiêu phần trăm?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "d142a7be6592b83dbfaf5836ca863e03",
+        "relevance_score": 1.0,
+        "reasoning": "Hơn 60% cán bộ chủ chốt VNPT và 30% cán bộ chủ chốt Viettel là cựu sinh viên trường."
+      },
+      {
+        "chunk_id": "d142a7be6592b83dbfaf5836ca863e03",
+        "relevance_score": 0.8,
+        "reasoning": "Gần 40% nhân lực cấp cao tại Samsung R&D cũng xuất thân từ Học viện."
+      }
+    ]
+  },
+  {
+    "query_id": 125,
+    "query": "Những đề tài nghiên cứu tiêu biểu của giảng viên PTIT trong năm 2018-2019 liên quan đến ứng dụng y tế và môi trường là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "032f158fb9560fd71ec373d36a7bf052",
+        "relevance_score": 1.0,
+        "reasoning": "Đề tài về vận tốc tín hiệu điện cơ bề mặt trong co cơ vận động."
+      },
+      {
+        "chunk_id": "0459a36265f00549ac8cd254b8b0c324",
+        "relevance_score": 0.9,
+        "reasoning": "Nghiên cứu sạt lở bờ sông bằng phương pháp điện trường tại Bình Dương."
+      },
+      {
+        "chunk_id": "c642a7be6592b83dbfaf5836ca863e03",
+        "relevance_score": 0.7,
+        "reasoning": "Nghiên cứu sự lan truyền nước rỉ thải bãi rác bằng phương pháp điện trường."
+      }
+    ]
+  },
+  {
+    "query_id": 126,
+    "query": "Vai trò của Công đoàn Học viện trong việc hỗ trợ và chăm lo đời sống cho đội ngũ cán bộ, viên chức?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "a333bae42e3289a1a82b7cb5d97e8002",
+        "relevance_score": 1.0,
+        "reasoning": "Bảo vệ quyền lợi hợp pháp, tổ chức Hội nghị công chức viên chức hàng năm."
+      },
+      {
+        "chunk_id": "27f5ba51a824b45fd863989bcfecb1fb",
+        "relevance_score": 0.7,
+        "reasoning": "Chú trọng đến đời sống tinh thần của con em cán bộ giảng viên."
+      }
+    ]
+  },
+  {
+    "query_id": 127,
+    "query": "Các tiêu chí đánh giá chất lượng giáo dục 4 ngành học của Học viện theo đoàn Đánh giá ngoài của Bộ GD&ĐT gồm những gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "012292e5a2ed52314e4955ba8a499a56",
+        "relevance_score": 1.0,
+        "reasoning": "Thể hiện qua 11 tiêu chuẩn và 50 tiêu chí đánh giá theo quy định của Bộ."
+      },
+      {
+        "chunk_id": "012292e5a2ed52314e4955ba8a499a56",
+        "relevance_score": 0.9,
+        "reasoning": "Đoàn đánh giá thực hiện khảo sát phòng Lab, thư viện, giảng đường và thẩm định việc làm sinh viên."
+      }
+    ]
+  },
+  {
+    "query_id": 128,
+    "query": "Sự kiện 'Google I/O Extended Hanoi' tổ chức tại PTIT có quy mô và sức ảnh hưởng như thế nào đối với cộng đồng công nghệ?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "058f7b68059b6669c2083c327477c3ec",
+        "relevance_score": 1.0,
+        "reasoning": "Thu hút hơn 1.200 người tham dự, 15 diễn giả chuyên gia và 20 đơn vị đối tác."
+      },
+      {
+        "chunk_id": "058f7b68059b6669c2083c327477c3ec",
+        "relevance_score": 0.9,
+        "reasoning": "Là năm thứ 7 tổ chức với quy mô lớn nhất cả nước tại địa phương."
+      }
+    ]
+  },
+  {
+    "query_id": 129,
+    "query": "Đội tuyển sinh viên PTIT đã đạt giải Ba toàn cầu trong hạng mục nào tại cuộc thi Huawei ICT Competition 2022-2023?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "02db8f9080faec8ac4073f50a0bf7f79",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận giải Ba toàn cầu ở hạng mục Cloud tại Thâm Quyến, Trung Quốc."
+      },
+      {
+        "chunk_id": "02db8f9080faec8ac4073f50a0bf7f79",
+        "relevance_score": 0.8,
+        "reasoning": "Thông tin về sinh viên Nguyễn Quốc Hùng và sự dẫn dắt của giảng viên PTIT."
+      }
+    ]
+  },
+  {
+    "query_id": 130,
+    "query": "Những đặc trưng quan trọng của nhân lực số trong mô hình đại học hiện đại theo định hướng của Bộ trưởng Bộ TT&TT là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "1cbe5d688c827e6b51f1394dde33a81f",
+        "relevance_score": 1.0,
+        "reasoning": "Nhân lực số trở thành lực lượng sản xuất chính, chiếm 20-30% tổng nhân lực Học viện."
+      },
+      {
+        "chunk_id": "1cbe5d688c827e6b51f1394dde33a81f",
+        "relevance_score": 0.9,
+        "reasoning": "Vai trò tạo ra nền tảng đào tạo số, học liệu số, thiết kế học và thi online."
+      }
+    ]
+  },
+  {
+    "query_id": 131,
+    "query": "Hoạt động tình nguyện Mùa hè xanh năm 2016 của sinh viên cơ sở TP.HCM đã thực hiện những công trình ý nghĩa nào tại địa phương?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "12819a0a1a66a2634e8d5d62ca37b11e",
+        "relevance_score": 1.0,
+        "reasoning": "Xóa điểm rác tự phát, khơi thông dòng chảy và trồng cỏ đường nông thôn tại Bảo Quang."
+      },
+      {
+        "chunk_id": "12819a0a1a66a2634e8d5d62ca37b11e",
+        "relevance_score": 0.8,
+        "reasoning": "Tuyên truyền vệ sinh môi trường cho gần 500 hộ dân tại phường Phú Hữu."
+      }
+    ]
+  },
+  {
+    "query_id": 132,
+    "query": "Các chương trình đào tạo ngắn hạn về AI tại PTIT cơ sở TP.HCM tập trung vào những ứng dụng thực tiễn nào cho cán bộ công chức?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "02ed9a3eef4816fdb136b2c0d4ac9bbc",
+        "relevance_score": 1.0,
+        "reasoning": "Ứng dụng AI cho lãnh đạo, trong quản trị cơ sở và công vụ hành chính."
+      },
+      {
+        "chunk_id": "046e2f9a110015afad31fb4a9ee39f50",
+        "relevance_score": 0.7,
+        "reasoning": "Đào tạo ứng dụng AI trong sáng tạo nội dung báo chí số."
+      }
+    ]
+  },
+  {
+    "query_id": 133,
+    "query": "Mục tiêu và các hạng mục thi đấu chính của cuộc thi 'Sinh viên Kinh doanh số – DIGITAL BUSINESS CONTEST 2023' là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "6600278478222048052dab50f5020cd2",
+        "relevance_score": 1.0,
+        "reasoning": "Gồm 4 hạng mục: Bán hàng online, Digital Marketing, Ý tưởng kinh doanh số và TMĐT xanh."
+      },
+      {
+        "chunk_id": "6600278478222048052dab50f5020cd2",
+        "relevance_score": 0.9,
+        "reasoning": "Ý tưởng 'GrEcom' của sinh viên PTIT đạt giải Nhất toàn quốc hạng mục TMĐT xanh."
+      }
+    ]
+  },
+  {
+    "query_id": 134,
+    "query": "Tại sao Học viện lại chú trọng đầu tư vào các môn học về khởi nghiệp và sở hữu trí tuệ trong chương trình đào tạo?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "c84c276ad3c59f79bf11fd493ed195b4",
+        "relevance_score": 1.0,
+        "reasoning": "Giúp hình thành các 'kỳ lân' công nghệ tiềm năng trong tương lai."
+      },
+      {
+        "chunk_id": "c84c276ad3c59f79bf11fd493ed195b4",
+        "relevance_score": 0.8,
+        "reasoning": "Trang bị kiến thức gọi vốn đầu tư và phát triển thị trường cho sinh viên."
+      }
+    ]
+  },
+  {
+    "query_id": 135,
+    "query": "Những nội dung cốt lõi trong biên bản ký kết giữa PTIT và Đại học Seoul Cyber (Hàn Quốc) về giáo dục trực tuyến?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "5bf29f4d6f2bc25abbbb4067984e7c66",
+        "relevance_score": 1.0,
+        "reasoning": "Hợp tác về e-learning, đào tạo giảng viên trực tuyến và hỗ trợ kỹ thuật."
+      },
+      {
+        "chunk_id": "01c3664fe6d0f5d5ea41d57c2164377b",
+        "relevance_score": 0.9,
+        "reasoning": "Xây dựng nền tảng đại học số dựa trên mô hình cyber top 1 tại Hàn Quốc."
+      }
+    ]
+  },
+  {
+    "query_id": 136,
+    "query": "Thông tin chi tiết về buổi seminar 'Hiểu Ngành – Chọn Nghề 2025' dành cho sinh viên khối ngành Kinh tế?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "046ef91afbba07d7cc6cbedba6ff489f",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu thời gian, địa điểm, đơn vị tổ chức và các diễn giả từ DKSH, Mobifone."
+      },
+      {
+        "chunk_id": "046ef91afbba07d7cc6cbedba6ff489f",
+        "relevance_score": 0.8,
+        "reasoning": "Mục tiêu cung cấp góc nhìn đa chiều về sự nghiệp cho sinh viên Quản trị kinh doanh."
+      }
+    ]
+  },
+  {
+    "query_id": 137,
+    "query": "Tại hội nghị 'Bàn về phát triển nhân lực ICT trình độ cao', Bộ trưởng Phùng Xuân Nhạ đã nhấn mạnh thách thức gì trong bối cảnh số hóa?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "ec63c547b31080f7b3f165e130980d56",
+        "relevance_score": 1.0,
+        "reasoning": "Nhân lực ICT đóng vai trò quan trọng nhưng thách thức về chất lượng là rất lớn khi kinh tế số hóa."
+      },
+      {
+        "chunk_id": "ac23febd12c2453ed554882232a44bf",
+        "relevance_score": 0.8,
+        "reasoning": "Thực trạng gắn kết cung cầu giữa nhà trường và doanh nghiệp còn nhiều vấn đề cần giải quyết."
+      }
+    ]
+  },
+  {
+    "query_id": 138,
+    "query": "Các hoạt động 'về nguồn' của Học viện hướng tới kỷ niệm 70 năm thành lập trường Bưu điện đã diễn ra tại những địa điểm nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "03517aac85d954a1e84a5e5a0c2b6783",
+        "relevance_score": 1.0,
+        "reasoning": "Lễ khánh thành Bia kỷ niệm tại Phú Xuyên, Đại Từ, Thái Nguyên."
+      },
+      {
+        "chunk_id": "d16c0d22d8e5d1a2bc9fb5007d1ecf8",
+        "relevance_score": 0.8,
+        "reasoning": "Hoạt động về nguồn tại Tân Biên, Tây Ninh nhân kỷ niệm 70 năm."
+      }
+    ]
+  },
+  {
+    "query_id": 139,
+    "query": "Học viện đã tham gia vào báo cáo kinh tế số thường niên của Việt Nam như thế nào trong năm 2023?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "016b9ae47501cd75a2a823797fd05663",
+        "relevance_score": 1.0,
+        "reasoning": "Tham gia đánh giá tỷ trọng kinh tế số trong GDP/GRDP cho 63 tỉnh thành."
+      },
+      {
+        "chunk_id": "0507589afdebb758ab8562d52695f534",
+        "relevance_score": 0.9,
+        "reasoning": "Phối hợp cùng Vụ Kinh tế số công bố báo cáo có đầy đủ cơ sở khoa học vào tháng 7."
+      }
+    ]
+  },
+  {
+    "query_id": 140,
+    "query": "Thông tin về cuộc thi 'Lập trình Robot năm 2023' do khoa Kỹ thuật Điện tử 1 chủ trì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0ae1109454c956f04f1cd4119ce03500",
+        "relevance_score": 1.0,
+        "reasoning": "Đối tượng dự thi là sinh viên cả nước; mục tiêu khuyến khích sáng tạo công nghệ mới."
+      },
+      {
+        "chunk_id": "0ae1109454c956f04f1cd4119ce03500",
+        "relevance_score": 0.8,
+        "reasoning": "Có sự tham dự và cố vấn của chuyên gia từ Đại học Gunma (Nhật Bản)."
+      }
+    ]
+  },
+  {
+    "query_id": 141,
+    "query": "Keyword: 'Anh hùng lao động', 'Anh hùng lực lượng vũ trang', 'Huân chương độc lập'",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0a6bf18cc8ac39e4a3a979d4cd1d868b",
+        "relevance_score": 1.0,
+        "reasoning": "Học viện được tặng danh hiệu Anh hùng Lao động năm 2013."
+      },
+      {
+        "chunk_id": "87339ea919dec001f9a0cd123ba5789c",
+        "relevance_score": 0.9,
+        "reasoning": "Đề cập đến danh hiệu Anh hùng lực lượng vũ trang nhân dân của các thế hệ tiền thân."
+      }
+    ]
+  },
+  {
+    "query_id": 142,
+    "query": "Phát biểu của Bộ trưởng Nguyễn Mạnh Hùng về triết lý 'Học và Hỏi' trong thời đại 4.0?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "01eaca20a837f21ec41cca583493bb03",
+        "relevance_score": 1.0,
+        "reasoning": "Hỏi là tư duy, học là ăn còn hỏi là tiêu hóa; hỏi để sinh ra tri thức mới."
+      },
+      {
+        "chunk_id": "3426bae36ff93b554039706d5bb59e57",
+        "relevance_score": 0.9,
+        "reasoning": "Hỏi biến lớp học thành môi trường sáng tạo; thầy học ở trò qua những câu hỏi."
+      }
+    ]
+  },
+  {
+    "query_id": 143,
+    "query": "Cơ sở vật chất phục vụ đào tạo tại PTIT cơ sở TP.HCM có những điểm mạnh nào về không gian sáng chế và thực hành?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "254309aa1a66a2634e8d5d62ca37b11e",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả Trung tâm Không gian sáng chế Maker Space gắn kết với doanh nghiệp."
+      },
+      {
+        "chunk_id": "254309aa1a66a2634e8d5d62ca37b11e",
+        "relevance_score": 0.9,
+        "reasoning": "Hệ thống phòng thí nghiệm Lab nghiên cứu chuyên sâu cho sinh viên phát triển dự án."
+      }
+    ]
+  },
+  {
+    "query_id": 144,
+    "query": "Kết quả khảo sát xu hướng việc làm của sinh viên PTIT sau khi tốt nghiệp giai đoạn 2022-2023?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "526c7a733abb97e9f740f0c550211443",
+        "relevance_score": 1.0,
+        "reasoning": "PTIT tham gia dự án khảo sát xu hướng việc làm của sinh viên cùng các đối tác Châu Âu."
+      },
+      {
+        "chunk_id": "9f7f0b5486fbf82708e7a86efbae3dda",
+        "relevance_score": 0.8,
+        "reasoning": "Hội thảo phổ biến kết quả khảo sát việc làm do quỹ Erasmus+ tài trợ."
+      }
+    ]
+  },
+  {
+    "query_id": 145,
+    "query": "PTIT đã thực hiện chuyển giao công nghệ hệ thống 'Đại học số' cho những đơn vị đào tạo nào bên ngoài?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0d1a4cc276ad3c59f79bf11fd493ed19",
+        "relevance_score": 1.0,
+        "reasoning": "Chuyển giao hệ thống Đại học số với 18 phân hệ cho Trường Đại học Vinh."
+      },
+      {
+        "chunk_id": "0263c0a6dc2eb0f294f2e5139cb5d6ec",
+        "relevance_score": 0.8,
+        "reasoning": "Định hướng chuyển giao công nghệ số cho các đơn vị đào tạo trong cả nước."
+      }
+    ]
+  },
+  {
+    "query_id": 146,
+    "query": "Hoạt động 'PTIT Hồng' mang ý nghĩa gì và đóng góp như thế nào cho cộng đồng?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "05334b36d6c6279da6251cd19508feac",
+        "relevance_score": 1.0,
+        "reasoning": "Đây là hoạt động hiến máu nhân đạo thường niên được thành phố Hà Nội tặng bằng khen."
+      },
+      {
+        "chunk_id": "05334b36d6c6279da6251cd19508feac",
+        "relevance_score": 0.9,
+        "reasoning": "Thể hiện tinh thần nhân văn, xung kích của tuổi trẻ Học viện vì sức khỏe cộng đồng."
+      }
+    ]
+  },
+  {
+    "query_id": 147,
+    "query": "Sự khác biệt giữa thiết bị cứu hộ 'SkyHelper' của sinh viên PTIT so với Flycam và Robot tìm kiếm thông thường?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "00d085027ee9de9b38ef40f1718687b9",
+        "relevance_score": 1.0,
+        "reasoning": "SkyHelper khắc phục hạn chế về vị trí chính xác của Flycam và địa hình gồ ghề của Robot."
+      },
+      {
+        "chunk_id": "00d085027ee9de9b38ef40f1718687b9",
+        "relevance_score": 0.9,
+        "reasoning": "Thông tin đạt giải Nhì tại cuộc thi Sáng tạo trẻ 2023."
+      }
+    ]
+  },
+  {
+    "query_id": 148,
+    "query": "Những nội dung nghiên cứu khoa học trọng tâm của PTIT hướng tới Cách mạng Công nghiệp 4.0 trong giai đoạn 2017-2022?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "a335ccc451fff114d63241157029c48f",
+        "relevance_score": 1.0,
+        "reasoning": "Nghiên cứu về IoT, vi mạch tích hợp IC, thực tại ảo VR/AR và CNTT xanh."
+      },
+      {
+        "chunk_id": "a335ccc451fff114d63241157029c48f",
+        "relevance_score": 0.9,
+        "reasoning": "Nghiên cứu kinh tế số, marketing số và các phương pháp quản trị hiện đại."
+      }
+    ]
+  },
+  {
+    "query_id": 149,
+    "query": "Thành phần hội đồng chấm luận án tiến sĩ và kết quả bảo vệ của NCS Lê Ngọc Hiếu ngành Kỹ thuật Viễn thông?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "e35b0a0fd3092b534e7c4a3607e03648",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các thành viên hội đồng từ ĐH Bách Khoa, ĐH Sài Gòn và Học viện."
+      },
+      {
+        "chunk_id": "e35b0a0fd3092b534e7c4a3607e03648",
+        "relevance_score": 0.9,
+        "reasoning": "Hội đồng đánh giá đề tài phù hợp mã số chuyên ngành và đạt chất lượng."
+      }
+    ]
+  },
+  {
+    "query_id": 150,
+    "query": "Keyword: 'C-DAC Ấn Độ', 'An ninh mạng', 'Master Trainer', 'CESDT'",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0a0a4c0690cb99c8fe3c63bbe3768053",
+        "relevance_score": 1.0,
+        "reasoning": "Chứng nhận International ATC từ C-DAC Ấn Độ trao cho PTIT."
+      },
+      {
+        "chunk_id": "d16c0d22d8e5d1a2bc9fb5007d1ecf8",
+        "relevance_score": 0.7,
+        "reasoning": "Việc cử giảng viên đi tập huấn nước ngoài tại Ấn Độ để nâng cao năng lực."
+      }
+    ]
+  },
+  {
+    "query_id": 151,
+    "query": "Sinh viên theo học ngành Điện - Điện tử sẽ được thực hành trong môi trường như thế nào và nhà trường có cam kết gì về trang thiết bị không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "37239614a14a5cdd05ec0536efe13b97",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập trực tiếp đến việc Học viện trang bị các thiết bị thực hành mới và đảm bảo chất lượng dạy học cho sinh viên."
+      },
+      {
+        "chunk_id": "00619b99e5991526d38c86f543acd87c",
+        "relevance_score": 0.8,
+        "reasoning": "Cung cấp bối cảnh về cơ hội thực hành và tầm quan trọng của việc rèn luyện kỹ năng trong ngành Điện - Điện tử."
+      },
+      {
+        "chunk_id": "6038fb240733166facb571d9d9dd72ed",
+        "relevance_score": 0.7,
+        "reasoning": "Bổ sung thông tin về các địa điểm thực tập và đơn vị liên kết thực hành của ngành."
+      }
+    ]
+  },
+  {
+    "query_id": 152,
+    "query": "Sau khi tốt nghiệp ngành Kỹ thuật điện tử viễn thông, tôi có thể làm việc tại những vị trí nào và ở đâu?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "079e62fc0c5ab7c930a4786e90cd812e",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê chi tiết các vị trí như chuyên viên thiết kế mạng, quy hoạch tại các công ty viễn thông."
+      },
+      {
+        "chunk_id": "278c0223297b6533443b0e4bb85eb278",
+        "relevance_score": 0.9,
+        "reasoning": "Mô tả tổng quát về đầu ra công việc và các môi trường làm việc thực tế cho kỹ sư viễn thông."
+      }
+    ]
+  },
+  {
+    "query_id": 153,
+    "query": "Những yếu tố nào thường quyết định đến mức điểm chuẩn đầu vào của ngành Viễn thông tại các cơ sở đào tạo khác nhau?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "5ccbe2ce56cbf3598e4859952d4a9d0d",
+        "relevance_score": 1.0,
+        "reasoning": "Phân tích vai trò của chỉ tiêu tuyển sinh tại từng cơ sở ảnh hưởng đến mức điểm chuẩn."
+      },
+      {
+        "chunk_id": "079e62fc0c5ab7c930a4786e90cd812e",
+        "relevance_score": 0.5,
+        "reasoning": "Cung cấp thông tin nền về sức hút của ngành, gián tiếp ảnh hưởng đến tính cạnh tranh điểm số."
+      }
+    ]
+  },
+  {
+    "query_id": 154,
+    "query": "Chương trình đào tạo Quản trị kinh doanh kéo dài trong bao lâu và sinh viên sẽ được trang bị những kiến thức chuyên môn gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "087adfbc8f95f06d3293dd0b5746576e",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận thời gian đào tạo tiêu chuẩn của ngành Quản trị kinh doanh."
+      },
+      {
+        "chunk_id": "33adca9cdf250d158cdc2dbb9901761a",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các nhóm môn học và kiến thức chuyên ngành mà sinh viên được tiếp cận trong 4 năm."
+      }
+    ]
+  },
+  {
+    "query_id": 155,
+    "query": "Lĩnh vực An toàn thông tin tại Học viện tập trung đào tạo những kỹ năng bảo vệ dữ liệu nào cho người học?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "029d9974e7c8bfc53fee3e561d709863",
+        "relevance_score": 1.0,
+        "reasoning": "Giới thiệu tổng quan về định hướng đào tạo ATTT và các kỹ năng phòng thủ mạng."
+      },
+      {
+        "chunk_id": "4627a9d8c76c96cfef8e9c569db56891",
+        "relevance_score": 0.9,
+        "reasoning": "Chi tiết về việc xử lý lỗ hổng và bảo mật hệ thống thông tin."
+      }
+    ]
+  },
+  {
+    "query_id": 156,
+    "query": "Công việc của một kỹ sư vận hành và bảo trì hệ thống điện trong các nhà máy, xí nghiệp cụ thể là làm những gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0013929657e86ac71ef7c885492f8d1c",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả chi tiết nhiệm vụ của kỹ sư vận hành lắp đặt, bảo trì thiết bị điện tại xí nghiệp."
+      },
+      {
+        "chunk_id": "43e678e989e0d7d2d24a98fadf3308a1",
+        "relevance_score": 0.8,
+        "reasoning": "Bổ sung thông tin về mảng điều khiển tự động hóa liên quan đến vận hành hệ thống."
+      }
+    ]
+  },
+  {
+    "query_id": 157,
+    "query": "Tại sao nói Logistics là ngành học đáp ứng tốt nhu cầu nhân lực trong bối cảnh kinh tế hiện nay?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "67373f7607730e7912d09df442475475",
+        "relevance_score": 1.0,
+        "reasoning": "Phân tích xu hướng phát triển của chuỗi cung ứng và sự thiếu hụt nhân sự chuyên môn."
+      },
+      {
+        "chunk_id": "84728374823748237482374823748237",
+        "relevance_score": 0.8,
+        "reasoning": "Nêu vai trò quan trọng của quản trị Logistics đối với hiệu quả kinh doanh của doanh nghiệp."
+      }
+    ]
+  },
+  {
+    "query_id": 158,
+    "query": "Vai trò của công nghệ điện - điện tử đối với đời sống sinh hoạt hàng ngày được thể hiện qua những khía cạnh nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "69785023948572039485720394857203",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả các ứng dụng thực tế của điện tử trong các thiết bị gia dụng và tiện ích cá nhân."
+      },
+      {
+        "chunk_id": "0103108994d2eb2f5afe5dbc1de8ee35",
+        "relevance_score": 0.6,
+        "reasoning": "Đề cập đến các giải pháp công nghệ thông minh trong đời sống số."
+      }
+    ]
+  },
+  {
+    "query_id": 159,
+    "query": "Các ứng viên dự tuyển vị trí giảng viên cần đáp ứng yêu cầu về trình độ chuyên môn và chứng chỉ ngoại ngữ như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "cc62e51c9d90af5284eb8f7a1b9a14d6",
+        "relevance_score": 0.9,
+        "reasoning": "Quy định về hồ sơ năng lực và các văn bằng cần thiết khi ứng tuyển."
+      },
+      {
+        "chunk_id": "e9cf5400e08e717888586b0d7993a42c",
+        "relevance_score": 1.0,
+        "reasoning": "Chi tiết tiêu chuẩn về trình độ học vấn (Thạc sĩ, Tiến sĩ) và yêu cầu tiếng Anh (IELTS/TOEIC)."
+      }
+    ]
+  },
+  {
+    "query_id": 160,
+    "query": "Ngoài kiến thức kỹ thuật, sinh viên ngành Đa phương tiện tại PTIT có được đào tạo về tư duy thẩm mỹ và sáng tạo không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "79a0f8fbf96362258089af9a4fb50977",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận chương trình có sự kết hợp giữa kỹ thuật và nghệ thuật/sáng tạo nội dung."
+      },
+      {
+        "chunk_id": "029d9974e7c8bfc53fee3e561d709863",
+        "relevance_score": 0.4,
+        "reasoning": "Cung cấp bối cảnh về môi trường đào tạo công nghệ hiện đại hỗ trợ tư duy mới."
+      }
+    ]
+  },
+  {
+    "query_id": 161,
+    "query": "Sinh viên học Kỹ thuật điều khiển và tự động hóa tại PTIT cơ sở Hồ Chí Minh sẽ nhận được sự hỗ trợ kết nối doanh nghiệp như thế nào, và làm sao để liên hệ tư vấn?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0889766cf3804454eea7f561e42d9638",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu rõ việc học viện kết nối với doanh nghiệp để tạo cơ hội thực tập và việc làm cho sinh viên."
+      },
+      {
+        "chunk_id": "7e911d219c2ad08bf827a4b8e8cd8a60",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp trực tiếp số hotline 02838297220 để liên hệ tư vấn giải đáp thắc mắc."
+      },
+      {
+        "chunk_id": "fd152f7d796d81d4b78dcaee702a6069",
+        "relevance_score": 0.6,
+        "reasoning": "Đề cập đến vấn đề chọn đơn vị học tập phù hợp để tăng tỷ lệ xin việc cao sau khi ra trường."
+      }
+    ]
+  },
+  {
+    "query_id": 162,
+    "query": "Thời gian hoàn thành chương trình đào tạo chuyên ngành Internet vạn vật thường kéo dài bao lâu và nó phụ thuộc vào những yếu tố gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "769b69de9e6bf1da564945bc9b58ef86",
+        "relevance_score": 1.0,
+        "reasoning": "Giải thích rõ thời gian học phụ thuộc vào cơ sở đào tạo và trình độ cụ thể như trung cấp hay đại học."
+      },
+      {
+        "chunk_id": "0919d6c0b0e07898d9b478046583ab96",
+        "relevance_score": 0.5,
+        "reasoning": "Cung cấp bối cảnh về chuyên ngành IoT và ứng dụng đa dạng của nó trong đời sống."
+      }
+    ]
+  },
+  {
+    "query_id": 163,
+    "query": "Học ngành điện tử đòi hỏi người học cần phải có những đức tính gì để hoàn thiện sản phẩm một cách tốt nhất?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "b3e475cec5a1608db0a585700dc2f8d2",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập trực tiếp đến yêu cầu về sự tỉ mỉ, cẩn thận và cố gắng hoàn thành tốt nhất công việc."
+      },
+      {
+        "chunk_id": "1dd66c0a2cc5a8b28d5fb18f8808ed7b",
+        "relevance_score": 0.6,
+        "reasoning": "Nhấn mạnh cơ hội việc làm phong phú của ngành so với các chuyên ngành khác làm bối cảnh nỗ lực cho sinh viên."
+      }
+    ]
+  },
+  {
+    "query_id": 164,
+    "query": "Để thành công và làm việc hiệu quả trong lĩnh vực Marketing hiện nay, nhân sự cần trang bị và cập nhật những gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "8c961ff4331bf3b7bb6325b7bfb6f455",
+        "relevance_score": 1.0,
+        "reasoning": "Yêu cầu ứng viên phải thường xuyên cập nhật kiến thức, nắm vững công cụ và công nghệ phục vụ công việc."
+      },
+      {
+        "chunk_id": "619d2823b3e93d5e43498f4d7ec81bab",
+        "relevance_score": 0.7,
+        "reasoning": "Xác nhận cơ hội việc làm phong phú, giải thích vì sao cần liên tục học hỏi để nắm bắt cơ hội."
+      }
+    ]
+  },
+  {
+    "query_id": 165,
+    "query": "Chương trình đào tạo Kỹ sư Điều khiển và Tự động hóa hợp tác với Nhật Bản năm 2023 tại cơ sở Hà Nội có điểm gì đặc biệt về thời gian học tập?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "099b4ebd5ff2f2adc358b2911bc1acf0",
+        "relevance_score": 1.0,
+        "reasoning": "Khẳng định thông tin PTIT hợp tác với Nhật Bản trong mùa tuyển sinh 2023 tại cơ sở Hà Nội."
+      },
+      {
+        "chunk_id": "603062c6924c91dac34a01a2ed4b4324",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả chi tiết thời gian học xen kẽ, vừa học tại Việt Nam vừa có thời gian 1,5 năm tại Nhật."
+      },
+      {
+        "chunk_id": "303de7e67470fde1ba17b1eacea10961",
+        "relevance_score": 0.4,
+        "reasoning": "Thông tin nền về các chương trình hợp tác trước đó (từ năm 2020) để thấy sự nối tiếp."
+      }
+    ]
+  },
+  {
+    "query_id": 166,
+    "query": "Kỹ sư tự động hóa cần đáp ứng những tiêu chuẩn gì về kỹ năng mềm và ngoại ngữ để có thể làm việc tốt?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "09d0847e18d59cb375fb302156201e04",
+        "relevance_score": 1.0,
+        "reasoning": "Nhấn mạnh kỹ năng giao tiếp và trình độ tiếng Anh tốt là yếu tố cần thiết."
+      },
+      {
+        "chunk_id": "451b7f56df5d1dd7546aa59709fa4bd6",
+        "relevance_score": 0.9,
+        "reasoning": "Bổ sung các yêu cầu về đầu óc sáng tạo, linh hoạt bên cạnh kiến thức chuyên môn."
+      }
+    ]
+  },
+  {
+    "query_id": 167,
+    "query": "Ngành kỹ thuật điều khiển đóng vai trò như thế nào trong xu hướng chế tạo và sản xuất phương tiện giao thông mới như xe điện?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "09f668a30758b06b081d316fabf00c31",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu rõ vai trò của ngành trong công cuộc chế tạo và vận hành các phương tiện giao thông mới."
+      },
+      {
+        "chunk_id": "76998e83658b30e63d8567cd6d887da6",
+        "relevance_score": 0.8,
+        "reasoning": "Giải thích yếu tố an toàn và bảo vệ môi trường, lý do xe điện và xe tự động cần công nghệ điều khiển."
+      }
+    ]
+  },
+  {
+    "query_id": 168,
+    "query": "Chương trình đào tạo ngành Công nghệ đa phương tiện tại Học viện có cam kết như thế nào về khả năng làm việc của sinh viên sau khi ra trường?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "09fa11d0bdc6b75e24d51133b89e6eba",
+        "relevance_score": 1.0,
+        "reasoning": "Học viện cam kết người học sau khi ra trường có thể đảm nhận tốt các công việc chuyên môn của doanh nghiệp."
+      },
+      {
+        "chunk_id": "64dece7ec5ccecc734a65abb0c27d6a5",
+        "relevance_score": 0.5,
+        "reasoning": "Giới thiệu chung về sức hấp dẫn của ngành đa phương tiện hiện nay."
+      }
+    ]
+  },
+  {
+    "query_id": 169,
+    "query": "Ngay cả khi chỉ tốt nghiệp hệ trung cấp hay cao đẳng chuyên ngành Điện - Điện tử, người lao động có dễ dàng tìm được công việc phù hợp không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0a659f8c6170f643e22dc9649ebf59e5",
+        "relevance_score": 1.0,
+        "reasoning": "Khẳng định bằng trung cấp, cao đẳng vẫn có nhiều cơ hội tìm kiếm việc làm tùy theo năng lực."
+      },
+      {
+        "chunk_id": "40874acdddda8c4daefa8103a2c36962",
+        "relevance_score": 0.7,
+        "reasoning": "Lý giải vì sao luôn có việc làm, do điện - điện tử là ngành cốt lõi trong mọi hoạt động sản xuất."
+      }
+    ]
+  },
+  {
+    "query_id": 170,
+    "query": "Làm thế nào để sinh viên điện tử tích lũy kinh nghiệm thực tế và học hỏi thêm kiến thức ngoài giảng đường đại học?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "19d84e606083ce68a18f906701a70da8",
+        "relevance_score": 1.0,
+        "reasoning": "Gợi ý các kênh học tập mở rộng như sách báo, khóa học trực tuyến, hội nghị chuyên ngành."
+      },
+      {
+        "chunk_id": "7dc9afb3761a07a73e29bdb52b0578ba",
+        "relevance_score": 1.0,
+        "reasoning": "Chỉ ra việc làm thực tập là phương pháp tốt nhất để tích lũy kinh nghiệm thực chiến."
+      }
+    ]
+  },
+  {
+    "query_id": 171,
+    "query": "Sự phát triển của công nghệ số tác động như thế nào đến yêu cầu công việc đối với nhân viên kế toán hiện nay?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "451f3cc2883caf1a2216b4c5f98e7768",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập đến vai trò của ngành kế toán và sự thay đổi, thách thức mà công nghệ số mang lại."
+      },
+      {
+        "chunk_id": "a33183aa973fbc579ba9dafbfa3fda9f",
+        "relevance_score": 0.8,
+        "reasoning": "Chỉ ra công việc bị ảnh hưởng thay đổi tùy thuộc vào mức độ áp dụng công nghệ và quy mô doanh nghiệp."
+      },
+      {
+        "chunk_id": "0af629ea6227825057ed5193bbec9d60",
+        "relevance_score": 0.7,
+        "reasoning": "Tuy công nghệ thay đổi, nhưng đặc thù tính chính xác, cẩn thận và tỉ mỉ vẫn là cốt lõi."
+      }
+    ]
+  },
+  {
+    "query_id": 172,
+    "query": "Khả năng ứng dụng của công nghệ điện tử vào lĩnh vực sản xuất robot và tự động hóa hiện đại được đánh giá ra sao?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0c1f841ad90c5762bbad98a777847454",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả cụ thể ứng dụng của công nghệ điện tử trong lĩnh vực sản xuất hiện đại và phát triển robot."
+      },
+      {
+        "chunk_id": "79cd484c42a5ce49c1be68fe01b31891",
+        "relevance_score": 0.6,
+        "reasoning": "Kết luận về tiềm năng to lớn của ngành điện tử trong các xu hướng công nghệ tương lai."
+      }
+    ]
+  },
+  {
+    "query_id": 173,
+    "query": "Tốt nghiệp chuyên ngành điện - điện tử với trình độ cao, tôi có thể đảm nhận các vị trí nào trong việc xây dựng cơ sở hạ tầng?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0c7bcd92c3e9dac943883c7b5da273d0",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê vị trí thiết kế, thi công mạng lưới điện cho khu dân cư, công nghiệp, công trình dân dụng."
+      },
+      {
+        "chunk_id": "1f3a3fe530285c1d2e4296b1a34fe52d",
+        "relevance_score": 0.5,
+        "reasoning": "Khẳng định nhu cầu nhân sự ngành này không bao giờ giảm, đảm bảo đầu ra công việc."
+      }
+    ]
+  },
+  {
+    "query_id": 174,
+    "query": "Làm sao để liên hệ nhận hỗ trợ tư vấn tuyển sinh chuyên ngành kỹ thuật điện - điện tử tại cơ sở đào tạo này?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "8a7821b2d2484465e2f17e2e09a74a82",
+        "relevance_score": 1.0,
+        "reasoning": "Chỉ định rõ hotline 02838297220 để người dùng có thể nhận hỗ trợ tư vấn tuyển sinh trực tiếp."
+      },
+      {
+        "chunk_id": "3ae318ea4c78ddff6d082320a3c204ce",
+        "relevance_score": 0.4,
+        "reasoning": "Cung cấp bối cảnh đây là trường đào tạo điện điện tử có thứ hạng cao."
+      }
+    ]
+  },
+  {
+    "query_id": 175,
+    "query": "Mức thu nhập trung bình của sinh viên mới tốt nghiệp ngành An toàn thông tin hiện nay khoảng bao nhiêu?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "9324ed0ef89f65bdfcc6bc559a2b4c61",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp con số thống kê mức lương trung bình từ 8 - 15 triệu đồng/tháng cho sinh viên mới ra trường."
+      },
+      {
+        "chunk_id": "631f4828b68189e3863ab8fedb64cef4",
+        "relevance_score": 0.5,
+        "reasoning": "Đề cập đa dạng các vị trí công việc giúp đem lại thu nhập tốt cho ngành."
+      }
+    ]
+  },
+  {
+    "query_id": 176,
+    "query": "Cử nhân Marketing sau khi tốt nghiệp có thể ứng tuyển vào các vị trí công việc cụ thể nào trong doanh nghiệp?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "15eff16ad8dd80efa31dbbe4a3e8162e",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê trực tiếp các chức danh như Chuyên viên phát triển thị trường, Chuyên viên tổ chức sự kiện..."
+      },
+      {
+        "chunk_id": "8313c8eea04337620eba480249e9c5bd",
+        "relevance_score": 0.8,
+        "reasoning": "Khẳng định đây là ngành thuộc top 6 có nhu cầu tuyển dụng cao nhất hiện nay."
+      }
+    ]
+  },
+  {
+    "query_id": 177,
+    "query": "Những sở thích và tố chất nào cho thấy một học sinh phù hợp để theo học ngành Internet vạn vật (IoT)?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "5e327438bc3ae535bcc2b70985af8963",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu rõ yêu cầu về sự đam mê tìm hiểu, khám phá, khả năng phân tích và thích chế tạo thiết bị hệ thống IoT."
+      },
+      {
+        "chunk_id": "0e4d7327a9e3280a1f526ea0f24cb499",
+        "relevance_score": 0.4,
+        "reasoning": "Mở đầu vấn đề về việc định hướng nghề nghiệp cho các bạn trẻ chưa hiểu rõ về ngành IoT."
+      }
+    ]
+  },
+  {
+    "query_id": 178,
+    "query": "Sinh viên theo học Kỹ thuật điều khiển và Tự động hóa được định hướng như thế nào trong bối cảnh bùng nổ Trí tuệ nhân tạo?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0f0786a96dfc81b8b2d8f63b833b6cd1",
+        "relevance_score": 1.0,
+        "reasoning": "Nhấn mạnh vai trò của ngành được ứng dụng song hành với cuộc cách mạng 4.0 và nền tảng Trí tuệ nhân tạo (AI)."
+      },
+      {
+        "chunk_id": "ace7e7a1daaf37d2e93b16b0d1cc4289",
+        "relevance_score": 0.7,
+        "reasoning": "Khẳng định những xu hướng mới này mang lại cơ hội việc làm cực kỳ lớn cho sinh viên."
+      }
+    ]
+  },
+  {
+    "query_id": 179,
+    "query": "Những khó khăn và rào cản chính mà các kỹ sư thiết kế vi mạch thường gặp phải trong quá trình tạo ra các sản phẩm phức tạp là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "0f1f634bf63ab2c38858f102acfb67d6",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê rõ các thách thức như vấn đề chi phí và sự phụ thuộc vào tài nguyên để đạt được hiệu suất cao."
+      },
+      {
+        "chunk_id": "a983ed61b11de50b4d3924f9cfbb8bab",
+        "relevance_score": 0.6,
+        "reasoning": "Định nghĩa tổng quan quá trình thiết kế mạch tích hợp đa lớp vô cùng phức tạp."
+      }
+    ]
+  },
+  {
+    "query_id": 180,
+    "query": "Có những bài viết hay nguồn tham khảo nào giúp tìm hiểu kỹ hơn về thu nhập và định hướng nghề nghiệp tương lai của ngành Điện - Điện tử?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "3987b63fc92933aa70d668bcaa581654",
+        "relevance_score": 1.0,
+        "reasoning": "Gợi ý rõ việc xem thêm bài viết 'Những cơ hội nghề nghiệp và thu nhập' để người đọc tham khảo."
+      },
+      {
+        "chunk_id": "4c34915d7734e57738cc7d9b79fb0772",
+        "relevance_score": 0.8,
+        "reasoning": "Bổ sung định hướng về xu hướng phát triển và thị trường nhân lực cho ngành này."
+      }
+    ]
+  },
+  {
+    "query_id": 181,
+    "query": "Chương trình CNTT tại PTITHCM có những chuyên đề nào giúp sinh viên biết cách ứng phó với các mối đe dọa trên không gian mạng?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "3541f36d9ecf1c545836edc2a2134233",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả sinh viên được trang bị kiến thức phòng ngừa, phát hiện và ứng phó các cuộc tấn công mạng, bảo vệ hệ thống."
+      },
+      {
+        "chunk_id": "0fa1603c2f36e1e7954183cf3b387ae4",
+        "relevance_score": 0.5,
+        "reasoning": "Giới thiệu vị thế 'xương sống' của ngành CNTT, làm nền tảng cho đào tạo bảo mật."
+      }
+    ]
+  },
+  {
+    "query_id": 182,
+    "query": "Một kỹ sư tự động hóa có trình độ chuyên môn cao và thông thạo ngoại ngữ sẽ nhận được lợi thế gì trên thị trường lao động?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "c4f378889a015dc704f7ef7424ad6049",
+        "relevance_score": 1.0,
+        "reasoning": "Nhấn mạnh ứng viên có chuyên môn giỏi và ngoại ngữ tốt sẽ rất được săn đón với nhiều quyền lợi vượt trội."
+      },
+      {
+        "chunk_id": "af8a11b94860017ebb005b3565796491",
+        "relevance_score": 0.7,
+        "reasoning": "Giải thích thêm về việc các tổ chức đang tăng cường đầu tư nâng cao chất lượng nhân lực ngành này."
+      }
+    ]
+  },
+  {
+    "query_id": 183,
+    "query": "Chuẩn đầu ra về mặt kỹ thuật cho sinh viên đại học ngành Công nghệ kỹ thuật điện - điện tử bao gồm những kiến thức cốt lõi nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "4cadef43a96a85f3ecd36e5f4e3ccfee",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê các chuẩn đầu ra như hiểu nguyên lý truyền dẫn RF, thuật toán nén dữ liệu và kiến thức linh kiện."
+      },
+      {
+        "chunk_id": "4c4293a8dfcb778cacfed71d9909a5fb",
+        "relevance_score": 0.9,
+        "reasoning": "Khẳng định người tốt nghiệp chương trình đại học phải nắm chắc các kiến thức cơ bản liên quan kỹ thuật."
+      }
+    ]
+  },
+  {
+    "query_id": 184,
+    "query": "Ngành Công nghệ kỹ thuật điện - điện tử tại Học viện Công nghệ Bưu chính Viễn thông được phân chia thành những chuyên ngành hẹp nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "1d97769c75af631e091f28f4f25bc5b0",
+        "relevance_score": 1.0,
+        "reasoning": "Chỉ rõ ngành được chia làm 3 chuyên ngành, trong đó có chuyên ngành Xử lý tín hiệu truyền thông."
+      },
+      {
+        "chunk_id": "144db2ed0e628170dda4274a1d03adb4",
+        "relevance_score": 0.6,
+        "reasoning": "Nhấn mạnh sự khác biệt và điểm mạnh trong chất lượng đào tạo điện - điện tử tại PTIT so với các trường khác."
+      }
+    ]
+  },
+  {
+    "query_id": 185,
+    "query": "Học sinh 2k7 nên làm gì với kiến thức vừa học được và làm sao để làm quen với các dạng đề thi tốt nhất?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "11e5e92f27623672a74a81f92e846873",
+        "relevance_score": 1.0,
+        "reasoning": "Khuyên học sinh cần ghi lại kiến thức một cách khoa học để ghi nhớ thật tốt."
+      },
+      {
+        "chunk_id": "82a2400400a40c9dba7425a6fc1506c8",
+        "relevance_score": 1.0,
+        "reasoning": "Khuyến khích luyện các dạng đề thi thường xuyên để quen với đề bài và áp lực thi cử."
+      }
+    ]
+  },
+  {
+    "query_id": 186,
+    "query": "Ngành kỹ thuật điện - điện tử hiện tại có nhận được sự đầu tư đúng mức từ các cơ quan và doanh nghiệp để phát triển cơ sở hạ tầng không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "45445f7553364ae4dad5f6c6c892f968",
+        "relevance_score": 1.0,
+        "reasoning": "Xác nhận các đơn vị đang chú trọng đầu tư để lĩnh vực này ngày một cải thiện và nâng cấp hạ tầng."
+      },
+      {
+        "chunk_id": "57672cb51bcd5254f04863b13e129a5e",
+        "relevance_score": 0.8,
+        "reasoning": "Nhấn mạnh đây là khu vực hấp dẫn, có nhiều tiềm năng nhận dòng vốn đầu tư mạnh mẽ."
+      }
+    ]
+  },
+  {
+    "query_id": 187,
+    "query": "Thu nhập của nhân sự làm trong lĩnh vực An toàn thông tin phụ thuộc vào yếu tố nào và cơ hội việc làm của ngành này ra sao?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "4627a9d8c76c96cfef8e9c569db56891",
+        "relevance_score": 1.0,
+        "reasoning": "Chỉ rõ mức lương hoàn toàn phụ thuộc vào năng lực thực tế của ứng viên bảo mật."
+      },
+      {
+        "chunk_id": "79a0f8fbf96362258089af9a4fb50977",
+        "relevance_score": 1.0,
+        "reasoning": "Khẳng định cơ hội cho sinh viên ngành An toàn thông tin đang rất rộng mở do nhu cầu an ninh số."
+      },
+      {
+        "chunk_id": "fe9f9c309cdddeb52203fec5c3da1f18",
+        "relevance_score": 0.5,
+        "reasoning": "So sánh sự phát triển và nhu cầu tương đồng giữa An toàn thông tin và Công nghệ thông tin truyền thống."
+      }
+    ]
+  },
+  {
+    "query_id": 188,
+    "query": "Kỹ năng làm việc nhóm và giao tiếp có quan trọng đối với kỹ sư điện - điện tử không, và họ cần nắm vững tiêu chuẩn gì trong sản xuất?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "042633af90d2cfcab039bb223e1a575e",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập cụ thể tầm quan trọng của làm việc nhóm và yêu cầu nắm vững các quy trình, tiêu chuẩn chất lượng sản xuất."
+      },
+      {
+        "chunk_id": "148141cab38715404b0d55df9c646a32",
+        "relevance_score": 0.8,
+        "reasoning": "Bổ sung việc kỹ năng mềm và kỹ năng thực hành vận dụng kiến thức là cốt lõi cần phải trang bị chắc chắn."
+      }
+    ]
+  },
+  {
+    "query_id": 189,
+    "query": "Tình hình cung cầu nhân lực ngành Tự động hóa tại Việt Nam hiện nay đang ở mức nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "044527c6e3379a9c6ac397e03eb5865e",
+        "relevance_score": 1.0,
+        "reasoning": "Nhấn mạnh tại Việt Nam đây là ngành nghề còn non trẻ nên số lượng người lao động cung ứng vẫn còn thiếu rất nhiều."
+      },
+      {
+        "chunk_id": "4aae98a4e8459e029ede4cfb1d2ccab0",
+        "relevance_score": 0.8,
+        "reasoning": "Mô tả xu thế phát triển, đời sống càng hiện đại thì nhu cầu về tự động hóa càng tăng vọt, gây áp lực cung cầu."
+      }
+    ]
+  },
+  {
+    "query_id": 190,
+    "query": "Có thể tìm hiểu thông tin đào tạo ngành điện - điện tử của Học viện Công nghệ Bưu Chính Viễn Thông qua những kênh nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "b6fca1b75b8efeecd9f8e0eeb4f1f665",
+        "relevance_score": 1.0,
+        "reasoning": "Gợi ý người dùng tìm hiểu trực tiếp thông tin chuyên ngành tại website hoặc cổng thông tin của học viện."
+      },
+      {
+        "chunk_id": "d7c007fa84c10d0a89e28c821129ff2a",
+        "relevance_score": 0.5,
+        "reasoning": "Đưa ra lời khuyên về việc học tập để áp dụng kiến thức vào thực tiễn."
+      }
+    ]
+  },
+  {
+    "query_id": 191,
+    "query": "Dự báo về vai trò của Việt Nam trong chuỗi cung ứng sản phẩm điện tử khu vực ASEAN trong tương lai là gì?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "4302e934656f7060ddc533b2a5f3801a",
+        "relevance_score": 1.0,
+        "reasoning": "Khẳng định dự báo Việt Nam sẽ trở thành trung tâm chế tạo thiết bị điện tử lớn trong khối ASEAN."
+      },
+      {
+        "chunk_id": "2fae2185dc56a4ff06249ae4aada8385",
+        "relevance_score": 0.7,
+        "reasoning": "Liệt kê các mảng kinh tế hội tụ điện tử - truyền thông sẽ được hưởng lợi từ vị thế này."
+      }
+    ]
+  },
+  {
+    "query_id": 192,
+    "query": "Sự phát triển của ngành công nghệ kỹ thuật điện đóng góp như thế nào vào đời sống và nhân loại trong kỷ nguyên số?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "088156268bc33d983f42cb4b11f6a1d5",
+        "relevance_score": 1.0,
+        "reasoning": "Giải thích rõ mục tiêu giúp phát triển đời sống sinh hoạt và quy trình sản xuất ngày một ưu việt hơn."
+      },
+      {
+        "chunk_id": "6eb7f28ff0f9e6adc3bc30c07615b4b4",
+        "relevance_score": 1.0,
+        "reasoning": "Nhấn mạnh ngành sẽ luôn đồng hành cùng sự phát triển của loài người, là trọng tâm đầu tư của xã hội."
+      }
+    ]
+  },
+  {
+    "query_id": 193,
+    "query": "Nếu tôi có sở thích sáng tạo và muốn phát triển các sản phẩm phần mềm, tôi nên chọn chuyên ngành nào tại Học viện?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "df3e93b727c8f0e9f7bb0dbb82811c46",
+        "relevance_score": 1.0,
+        "reasoning": "Mô tả sự phù hợp của ngành cho những cá nhân yêu thích sự sáng tạo và nội dung mới mẻ."
+      },
+      {
+        "chunk_id": "48405a8d124beaaa1498539c7e49a3d6",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập cụ thể đến cơ hội học để phát triển phần mềm ứng dụng từ nền tảng đa phương tiện."
+      }
+    ]
+  },
+  {
+    "query_id": 194,
+    "query": "Ngành Kỹ thuật điện tử viễn thông có đang thu hút được nhiều sự quan tâm của giới trẻ hiện nay không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "6f368155ac149338a47bf9e9948ce86d",
+        "relevance_score": 1.0,
+        "reasoning": "Khẳng định đây vẫn là một trong những ngành hot, nhận được lượng lớn sự quan tâm từ các bạn trẻ."
+      },
+      {
+        "chunk_id": "278c0223297b6533443b0e4bb85eb278",
+        "relevance_score": 0.8,
+        "reasoning": "Gợi ý đầu ra rộng mở với nhiều lựa chọn việc làm, là lý do chính thu hút sinh viên."
+      }
+    ]
+  },
+  {
+    "query_id": 195,
+    "query": "Mã ngành của ngành Quản trị kinh doanh tại Học viện là bao nhiêu và sinh viên phải hoàn thành bao nhiêu tín chỉ để nhận bằng Cử nhân?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "4161c841929e01b0494c38cdb588e4c9",
+        "relevance_score": 1.0,
+        "reasoning": "Cung cấp số liệu chính xác: Mã ngành 7340101, khối lượng kiến thức yêu cầu là 129 tín chỉ."
+      },
+      {
+        "chunk_id": "07f54513281d3128475bf3fe1f088d6a",
+        "relevance_score": 0.4,
+        "reasoning": "Mô tả chung về mục tiêu đào tạo trình độ cử nhân/kỹ sư của hệ thống Học viện."
+      }
+    ]
+  },
+  {
+    "query_id": 196,
+    "query": "Ngoài chuyên môn, Học viện rèn luyện thêm những kỹ năng mềm nào cho sinh viên trong quá trình học tập?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "709ebae354106b67de9c71242eb6771b",
+        "relevance_score": 1.0,
+        "reasoning": "Liệt kê trực tiếp các kỹ năng được bổ trợ như giao tiếp, lắng nghe và xử lý tình huống."
+      },
+      {
+        "chunk_id": "a39c84e25dbeafa6089c521d05d2bb0d",
+        "relevance_score": 0.5,
+        "reasoning": "Xác nhận ngoài kiến thức kỹ thuật căn bản (ví dụ IoT), sự toàn diện của sinh viên luôn được chú trọng."
+      }
+    ]
+  },
+  {
+    "query_id": 197,
+    "query": "Chương trình khung và các môn học của ngành Quản trị kinh doanh có giống nhau ở tất cả các trường đại học không?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "80a930913e58383b306bff191bcb3bad",
+        "relevance_score": 1.0,
+        "reasoning": "Giải thích rằng khung đào tạo và thiết kế môn học sẽ thay đổi tùy thuộc vào từng đơn vị trường học cụ thể."
+      },
+      {
+        "chunk_id": "33adca9cdf250d158cdc2dbb9901761a",
+        "relevance_score": 0.8,
+        "reasoning": "Nhấn mạnh rằng dù khác nhau, sinh viên vẫn sẽ học chung một số khối kiến thức chuyên ngành cốt lõi trong 4 năm."
+      }
+    ]
+  },
+  {
+    "query_id": 198,
+    "query": "Mức lương cơ bản của kỹ sư điện - điện tử sau khi ra trường theo các thống kê khảo sát là như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "1215ab084790397f10755c6aec41f543",
+        "relevance_score": 1.0,
+        "reasoning": "Đề cập đến việc thống kê mức thu nhập và khảo sát thực tế dành cho chuyên gia lĩnh vực này."
+      },
+      {
+        "chunk_id": "72eb52b4f7b41bbb705c1888737f9d53",
+        "relevance_score": 0.7,
+        "reasoning": "Cho biết thông tin này giúp sinh viên tham khảo để có kỳ vọng chính xác về tài chính."
+      }
+    ]
+  },
+  {
+    "query_id": 199,
+    "query": "Học sinh đăng ký ngành Công nghệ thông tin tại PTITHCM sẽ được thực hành vận hành hệ thống mạng như thế nào?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "540e6e918195759d4f0bfd223a21f6e1",
+        "relevance_score": 1.0,
+        "reasoning": "Chi tiết việc sinh viên được dạy cách triển khai, vận hành mạng và tối ưu truyền dẫn dữ liệu tiên tiến."
+      },
+      {
+        "chunk_id": "7633a3d4e89ec3a7b325de0eeb607fbd",
+        "relevance_score": 0.6,
+        "reasoning": "Gắn kết với thông tin xét tuyển, khuyến khích sinh viên ghi danh vào ngành học."
+      }
+    ]
+  },
+  {
+    "query_id": 200,
+    "query": "Lĩnh vực thiết kế vi mạch đóng góp vai trò như thế nào đối với sự tiến bộ của công nghệ điện tử và xã hội?",
+    "relevant_chunks": [
+      {
+        "chunk_id": "6f5ce7d0fc1166d1dceefb5a2225893b",
+        "relevance_score": 1.0,
+        "reasoning": "Nêu rõ thiết kế vi mạch là động lực thúc đẩy sự phát triển của điện tử và tiến bộ chung của xã hội."
+      },
+      {
+        "chunk_id": "0f1f634bf63ab2c38858f102acfb67d6",
+        "relevance_score": 0.8,
+        "reasoning": "Chỉ ra mặt trái, dù đóng góp lớn nhưng ngành luôn phải đánh đổi bằng chi phí và tài nguyên đắt đỏ."
+      }
+    ]
+  }
+]
