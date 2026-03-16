@@ -3,6 +3,7 @@ from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 from core.config import settings
 from pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
+import time
 
 openai_client = OpenAI(api_key=settings.openai_key)
 
@@ -12,10 +13,17 @@ class RerankRag:
         self.collection_name = collection_name
 
     def retrieve(self, query: str, top_k: int): 
-        contexts = client.query_points(collection_name=self.collection_name,
-                                       query=self.embedding_model.encode(query),
-                                       with_payload=True,
-                                       limit=20)
+        for attempt in range(3):
+            try:
+                contexts = client.query_points(collection_name=self.collection_name,
+                                                query=self.embedding_model.encode(query),
+                                                with_payload=True,
+                                                limit=20)
+                break
+            except Exception as e:
+                print(f"Retry: {e}")
+                time.sleep(2)
+
         results =  []
         for point in contexts.points:
             payload = point.payload
@@ -75,24 +83,18 @@ class RerankRag:
 
         return response.output_text
 
-# if __name__ == "__main__":
-#     rag_engine = RerankRag(embedding_model="BAAI/bge-m3",
-#                           collection_name="enrich_hybrid_collection")
+if __name__ == "__main__":
+    rag_engine = RerankRag(embedding_model="BAAI/bge-m3",
+                          collection_name="enrich_hybrid_collection")
     
-#     query = "Điểm chuẩn để đỗ vào trường PTIT cơ sở phía Nam năm 2017, 2019 và 2023 có xét điểm cộng ưu tiên hay không và xem ở đâu?"
+    query = "Điểm chuẩn để đỗ vào trường PTIT cơ sở phía Nam năm 2017, 2019 và 2023 có xét điểm cộng ưu tiên hay không và xem ở đâu?"
     
-#     results = rag_engine.retrieve(query=query, top_k=10)
+    results = rag_engine.retrieve(query=query, top_k=10)
 
-#     reranked_contexts = cross_encoder_reranker(results, query)
-
-#     for result in results:
-#         print(result["id"])
+    for result in results:
+        print(result["id"])
 
 
-#     print("===================")
-
-#     for c in reranked_contexts:
-#         print(c["id"])
 
 
     
