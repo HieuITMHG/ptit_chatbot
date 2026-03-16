@@ -68,6 +68,6 @@ def embedding_pipeline(config):
         )
 
 if __name__ == "__main__":
-    config = PipelineConfig("configs/base.yaml")
+    config = PipelineConfig("configs/hybrid_rag.yaml")
     embedding_pipeline(config.embedding)
 

@@ -5,6 +5,7 @@ from core.config_loader import PipelineConfig
 from core.database import db
 from .retrieval_metrics import RetrievalMetric
 from .generation_metrics import GenerationMetric
+from pipelines.bm25 import BM25
 
 hybrid_queries_collection = db["hybrid_queries"]
 
