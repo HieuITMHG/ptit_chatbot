@@ -137,11 +137,6 @@ class RetrievalMetric:
             grade = self.grade_ndcg(eval_data)
 
             print(f"precision@{self.top_k} query {idx}: {precision}")
-            print(f"recall@{self.top_k} query {idx}: {recall}")
-            print(f"hit@{self.top_k} query {idx}: {hit}")
-            print(f"ndcg@{self.top_k} query {idx}: {self.ndcg}")
-            print(f"grade@{self.top_k} query {idx}: {grade}")
-            print(f"mrr@{self.top_k} query {idx}: {self.mrr}")
 
             precision_lst.append(precision)
             recall_lst.append(recall)
