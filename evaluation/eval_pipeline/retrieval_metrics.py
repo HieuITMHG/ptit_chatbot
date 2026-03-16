@@ -118,7 +118,8 @@ class RetrievalMetric:
         hit_lst = []
         grade_lst = []
 
-        for query in query_lst:
+        for query, idx in enumerate(query_lst):
+            
             results = self.rag_engine.retrieve(
                 query=query["query_content"],
                 top_k=self.top_k
@@ -134,6 +135,13 @@ class RetrievalMetric:
             mrr = self.mrr(eval_data)
             hit = self.hit(eval_data)
             grade = self.grade_ndcg(eval_data)
+
+            print(f"precision@{self.top_k} query {idx}: {precision}")
+            print(f"recall@{self.top_k} query {idx}: {recall}")
+            print(f"hit@{self.top_k} query {idx}: {hit}")
+            print(f"ndcg@{self.top_k} query {idx}: {self.ndcg}")
+            print(f"grade@{self.top_k} query {idx}: {grade}")
+            print(f"mrr@{self.top_k} query {idx}: {self.mrr}")
 
             precision_lst.append(precision)
             recall_lst.append(recall)
