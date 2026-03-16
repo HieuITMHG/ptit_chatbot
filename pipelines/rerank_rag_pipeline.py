@@ -87,12 +87,11 @@ if __name__ == "__main__":
     rag_engine = RerankRag(embedding_model="BAAI/bge-m3",
                           collection_name="enrich_hybrid_collection")
     
-    query = "Điểm chuẩn để đỗ vào trường PTIT cơ sở phía Nam năm 2017, 2019 và 2023 có xét điểm cộng ưu tiên hay không và xem ở đâu?"
+    query = "Thông tin về học bổng của trường"
     
-    results = rag_engine.retrieve(query=query, top_k=10)
+    results = rag_engine.retrieve(query=query, top_k=5)
 
-    for result in results:
-        print(result["id"])
+    print(rag_engine.generate(query=query, contexts=results))
 
 
 
