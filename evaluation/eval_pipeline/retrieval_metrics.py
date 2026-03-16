@@ -118,7 +118,7 @@ class RetrievalMetric:
         hit_lst = []
         grade_lst = []
 
-        for query, idx in enumerate(query_lst):
+        for idx, query in enumerate(query_lst):
             
             results = self.rag_engine.retrieve(
                 query=query["query_content"],
