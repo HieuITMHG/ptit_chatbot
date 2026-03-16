@@ -56,23 +56,28 @@ class RerankRag:
             - Trả lời ngắn gọn, tự nhiên, dễ hiểu như khi giải thích cho sinh viên.
             - Nếu dữ liệu không có thông tin để trả lời câu hỏi, hãy nói đơn giản:
             "Hiện chưa có thông tin về nội dung này."
+            - Cuối câu trả lời hãy liệt kê các nguồn tham khảo (URL).
 
             Dữ liệu:
             {context_1}
             {context_2}
             {context_3}
-            {context_4}
-            {context_5}
 
             Câu hỏi: {query}
         """
 
+        context_1 = f'{contexts[0]["chunk_content"]}\nNguồn: {contexts[0]["doc_url"]}'
+        context_2 = f'{contexts[1]["chunk_content"]}\nNguồn: {contexts[1]["doc_url"]}'
+        context_3 = f'{contexts[2]["chunk_content"]}\nNguồn: {contexts[2]["doc_url"]}'
+
+        print(contexts[0]["doc_url"])
+        print(contexts[1]["doc_url"])
+        print(contexts[2]["doc_url"])
+
         prompt = prompt_template.format(
-            context_1 = contexts[0]["chunk_content"],
-            context_2 = contexts[1]["chunk_content"],
-            context_3 = contexts[2]["chunk_content"],
-            context_4 = contexts[3]["chunk_content"],
-            context_5 = contexts[4]["chunk_content"],
+            context_1 = context_1,
+            context_2 = context_2,
+            context_3 = context_3,
             query = query
         )
 
@@ -87,7 +92,7 @@ if __name__ == "__main__":
     rag_engine = RerankRag(embedding_model="BAAI/bge-m3",
                           collection_name="enrich_hybrid_collection")
     
-    query = "Thông tin về học bổng của trường"
+    query = "Các cuộc thi gần đây mà ptit tham gia"
     
     results = rag_engine.retrieve(query=query, top_k=5)
 

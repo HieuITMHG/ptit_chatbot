@@ -1,0 +1,12 @@
+dataset_path: data/pages.json
+
+chunking:
+  type: enrich_hybrid
+  chunk_size: 500
+  overlap: 50
+  embedder: BAAI/bge-m3
+
+embedding:
+  col_name: hybrid_collection
+  model: BAAI/bge-m3
+
