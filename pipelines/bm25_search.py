@@ -1,9 +1,11 @@
 import pickle
 import numpy as np
-
-from pipelines.bm25 import BM25, preprocess
+from .bm25 import BM25, preprocess
+import __main__
 
 BM25_INDEX_PATH = "pipelines/bm25_index.pkl"
+
+__main__.BM25 = BM25
 
 with open(BM25_INDEX_PATH, "rb") as f:
         data = pickle.load(f)

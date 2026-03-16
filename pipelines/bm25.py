@@ -11,19 +11,16 @@ with open("pipelines/vietnamese-stopwords.txt", "r", encoding="utf-8") as f:
 
 BM25_INDEX_PATH = "pipelines/bm25_index.pkl"
 
-
 def clean_text(text):
     text = re.sub('<.*?>', '', text).strip()
     text = re.sub(r'(\s)+', r'\1', text)
     return text
-
 
 def normalize_text(text):
     listpunctuation = string.punctuation.replace('_', '')
     for i in listpunctuation:
         text = text.replace(i, ' ')
     return text.lower()
-
 
 def remove_stopword(text):
     words = text.split()
