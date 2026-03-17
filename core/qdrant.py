@@ -5,7 +5,10 @@ from qdrant_client.http.models import PointStruct #
 client = QdrantClient(url=settings.qdrant_endpoint,
                       api_key=settings.qdrant_key)
 
-local_client = QdrantClient() 
+try:
+    local_client = QdrantClient() 
+except Exception:
+    print("Ko thể kết nối qdrant local")
 
 def sync_qdrant_cloud_to_local(batch_size=100):
     # 1. Lấy danh sách tất cả collections trên Cloud
