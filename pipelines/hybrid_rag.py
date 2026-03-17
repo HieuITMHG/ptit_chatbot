@@ -1,4 +1,4 @@
-from core.qdrant import local_client
+from core.qdrant import client
 from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 from core.config import settings
