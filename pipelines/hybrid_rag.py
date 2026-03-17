@@ -18,7 +18,7 @@ class HybirdRag:
     def dense_retrieve(self, query: str, limit: int = 50): 
         for attempt in range(5):
             try:
-                contexts = local_client.query_points(collection_name=self.collection_name,
+                contexts = client.query_points(collection_name=self.collection_name,
                                                 query=self.embedding_model.encode(query),
                                                 with_payload=True,
                                                 limit=limit)
