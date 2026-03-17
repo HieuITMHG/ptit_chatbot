@@ -26,11 +26,26 @@
 
 from flashrank import Ranker, RerankRequest
 import time
+import os
 
-# Khởi tạo mô hình FlashRank (đã được nén và tối ưu ONNX)
-# ms-marco-MultiBERT-L-12 là mô hình đa ngôn ngữ, hỗ trợ tiếng Việt rất tốt và cực kỳ nhẹ
-print("Đang tải mô hình Rerank ONNX...")
-ranker = Ranker(model_name="ms-marco-MultiBERT-L-12", cache_dir="./models") 
+current_file_dir = os.path.dirname(os.path.abspath(__file__))
+
+base_project_dir = os.path.abspath(os.path.join(current_file_dir, "../../"))
+model_cache_path = os.path.join(base_project_dir, "models")
+
+if not os.path.exists(model_cache_path):
+    os.makedirs(model_cache_path)
+
+print(f"Đang kiểm tra mô hình Rerank tại: {model_cache_path}")
+
+try:
+    # Khởi tạo FlashRank
+    # Nếu server có internet, nó sẽ tự tải về models/ nếu chưa có
+    ranker = Ranker(model_name="ms-marco-MultiBERT-L-12", cache_dir=model_cache_path) 
+except Exception as e:
+    print(f"Lỗi khởi tạo Ranker: {e}")
+    print("Mẹo: Nếu server không có internet, hãy dùng 'scp' copy thư mục model từ local lên.")
+    raise
 
 def cross_encoder_reranker(unordered_contexts: list, query: str) -> list:
     """
