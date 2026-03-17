@@ -1,7 +1,7 @@
 import json
 import numpy as np
 from sklearn.cluster import KMeans
-from core.qdrant import client # Import client của bạn
+from core.qdrant import local_client
 
 collection_name = "enrich_hybrid_collection"
 num_clusters = 4
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # Bước 1: Dùng lệnh scroll để lấy TẤT CẢ vectors và payloads theo từng batch
     offset = None
     while True:
-        records, offset = client.scroll(
+        records, offset = local_client.scroll(
             collection_name=collection_name,
             limit=1000,          # Tải mỗi lần 1000 chunks để không bị quá tải mạng
             with_vectors=True,   # Bắt buộc lấy vector để chạy K-Means

@@ -1,4 +1,4 @@
-from core.qdrant import client
+from core.qdrant import local_client
 from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 from core.config import settings
@@ -6,6 +6,7 @@ from pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
 import time
 from .bm25 import BM25
 from .bm25_search import search, raw_docs, bm25
+import time
 
 openai_client = OpenAI(api_key=settings.openai_key)
 
@@ -17,7 +18,7 @@ class HybirdRag:
     def dense_retrieve(self, query: str, limit: int = 50): 
         for attempt in range(5):
             try:
-                contexts = client.query_points(collection_name=self.collection_name,
+                contexts = local_client.query_points(collection_name=self.collection_name,
                                                 query=self.embedding_model.encode(query),
                                                 with_payload=True,
                                                 limit=limit)
@@ -73,11 +74,14 @@ class HybirdRag:
         return results
         
     def retrieve(self, query: str, top_k:int, search_limit:int = 50):
-
+        start_dense = time.perf_counter()
         dense_results = self.dense_retrieve(
             query=query,
             limit=search_limit
         )
+        end_dense = time.perf_counter()
+        dense_time = end_dense - start_dense
+        print(f"Dense search latency: {dense_time}")
 
         sparse_results = search(
             query=query,
@@ -91,14 +95,18 @@ class HybirdRag:
             sparse_results
         )
 
-        fused_results = fused_results[0: 40]
+        fused_results = fused_results[0: 10]
 
-        reranked_contexts = cross_encoder_reranker(
+        start_rerank = time.perf_counter()
+        fused_results = cross_encoder_reranker(
             unordered_contexts=fused_results,
             query=query
         )
+        end_rerank = time.perf_counter()
+        rerank_time = end_rerank - start_rerank
+        print(f"Rerank latency: {rerank_time}")
 
-        return reranked_contexts[:top_k]
+        return fused_results[:top_k]
     
     def generate(self, query, contexts):
         prompt_template = """
@@ -149,12 +157,20 @@ if __name__ == "__main__":
     rag_engine = HybirdRag(embedding_model="BAAI/bge-m3",
                           collection_name="enrich_hybrid_collection")
     
-    query = "Chương trình thạc sĩ 2018 và hệ cao đẳng 2013 khác với đề án ĐH 2020 ở số lượng môn thi như thế nào?"
+    query = "tư vấn tuyển sinh đại học cao đẳng ptit 2014 2025"
+
+    start_time = time.perf_counter()
     
     results = rag_engine.retrieve(query=query, top_k=5)
 
+    end_time = time.perf_counter()
+
+    latency = end_time - start_time
+
     for r in results:
         print(r["id"])
+
+    print(f"Latency: {latency}")
 
     # print(rag_engine.generate(query=query, contexts=results))
 

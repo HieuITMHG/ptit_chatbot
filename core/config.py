@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     openai_key:str
     qdrant_key:str
     qdrant_endpoint:str
+    local_mongodb_uri:str
     class Config:
         env_file = ".env"
     

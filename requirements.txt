@@ -16,3 +16,4 @@ scikit-learn
 FlagEmbedding
 deepeval
 pyvi
+flashrank

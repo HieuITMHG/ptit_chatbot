@@ -7,3 +7,6 @@ __pycache__/
 .env
 # CSV files
 *.csv
+
+models/
+*.onnx

@@ -20,7 +20,7 @@ if __name__ == "__main__":
                               collection_name=hybrid_config.embedding["col_name"])
     
     metric = RetrievalMetric(rag_engine=hybrid_engine,
-                             data_config=base_config.chunking,
+                             data_config=hybrid_config.chunking,
                              top_k=5)
     result = metric.evaluate()
     print(result)

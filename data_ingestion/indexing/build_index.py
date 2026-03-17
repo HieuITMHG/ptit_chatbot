@@ -95,6 +95,6 @@ def embedding_pipeline(config):
 
 if __name__ == "__main__":
     config = PipelineConfig("configs/base.yaml")
-    chunking_pipeline(config.chunking)
+    # chunking_pipeline(config.chunking)
     embedding_pipeline(config.embedding)
 
