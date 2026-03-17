@@ -1,9 +1,25 @@
 Tôi muốn gen ra một bộ dataset benmark để tính các metric như recall, precision, ndcg, mrr. File tôi gửi là tập các chunk của tôi. Nhiệm vụ bạn là lộc ra các chunk informative và sinh ra các query, các query này có thể dựa vào context trong các chunk để trả lời:
 
 yêu cầu:
+- Chỉ sử dụng các context có ý nghĩa, còn những context mà chỉ có câu giới thiệu, hay là dẫn đến một link nào đó thì không cần dùng
 - Query không được quá dể như copy nguyên text từ context
-- Tránh sử dụng các từ trong context
+- Tránh sử dụng các từ trong context2
 - Query phải tự nhiên và ngắn gọn
+- Dạng dễ nhất: hỏi đúng thông tin nằm trong document.
+- Paraphrased question, Cùng ý nghĩa nhưng dùng wording khác.
+Ví dụ document:
+
+“Transformer was introduced in the paper Attention is All You Need in 2017.”
+
+      Queries:
+
+      “Which paper introduced the Transformer architecture?”
+
+      “Where did the Transformer model first appear?”
+
+      “What research work proposed the Transformer?”
+- Keyword query (dạng search engine)
+- Multi-hop query
 - Một query có thể được trả lời bằng nhiều chunk, tốt nhất là 2 - 3 chunk và tối đa là 5 chunk, không được 1 chunk
 - Mỗi chunk (relevance) phải được chấm điểm, càng relevance điểm càng cao
 - output là json, tổ chức thế nào tùy bạn để tôi có thể truy suất loop và insert lên mongodb
@@ -12,95 +28,21 @@ yêu cầu:
 [
   {
     "query_id": 1,
-    "query": "Những ai đủ điều kiện để nộp hồ sơ đăng ký dự thi cao học đợt 2 năm 2016 và thời hạn nộp hồ sơ đến khi nào?",
+    "query": "Tìm thông tin về mã ngành và các chuyên ngành thuộc chương trình đào tạo chính quy đại học mảng Công nghệ thông tin?",
+    "query_type": "Keyword query",
     "relevant_chunks": [
       {
-        "chunk_id": "0594729d4088417728a3cae467f43575",
-        "relevance_score": 1.0,
-        "reasoning": "Liệt kê quy định chi tiết về các điều kiện văn bằng đại học để được dự thi."
+        "chunk_id": "5550e51a36b8ddb38c8898684c2e4f18",
+        "relevance_score": 0.7,
+        "reasoning": "Đưa ra danh mục tổng quan các chương trình đào tạo chính quy ngành Công nghệ thông tin của trường."
       },
       {
-        "chunk_id": "15c8df962eb0ec9f62162e5d162301d6",
+        "chunk_id": "a952514e6450c4fea105856e141030c4",
         "relevance_score": 1.0,
-        "reasoning": "Mô tả điều kiện thâm niên công tác đối với các ứng viên tốt nghiệp nhóm ngành công nghệ, kỹ thuật."
-      },
-      {
-        "chunk_id": "2543a01d345b92f25859b667a813582f",
-        "relevance_score": 1.0,
-        "reasoning": "Cung cấp thời hạn cuối cùng nhận hồ sơ đăng ký dự thi đợt 2 năm 2016 (từ 01/06 đến 16/09/2016)."
+        "reasoning": "Cung cấp chính xác mã ngành đào tạo (7480201) và tên các chuyên ngành cụ thể bên trong."
       }
     ]
   },
-  {
-    "query_id": 2,
-    "query": "Tôi muốn học đại học hệ Vừa làm vừa học năm 2018 tại cơ sở phía Bắc thì cần nộp hồ sơ ở đâu và cần những loại giấy tờ chứng thực gì?",
-    "relevant_chunks": [
-      {
-        "chunk_id": "f710e7c63b43bf7f701775a6046d66b3",
-        "relevance_score": 1.0,
-        "reasoning": "Chứa thông tin danh sách giấy tờ trong hồ sơ tuyển sinh như phiếu đăng ký, bản sao hợp lệ bằng cấp."
-      },
-      {
-        "chunk_id": "a1a13ce7cdc68fd51fe746653423a110",
-        "relevance_score": 1.0,
-        "reasoning": "Chỉ định rõ địa chỉ giao dịch một cửa bộ phận tuyển sinh tại Km10 đường Nguyễn Trãi cho các thí sinh đăng ký ở cơ sở miền Bắc."
-      }
-    ]
-  },
-  {
-    "query_id": 3,
-    "query": "Có chính sách ưu tiên xét tuyển thẳng nào dành cho những người đã có một bằng cử nhân nhưng muốn đăng ký thêm ngành khác của hệ VLVH năm 2018 không?",
-    "relevant_chunks": [
-      {
-        "chunk_id": "27da75a3008fe7137ba8097760bd0965",
-        "relevance_score": 1.0,
-        "reasoning": "Giải thích quyền lợi xét tuyển thẳng cho đối tượng người đã có một bằng đại học khi muốn học thêm ngành thứ hai theo hình thức VLVH."
-      },
-      {
-        "chunk_id": "4f315c04207e540f977a87509bfb7311",
-        "relevance_score": 0.6,
-        "reasoning": "Cung cấp bối cảnh về đợt tuyển sinh VLVH năm 2018, giúp gắn kết thông tin chính sách ưu tiên."
-      }
-    ]
-  },
-  {
-    "query_id": 4,
-    "query": "Tân sinh viên D25 làm sao để biết được link chính thức dùng xác nhận nhập học trực tuyến và có cần chuẩn bị giấy tờ chuyển sinh hoạt Đoàn hay Đảng khi đi làm thủ tục không?",
-    "relevant_chunks": [
-      {
-        "chunk_id": "96d8785c81da0b88a8b16a560f25188a",
-        "relevance_score": 1.0,
-        "reasoning": "Chứa địa chỉ web của Bộ GD&ĐT dành cho tân sinh viên xác nhận trạng thái trúng tuyển."
-      },
-      {
-        "chunk_id": "cb42b97558f2b1a49f26cbab59d3d282",
-        "relevance_score": 1.0,
-        "reasoning": "Đề cập cụ thể đến yêu cầu rút và nộp giấy tờ chuyển sinh hoạt Đảng, Đoàn bộ nếu thí sinh đã kết nạp."
-      }
-    ]
-  },
-  {
-    "query_id": 5,
-    "query": "Để tham gia ứng tuyển vị trí giảng viên cơ hữu đợt 1 năm 2017, ứng viên có thể nộp hồ sơ qua các kênh nào và được hưởng những quyền lợi gì nếu tham gia nghiên cứu đề tài?",
-    "relevant_chunks": [
-      {
-        "chunk_id": "cc62e51c9d90af5284eb8f7a1b9a14d6",
-        "relevance_score": 1.0,
-        "reasoning": "Liệt kê 2 hình thức nộp hồ sơ hợp lệ: đến trực tiếp trong giờ làm việc hoặc gửi chuyển phát qua đường bưu điện."
-      },
-      {
-        "chunk_id": "4d5c75148dfc6a31f4ed25ff513be983",
-        "relevance_score": 1.0,
-        "reasoning": "Nêu rõ chế độ trả thêm thù lao khi giảng viên cơ hữu tham gia thực hiện các dự án công nghệ hoặc nghiên cứu khoa học."
-      },
-      {
-        "chunk_id": "e9cf5400e08e717888586b0d7993a42c",
-        "relevance_score": 0.5,
-        "reasoning": "Xác nhận ngữ cảnh đợt tuyển dụng giảng viên cơ hữu lần 1 năm 2017."
-      }
-    ]
-  }
 ]
 
-- Nhớ, bắt đầu với id là 106 vì tôi có 105 về trước rồi, và cũng không cần ngoặc vuông, tôi sẽ copy vào file của tôi
-Giờ gen cho tôi 30 query trước đi
+Giờ gen cho tôi 50 query trước đi

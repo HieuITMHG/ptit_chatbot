@@ -3,10 +3,10 @@ import json
 from model.query import Query
 from model.qrel import Qrel
 
-hybrid_queries_collection = db["hybrid_queries"]
-hybrid_qrels_collection = db["hybrid_qrels"]
+queries_collection = db["queries"]
+qrels_collection = db["qrels"]
 
-sample_url = "evaluation/ds_gen/enrich_dataset.json"
+sample_url = "evaluation/ds_gen/eval_dataset.json"
 
 if __name__ == "__main__":
 
@@ -26,8 +26,8 @@ if __name__ == "__main__":
             qrel_lst.append(qrel.model_dump())
             
         try:
-            hybrid_queries_collection.insert_one(que.model_dump())
-            hybrid_qrels_collection.insert_many(qrel_lst)
+            queries_collection.insert_one(que.model_dump())
+            qrels_collection.insert_many(qrel_lst)
             print(f"Đã lưu thông tin query {que.id}")
         except Exception as e:
             print(f"Lỗi khi lưu query {que.id}: {e}")

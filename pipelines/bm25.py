@@ -32,14 +32,12 @@ def word_segment(sent):
     sent = tokenize(sent.encode('utf-8').decode('utf-8'))
     return sent
 
-
 def preprocess(text):
     text = clean_text(text)
     text = normalize_text(text)
     text = word_segment(text)
     text = remove_stopword(text)
     return text
-
 
 def get_docs():
     docs = []
@@ -57,7 +55,6 @@ def get_docs():
         raw_docs.append(doc)
 
     return docs, raw_docs
-
 
 class BM25:
 
