@@ -10,15 +10,15 @@ def run(rag, generation, retrieval, topk):
     if rag == RagType.HYBRID.value:
         config = PipelineConfig("configs/hybrid_rag.yaml")
         rag_engine = HybirdRag(embedding_model=config.embedding["model"],
-                         collection_name=config.embedding["col_name"])
+                         collection_name=config.embedding["vector_col_name"])
     elif rag == RagType.NAIVE.value:
         config = PipelineConfig("configs/naive_rag.yaml")
         rag_engine = NaiveRag(embedding_model=config.embedding["model"],
-                        collection_name=config.embedding["col_name"])
+                        collection_name=config.embedding["vector_col_name"])
     elif rag == RagType.RERANK.value:
         config = PipelineConfig("configs/rerank_rag.yaml")
         rag_engine = RerankRag(embedding_model=config.embedding["model"],
-                        collection_name=config.embedding["col_name"])
+                        collection_name=config.embedding["vector_col_name"])
     
     if retrieval:
         metric = RetrievalMetric(rag_engine=rag_engine, data_config=config.evaluation, top_k=topk)
