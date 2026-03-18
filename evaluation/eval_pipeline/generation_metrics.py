@@ -70,12 +70,10 @@ class GenerationMetric:
                 top_k=self.top_k
             )
 
-            # convert context objects -> text
             context_texts = [c["chunk_content"] if isinstance(c, dict) else str(c) for c in retrieved_contexts]
 
             t1 = time.perf_counter()
 
-            # ---------- Generate ----------
             llm_response = self.rag_engine.generate(
                 contexts=retrieved_contexts,
                 query=query["query_content"]
@@ -83,7 +81,6 @@ class GenerationMetric:
 
             t2 = time.perf_counter()
 
-            # ---------- Metrics ----------
             ans_rel, ans_reason = self.answer_relevancy(
                 query=query["query_content"],
                 actual_res=llm_response
@@ -97,13 +94,11 @@ class GenerationMetric:
 
             t3 = time.perf_counter()
 
-            # ---------- Latency ----------
             retrieve_latency = t1 - t0
             generate_latency = t2 - t1
             judge_latency = t3 - t2
             total_latency = t3 - t0
 
-            # ---------- Print ----------
             print("\n==============================")
             print("Query:", query["query_content"])
             print("\nAnswer:")

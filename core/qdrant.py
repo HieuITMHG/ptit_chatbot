@@ -7,11 +7,6 @@ from .config import settings
 # Khởi tạo client (Thay bằng settings của bạn)
 client = QdrantClient(url=settings.qdrant_endpoint, api_key=settings.qdrant_key)
 
-try:
-    local_client = QdrantClient() 
-except Exception:
-    print("Không thể kết nối Qdrant local")
-
 def sync_qdrant_cloud_to_local(batch_size=100, max_retries=5):
     cloud_collections = client.get_collections().collections
     print(f"Bắt đầu đồng bộ {len(cloud_collections)} collections...\n")

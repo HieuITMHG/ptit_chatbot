@@ -155,9 +155,9 @@ class HybirdRag:
 
 if __name__ == "__main__":
     rag_engine = HybirdRag(embedding_model="BAAI/bge-m3",
-                          collection_name="enrich_hybrid_collection")
+                          collection_name="hybrid_collection")
     
-    query = "tư vấn tuyển sinh đại học cao đẳng ptit 2014 2025"
+    query = "Điểm chuẩn kỳ thi tuyển sinh hệ HCKT + VHVL (tại chức cũ)"
 
     start_time = time.perf_counter()
     

@@ -8,7 +8,7 @@ from core.config import settings
 from model.page import Page
 from model.sitemap import Sitemap
 
-from repositories.page_repository import save_page, find_one_page, updata_page_last_mod
+from repositories.page_repository import save_page, find_one_page, update_page_last_mod, update_page_is_parse
 from repositories.sitemap_repository import save_sitemap, find_one_sitemap, updata_sitemap_last_mod
 
 current_file = Path(__file__)
@@ -89,13 +89,14 @@ def crawl_raw_html(sitemap_index_url):
                     else:
                         db_page_last_mod = normalize_dt(page["last_mod"])
                         if web_plast_mod.timestamp() != db_page_last_mod.timestamp():
-                            updata_page_last_mod(url=save_purl, new_last_mod=plast_mod.text)
+                            update_page_last_mod(url=save_purl, new_last_mod=plast_mod.text)
+                            update_page_is_parse(url=save_purl, is_parse=False)
                             save_html(page)
                             need_parse.append(page)
                             print(f"Modify page {save_purl}")
                 updata_sitemap_last_mod(url=save_url, new_last_mod=last_mod.text)
             else:
-                print("Éo có gì mới")
+                print("Không có gì mới")
         else:
             sitemap = Sitemap(url=save_url, last_mod=last_mod.text)
             for url, last_mod in zip(page_urls, page_last_mods):
@@ -106,8 +107,3 @@ def crawl_raw_html(sitemap_index_url):
                 need_parse.append(page)
             save_sitemap(sitemap=sitemap)
     return need_parse
-
-# if __name__ == "__main__":
-#     crawl_raw_html(sitemap_index_url=settings.sitemap_index_url, root_csv_path=settings.root_csv)
-#     initiate_data(settings.sitemap_index_url)
-#     crawl_raw_html(sitemap_index_url=settings.sitemap_index_url)

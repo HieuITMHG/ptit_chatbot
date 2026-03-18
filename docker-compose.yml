@@ -5,7 +5,6 @@ services:
   mongodb:
     image: mongo:latest
     container_name: local_mongodb
-    restart: always
     ports:
       - "27017:27017"
     volumes:
@@ -15,7 +14,6 @@ services:
   qdrant:
     image: qdrant/qdrant:latest
     container_name: local_qdrant
-    restart: always
     ports:
       - "6333:6333" # Port REST API
       - "6334:6334" # Port gRPC
@@ -26,7 +24,6 @@ services:
   minio:
     image: minio/minio:latest
     container_name: local_minio
-    restart: always
     ports:
       - "9000:9000" # Port API (Tương đương endpoint S3)
       - "9001:9001" # Port giao diện Web UI

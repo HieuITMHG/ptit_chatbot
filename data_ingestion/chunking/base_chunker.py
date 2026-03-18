@@ -1,17 +1,18 @@
 from abc import ABC, abstractmethod
 from typing import List, Any
+import tiktoken
 
 class BaseChunker(ABC):
     def __init__(self, 
-                 encoding: Any,
+                 tokenizer: str,
                  chunk_size: int = 500,
                  chunk_overlap: int = 50,
-                 length_function: Any = len,
                  ):
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
-        self.length_function = length_function
-        self.encoding = encoding
+        self.tokenizer = tiktoken.encoding_for_model(tokenizer)
+        self.length_function = lambda text: len(self.tokenizer.encode(text))
+        
     
     @abstractmethod
     def split_text(self, text: str) -> List[str]:

@@ -1,14 +1,15 @@
-pipeline: rag
-
 chunking:
-  type: fixed
+  type: semantic
   chunk_size: 500
   overlap: 50
+  embedder: BAAI/bge-m3
+  tokenizer: gpt-5-nano
+  chunk_col_name: semantic_chunks
 
-retriever:
-  type: dense
-  top_k: 20
-
-reranker:
-  type: bge
-  top_k: 5
+evaluation:
+  queries_col_name: queries
+  qrels_col_name: qrels
+  
+embedding:
+  vector_col_name: semantic_collecction
+  model: BAAI/bge-m3

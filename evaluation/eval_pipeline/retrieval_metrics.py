@@ -1,7 +1,6 @@
 import math
 from core.database import db
 
-
 class RetrievalMetric:
     def __init__(self, rag_engine, data_config, top_k):
         self.rag_engine = rag_engine
@@ -137,7 +136,7 @@ class RetrievalMetric:
             grade = self.grade_ndcg(eval_data)
 
             print(f"precision@{self.top_k} query {idx}: {precision}")
-
+            
             precision_lst.append(precision)
             recall_lst.append(recall)
             ndcg_lst.append(ndcg)
@@ -145,13 +144,18 @@ class RetrievalMetric:
             hit_lst.append(hit)
             grade_lst.append(grade)
 
-        metrics = {
-            f"precision@{self.top_k}": sum(precision_lst) / len(precision_lst),
-            f"recall@{self.top_k}": sum(recall_lst) / len(recall_lst),
-            f"hit@{self.top_k}": sum(hit_lst) / len(hit_lst),
-            f"ndcg@{self.top_k}": sum(ndcg_lst) / len(ndcg_lst),
-            f"grade_ndcg@{self.top_k}": sum(grade_lst) / len(grade_lst),
-            "MRR": sum(mrr_lst) / len(mrr_lst),
-        }
+        metrics = [
+            f"\nprecision@{self.top_k}: {sum(precision_lst) / len(precision_lst)}",
+            f"\nrecall@{self.top_k}: {sum(recall_lst) / len(recall_lst)}",
+            f"\nhit@{self.top_k}: {sum(hit_lst) / len(hit_lst)}",
+            f"\nndcg@{self.top_k}: {sum(ndcg_lst) / len(ndcg_lst)}",
+            f"\ngrade_ndcg@{self.top_k}: {sum(grade_lst) / len(grade_lst)}",
+            f"\nMRR: {sum(mrr_lst) / len(mrr_lst)}",
+        ]
+
+        with open("evaluation/eval_pipeline/results.txt", "a", encoding="utf-8") as f:
+            for m in metrics:
+                f.write(m)
+                print(m)
 
         return metrics

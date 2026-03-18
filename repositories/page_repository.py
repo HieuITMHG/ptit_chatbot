@@ -19,7 +19,7 @@ def find_one_page(url):
 
     return page
 
-def updata_page_last_mod(url, new_last_mod):
+def update_page_last_mod(url, new_last_mod):
     try:
         pages_collection.update_one(
             {"url": url},
@@ -28,3 +28,13 @@ def updata_page_last_mod(url, new_last_mod):
         print("Đã update page last mod")
     except Exception as e:
         print(f"Lỗi khi khi update page last mod: {e}")
+
+def update_page_is_parse(url:str, is_parse:bool):
+    try:
+        pages_collection.update_one(
+            {"url": url},
+            {"$set": {"is_parse": is_parse}}
+        )
+        print("Đã update page is parse")
+    except Exception as e:
+        print(f"Lỗi khi khi update page is_parse: {e}")

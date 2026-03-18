@@ -11,15 +11,29 @@ from core.database import db
 from model.document import Document
 from model.lowcontent import LowContent
 
+from repositories.page_repository import update_page_is_parse
+
 pages_collection = db["pages"]
 sitemaps_collection = db["sitemaps"]
 documents_collection = db["documents"]
 lowcontents_collection = db["lowcontents"]
 
-def parse_from_html(page: str):
-    print(f"Processing {page["url"]}")
+def extract_title(soup):
+    og = soup.find("meta", property="og:title")
+    if og and og.get("content"):
+        return og["content"].strip()
 
-    is_exist =  documents_collection.count_documents({"source_url":page["url"]}, limit=1) > 0
+    h1 = soup.find("h1")
+    if h1:
+        return h1.get_text(strip=True)
+
+    if soup.title and soup.title.string:
+        return soup.title.string.split(" - ")[0].strip()
+
+    return None
+
+def convert_from_html(page):
+    is_exist = documents_collection.count_documents({"source_url":page["url"]}, limit=1) > 0
 
     try:
         response = s3.get_object(
@@ -31,12 +45,11 @@ def parse_from_html(page: str):
         time.sleep(5)
         return False
 
-
     html = response["Body"].read().decode("utf-8-sig")
     soup = BeautifulSoup(html, "lxml")
 
     source_url = page["url"]
-    title = soup.title.string if soup.title else None
+    title = extract_title(soup=soup)
     author = soup.find("meta", attrs={"name": "author"})
     author_content = author["content"] if author else None
     published_date = soup.find("meta", property="article:published_time")
@@ -51,7 +64,7 @@ def parse_from_html(page: str):
             include_images=True,
             include_links=True
     )
-    markdown_content = re.sub(r"\n+", " ", doc["content"]).strip()
+    markdown_content = re.sub(r"\n+", " ", markdown_content).strip()
     markdown_content = unicodedata.normalize("NFC", markdown_content)
 
     if (len(markdown_content) < 500):
@@ -69,10 +82,10 @@ def parse_from_html(page: str):
                                     "author": author_content
                                 }
                             }
-            result = documents_collection.update_one({
+            result = documents_collection.update_one(
                 query,
                 new_values
-            })
+            )
 
             print(f"Số lượng bản ghi khớp: {result.matched_count}")
             print(f"Số lượng bản ghi đã sửa: {result.modified_count}")
@@ -88,17 +101,23 @@ def parse_from_html(page: str):
 
             print(f"Đã lưu thành công {title}")
 
+    update_page_is_parse(url=page["url"], is_parse=True)
     
     print(f"Đã xử lý {title} với độ dài là {len(markdown_content)}")
 
+def parse_data(need_parse_lst: list=None):
+    url_lst = []
+    if need_parse_lst:
+        for page in need_parse_lst:
+            if convert_from_html(page):
+                url_lst.append(page["url"])
+    else:
+        pages = pages_collection.find({"is_parse": False})
 
-# if __name__ == "__main__":
-#     page_lst = pages_collection.find({})
+        for page in pages:
+            if convert_from_html(page):
+                url_lst.append(page["url"])
 
-#     for page in page_lst:
-#         exist_doc = documents_collection.find_one({'source_url': page['url']})
-#         if exist_doc:
-#             print("Doc đã tồn tại")
-#             continue
-#         parse_from_html(page=page)
+    return url_lst
+
             

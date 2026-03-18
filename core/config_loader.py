@@ -18,3 +18,7 @@ class PipelineConfig:
     @property
     def embedding(self):
         return self.config.get("embedding", {})
+    
+    @property
+    def evaluation(self):
+        return self.config.get("evaluation", {})

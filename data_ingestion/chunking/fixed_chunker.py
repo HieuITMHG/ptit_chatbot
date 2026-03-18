@@ -23,7 +23,7 @@ class FixedSizeChunker(BaseChunker):
 
             chunk_ids = encoded[start:end]
 
-            decoded_chunk = self.encoding.decode(chunk_ids)
+            decoded_chunk = self.tokenizer.decode(chunk_ids)
 
             chunks.append(decoded_chunk)
 
