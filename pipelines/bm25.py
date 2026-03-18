@@ -4,7 +4,7 @@ from pyvi.ViTokenizer import tokenize
 import math
 import pickle
 
-enrich_hybrids_collection = db["enrich_hybrids"]
+hybrid_chunks_collection = db["hybrid_chunks"]
 
 with open("pipelines/vietnamese-stopwords.txt", "r", encoding="utf-8") as f:
     list_stopwords = {line.strip() for line in f if line.strip()}
@@ -43,7 +43,7 @@ def get_docs():
     docs = []
     raw_docs = []
 
-    doc_lst = list(enrich_hybrids_collection.find({}, {"_id": 0}))
+    doc_lst = list(hybrid_chunks_collection.find({}, {"_id": 0}))
 
     for doc in doc_lst:
         if len(doc["chunk_content"]) < 500:
