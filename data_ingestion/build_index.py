@@ -43,8 +43,7 @@ class IndexBuilder():
         return chunk_lst
 
     def chunking_pipeline(self, url_lst):
-        print("Model name nè")
-        print(self.config.chunking["tokenizer"])
+        chunk_lst = []
         chunker = build_chunker(config=self.config.chunking, embedder=self.embedder)
 
         if url_lst:
@@ -68,17 +67,18 @@ class IndexBuilder():
 
                 doc = documents_collection.find_one({"source_url": url})
                 new_chunks = chunker.split_text(text=doc["content"], title=doc["title"])
-                return self.save_chunks(chunks=new_chunks, doc = doc)
+                chunk_lst.extend(self.save_chunks(chunks=new_chunks, doc = doc))
         else:
-            docs = documents_collection.find({})
-            for doc in docs:
+            docs = list(documents_collection.find({}))
+            print(len(docs))
+            for doc in docs:    
                 exists = self.chunks_collection.find_one({"document_url": doc["source_url"]})
-
+                print(exists)
                 if exists:
                     continue
                 else:
                     new_chunks = chunker.split_text(text=doc["content"], title=doc["title"])
-                    return self.save_chunks(chunks=new_chunks, doc = doc)
+                    chunk_lst.extend(self.save_chunks(chunks=new_chunks, doc = doc))
     
 
     def embed_chunks(self, chunks):
