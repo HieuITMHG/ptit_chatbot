@@ -15,6 +15,7 @@ BATCH_SIZE = 64
 
 class IndexBuilder():
     def __init__(self, config, embedder):
+        self.confg = config
         self.qdrant_collection_name = config.embedding["vector_col_name"]
         self.chunks_collection = db[config.chunking["chunk_col_name"]]
         self.embedder = embedder
