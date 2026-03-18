@@ -14,7 +14,7 @@ documents_collection = db["documents"]
 BATCH_SIZE = 64
 
 class IndexBuilder():
-    def __int__(self, config, embedder):
+    def __init__(self, config, embedder):
         self.qdrant_collection_name = config.embedding["vector_col_name"]
         self.chunks_collection = db[config.chunking["chunk_col_name"]]
         self.embedder = embedder

@@ -10,6 +10,7 @@ def run(rag, crawl=False, parse=False, chunk=False, embed=False):
     if (chunk or embed) and not rag:
         print("Phải chọn loại rag cho chunk và embed")
         return
+    print(f"rag: {rag}")
     if rag:
         if rag == RagType.HYBRID.value:
             config = PipelineConfig("configs/hybrid_rag.yaml")
@@ -19,6 +20,7 @@ def run(rag, crawl=False, parse=False, chunk=False, embed=False):
             config == PipelineConfig("configs/rerank_rag.yaml")
 
         embedder = SentenceTransformer(config.embedding["model"])
+        
         index_builder = IndexBuilder(config=config, embedder=embedder)
     need_parse = None
     url_lst = None
