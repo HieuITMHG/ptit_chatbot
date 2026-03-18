@@ -73,7 +73,7 @@ class SemanticChunker(BaseChunker):
     def split_text(self, text, title):
 
         title = f"title: {title}"
-        title_tokens = self.length_function(title)[1]
+        title_tokens = self.length_function(title)
 
         max_content_tokens = self.chunk_size - title_tokens
         if max_content_tokens <= 0:
@@ -85,7 +85,7 @@ class SemanticChunker(BaseChunker):
 
         vectors = self.embedder.encode(sentences)
 
-        sen_lengths = [self.length_function(s)[1] for s in sentences]
+        sen_lengths = [self.length_function(s) for s in sentences]
 
         if len(sentences) > 1:
             sim_scores = 1.0 - paired_cosine_distances(vectors[:-1], vectors[1:])
@@ -107,7 +107,7 @@ class SemanticChunker(BaseChunker):
 
                 if chunk_sentences:
                     chunk_text = title + "\n" + " ".join(chunk_sentences)
-                    token_count = self.length_function(chunk_text)[1]
+                    token_count = self.length_function(chunk_text)
 
                     chunks.append({
                         "text": chunk_text,
@@ -122,7 +122,7 @@ class SemanticChunker(BaseChunker):
                 for sc in sub_chunks:
 
                     sc_text = title + "\n" + sc
-                    sc_token_count = self.length_function(sc_text)[1]
+                    sc_token_count = self.length_function(sc_text)
 
                     if sc_token_count > self.chunk_size:
                         sc = sc[:max_content_tokens]
@@ -152,7 +152,7 @@ class SemanticChunker(BaseChunker):
             if should_split:
 
                 chunk_text = title + "\n" + " ".join(chunk_sentences)
-                token_count = self.length_function(chunk_text)[1]
+                token_count = self.length_function(chunk_text)
 
                 chunks.append({
                     "text": chunk_text,
@@ -167,7 +167,7 @@ class SemanticChunker(BaseChunker):
                 if current_chunk_length + sen_len > max_content_tokens:
 
                     chunk_text = title + "\n" + " ".join(chunk_sentences)
-                    token_count = self.length_function(chunk_text)[1]
+                    token_count = self.length_function(chunk_text)
 
                     chunks.append({
                         "text": chunk_text,
@@ -186,7 +186,7 @@ class SemanticChunker(BaseChunker):
         if chunk_sentences:
 
             chunk_text = title + "\n" + " ".join(chunk_sentences)
-            token_count = self.length_function(chunk_text)[1]
+            token_count = self.length_function(chunk_text)
 
             chunks.append({
                 "text": chunk_text,

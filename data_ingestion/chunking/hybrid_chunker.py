@@ -13,7 +13,11 @@ class HybridChunker(BaseChunker):
                  threshold = 0.5,
                  drop = 0.12,
                  min_chunk_size = 100):
-        super().__init__(chunk_size, chunk_overlap)
+        super().__init__(
+            tokenizer=tokenizer,
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap
+        )
         self.threshold = threshold
         self.embedder = embedder
         self.drop = drop
@@ -74,7 +78,7 @@ class HybridChunker(BaseChunker):
     def split_text(self, text, title):
 
         title = f"title: {title}"
-        title_tokens = self.length_function(title)[1]
+        title_tokens = self.length_function(title)
 
         max_content_tokens = self.chunk_size - title_tokens
         if max_content_tokens <= 0:
@@ -86,7 +90,7 @@ class HybridChunker(BaseChunker):
 
         vectors = self.embedder.encode(sentences)
 
-        sen_lengths = [self.length_function(s)[1] for s in sentences]
+        sen_lengths = [self.length_function(s) for s in sentences]
 
         if len(sentences) > 1:
             sim_scores = 1.0 - paired_cosine_distances(vectors[:-1], vectors[1:])
@@ -108,7 +112,7 @@ class HybridChunker(BaseChunker):
 
                 if chunk_sentences:
                     chunk_text = title + "\n" + " ".join(chunk_sentences)
-                    token_count = self.length_function(chunk_text)[1]
+                    token_count = self.length_function(chunk_text)
 
                     chunks.append({
                         "text": chunk_text,
@@ -123,7 +127,7 @@ class HybridChunker(BaseChunker):
                 for sc in sub_chunks:
 
                     sc_text = title + "\n" + sc
-                    sc_token_count = self.length_function(sc_text)[1]
+                    sc_token_count = self.length_function(sc_text)
 
                     if sc_token_count > self.chunk_size:
                         sc = sc[:max_content_tokens]
@@ -153,7 +157,7 @@ class HybridChunker(BaseChunker):
             if should_split:
 
                 chunk_text = title + "\n" + " ".join(chunk_sentences)
-                token_count = self.length_function(chunk_text)[1]
+                token_count = self.length_function(chunk_text)
 
                 chunks.append({
                     "text": chunk_text,
@@ -168,7 +172,7 @@ class HybridChunker(BaseChunker):
                 if current_chunk_length + sen_len > max_content_tokens:
 
                     chunk_text = title + "\n" + " ".join(chunk_sentences)
-                    token_count = self.length_function(chunk_text)[1]
+                    token_count = self.length_function(chunk_text)
 
                     chunks.append({
                         "text": chunk_text,
@@ -187,7 +191,7 @@ class HybridChunker(BaseChunker):
         if chunk_sentences:
 
             chunk_text = title + "\n" + " ".join(chunk_sentences)
-            token_count = self.length_function(chunk_text)[1]
+            token_count = self.length_function(chunk_text)
 
             chunks.append({
                 "text": chunk_text,

@@ -4,7 +4,8 @@ from .hybrid_chunker import HybridChunker
 from enums.chunk_type import ChunkType
 
 def build_chunker(config, embedder):
-
+    print("Đây nữa nè")
+    print(config["tokenizer"])
     chunk_type = config["type"]
 
     if chunk_type == ChunkType.FIXED.value:

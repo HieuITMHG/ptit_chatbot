@@ -6,7 +6,8 @@ from core.database import db
 class FixedSizeChunker(BaseChunker):
     def split_text(self, text: str) -> List[str]:
         chunks = []
-        encoded, content_len = self.length_function(text=text)
+        content_len = self.length_function(text=text)
+        encoded = self.tokenizer.encode(text=text)
         
         if content_len <= self.chunk_size:
             return [text]

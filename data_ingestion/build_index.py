@@ -43,6 +43,8 @@ class IndexBuilder():
         return chunk_lst
 
     def chunking_pipeline(self, url_lst):
+        print("Model name nè")
+        print(self.config.chunking["tokenizer"])
         chunker = build_chunker(config=self.config.chunking, embedder=self.embedder)
 
         if url_lst:
