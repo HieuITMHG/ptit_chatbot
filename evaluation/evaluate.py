@@ -6,7 +6,7 @@ from core.config_loader import PipelineConfig
 from evaluation.eval_pipeline.generation_metrics import GenerationMetric
 from evaluation.eval_pipeline.retrieval_metrics import RetrievalMetric
 
-def run(rag, generation, retrieval, top_k):
+def run(rag, generation, retrieval, topk):
     if rag == RagType.HYBRID.value:
         config = PipelineConfig("configs/hybrid_rag.yaml")
         rag_engine = HybirdRag(embedding_model=config.embedding["model"],
@@ -21,11 +21,11 @@ def run(rag, generation, retrieval, top_k):
                         collection_name=config.embedding["col_name"])
     
     if retrieval:
-        metric = RetrievalMetric(rag_engine=rag_engine, data_config=config.evaluation, top_k=top_k)
+        metric = RetrievalMetric(rag_engine=rag_engine, data_config=config.evaluation, top_k=topk)
         metric.evaluate()
 
     if generation:
-        metric = GenerationMetric(rag_engine=rag_engine, data_config=config.evaluation, top_k=top_k)
+        metric = GenerationMetric(rag_engine=rag_engine, data_config=config.evaluation, top_k=topk)
         metric.evaluate()
 
     
