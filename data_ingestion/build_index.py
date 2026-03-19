@@ -2,7 +2,7 @@ from core.database import db, client
 from data_ingestion.chunking.chunker_factory import build_chunker
 from model.chunk import Chunk
 from core.qdrant import client
-from qdrant_client.models import VectorParams, Distance, Filter, FieldCondition, MatchValue
+from qdrant_client.models import VectorParams, Distance, Filter, FieldCondition, MatchValue, SparseVectorParams, PointStruct, SparseVector
 import hashlib
 
 def make_point_id(url, chunk_index):
@@ -84,40 +84,67 @@ class IndexBuilder():
     def embed_chunks(self, chunks):
         batch = []
         for chunk in chunks:
-            print(chunk["document_url"])
             batch.append(chunk)
 
             if len(batch) == BATCH_SIZE:
                 texts = [c["chunk_content"] for c in batch]
 
-                vectors = self.embedder.encode(texts)
+                output = self.embedder.encode(texts, return_dense=True, return_sparse=True, return_colbert_vecs=False)
+
+                dense_vecs = output['dense_vecs']
+                lexical_weights = output['lexical_weights']
 
                 points = []
 
-                for i, vec in enumerate(vectors):
-                    points.append({
-                        "id": batch[i]["id"],
-                        "vector": vec,
-                        "payload": batch[i]
-                    })
+                for i in range(len(batch)):
+                    sparse_indices = [int(k) for k in lexical_weights[i].keys()]
+                    sparse_values = list(lexical_weights[i].values())
                     
+                    points.append(
+                        PointStruct(
+                            id=batch[i]["id"],
+                            vector={
+                                "dense": dense_vecs[i].tolist(), # Truyền dense vector
+                                "sparse": SparseVector(          # Truyền sparse vector
+                                    indices=sparse_indices,
+                                    values=sparse_values
+                                )
+                            },
+                            payload=batch[i]
+                        )
+                    )
+
                 client.upsert(
                     collection_name=self.qdrant_collection_name,
                     points=points
                 )
-
+                print(f"Đã upsert batch {len(batch)} chunks (Hybrid)")
                 batch = []
         if batch:
             texts = [c["chunk_content"] for c in batch]
-            vectors = self.embedder.encode(texts)
+            output = self.embedder.encode(texts, return_dense=True, return_sparse=True, return_colbert_vecs=False)
+            
+            dense_vecs = output['dense_vecs']
+            lexical_weights = output['lexical_weights']
 
             points = []
-            for i, vec in enumerate(vectors):
-                points.append({
-                    "id": batch[i]["id"],
-                    "vector": vec,
-                    "payload": batch[i]
-                })
+            for i in range(len(batch)):
+                sparse_indices = [int(k) for k in lexical_weights[i].keys()]
+                sparse_values = list(lexical_weights[i].values())
+
+                points.append(
+                    PointStruct(
+                        id=batch[i]["id"],
+                        vector={
+                            "dense": dense_vecs[i].tolist(),
+                            "sparse": SparseVector(
+                                indices=sparse_indices,
+                                values=sparse_values
+                            )
+                        },
+                        payload=batch[i]
+                    )
+                )
 
             client.upsert(
                 collection_name=self.qdrant_collection_name,
@@ -129,8 +156,15 @@ class IndexBuilder():
             print("Collection đã tồn tại")
         else:
             client.create_collection(collection_name=self.qdrant_collection_name,
-                                    vectors_config=VectorParams(size=self.embedder.get_sentence_embedding_dimension(),
-                                                                distance=Distance.COSINE))
+                                    vectors_config={
+                                        "dense": VectorParams(
+                                            size=self.embedder.get_sentence_embedding_dimension(),
+                                            distance=Distance.COSINE
+                                        )
+                                    },
+                                    sparse_vectors_config={
+                                        "sparse": SparseVectorParams()
+                                    })
             print(f"Đã tạo collection {self.qdrant_collection_name}")
         
         if chunk_lst:

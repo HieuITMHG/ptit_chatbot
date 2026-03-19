@@ -3,7 +3,7 @@ from .etl.parse_data import parse_data
 from core.config_loader import PipelineConfig
 from core.config import settings
 from enums.rag_type import RagType
-from sentence_transformers import SentenceTransformer
+from FlagEmbedding import BGEM3FlagModel
 from .build_index import IndexBuilder
 
 def run(rag, crawl=False, parse=False, chunk=False, embed=False):
@@ -19,7 +19,7 @@ def run(rag, crawl=False, parse=False, chunk=False, embed=False):
         elif rag == RagType.RERANK.value:
             config == PipelineConfig("configs/rerank_rag.yaml")
 
-        embedder = SentenceTransformer(config.embedding["model"])
+        embedder = BGEM3FlagModel(config.embedding["model"])
         
         index_builder = IndexBuilder(config=config, embedder=embedder)
     need_parse = None
