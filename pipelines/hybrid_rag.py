@@ -157,7 +157,7 @@ if __name__ == "__main__":
     rag_engine = HybirdRag(embedding_model="BAAI/bge-m3",
                           collection_name="hybrid_collection")
     
-    query = "Điểm chuẩn kỳ thi tuyển sinh hệ HCKT + VHVL (tại chức cũ)"
+    query = "điểm chuẩn ngành công nghệ thông tin qua các năm"
 
     start_time = time.perf_counter()
     
@@ -172,7 +172,7 @@ if __name__ == "__main__":
 
     print(f"Latency: {latency}")
 
-    # print(rag_engine.generate(query=query, contexts=results))
+    print(rag_engine.generate(query=query, contexts=results))
 
 
 

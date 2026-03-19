@@ -3,10 +3,10 @@ import json
 from model.query import Query
 from model.qrel import Qrel
 
-queries_collection = db["queries"]
-qrels_collection = db["qrels"]
+queries_collection = db["hybrid_queries"]
+qrels_collection = db["hybrid_qrels"]
 
-sample_url = "evaluation/ds_gen/eval_dataset.json"
+sample_url = "evaluation/ds_gen/next_ds.json"
 
 if __name__ == "__main__":
 
