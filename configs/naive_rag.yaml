@@ -7,8 +7,8 @@ chunking:
   chunk_col_name: semantic_chunks #eval
 
 evaluation:
-  qrels_col_name: qrels #eval
-  queries_col_name: queries
+  queries_col_name: hybrid_queries
+  qrels_col_name: hybrid_qrels
 
 embedding:
   vector_col_name: semantic_collecction

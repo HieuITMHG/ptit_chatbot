@@ -2,32 +2,20 @@ Tôi muốn gen ra một bộ dataset benmark để tính các metric như recal
 
 yêu cầu:
 - Chỉ sử dụng các context có ý nghĩa, còn những context mà chỉ có câu giới thiệu, hay là dẫn đến một link nào đó thì không cần dùng
-- Query không được quá dể như copy nguyên text từ context
-- Tránh sử dụng các từ trong context2
-- Query phải tự nhiên và ngắn gọn
-- Dạng dễ nhất: hỏi đúng thông tin nằm trong document.
-- Paraphrased question, Cùng ý nghĩa nhưng dùng wording khác.
-- Một query có thể được trả lời bằng nhiều chunk, tốt nhất là 2 - 3 chunk và tối đa là 5 chunk, không được 1 chunk
-- Mỗi chunk (relevance) phải được chấm điểm, càng relevance điểm càng cao
-- output là json, tổ chức thế nào tùy bạn để tôi có thể truy suất loop và insert lên mongodb
-- Do giới hạn token đầu ra của bạn tôi sẽ bảo bạn generate nhiều lần, nên mỗi lần generate ko được dùng các chunk đã dùng rồi và bạn phải tự động tăng id lên
-
+- Câu hỏi phải ngắn ngọn
+- Tránh cung cấp quá nhiều thông tin trong câu hỏi
+- Có thể là một câu hỏi dể, một câu hỏi chung chung, cũng có thể dùng wording khác, có thể là câu hỏi tổng hợp, đồi hỏi nhiều context
+- Một query có thể được trả lời bằng nhiều chunk
+- Do giới hạn token đầu ra của bạn tôi sẽ bảo bạn generate nhiều lần, nên mỗi lần generate ko được dùng các chunk đã dùng rồi và 
+bạn phải tự động tăng id lên
+- output là json chính xác như mẫu dưới đây
 [
   {
     "query_id": 1,
-    "query": "Tìm thông tin về mã ngành và các chuyên ngành thuộc chương trình đào tạo chính quy đại học mảng Công nghệ thông tin?",
-    "query_type": "Keyword query",
+    "query": "Cho biết thông tin về học bổng",
     "relevant_chunks": [
-      {
-        "chunk_id": "5550e51a36b8ddb38c8898684c2e4f18",
-        "relevance_score": 0.7,
-        "reasoning": "Đưa ra danh mục tổng quan các chương trình đào tạo chính quy ngành Công nghệ thông tin của trường."
-      },
-      {
-        "chunk_id": "a952514e6450c4fea105856e141030c4",
-        "relevance_score": 1.0,
-        "reasoning": "Cung cấp chính xác mã ngành đào tạo (7480201) và tên các chuyên ngành cụ thể bên trong."
-      }
+        "5550e51a36bdffdfdrdrythghgfhgg4f18",
+        "a952514e6450c4fea105856e1gfgfdg0c4"
     ]
   },
 ]

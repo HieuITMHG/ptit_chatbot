@@ -157,7 +157,7 @@ if __name__ == "__main__":
     rag_engine = HybirdRag(embedding_model="BAAI/bge-m3",
                           collection_name="hybrid_collection")
     
-    query = "điểm chuẩn ngành công nghệ thông tin qua các năm"
+    query = "NCKH năm 2024"
 
     start_time = time.perf_counter()
     
@@ -167,12 +167,12 @@ if __name__ == "__main__":
 
     latency = end_time - start_time
 
+    print("\n=== TOP KẾT QUẢ ĐÃ ĐƯỢC HYBRID RERANK của mìn ===")
     for r in results:
-        print(r["id"])
-
+        print(f"ID: {r['id']} | URL: {r['doc_url']}")
     print(f"Latency: {latency}")
 
-    print(rag_engine.generate(query=query, contexts=results))
+    # print(rag_engine.generate(query=query, contexts=results))
 
 
 

@@ -25,7 +25,7 @@ def main():
 
     parser_eval.add_argument("--retrieval", action="store_true", help="Đánh giá retriever")
     parser_eval.add_argument("--generation", action="store_true", help="Đánh giá generator")
-    parser_eval.add_argument("--rag", required=True, choices=["naive", "rerank", "hybrid"])
+    parser_eval.add_argument("--rag", required=True, choices=["naive", "rerank", "hybrid", "hybridv2"])
     parser_eval.add_argument("--topk", required=True, type=int, choices=[5, 10, 20])
 
     args = parser.parse_args()

@@ -6,7 +6,7 @@ from model.qrel import Qrel
 queries_collection = db["hybrid_queries"]
 qrels_collection = db["hybrid_qrels"]
 
-sample_url = "evaluation/ds_gen/next_ds.json"
+sample_url = "evaluation/ds_gen/hybrid_dataset.json"
 
 if __name__ == "__main__":
 
@@ -19,10 +19,8 @@ if __name__ == "__main__":
                     query_content=query["query"])
         
         for rel in query["relevant_chunks"]:
-            qrel = Qrel(chunk_id=rel["chunk_id"],
-                        query_id=que.id,
-                        relevance_score=rel["relevance_score"],
-                        reasoning=rel["reasoning"])
+            qrel = Qrel(chunk_id=rel,
+                        query_id=que.id)
             qrel_lst.append(qrel.model_dump())
             
         try:

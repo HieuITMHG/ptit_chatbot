@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 from core.qdrant import client
 
-collection_name = "hybrid_collection"
+collection_name = "semantic_collecction"
 num_clusters = 4
 
 if __name__ == "__main__":
@@ -24,7 +24,9 @@ if __name__ == "__main__":
         )
         
         for record in records:
-            all_vectors.append(record.vector)
+            # Thay "TÊN_VECTOR_CỦA_BẠN" bằng tên thật trong Qdrant (ví dụ: "text")
+            vector_data = record.vector["dense"] 
+            all_vectors.append(vector_data)
             all_payloads.append(record.payload)
             
         print(f"Đã tải {len(all_vectors)} chunks...")

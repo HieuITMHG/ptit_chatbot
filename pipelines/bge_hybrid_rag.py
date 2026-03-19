@@ -124,9 +124,9 @@ class BGEHybirdRag:
 
 if __name__ == "__main__":
     rag_engine = BGEHybirdRag(embedding_model="BAAI/bge-m3",
-                              collection_name="hybrid_collection")
+                              collection_name="semantic_collecction")
     
-    query = "điểm chuẩn ngành công nghệ thông tin qua các năm"
+    query = "Đại hội Đảng bộ Học viện Công nghệ Bưu chính Viễn thông lần thứ VII tổ chức trong khoảng thời gian nào và đề ra những mục tiêu gì cho nhiệm kỳ 2025-2030?"
 
     start_time = time.perf_counter()
     
@@ -136,10 +136,10 @@ if __name__ == "__main__":
 
     latency = end_time - start_time
 
-    print("\n--- Danh sách ID tài liệu được chọn ---")
+    print("\n=== TOP KẾT QUẢ ĐÃ ĐƯỢC BGE RERANK ===")
     for r in results:
-        print(f"ID: {r['id']} - Score: {r.get('score', 'N/A')}")
+        print(f"ID: {r['id']} | URL: {r['doc_url']}")
 
     print(f"Total Retrieval Latency: {latency:.4f}s\n")
-    print("--- Câu trả lời từ LLM ---")
-    print(rag_engine.generate(query=query, contexts=results))
+    # print("--- Câu trả lời từ LLM ---")
+    # print(rag_engine.generate(query=query, contexts=results))

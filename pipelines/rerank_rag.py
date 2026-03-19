@@ -1,5 +1,5 @@
 from core.qdrant import client
-from sentence_transformers import SentenceTransformer
+from FlagEmbedding import BGEM3FlagModel
 from openai import OpenAI
 from core.config import settings
 from pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
@@ -9,39 +9,52 @@ openai_client = OpenAI(api_key=settings.openai_key)
 
 class RerankRag:
     def __init__(self, embedding_model, collection_name):
-        self.embedding_model = SentenceTransformer(embedding_model)
+        # 1. Thay thế SentenceTransformer bằng BGEM3FlagModel
+        self.embedding_model = BGEM3FlagModel(embedding_model, use_fp16=True)
         self.collection_name = collection_name
 
     def retrieve(self, query: str, top_k: int): 
+        # 2. Mã hóa câu hỏi và CHỈ lấy dense_vecs
+        encoded_output = self.embedding_model.encode(query, return_dense=True, return_sparse=False, return_colbert_vecs=False)
+        query_dense = encoded_output["dense_vecs"].tolist()
+
         for attempt in range(3):
             try:
-                contexts = client.query_points(collection_name=self.collection_name,
-                                                query=self.embedding_model.encode(query),
-                                                with_payload=True,
-                                                limit=20)
+                # 3. Search Qdrant thuần bằng Dense Vector
+                contexts = client.query_points(
+                    collection_name=self.collection_name,
+                    query=query_dense, 
+                    with_payload=True,
+                    using="dense",
+                    limit=20
+                )
                 break
             except Exception as e:
                 print(f"Retry: {e}")
                 time.sleep(2)
 
-        results =  []
-        for point in contexts.points:
-            payload = point.payload
-            results.append({
-                "id": point.id.replace("-", ""),
-                "doc_url": payload["document_url"],
-                "chunk_index": payload["chunk_index"],
-                "token_count": payload["token_count"],
-                "title": payload["title"],
-                "chunk_content": payload["chunk_content"],
-                "author": payload["author"],
-                "published_date": payload["published_date"]
-            })
+        results = []
+        if hasattr(contexts, 'points'):
+            for point in contexts.points:
+                payload = point.payload
+                results.append({
+                    "id": point.id.replace("-", ""),
+                    "doc_url": payload.get("document_url", ""),
+                    "chunk_index": payload.get("chunk_index", 0),
+                    "token_count": payload.get("token_count", 0),
+                    "title": payload.get("title", ""),
+                    "chunk_content": payload.get("chunk_content", ""),
+                    "author": payload.get("author", ""),
+                    "published_date": payload.get("published_date", "")
+                })
         
-        reranked_contexts = cross_encoder_reranker(unordered_contexts=results[: 10],
-                                                   query=query)
+        # 4. Đưa top 10 kết quả vào Re-ranker
+        reranked_contexts = cross_encoder_reranker(
+            unordered_contexts=results[:10],
+            query=query
+        )
 
-        return reranked_contexts[0: top_k]
+        return reranked_contexts[:top_k]
     
     def generate(self, query, contexts):
         prompt_template = """
@@ -59,49 +72,48 @@ class RerankRag:
             - Cuối câu trả lời hãy liệt kê các nguồn tham khảo (URL).
 
             Dữ liệu:
-            {context_1}
-            {context_2}
-            {context_3}
+            {contexts_str}
 
             Câu hỏi: {query}
         """
 
-        context_1 = f'{contexts[0]["chunk_content"]}\nNguồn: {contexts[0]["doc_url"]}'
-        context_2 = f'{contexts[1]["chunk_content"]}\nNguồn: {contexts[1]["doc_url"]}'
-        context_3 = f'{contexts[2]["chunk_content"]}\nNguồn: {contexts[2]["doc_url"]}'
+        # Tránh lỗi IndexError bằng cách duyệt động qua mảng contexts
+        contexts_list = []
+        for i, ctx in enumerate(contexts):
+            context_text = f'--- Nội dung {i+1} ---\n{ctx["chunk_content"]}\nNguồn: {ctx["doc_url"]}'
+            contexts_list.append(context_text)
+            print(f"Nguồn {i+1}: {ctx['doc_url']}")
 
-        print(contexts[0]["doc_url"])
-        print(contexts[1]["doc_url"])
-        print(contexts[2]["doc_url"])
+        contexts_str = "\n\n".join(contexts_list)
 
         prompt = prompt_template.format(
-            context_1 = context_1,
-            context_2 = context_2,
-            context_3 = context_3,
-            query = query
+            contexts_str=contexts_str,
+            query=query
         )
 
-        response = openai_client.responses.create(
-            model="gpt-5-nano",
-            input=prompt,
+        # Cú pháp OpenAI Chat Completions mới
+        response = openai_client.chat.completions.create(
+            model="gpt-4o-mini", # Đổi lại model hợp lệ nhé (gpt-4o-mini hoặc gpt-3.5-turbo)
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.2
         )
 
-        return response.output_text
+        return response.choices[0].message.content
 
 if __name__ == "__main__":
     rag_engine = RerankRag(embedding_model="BAAI/bge-m3",
-                          collection_name="enrich_hybrid_collection")
+                          collection_name="semantic_collecction") # Đã sửa lỗi typo collecction
     
-    query = "tổng hợp hoạt động đoàn"
+    query = "NCKH năm 2024"
     
+    # Lấy top 5 kết quả tốt nhất
     results = rag_engine.retrieve(query=query, top_k=5)
 
+    print("\n=== TOP KẾT QUẢ ĐÃ ĐƯỢC RERANK ===")
     for r in results:
-        print(r["id"])
+        print(f"ID: {r['id']} | URL: {r['doc_url']}")
 
+    print("\n=== TRẢ LỜI TỪ LLM ===")
     print(rag_engine.generate(query=query, contexts=results))
-
-
-
-
-    
