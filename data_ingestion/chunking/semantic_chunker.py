@@ -12,7 +12,7 @@ class SemanticChunker(BaseChunker):
                  threshold = 0.5,
                  drop = 0.12,
                  min_chunk_size = 100):
-        super().__init__(chunk_size, chunk_overlap)
+        super().__init__(chunk_size=chunk_size, tokenizer=tokenizer, chunk_overlap=chunk_overlap)
         self.threshold = threshold
         self.embedder = embedder
         self.drop = drop
