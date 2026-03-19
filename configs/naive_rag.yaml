@@ -4,11 +4,11 @@ chunking:
   overlap: 50
   embedder: BAAI/bge-m3
   tokenizer: gpt-5-nano
-  queries_col_name: queries
+  chunk_col_name: semantic_chunks #eval
 
 evaluation:
   qrels_col_name: qrels #eval
-  chunk_col_name: semantic_chunks #eval
+  queries_col_name: queries
 
 embedding:
   vector_col_name: semantic_collecction
