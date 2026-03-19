@@ -124,6 +124,8 @@ class RetrievalMetric:
         ndcg = sum(ndcg_lst) / len(ndcg_lst)
         mrr = sum(mrr_lst) / len(mrr_lst)
 
+        print(f"{precision}, {recall}, {hit}, {ndcg}, {mrr}]")
+
         result = RetrievalResult(precision=precision,
                                  recall=recall,
                                  hit=hit,
@@ -134,11 +136,11 @@ class RetrievalMetric:
         resuls_collection.insert_one(result.model_dump())
 
         metrics = [
-            f"\nprecision@{self.top_k}: {sum(precision_lst) / len(precision_lst)}",
-            f"\nrecall@{self.top_k}: {sum(recall_lst) / len(recall_lst)}",
-            f"\nhit@{self.top_k}: {sum(hit_lst) / len(hit_lst)}",
-            f"\nndcg@{self.top_k}: {sum(ndcg_lst) / len(ndcg_lst)}",
-            f"\nMRR: {sum(mrr_lst) / len(mrr_lst)}",
+            f"\nprecision@{self.top_k}: {precision}",
+            f"\nrecall@{self.top_k}: {recall}",
+            f"\nhit@{self.top_k}: {hit}",
+            f"\nndcg@{self.top_k}: {ndcg}",
+            f"\nMRR: {mrr}",
         ]
 
         return metrics
