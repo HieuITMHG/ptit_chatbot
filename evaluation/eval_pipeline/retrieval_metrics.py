@@ -16,9 +16,12 @@ class RetrievalMetric:
         self.qrels_map = {}
         for rel in self.qrels_collection.find({}, {"_id": 0}):
             qid = rel["query_id"]
+            chunk_id = rel["chunk_id"]
 
             if qid not in self.qrels_map:
                 self.qrels_map[qid] = {}
+
+            self.qrels_map[qid][chunk_id] = 1
 
     def _prepare_eval_data(self, query_id, results):
         rel_map = self.qrels_map.get(query_id, {})

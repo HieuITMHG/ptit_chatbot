@@ -57,7 +57,7 @@ class BGEHybirdRag:
             for point in contexts.points:
                 payload = point.payload
                 results.append({
-                    "id": point.id.replace("-", ""),
+                    "id": payload["id"],
                     "doc_url": payload["document_url"],
                     "chunk_index": payload["chunk_index"],
                     "token_count": payload["token_count"],
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     rag_engine = BGEHybirdRag(embedding_model="BAAI/bge-m3",
                               collection_name="semantic_collecction")
     
-    query = "Đại hội Đảng bộ Học viện Công nghệ Bưu chính Viễn thông lần thứ VII tổ chức trong khoảng thời gian nào và đề ra những mục tiêu gì cho nhiệm kỳ 2025-2030?"
+    query = "Học ngành công nghệ kỹ thuật điện - điện tử ra trường có thể làm những công việc gì?"
 
     start_time = time.perf_counter()
     
