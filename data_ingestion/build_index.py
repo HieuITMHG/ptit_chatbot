@@ -158,7 +158,7 @@ class IndexBuilder():
             client.create_collection(collection_name=self.qdrant_collection_name,
                                     vectors_config={
                                         "dense": VectorParams(
-                                            size=self.embedder.get_sentence_embedding_dimension(),
+                                            size=self.embedder.model.config.hidden_size,
                                             distance=Distance.COSINE
                                         )
                                     },

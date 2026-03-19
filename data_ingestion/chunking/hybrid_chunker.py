@@ -88,7 +88,7 @@ class HybridChunker(BaseChunker):
         if not sentences:
             return []
 
-        vectors = self.embedder.encode(sentences)
+        vectors = self.embedder.encode(sentences)["dense_vecs"]
 
         sen_lengths = [self.length_function(s) for s in sentences]
 
