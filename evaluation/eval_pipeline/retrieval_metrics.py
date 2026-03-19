@@ -1,5 +1,8 @@
 import math
 from core.database import db
+from model.retrieval_result import RetrievalResult
+
+resuls_collection = db["retrieval_results"]
 
 class RetrievalMetric:
     def __init__(self, rag_engine, data_config, top_k):
@@ -72,28 +75,6 @@ class RetrievalMetric:
 
         return dcg / idcg
     
-    def grade_ndcg(self, eval_data):
-        rel_map = eval_data["rel_map"]
-        result_ids = eval_data["result_ids"]
-
-        dcg = 0.0
-        for i, doc_id in enumerate(result_ids):
-            rel = rel_map.get(doc_id, 0.0)
-            dcg += rel / math.log2(i + 2)
-
-
-        ideal_rels = sorted(rel_map.values(), reverse=True)
-        ideal_rels = ideal_rels[: len(result_ids)]
-
-        idcg = 0.0
-        for i, rel in enumerate(ideal_rels):
-            idcg += rel / math.log2(i + 2)
-
-        if idcg == 0:
-            return 0.0
-
-        return dcg / idcg
-    
     def mrr(self, eval_data):
         rel_ids = eval_data["rel_ids"]
         result_ids = eval_data["result_ids"]
@@ -115,7 +96,6 @@ class RetrievalMetric:
         ndcg_lst = []
         mrr_lst = []
         hit_lst = []
-        grade_lst = []
 
         for idx, query in enumerate(query_lst):
             
@@ -133,7 +113,6 @@ class RetrievalMetric:
             ndcg = self.ndcg(eval_data)
             mrr = self.mrr(eval_data)
             hit = self.hit(eval_data)
-            grade = self.grade_ndcg(eval_data)
 
             print(f"precision@{self.top_k} query {idx}: {precision}")
             
@@ -142,20 +121,28 @@ class RetrievalMetric:
             ndcg_lst.append(ndcg)
             mrr_lst.append(mrr)
             hit_lst.append(hit)
-            grade_lst.append(grade)
+
+        precision = sum(precision_lst) / len(precision_lst)
+        recall = sum(recall_lst) / len(recall_lst)
+        hit = sum(hit_lst) / len(hit_lst)
+        ndcg = sum(ndcg_lst) / len(ndcg_lst)
+        mrr = sum(mrr_lst) / len(mrr_lst)
+
+        result = RetrievalResult(precision=precision,
+                                 recall=recall,
+                                 hit=hit,
+                                 ndcg=ndcg,
+                                 mrr=mrr,
+                                 top_k=self.top_k)
+        
+        resuls_collection.insert_one(result.model_dump())
 
         metrics = [
             f"\nprecision@{self.top_k}: {sum(precision_lst) / len(precision_lst)}",
             f"\nrecall@{self.top_k}: {sum(recall_lst) / len(recall_lst)}",
             f"\nhit@{self.top_k}: {sum(hit_lst) / len(hit_lst)}",
             f"\nndcg@{self.top_k}: {sum(ndcg_lst) / len(ndcg_lst)}",
-            f"\ngrade_ndcg@{self.top_k}: {sum(grade_lst) / len(grade_lst)}",
             f"\nMRR: {sum(mrr_lst) / len(mrr_lst)}",
         ]
-
-        with open("evaluation/eval_pipeline/results.txt", "a", encoding="utf-8") as f:
-            for m in metrics:
-                f.write(m)
-                print(m)
 
         return metrics
