@@ -7,3 +7,4 @@ class RetrievalResult(BaseModel):
     hit: float
     ndcg: float
     mrr: float
+    rag_type: str

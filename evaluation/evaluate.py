@@ -26,7 +26,7 @@ def run(rag, generation, retrieval, topk):
                         collection_name=config.embedding["vector_col_name"])
     
     if retrieval:
-        metric = RetrievalMetric(rag_engine=rag_engine, data_config=config.evaluation, top_k=topk)
+        metric = RetrievalMetric(rag_engine=rag_engine, data_config=config.evaluation, top_k=topk, rag_type=rag)
         metric.evaluate()
 
     if generation:

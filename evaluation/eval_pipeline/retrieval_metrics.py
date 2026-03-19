@@ -5,9 +5,10 @@ from model.retrieval_result import RetrievalResult
 resuls_collection = db["retrieval_results"]
 
 class RetrievalMetric:
-    def __init__(self, rag_engine, data_config, top_k):
+    def __init__(self, rag_engine, data_config, top_k, rag_type):
         self.rag_engine = rag_engine
         self.top_k = top_k
+        self.rag_type = rag_type
 
         self.qrels_collection = db[data_config["qrels_col_name"]]
         self.queries_collection = db[data_config["queries_col_name"]]
@@ -131,7 +132,8 @@ class RetrievalMetric:
                                  hit=hit,
                                  ndcg=ndcg,
                                  mrr=mrr,
-                                 top_k=self.top_k)
+                                 top_k=self.top_k,
+                                 rag_type=self.rag_type)
         
         resuls_collection.insert_one(result.model_dump())
 
