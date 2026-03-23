@@ -1,6 +1,6 @@
-from flashrank import Ranker, RerankRequest
-import time
 import os
+import time
+from flashrank import Ranker, RerankRequest
 
 current_file_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -10,28 +10,30 @@ model_cache_path = os.path.join(base_project_dir, "models")
 if not os.path.exists(model_cache_path):
     os.makedirs(model_cache_path)
 
-print(f"Đang kiểm tra mô hình Rerank tại: {model_cache_path}")
+MODEL_NAME = "ms-marco-MultiBERT-L-12"
+
+print(f"--- Đang kiểm tra mô hình Rerank tại: {model_cache_path} ---")
 
 try:
-    ranker = Ranker(model_name="ms-marco-MultiBERT-L-12", cache_dir=model_cache_path) 
+    ranker = Ranker(model_name=MODEL_NAME, cache_dir=model_cache_path)
+    print(f"--- Khởi tạo Ranker thành công: {MODEL_NAME} ---")
 except Exception as e:
     print(f"Lỗi khởi tạo Ranker: {e}")
-    print("Mẹo: Nếu server không có internet, hãy dùng 'scp' copy thư mục model từ local lên.")
+    print("Mẹo: Nếu server không có internet, hãy dùng 'scp' copy thư mục model từ máy local lên.")
     raise
 
 def cross_encoder_reranker(unordered_contexts: list, query: str) -> list:
-    """
-    Hàm này nhận vào list các context và trả về list đã sắp xếp, 
-    giống hệt output của hàm cũ để code của bạn không bị lỗi.
-    """
+    if not unordered_contexts:
+        return []
+
     start_time = time.perf_counter()
 
     passages = []
     for i, context in enumerate(unordered_contexts):
         passages.append({
-            "id": str(i),                         
-            "text": context["chunk_content"],    
-            "meta": context                      
+            "id": str(i), 
+            "text": context.get("chunk_content", ""), 
+            "meta": context  
         })
 
     req = RerankRequest(query=query, passages=passages)
@@ -41,10 +43,11 @@ def cross_encoder_reranker(unordered_contexts: list, query: str) -> list:
     ranked_contexts = []
     for res in flashrank_results:
         original_context = res["meta"]           
-        original_context["score"] = res["score"]  
+        original_context["score"] = res["score"] 
         ranked_contexts.append(original_context)
 
     end_time = time.perf_counter()
-    print(f"Thời gian Rerank (ONNX): {end_time - start_time:.4f} giây")
+    print(f"Rerank hoàn tất: {len(ranked_contexts)} docs | Thời gian: {end_time - start_time:.4f} giây")
 
     return ranked_contexts
+
