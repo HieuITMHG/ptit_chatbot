@@ -1,41 +1,28 @@
-version: '3.8'
-
 services:
-  # 1. MongoDB
-  mongodb:
-    image: mongo:latest
-    container_name: local_mongodb
+  redis:
+    image: redis:7
+    container_name: local_redis
     ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
+      - "6379:6379"
 
-  # 2. Qdrant (Vector Database)
-  qdrant:
-    image: qdrant/qdrant:latest
-    container_name: local_qdrant
+  api:
+    build: .
+    container_name: rag_api
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
     ports:
-      - "6333:6333" # Port REST API
-      - "6334:6334" # Port gRPC
+      - "8000:8000"
     volumes:
-      - qdrant_data:/qdrant/storage
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - redis
 
-  # 3. MinIO (Giả lập AWS S3 ở Local)
-  minio:
-    image: minio/minio:latest
-    container_name: local_minio
-    ports:
-      - "9000:9000" # Port API (Tương đương endpoint S3)
-      - "9001:9001" # Port giao diện Web UI
-    environment:
-      MINIO_ROOT_USER: admin_s3     # Thay thế cho AWS_ACCESS_KEY_ID
-      MINIO_ROOT_PASSWORD: password_s3 # Thay thế cho AWS_SECRET_ACCESS_KEY
-    command: server /data --console-address ":9001"
+  worker:
+    build: .
+    container_name: celery_worker
+    command: celery -A app.worker.celery_app worker --loglevel=info
     volumes:
-      - minio_data:/data
-
-# Khai báo Volumes để dữ liệu không bị mất khi tắt Docker
-volumes:
-  mongo_data:
-  qdrant_data:
-  minio_data:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - redis

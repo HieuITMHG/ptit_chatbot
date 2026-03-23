@@ -1,7 +1,9 @@
-qdrant docker: docker run -p 6333:6333 -p 6334:6334 -v qdrant_data:/qdrant/storage qdrant/qdrant
 
+python -m uvicorn app.main:app --reload
+docker compose down --rmi all
+docker compose build --no-cache
+docker compose up
+docker images
+docker image prune -f
 
-✅ Đã lưu 2632 chunks vào file: cluster_enrich_0.json
-✅ Đã lưu 2211 chunks vào file: cluster_enrich_1.json
-✅ Đã lưu 2742 chunks vào file: cluster_enrich_2.json
-✅ Đã lưu 794 chunks vào file: cluster_enrich_3.json
+docker system prune -a --volumes

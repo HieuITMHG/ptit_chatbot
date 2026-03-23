@@ -1,29 +1,3 @@
-# from FlagEmbedding import FlagReranker
-
-# model = FlagReranker(
-#     "BAAI/bge-reranker-base",
-#     use_fp16=False,
-#     devices=["cpu"]
-# )
-
-# def cross_encoder_reranker(unordered_contexts: list, query: str) -> list:
-#     pairs = [[query, context["chunk_content"]] for context in unordered_contexts]
-
-#     scores = model.compute_score(pairs)
-
-#     scored_contexts = [
-#         {**context, "score": score}
-#         for context, score in zip(unordered_contexts, scores)
-#     ]
-
-#     ranked_contexts = sorted(
-#         scored_contexts,
-#         key=lambda x: x["score"],
-#         reverse=True
-#     )
-
-#     return ranked_contexts
-
 from flashrank import Ranker, RerankRequest
 import time
 import os
@@ -39,8 +13,6 @@ if not os.path.exists(model_cache_path):
 print(f"Đang kiểm tra mô hình Rerank tại: {model_cache_path}")
 
 try:
-    # Khởi tạo FlashRank
-    # Nếu server có internet, nó sẽ tự tải về models/ nếu chưa có
     ranker = Ranker(model_name="ms-marco-MultiBERT-L-12", cache_dir=model_cache_path) 
 except Exception as e:
     print(f"Lỗi khởi tạo Ranker: {e}")
@@ -54,26 +26,22 @@ def cross_encoder_reranker(unordered_contexts: list, query: str) -> list:
     """
     start_time = time.perf_counter()
 
-    # 1. Chuyển đổi format list của bạn sang format mà FlashRank hiểu
     passages = []
     for i, context in enumerate(unordered_contexts):
         passages.append({
-            "id": str(i),                         # Tạo 1 ID tạm thời
-            "text": context["chunk_content"],     # Nội dung để đem đi so sánh
-            "meta": context                       # Nhét toàn bộ object cũ vào đây để lát lấy ra
+            "id": str(i),                         
+            "text": context["chunk_content"],    
+            "meta": context                      
         })
 
-    # 2. Đóng gói thành RerankRequest
     req = RerankRequest(query=query, passages=passages)
 
-    # 3. Chạy Rerank siêu tốc
     flashrank_results = ranker.rerank(req)
 
-    # 4. Bóc tách dữ liệu trả về đúng format cũ của bạn (kèm theo 'score')
     ranked_contexts = []
     for res in flashrank_results:
-        original_context = res["meta"]             # Lấy lại cái object gốc của bạn
-        original_context["score"] = res["score"]   # Cập nhật điểm số mới do FlashRank chấm
+        original_context = res["meta"]           
+        original_context["score"] = res["score"]  
         ranked_contexts.append(original_context)
 
     end_time = time.perf_counter()

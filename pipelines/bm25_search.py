@@ -41,22 +41,3 @@ def search(query, bm25, raw_docs, limit: int = 50):
 
     return results
 
-
-# if __name__ == "__main__":
-
-#     print("Loading BM25 index...")
-
-    
-
-#     query = "tư vấn tuyển sinh đại học cao đẳng ptit 2014 2025"
-
-#     results = search(query, bm25, raw_docs)
-
-#     for r in results:
-
-#         print("ID:", r["id"])
-#         print("Score:", r["score"])
-#         print("Title:", r["title"])
-#         print("URL:", r["url"])
-#         print("Preview:", r["chunk_content"][:200])
-#         print("-" * 50)

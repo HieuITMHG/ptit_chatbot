@@ -157,7 +157,7 @@ if __name__ == "__main__":
     rag_engine = HybirdRag(embedding_model="BAAI/bge-m3",
                           collection_name="hybrid_collection")
     
-    query = "NCKH năm 2024"
+    query = "Học ngành công nghệ kỹ thuật điện - điện tử ra trường có thể làm những công việc gì?"
 
     start_time = time.perf_counter()
     

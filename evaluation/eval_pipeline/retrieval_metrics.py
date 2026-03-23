@@ -109,6 +109,8 @@ class RetrievalMetric:
                 results=results
             )
 
+            print(eval_data)
+
             precision, recall = self.precision_recall(eval_data)
             ndcg = self.ndcg(eval_data)
             mrr = self.mrr(eval_data)

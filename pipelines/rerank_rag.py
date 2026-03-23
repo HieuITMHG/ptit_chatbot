@@ -9,18 +9,15 @@ openai_client = OpenAI(api_key=settings.openai_key)
 
 class RerankRag:
     def __init__(self, embedding_model, collection_name):
-        # 1. Thay thế SentenceTransformer bằng BGEM3FlagModel
         self.embedding_model = BGEM3FlagModel(embedding_model, use_fp16=True)
         self.collection_name = collection_name
 
     def retrieve(self, query: str, top_k: int): 
-        # 2. Mã hóa câu hỏi và CHỈ lấy dense_vecs
         encoded_output = self.embedding_model.encode(query, return_dense=True, return_sparse=False, return_colbert_vecs=False)
         query_dense = encoded_output["dense_vecs"].tolist()
 
         for attempt in range(3):
             try:
-                # 3. Search Qdrant thuần bằng Dense Vector
                 contexts = client.query_points(
                     collection_name=self.collection_name,
                     query=query_dense, 
@@ -48,7 +45,6 @@ class RerankRag:
                     "published_date": payload.get("published_date", "")
                 })
         
-        # 4. Đưa top 10 kết quả vào Re-ranker
         reranked_contexts = cross_encoder_reranker(
             unordered_contexts=results[:10],
             query=query
@@ -69,7 +65,6 @@ class RerankRag:
             - Trả lời ngắn gọn, tự nhiên, dễ hiểu như khi giải thích cho sinh viên.
             - Nếu dữ liệu không có thông tin để trả lời câu hỏi, hãy nói đơn giản:
             "Hiện chưa có thông tin về nội dung này."
-            - Cuối câu trả lời hãy liệt kê các nguồn tham khảo (URL).
 
             Dữ liệu:
             {contexts_str}
@@ -77,7 +72,6 @@ class RerankRag:
             Câu hỏi: {query}
         """
 
-        # Tránh lỗi IndexError bằng cách duyệt động qua mảng contexts
         contexts_list = []
         for i, ctx in enumerate(contexts):
             context_text = f'--- Nội dung {i+1} ---\n{ctx["chunk_content"]}\nNguồn: {ctx["doc_url"]}'
@@ -91,9 +85,8 @@ class RerankRag:
             query=query
         )
 
-        # Cú pháp OpenAI Chat Completions mới
         response = openai_client.chat.completions.create(
-            model="gpt-4o-mini", # Đổi lại model hợp lệ nhé (gpt-4o-mini hoặc gpt-3.5-turbo)
+            model="gpt-4o-mini", 
             messages=[
                 {"role": "user", "content": prompt}
             ],
@@ -101,19 +94,12 @@ class RerankRag:
         )
 
         return response.choices[0].message.content
-
-if __name__ == "__main__":
-    rag_engine = RerankRag(embedding_model="BAAI/bge-m3",
-                          collection_name="semantic_collecction") # Đã sửa lỗi typo collecction
     
-    query = "NCKH năm 2024"
-    
-    # Lấy top 5 kết quả tốt nhất
-    results = rag_engine.retrieve(query=query, top_k=5)
-
-    print("\n=== TOP KẾT QUẢ ĐÃ ĐƯỢC RERANK ===")
-    for r in results:
-        print(f"ID: {r['id']} | URL: {r['doc_url']}")
-
-    print("\n=== TRẢ LỜI TỪ LLM ===")
-    print(rag_engine.generate(query=query, contexts=results))
+def get_answer(rag_engine, prompt, top_k = 5):
+    contexts = rag_engine.retrieve(query=prompt, top_k=top_k)
+    source_urls = [f"https://ptithcm.edu.vn{context['doc_url']}" for context in contexts]
+    return {
+        "text_res": rag_engine.generate(query=prompt, contexts=contexts),
+        "ref_source": source_urls
+    }
+        
