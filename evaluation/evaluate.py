@@ -6,10 +6,12 @@ from pipelines.bge_hybrid_rag import BGEHybirdRag
 from core.config_loader import PipelineConfig
 from evaluation.eval_pipeline.generation_metrics import GenerationMetric
 from evaluation.eval_pipeline.retrieval_metrics import RetrievalMetric
+from FlagEmbedding import BGEM3FlagModel
 
 def run(rag, generation, retrieval, topk):
     if rag == RagType.HYBRID.value:
         config = PipelineConfig("configs/hybrid_rag.yaml")
+        embedder = BGEM3FlagModel(config.embedding["model"])
         rag_engine = HybirdRag(embedding_model=config.embedding["model"],
                          collection_name=config.embedding["vector_col_name"])
     elif rag == RagType.NAIVE.value:
@@ -17,8 +19,9 @@ def run(rag, generation, retrieval, topk):
         rag_engine = NaiveRag(embedding_model=config.embedding["model"],
                         collection_name=config.embedding["vector_col_name"])
     elif rag == RagType.RERANK.value:
+        embedder = BGEM3FlagModel(config.embedding["model"])
         config = PipelineConfig("configs/rerank_rag.yaml")
-        rag_engine = RerankRag(embedding_model=config.embedding["model"],
+        rag_engine = RerankRag(embedding_model=embedder,
                         collection_name=config.embedding["vector_col_name"])
     elif rag == RagType.HYBRIDV2.value:
         config = PipelineConfig("configs/rerank_rag.yaml")

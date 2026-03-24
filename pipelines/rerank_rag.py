@@ -1,5 +1,4 @@
 from core.qdrant import client
-from FlagEmbedding import BGEM3FlagModel
 from openai import OpenAI
 from core.config import settings
 from pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
@@ -9,7 +8,7 @@ openai_client = OpenAI(api_key=settings.openai_key)
 
 class RerankRag:
     def __init__(self, embedding_model, collection_name):
-        self.embedding_model = BGEM3FlagModel(embedding_model, use_fp16=True)
+        self.embedding_model = embedding_model
         self.collection_name = collection_name
 
     def retrieve(self, query: str, top_k: int): 
@@ -96,7 +95,13 @@ class RerankRag:
         return response.choices[0].message.content
     
 def get_answer(rag_engine, prompt, top_k = 5):
+    print("Đang retrieve contexts")
+    start_retrieve = time.perf_counter()
     contexts = rag_engine.retrieve(query=prompt, top_k=top_k)
+    end_retrieve = time.perf_counter()
+
+    print(f"Thời gian retrieve là: {end_retrieve - start_retrieve}")
+
     source_urls = [f"https://ptithcm.edu.vn{context['doc_url']}" for context in contexts]
     return {
         "text_res": rag_engine.generate(query=prompt, contexts=contexts),

@@ -7,3 +7,5 @@ docker images
 docker image prune -f
 
 docker system prune -a --volumes
+
+docker compose build

@@ -1,10 +1,19 @@
 from fastapi import FastAPI, HTTPException
 from datetime import datetime, timezone
-from celery.exceptions import TimeoutError
 from model.chat_request import ChatRequest
 from model.chat_response import ChatResponse
+from core.config_loader import PipelineConfig
 
-from .tasks import chat_rag_task
+from pipelines.rerank_rag import RerankRag, get_answer
+from FlagEmbedding import BGEM3FlagModel
+
+config = PipelineConfig("configs/rerank_rag.yaml")
+
+embedder = BGEM3FlagModel(config.embedding["model"])
+rag_engine = RerankRag(
+    embedding_model=embedder,
+    collection_name=config.embedding["vector_col_name"]
+)
 
 app = FastAPI()
 
@@ -20,10 +29,11 @@ async def chat(
                 "timestamp": datetime.now(timezone.utc),
             }
         )
-    task = chat_rag_task.delay(req.request_content)
 
     try:
-        result = task.get(timeout=60)
+        result = get_answer(rag_engine=rag_engine, 
+                            prompt= req.request_content,
+                            top_k=5)
 
         return ChatResponse(
             response_content=result["text_res"],
@@ -33,8 +43,5 @@ async def chat(
             }
         )
 
-    except TimeoutError:
-        raise HTTPException(
-            status_code=504,
-            detail="RAG processing timeout, please try again later"
-        )
+    except Exception as e:
+        return HTTPException(status_code=400, detail=e)
