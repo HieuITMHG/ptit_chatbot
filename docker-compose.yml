@@ -6,6 +6,14 @@ services:
       - "8000"
     restart: always
 
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=huuhieu123
+      - MONGODB_INITDB_ROOT_PASSWORD=pass123
+
+
   nginx:
     image: nginx:latest
     ports:
@@ -24,3 +32,11 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
+
+  redis:
+    image: redis:8.6.2-alpine
+    
+  celery_worker:
+    build: .
+    depends_on:
+      - redis

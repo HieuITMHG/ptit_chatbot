@@ -1,0 +1,94 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    command: >
+      uvicorn app.main:app
+      --host 0.0.0.0
+      --port 8000
+      --workers 4
+    depends_on:
+      - mongo
+      - redis
+      - qdrant
+      - minio
+    expose:
+      - "8000"
+    env_file:
+      - .env
+    restart: always
+
+  celery_worker:
+    build: .
+    command: celery -A app.celery_app worker --loglevel=info
+    depends_on:
+      - redis
+      - mongo
+      - qdrant
+    env_file:
+      - .env
+    restart: always
+
+  celery_beat:
+    build: .
+    command: celery -A app.celery_app beat --loglevel=info
+    depends_on:
+      - redis
+    env_file:
+      - .env
+    restart: always
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+    restart: always
+
+  mongo:
+    image: mongo:7
+    env_file:
+      - .env
+    volumes:
+      - mongo_data:/data/db
+    restart: always
+
+  qdrant:
+    image: qdrant/qdrant:v1.7.3
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: always
+
+  minio:
+    image: quay.io/minio/minio:latest
+    command: server /data --console-address ":9001"
+    env_file:
+      - .env
+    volumes:
+      - minio_data:/data
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - api
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    restart: always
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+
+volumes:
+  mongo_data:
+  redis_data:
+  qdrant_data:
+  minio_data:
