@@ -2,7 +2,7 @@ from .etl.save_raw_html import crawl_raw_html
 from .etl.parse_data import parse_data
 from core.config_loader import PipelineConfig
 from core.config import settings
-from enums.rag_type import RagType
+from rag.enums.rag_type import RagType
 from FlagEmbedding import BGEM3FlagModel
 from .build_index import IndexBuilder
 
