@@ -16,7 +16,7 @@ def parse_cors(v: Any) -> list[str] | str:
 class Settings(BaseSettings):
 
     env: str
-    project_name: str
+    compose_project_name: str
     API_V1_STR: str = "/api/v1"
 
     secret_key: str

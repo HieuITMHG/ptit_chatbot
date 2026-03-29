@@ -7,8 +7,8 @@ crawl:
 validate-retrieval:
 	@python3 -m run validate --retrieval --rag 
 
-dev:
-	@docker compose -f docker-compose.dev.yml up --build
+build-dev:
+	@docker compose -f docker-compose.dev.yml --build
 
 run-dev:
 	@docker compose -f docker-compose.dev.yml up -d
@@ -16,13 +16,17 @@ run-dev:
 stop-dev:
 	@docker compose -f docker-compose.dev.yml down
 
-prod:
-	@docker compose -f docker-compose.prod.yml up --build
+build-prod:
+	@docker compose -f docker-compose.prod.yml --build
 
 run:
 	@docker compose -f docker-compose.prod.yml up -d
 
 stop:
 	@docker compose -f docker-compose.prod.yml down
+
+etl-dev:
+	@docker compose -f docker-compose.dev.yml up -d
+	@docker compose -f docker-compose.dev.yml run --rm etl
 
 
