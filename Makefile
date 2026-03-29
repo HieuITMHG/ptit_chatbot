@@ -8,7 +8,7 @@ validate-retrieval:
 	@python3 -m run validate --retrieval --rag 
 
 build-dev:
-	@docker compose -f docker-compose.dev.yml --build
+	@docker compose -f docker-compose.dev.yml build
 
 run-dev:
 	@docker compose -f docker-compose.dev.yml up -d
@@ -17,7 +17,7 @@ stop-dev:
 	@docker compose -f docker-compose.dev.yml down
 
 build-prod:
-	@docker compose -f docker-compose.prod.yml --build
+	@docker compose -f docker-compose.prod.yml build
 
 run:
 	@docker compose -f docker-compose.prod.yml up -d
