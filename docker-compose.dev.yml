@@ -105,6 +105,8 @@ services:
       minio: { condition: service_healthy }
     env_file:
       - .env
+    volumes:
+    - .:/app
 
 volumes:
   mongo_data:
