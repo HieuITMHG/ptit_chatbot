@@ -2,7 +2,7 @@ from .base_chunker import BaseChunker
 import re
 from .fixed_chunker import FixedSizeChunker
 from sklearn.metrics.pairwise import paired_cosine_distances
-from pipelines.bm25 import preprocess
+from rag.pipelines.bm25 import preprocess
 
 class HybridChunker(BaseChunker):
     def __init__(self, 

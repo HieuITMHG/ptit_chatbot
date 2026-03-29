@@ -1,7 +1,7 @@
 from .fixed_chunker import FixedSizeChunker
 from .semantic_chunker import SemanticChunker
 from .hybrid_chunker import HybridChunker
-from enums.chunk_type import ChunkType
+from rag.enums.chunk_type import ChunkType
 
 def build_chunker(config, embedder):
     chunk_type = config["type"]
