@@ -74,9 +74,9 @@ def wait_for_qdrant(url, api_key=None, retries=10):
 def migrate_qdrant():
     print("🚀 Migrating Qdrant...")
 
-    # Khởi tạo client Cloud và Local
-    cloud = QdrantClient(url=QDRANT_CLOUD_URL, api_key=QDRANT_CLOUD_API_KEY, check_compatibility=False)
-    local = QdrantClient(url=QDRANT_LOCAL_URL, api_key=QDRANT_LOCAL_KEY, check_compatibility=False)
+    # Tăng timeout lên 60 giây để thoải mái truyền dữ liệu lớn
+    cloud = QdrantClient(url=QDRANT_CLOUD_URL, api_key=QDRANT_CLOUD_API_KEY, check_compatibility=False, timeout=60)
+    local = QdrantClient(url=QDRANT_LOCAL_URL, api_key=QDRANT_LOCAL_KEY, check_compatibility=False, timeout=60)
 
     try:
         collections = cloud.get_collections().collections
@@ -88,23 +88,20 @@ def migrate_qdrant():
         name = col.name
         print(f"➡️ Migrating collection: {name}")
 
-        # Lấy cấu hình vector từ Cloud để tạo collection tương ứng ở Local
         info = cloud.get_collection(name)
         vectors_config = info.config.params.vectors
 
-        # Xóa và tạo lại collection ở Local (Tránh lặp dữ liệu)
         local.recreate_collection(
             collection_name=name,
             vectors_config=vectors_config,
         )
 
-        # QUAN TRỌNG: with_vectors=True để lấy cả dữ liệu vector về máy
+        # Lấy dữ liệu (có thể tăng limit nếu cần, nhưng 10k là khá ổn)
         points, _ = cloud.scroll(collection_name=name, limit=10000, with_vectors=True)
 
         if points:
             points_to_upsert = []
             for point in points:
-                # Kiểm tra nếu point có vector thì mới thêm vào danh sách migrate
                 if point.vector is not None:
                     points_to_upsert.append(
                         PointStruct(
@@ -115,14 +112,18 @@ def migrate_qdrant():
                     )
             
             if points_to_upsert:
-                # Đẩy dữ liệu vào Qdrant Local
-                local.upsert(collection_name=name, points=points_to_upsert)
-                print(f"   ✅ {len(points_to_upsert)} vectors migrated")
+                # CHIA BATCH: Mỗi lần đẩy 200 điểm để tránh Timeout
+                batch_size = 200
+                for i in range(0, len(points_to_upsert), batch_size):
+                    batch = points_to_upsert[i : i + batch_size]
+                    local.upsert(collection_name=name, points=batch)
+                    print(f"   ✅ Đã đẩy {i + len(batch)} / {len(points_to_upsert)} vectors...")
+                
+                print(f"   ✨ Hoàn thành migrate collection: {name}")
             else:
                 print("   ⚠️ No valid vectors found to migrate")
         else:
             print("   ⚠️ Empty collection")
-
 # ======================
 # MAIN
 # ======================
