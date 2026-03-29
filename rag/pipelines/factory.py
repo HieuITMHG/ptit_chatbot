@@ -1,7 +1,7 @@
-from enums.rag_type import RagType
-from pipelines.hybrid_rag import HybirdRag
-from pipelines.naive_rag import NaiveRag
-from pipelines.rerank_rag import RerankRag
+from rag.enums.rag_type import RagType
+from rag.pipelines.hybrid_rag import HybirdRag
+from rag.pipelines.naive_rag import NaiveRag
+from rag.pipelines.rerank_rag import RerankRag
 
 def build_rag(type, config):
     if type == RagType.HYBRID.value:

@@ -2,9 +2,8 @@ from core.qdrant import client
 from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 from core.config import settings
-from pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
+from rag.pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
 import time
-from .bm25 import BM25
 from .bm25_search import search, raw_docs, bm25
 import time
 
