@@ -82,8 +82,7 @@ services:
       - qdrant_data:/qdrant/storage
     healthcheck:
       <<: *healthcheck_base
-      # SỬA LỖI 1: Đổi sang dùng curl để check cổng của Qdrant
-      test: ["CMD", "curl", "-f", "http://localhost:6333/"]
+      test: ["CMD", "curl", "-f", "http://localhost:6333/collections"]
     restart: always
 
   minio:
