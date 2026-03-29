@@ -13,11 +13,11 @@ def run(rag, crawl=False, parse=False, chunk=False, embed=False):
     print(f"rag: {rag}")
     if rag:
         if rag == RagType.HYBRID.value:
-            config = PipelineConfig("configs/hybrid_rag.yaml")
+            config = PipelineConfig("rag/configs/hybrid_rag.yaml")
         elif rag == RagType.NAIVE.value:
-            config = PipelineConfig("configs/naive_rag.yaml")
+            config = PipelineConfig("rag/configs/naive_rag.yaml")
         elif rag == RagType.RERANK.value:
-            config = PipelineConfig("configs/rerank_rag.yaml")
+            config = PipelineConfig("rag/configs/rerank_rag.yaml")
 
         embedder = BGEM3FlagModel(config.embedding["model"])
         

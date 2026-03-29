@@ -10,21 +10,21 @@ from FlagEmbedding import BGEM3FlagModel
 
 def run(rag, generation, retrieval, topk):
     if rag == RagType.HYBRID.value:
-        config = PipelineConfig("configs/hybrid_rag.yaml")
+        config = PipelineConfig("rag/configs/hybrid_rag.yaml")
         embedder = BGEM3FlagModel(config.embedding["model"])
         rag_engine = HybirdRag(embedding_model=config.embedding["model"],
                          collection_name=config.embedding["vector_col_name"])
     elif rag == RagType.NAIVE.value:
-        config = PipelineConfig("configs/naive_rag.yaml")
+        config = PipelineConfig("rag/configs/naive_rag.yaml")
         rag_engine = NaiveRag(embedding_model=config.embedding["model"],
                         collection_name=config.embedding["vector_col_name"])
     elif rag == RagType.RERANK.value:
         embedder = BGEM3FlagModel(config.embedding["model"])
-        config = PipelineConfig("configs/rerank_rag.yaml")
+        config = PipelineConfig("rag/configs/rerank_rag.yaml")
         rag_engine = RerankRag(embedding_model=embedder,
                         collection_name=config.embedding["vector_col_name"])
     elif rag == RagType.HYBRIDV2.value:
-        config = PipelineConfig("configs/rerank_rag.yaml")
+        config = PipelineConfig("rag/configs/rerank_rag.yaml")
         rag_engine = BGEHybirdRag(embedding_model=config.embedding["model"],
                         collection_name=config.embedding["vector_col_name"])
     
