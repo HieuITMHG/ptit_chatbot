@@ -32,7 +32,7 @@ services:
     depends_on:
       mongo: { condition: service_healthy }
       redis: { condition: service_healthy }
-      qdrant: { condition: service_healthy }
+      qdrant: { condition: service_started }
       minio: { condition: service_healthy }
     env_file:
       - .env
@@ -80,9 +80,6 @@ services:
       - .env
     volumes:
       - qdrant_data:/qdrant/storage
-    healthcheck:
-      <<: *healthcheck_base
-      test: ["CMD", "curl", "-f", "http://localhost:6333/collections"]
     restart: always
 
   minio:
