@@ -1,2 +1,3 @@
 create-network:
     - docker network create ptit_network
+    - docker network create chatbot_net

@@ -19,6 +19,8 @@ services:
     depends_on:
       api:
         condition: service_healthy
+    networks:
+      - chatbot_net
     restart: always
 
   api:
@@ -33,6 +35,8 @@ services:
       minio: { condition: service_healthy }
     env_file:
       - .env
+    networks:
+      - chatbot_net
     restart: always
 
   celery_worker:
@@ -109,3 +113,7 @@ volumes:
   redis_data:
   qdrant_data:
   minio_data:
+
+networks:
+  chatbot_net:
+    external: true

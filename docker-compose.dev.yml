@@ -94,14 +94,19 @@ services:
       <<: *healthcheck_base
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       
-  migration:
+  etl:
     build: .
-    command: python -m scripts.migrate_data
+    command: make etl-rerank
+    profiles: ["etl"]
     depends_on:
-      - mongo
-      - qdrant
+      mongo: { condition: service_healthy }
+      redis: { condition: service_healthy }
+      qdrant: { condition: service_healthy }
+      minio: { condition: service_healthy }
     env_file:
       - .env
+    volumes:
+    - .:/app
 
 volumes:
   mongo_data:
