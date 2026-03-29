@@ -4,6 +4,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libgl1 \
     libglib2.0-0 \
+    libgomp1 \
+    libwebp-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
