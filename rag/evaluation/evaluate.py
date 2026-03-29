@@ -4,8 +4,8 @@ from rag.pipelines.naive_rag import NaiveRag
 from rag.pipelines.rerank_rag import RerankRag
 from rag.pipelines.bge_hybrid_rag import BGEHybirdRag
 from core.config_loader import PipelineConfig
-from evaluation.eval_pipeline.generation_metrics import GenerationMetric
-from evaluation.eval_pipeline.retrieval_metrics import RetrievalMetric
+from .eval_pipeline.generation_metrics import GenerationMetric
+from .eval_pipeline.retrieval_metrics import RetrievalMetric
 from FlagEmbedding import BGEM3FlagModel
 
 def run(rag, generation, retrieval, topk):
