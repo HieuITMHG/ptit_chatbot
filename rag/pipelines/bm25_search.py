@@ -3,7 +3,7 @@ import numpy as np
 from .bm25 import BM25, preprocess
 import __main__
 
-BM25_INDEX_PATH = "pipelines/bm25_index.pkl"
+BM25_INDEX_PATH = "rag/pipelines/bm25_index.pkl"
 
 __main__.BM25 = BM25
 
