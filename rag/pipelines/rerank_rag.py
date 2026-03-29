@@ -15,6 +15,8 @@ class RerankRag:
         encoded_output = self.embedding_model.encode(query, return_dense=True, return_sparse=False, return_colbert_vecs=False)
         query_dense = encoded_output["dense_vecs"].tolist()
 
+        contexts = None
+
         for attempt in range(3):
             try:
                 contexts = client.query_points(
@@ -103,14 +105,8 @@ def get_answer(rag_engine, prompt, top_k = 5):
     print(f"Thời gian retrieve là: {end_retrieve - start_retrieve}")
 
     source_urls = [f"https://ptithcm.edu.vn{context['doc_url']}" for context in contexts]
-    # return {
-    #     "text_res": rag_engine.generate(query=prompt, contexts=contexts),
-    #     "ref_source": source_urls
-    # }
-
     return {
-            "text_res": "Đây là kết quả",
-            "ref_source": source_urls
-        }
-            
+        "text_res": rag_engine.generate(query=prompt, contexts=contexts),
+        "ref_source": source_urls
+    }
         
