@@ -1,14 +1,11 @@
-# from celery import Celery
+from celery import Celery
+from core.config import settings
 
-# celery_app = Celery(
-#     "worker",
-#     broker="redis://redis:6379/0",
-#     backend="redis://redis:6379/1",
-#     include=['app.tasks']  
-# )
+celery = Celery(
+    "worker",
+    broker=settings.redis_url,          
+    backend=settings.celery_result_backend,
+    include=['app.tasks.chat_task']
+)
 
-# celery_app.conf.update(
-#     task_track_started=True,
-#     result_expires=3600,
-#     worker_prefetch_multiplier=1
-# )
+celery.conf.broker_connection_retry_on_startup = True

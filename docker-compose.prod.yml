@@ -1,0 +1,111 @@
+version: "3.9"
+
+x-healthcheck-defaults: &healthcheck_base
+  interval: 10s 
+  timeout: 5s 
+  retries: 5 
+  start_period: 20s 
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: always
+
+  api:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    expose:
+      - "8000" 
+    depends_on:
+      mongo: { condition: service_healthy }
+      redis: { condition: service_healthy }
+      qdrant: { condition: service_healthy }
+      minio: { condition: service_healthy }
+    env_file:
+      - .env
+    restart: always
+
+  celery_worker:
+    build: .
+    command: celery -A app.worker worker --loglevel=info
+    depends_on:
+      redis: { condition: service_healthy }
+      mongo: { condition: service_healthy }
+    env_file:
+      - .env
+    restart: always
+
+  redis:
+    image: redis:7-alpine
+    expose:
+      - "6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      <<: *healthcheck_base 
+      test: ["CMD", "redis-cli", "ping"]
+    restart: always
+
+  mongo:
+    image: mongo:7
+    expose:
+      - "27017"
+    env_file:
+      - .env
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      <<: *healthcheck_base
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+    restart: always
+
+  qdrant:
+    image: qdrant/qdrant:v1.7.3
+    expose:
+      - "6333"
+    env_file:
+      - .env
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      <<: *healthcheck_base
+      test: ["CMD-SHELL", "cat < /dev/tcp/127.0.0.1/6333 || exit 1"]
+    restart: always
+
+  minio:
+    image: quay.io/minio/minio:latest
+    command: server /data --console-address ":9001"
+    expose:
+      - "9000"
+      - "9001"
+    env_file:
+      - .env
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      <<: *healthcheck_base
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+    restart: always
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+volumes:
+  mongo_data:
+  redis_data:
+  qdrant_data:
+  minio_data:

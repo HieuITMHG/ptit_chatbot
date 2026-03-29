@@ -1,0 +1,16 @@
+chunking:
+  type: hybrid
+  chunk_size: 500
+  overlap: 50
+  embedder: BAAI/bge-m3
+  tokenizer: gpt-5-nano
+  chunk_col_name: hybrid_chunks
+
+evaluation:
+  queries_col_name: hybrid_queries
+  qrels_col_name: hybrid_qrels
+  
+embedding:
+  vector_col_name: hybrid_collection
+  model: BAAI/bge-m3
+

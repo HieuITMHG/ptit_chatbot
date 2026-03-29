@@ -1,10 +1,11 @@
 import boto3
 from botocore.config import Config
+from core.config import settings
 
 s3 = boto3.client(
     's3',
-    endpoint_url='http://localhost:9000',
-    aws_access_key_id='admin_s3',         
-    aws_secret_access_key='password_s3',  
+    endpoint_url=settings.s3_enpoint,
+    aws_access_key_id=settings.aws_access_key_id,         
+    aws_secret_access_key=settings.aws_secret_access_key,  
     config=Config(s3={'addressing_style': 'path'})
 )

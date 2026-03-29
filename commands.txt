@@ -1,11 +1,2 @@
-
-python -m uvicorn app.main:app --reload
-docker compose down --rmi all
-docker compose build --no-cache
-docker compose up
-docker images
-docker image prune -f
-
-docker system prune -a --volumes
-
-docker compose build
+create-network:
+    - docker network create ptit_network

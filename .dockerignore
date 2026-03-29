@@ -1,0 +1,16 @@
+venv/
+.venv/
+env/
+
+# Bỏ qua git
+.git/
+.gitignore
+
+# Bỏ qua các file tạm, cache
+__pycache__/
+*.pyc
+.DS_Store
+
+# Bỏ qua dữ liệu lớn không cần thiết khi build image
+data/
+*.log
