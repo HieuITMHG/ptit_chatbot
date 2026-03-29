@@ -83,7 +83,7 @@ services:
       - qdrant_data:/qdrant/storage
     healthcheck:
       <<: *healthcheck_base
-      test: ["CMD-SHELL", "cat < /dev/tcp/127.0.0.1/6333 || exit 1"]
+      test: test: ["CMD-SHELL", "wget -q -O - http://localhost:6333/readyz || exit 1"]
     restart: always
 
   minio:
