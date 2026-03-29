@@ -5,6 +5,7 @@ from rag.pipelines.rerank_rag import RerankRag
 from core.config_loader import PipelineConfig
 from FlagEmbedding import BGEM3FlagModel
 from celery.signals import worker_process_init
+import json
 
 rag_engine = None 
 
@@ -28,7 +29,7 @@ def get_answer(task_id: str, prompt: str, username: str):
     print("Lấy câu trả lời")
     answer = get_rag_answer(rag_engine=rag_engine, prompt=prompt, top_k=5) 
     print("Có câu trả lời rồi")
-    sync_redis_client.publish(task_id, answer) 
+    answer_json = json.dumps(answer, ensure_ascii=False)
     print("đã public")
-    
+    sync_redis_client.publish(task_id, answer_json)
     return answer
