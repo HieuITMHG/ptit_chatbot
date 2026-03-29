@@ -25,3 +25,4 @@ PyJWT==2.10.1
 python-multipart==0.0.9
 redis==5.0.1
 websockets==16.0
+docling==2.76.0
