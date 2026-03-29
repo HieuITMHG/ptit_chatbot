@@ -1,6 +1,6 @@
 import math
 from core.database import db
-from model.retrieval_result import RetrievalResult
+from rag.model.retrieval_result import RetrievalResult
 
 resuls_collection = db["retrieval_results"]
 
