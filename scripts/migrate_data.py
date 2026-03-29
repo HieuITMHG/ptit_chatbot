@@ -108,10 +108,10 @@ def migrate_qdrant():
 if __name__ == "__main__":
     print("⏳ Waiting for services...")
 
-    wait_for_mongo(LOCAL_MONGO_URI)
+    # wait_for_mongo(LOCAL_MONGO_URI)
     wait_for_qdrant(QDRANT_LOCAL_URL)
 
-    migrate_mongo()
+    # migrate_mongo()
     migrate_qdrant()
 
     print("🎉 Migration completed!")
