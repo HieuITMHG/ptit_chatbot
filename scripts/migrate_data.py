@@ -2,6 +2,7 @@ import os
 import time
 from pymongo import MongoClient
 from qdrant_client import QdrantClient
+from qdrant_client.http.models import PointStruct
 
 # ======================
 # ENV VARIABLES
@@ -97,7 +98,15 @@ def migrate_qdrant():
         points, _ = cloud.scroll(collection_name=name, limit=10000)
 
         if points:
-            local.upsert(collection_name=name, points=points)
+    # Chuyển đổi từ Record sang PointStruct để khớp version
+            points_to_upsert = [
+                PointStruct(
+                    id=point.id,
+                    vector=point.vector,
+                    payload=point.payload
+                ) for point in points
+            ]
+            local.upsert(collection_name=name, points=points_to_upsert)
             print(f"   ✅ {len(points)} vectors migrated")
         else:
             print("   ⚠️ Empty collection")
