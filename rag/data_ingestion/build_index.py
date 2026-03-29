@@ -1,6 +1,6 @@
 from core.database import db, client
 from data_ingestion.chunking.chunker_factory import build_chunker
-from model.chunk import Chunk
+from rag.model.chunk import Chunk
 from core.qdrant import client
 from qdrant_client.models import VectorParams, Distance, Filter, FieldCondition, MatchValue, SparseVectorParams, PointStruct, SparseVector
 import hashlib

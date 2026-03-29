@@ -5,11 +5,11 @@ from pathlib import Path
 from core.boto_client import s3
 from core.config import settings
 
-from model.page import Page
-from model.sitemap import Sitemap
+from rag.model.page import Page
+from rag.model.sitemap import Sitemap
 
-from repositories.page_repository import save_page, find_one_page, update_page_last_mod, update_page_is_parse
-from repositories.sitemap_repository import save_sitemap, find_one_sitemap, updata_sitemap_last_mod
+from rag.repositories.page_repository import save_page, find_one_page, update_page_last_mod, update_page_is_parse
+from rag.repositories.sitemap_repository import save_sitemap, find_one_sitemap, updata_sitemap_last_mod
 
 current_file = Path(__file__)
 

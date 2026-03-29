@@ -8,10 +8,10 @@ import unicodedata
 from core.config import settings
 from core.database import db
 
-from model.document import Document
-from model.lowcontent import LowContent
+from rag.model.document import Document
+from rag.model.lowcontent import LowContent
 
-from repositories.page_repository import update_page_is_parse
+from rag.repositories.page_repository import update_page_is_parse
 
 pages_collection = db["pages"]
 sitemaps_collection = db["sitemaps"]
