@@ -20,23 +20,9 @@ QDRANT_LOCAL_KEY = os.getenv("QDRANT_KEY")
 # ======================
 # WAIT FOR SERVICES
 # ======================
-def wait_for_mongo(uri, retries=10):
-    for i in range(retries):
-        try:
-            client = MongoClient(uri)
-            client.admin.command("ping")
-            print("✅ MongoDB is ready")
-            return
-        except Exception:
-            print("⏳ Waiting for MongoDB...")
-            time.sleep(3)
-    raise Exception("❌ MongoDB not available")
-
-
 def wait_for_qdrant(url, api_key=None, retries=10):
     for i in range(retries):
         try:
-            # check_compatibility=False giúp bỏ qua lỗi lệch version giữa client và server
             client = QdrantClient(url=url, api_key=api_key, check_compatibility=False)
             client.get_collections()
             print("✅ Qdrant is ready")
@@ -47,96 +33,89 @@ def wait_for_qdrant(url, api_key=None, retries=10):
     raise Exception("❌ Qdrant not available")
 
 # ======================
-# MONGO MIGRATION (ĐÃ XỬ LÝ - ĐƯỢC CMT LẠI)
-# ======================
-# def migrate_mongo():
-#     print("🚀 Migrating MongoDB...")
-#     atlas_client = MongoClient(ATLAS_URI)
-#     local_client = MongoClient(LOCAL_MONGO_URI)
-#     atlas_db = atlas_client[DB_NAME]
-#     local_db = local_client[DB_NAME]
-#     collections = atlas_db.list_collection_names()
-#     for col in collections:
-#         print(f"➡️ Migrating collection: {col}")
-#         atlas_col = atlas_db[col]
-#         local_col = local_db[col]
-#         docs = list(atlas_col.find())
-#         if docs:
-#             local_col.delete_many({})
-#             local_col.insert_many(docs)
-#             print(f"   ✅ {len(docs)} documents migrated")
-#         else:
-#             print("   ⚠️ Empty collection")
-
-# ======================
 # QDRANT MIGRATION
 # ======================
 def migrate_qdrant():
-    print("🚀 Migrating Qdrant...")
+    print("🚀 Bắt đầu Migrate Qdrant...")
 
-    # Tăng timeout lên 60 giây để thoải mái truyền dữ liệu lớn
+    # Tăng timeout lên 60s để tránh lỗi WriteTimeout
     cloud = QdrantClient(url=QDRANT_CLOUD_URL, api_key=QDRANT_CLOUD_API_KEY, check_compatibility=False, timeout=60)
     local = QdrantClient(url=QDRANT_LOCAL_URL, api_key=QDRANT_LOCAL_KEY, check_compatibility=False, timeout=60)
 
     try:
-        collections = cloud.get_collections().collections
+        cloud_collections = cloud.get_collections().collections
     except Exception as e:
-        print(f"❌ Không thể lấy danh sách collection từ Cloud: {e}")
+        print(f"❌ Lỗi kết nối Qdrant Cloud: {e}")
         return
 
-    for col in collections:
+    for col in cloud_collections:
         name = col.name
-        print(f"➡️ Migrating collection: {name}")
+        print(f"\n➡️ Đang xử lý collection: {name}")
 
+        # --- LOGIC KIỂM TRA TỒN TẠI ---
+        try:
+            if local.collection_exists(name):
+                # Kiểm tra số lượng bản ghi ở local
+                local_info = local.get_collection(name)
+                if local_info.points_count > 0:
+                    print(f"   ⏩ Bỏ qua '{name}': Đã tồn tại {local_info.points_count} bản ghi ở Local.")
+                    continue
+        except Exception:
+            pass # Nếu lỗi khi check tồn tại thì cứ tiến hành tạo mới/recreate
+
+        # --- LẤY CẤU HÌNH TỪ CLOUD ---
         info = cloud.get_collection(name)
         vectors_config = info.config.params.vectors
+        sparse_config = info.config.params.sparse_vectors # Quan trọng: Sửa lỗi 400 sparse vector
 
+        # Tạo lại collection ở local
+        print(f"   🔨 Đang tạo collection '{name}' ở Local...")
         local.recreate_collection(
             collection_name=name,
             vectors_config=vectors_config,
+            sparse_vectors_config=sparse_config
         )
 
-        # Lấy dữ liệu (có thể tăng limit nếu cần, nhưng 10k là khá ổn)
+        # --- LẤY DỮ LIỆU (SCROLL) ---
+        print(f"   📥 Đang tải dữ liệu từ Cloud (kèm vectors)...")
         points, _ = cloud.scroll(collection_name=name, limit=10000, with_vectors=True)
 
         if points:
-            points_to_upsert = []
-            for point in points:
-                if point.vector is not None:
-                    points_to_upsert.append(
-                        PointStruct(
-                            id=point.id,
-                            vector=point.vector,
-                            payload=point.payload
-                        )
-                    )
+            # Chuyển đổi sang PointStruct
+            points_to_upsert = [
+                PointStruct(
+                    id=point.id,
+                    vector=point.vector,
+                    payload=point.payload
+                ) for point in points if point.vector is not None
+            ]
             
             if points_to_upsert:
-                # CHIA BATCH: Mỗi lần đẩy 200 điểm để tránh Timeout
+                # CHIA BATCH ĐỂ ĐẨY (TRÁNH TIMEOUT)
                 batch_size = 200
-                for i in range(0, len(points_to_upsert), batch_size):
+                total = len(points_to_upsert)
+                for i in range(0, total, batch_size):
                     batch = points_to_upsert[i : i + batch_size]
                     local.upsert(collection_name=name, points=batch)
-                    print(f"   ✅ Đã đẩy {i + len(batch)} / {len(points_to_upsert)} vectors...")
+                    print(f"   ✅ Đã đẩy {min(i + batch_size, total)} / {total} vectors...")
                 
-                print(f"   ✨ Hoàn thành migrate collection: {name}")
+                print(f"   ✨ Hoàn thành migrate: {name}")
             else:
-                print("   ⚠️ No valid vectors found to migrate")
+                print("   ⚠️ Không tìm thấy vector hợp lệ.")
         else:
-            print("   ⚠️ Empty collection")
+            print("   ⚠️ Cloud Collection này đang trống.")
+
 # ======================
 # MAIN
 # ======================
 if __name__ == "__main__":
-    print("⏳ Waiting for services...")
+    print("⏳ Đang kiểm tra dịch vụ...")
 
-    # Chờ Qdrant sẵn sàng
+    # Chỉ chạy Qdrant vì MongoDB bạn đã báo xong
     wait_for_qdrant(QDRANT_LOCAL_URL, api_key=QDRANT_LOCAL_KEY)
 
-    # Đã tắt MongoDB migration vì bạn đã xử lý rồi
-    # migrate_mongo() 
+    # migrate_mongo() # Đã xử lý xong nên cmt lại
 
-    # Bắt đầu migrate dữ liệu vector
     migrate_qdrant()
 
-    print("🎉 Migration completed!")
+    print("\n🎉 TẤT CẢ ĐÃ HOÀN TẤT!")
