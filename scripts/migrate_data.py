@@ -11,10 +11,10 @@ LOCAL_MONGO_URI = os.getenv("MONGODB_URI")
 DB_NAME = os.getenv("DATABASE_NAME", "PTITBOT")
 
 QDRANT_CLOUD_URL = os.getenv("QDRANT_CLOUD_ENDPOINT")
-QDRANT_CLOUD_API_KEY = os.getenv("QDRANT_KEY")
+QDRANT_CLOUD_API_KEY = os.getenv("QDRANT_CLOUD_KEY")
 
 QDRANT_LOCAL_URL = "http://qdrant:6333"
-
+QDRANT_LOCAL_KEY = os.getenv("QDRANT_KEY")
 # ======================
 # WAIT FOR SERVICES
 # ======================
@@ -77,7 +77,7 @@ def migrate_qdrant():
     print("🚀 Migrating Qdrant...")
 
     cloud = QdrantClient(url=QDRANT_CLOUD_URL, api_key=QDRANT_CLOUD_API_KEY)
-    local = QdrantClient(url=QDRANT_LOCAL_URL)
+    local = QdrantClient(url=QDRANT_LOCAL_URL, api_key=QDRANT_LOCAL_KEY)
 
     collections = cloud.get_collections().collections
 
