@@ -1,11 +1,11 @@
 etl-rerank:
-	@python -m run ingest --crawl --parse --chunk --embed --rag rerank
+	@python3 -m run ingest --crawl --parse --chunk --embed --rag rerank
 
 crawl:
-	@python -m run ingest --crawl
+	@python3 -m run ingest --crawl
 
 validate-retrieval:
-	@python -m run validate --retrieval --rag 
+	@python3 -m run validate --retrieval --rag 
 
 dev:
 	@docker compose -f docker-compose.dev.yml up --build
