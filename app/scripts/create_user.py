@@ -5,9 +5,7 @@ from app.schemas.user import UserInDB
 # Nếu repo của bạn đang dùng 'mongo:27017', hãy tạo client mới ở đây để ghi đè
 
 def run_insert():
-    # 1. Kết nối tới localhost vì bạn đang chạy ngoài Docker
-    # Thay admin/password123 bằng thông tin bạn đã set trong docker-compose
-    uri = "mongodb://admin:admin123@localhost:27017/admin"
+    uri = "mongodb://admin:admin123@mongo:27017/admin"
     client = MongoClient(uri)
     db = client["PTITBOT"] # Tên database của bạn
     users_collection = db["users"]
