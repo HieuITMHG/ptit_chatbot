@@ -1,4 +1,4 @@
-from model.sitemap import Sitemap
+from rag.model.sitemap import Sitemap
 
 from core.database import db
 

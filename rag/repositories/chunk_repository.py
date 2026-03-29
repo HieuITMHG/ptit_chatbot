@@ -1,4 +1,4 @@
-from model.chunk import Chunk
+from rag.model.chunk import Chunk
 
 from core.database import db
 

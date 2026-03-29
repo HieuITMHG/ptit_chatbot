@@ -1,4 +1,4 @@
-from model.page import Page
+from rag.model.page import Page
 
 from core.database import db
 
