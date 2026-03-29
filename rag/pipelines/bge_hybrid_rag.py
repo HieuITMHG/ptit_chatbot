@@ -3,7 +3,7 @@ from qdrant_client.models import Prefetch, FusionQuery, Fusion, SparseVector
 from FlagEmbedding import BGEM3FlagModel
 from openai import OpenAI
 from core.config import settings
-from pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
+from rag.pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
 import time
 
 openai_client = OpenAI(api_key=settings.openai_key)
