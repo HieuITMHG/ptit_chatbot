@@ -25,7 +25,7 @@ class IndexBuilder():
         for idx, chunk in enumerate(chunks):
             ch = Chunk(id=make_point_id(url=doc["source_url"], 
                         chunk_index=idx),
-                        document_url=doc["source_url"],
+                        document_url=doc['source_url'],
                         chunk_index=idx,
                         token_count=chunk["token_count"],
                         title=doc["title"],
@@ -36,9 +36,9 @@ class IndexBuilder():
             
         try:
             self.chunks_collection.insert_many(chunk_lst)
-            print(f"Đã lưu lưu của {doc["source_url"]}")
+            print(f"Đã lưu lưu của {doc['source_url']}")
         except Exception as e:
-            print(f"Lỗi khi insert các chunk của doc {doc["source_url"]}: {e}")
+            print(f"Lỗi khi insert các chunk của doc {doc['source_url']}: {e}")
 
         return chunk_lst
 
