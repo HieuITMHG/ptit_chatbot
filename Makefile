@@ -1,4 +1,4 @@
-elt-rerank:
+etl-rerank:
 	@python -m run ingest --crawl --parse --chunk --embed --rag rerank
 
 crawl:
