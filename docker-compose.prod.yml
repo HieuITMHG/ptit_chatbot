@@ -30,24 +30,27 @@ services:
     expose:
       - "8000" 
     depends_on:
-      mongo: { condition: service_healthy }
       redis: { condition: service_healthy }
-      qdrant: { condition: service_started }
       minio: { condition: service_healthy }
+      mongo: { condition: service_healthy }
+      qdrant: { condition: service_healthy }
     env_file:
-      - .env
+      - .env.prod
     restart: always
+    image: ptitbot-backend
 
   celery_worker:
-    build: .
+    image: ptitbot-backend
     command: celery -A app.worker worker --concurrency=1 --loglevel=info 
     depends_on:
       redis: { condition: service_healthy }
       mongo: { condition: service_healthy }
+      minio: { condition: service_healthy }
+      qdrant: { condition: service_healthy }
     environment:
       - TOKENIZERS_PARALLELISM=false
     env_file:
-      - .env
+      - .env.prod
     restart: always
 
   redis:
@@ -66,7 +69,7 @@ services:
     expose:
       - "27017"
     env_file:
-      - .env
+      - .env.prod
     volumes:
       - mongo_data:/data/db
     healthcheck:
@@ -79,7 +82,7 @@ services:
     expose:
       - "6333"
     env_file:
-      - .env
+      - .env.prod
     volumes:
       - qdrant_data:/qdrant/storage
     restart: always
@@ -91,13 +94,33 @@ services:
       - "9000"
       - "9001"
     env_file:
-      - .env
+      - .env.prod
     volumes:
       - minio_data:/data
     healthcheck:
       <<: *healthcheck_base
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
     restart: always
+
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    expose:
+      - "80"
+    command: npm run dev
+    volumes:
+      - ./frontend:/app/frontend
+
+  etl:
+    image: ptitbot-backend
+    command: python3 -m run ingest --crawl --parse --chunk --embed --rag rerank
+    depends_on:
+      mongo: { condition: service_healthy }
+      qdrant: { condition: service_healthy }
+      minio: { condition: service_healthy }
+    restart: "no"
+    profiles: ["etl"]
 
   certbot:
     image: certbot/certbot

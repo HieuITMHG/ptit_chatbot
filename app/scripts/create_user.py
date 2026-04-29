@@ -1,18 +1,15 @@
 from pymongo import MongoClient
 from pwdlib import PasswordHash
 from app.schemas.user import UserInDB
-# Import collection hoặc tự tạo tạm thời để insert
-# Nếu repo của bạn đang dùng 'mongo:27017', hãy tạo client mới ở đây để ghi đè
 
 def run_insert():
     uri = "mongodb://admin:admin123@mongo:27017/admin"
     client = MongoClient(uri)
-    db = client["PTITBOT"] # Tên database của bạn
+    db = client["PTITBOT"]
     users_collection = db["users"]
 
     password_hash = PasswordHash.recommended()
 
-    # 2. Dữ liệu user
     raw_password = "123456"
     user_data = {
         "username": "huuhieu",
@@ -21,13 +18,11 @@ def run_insert():
         "disabled": False
     }
 
-    # 3. Hash và Validate
     hashed_password = password_hash.hash(raw_password)
     user_in_db = UserInDB(**user_data, hashed_password=hashed_password)
 
-    # 4. Thực hiện Insert
     try:
-        # Kiểm tra xem user đã tồn tại chưa để tránh trùng lặp
+
         if users_collection.find_one({"username": user_data["username"]}):
             print("User này đã tồn tại rồi!")
         else:

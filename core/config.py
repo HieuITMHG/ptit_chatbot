@@ -46,6 +46,9 @@ class Settings(BaseSettings):
     cookie_secure: bool
     cookie_samesite: str
 
+    test_username: str
+    test_password: str
+
     FRONTEND_HOST: str = "http://localhost:5173"
 
     BACKEND_CORS_ORIGINS: Annotated[
