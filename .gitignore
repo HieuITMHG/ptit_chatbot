@@ -12,6 +12,6 @@ __pycache__/
 models/
 *.onnx
 
-.env.prod
+.env.dev
 
 frontend/note_modules
