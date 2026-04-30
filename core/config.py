@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     openai_key:str
 
     bucket_name:str
-    s3_enpoint: str
+    s3_endpoint: str
     aws_access_key_id :str
     aws_secret_access_key:str
 
