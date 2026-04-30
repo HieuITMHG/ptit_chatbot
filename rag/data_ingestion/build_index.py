@@ -46,7 +46,7 @@ class IndexBuilder():
         chunk_lst = []
         chunker = build_chunker(config=self.config.chunking, embedder=self.embedder)
 
-        if url_lst:
+        if url_lst and len(url_lst) >= 0:
             for url in url_lst:
                 exist_chunks = list(self.chunks_collection.find({"document_url": url}))
 
@@ -167,7 +167,7 @@ class IndexBuilder():
                                     })
             print(f"Đã tạo collection {self.qdrant_collection_name}")
         
-        if chunk_lst:
+        if chunk_lst and len(chunk_lst) >= 0:
             self.embed_chunks(chunks=chunk_lst)
         else:
             chunks = self.chunks_collection.find({}, {"_id": 0}).batch_size(512)

@@ -107,7 +107,7 @@ def convert_from_html(page):
 
 def parse_data(need_parse_lst: list=None):
     url_lst = []
-    if need_parse_lst:
+    if need_parse_lst and len(need_parse_lst) >= 0:
         for page in need_parse_lst:
             if convert_from_html(page):
                 url_lst.append(page.url)
