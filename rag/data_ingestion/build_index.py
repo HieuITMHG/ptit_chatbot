@@ -74,12 +74,12 @@ class IndexBuilder():
             for doc in docs:    
                 exists = self.chunks_collection.find_one({"document_url": doc["source_url"]})
                 if exists:
-                    print(f"{doc["title"]} đã có chunk rồi")
+                    print(f"{doc['title']} đã có chunk rồi")
                     continue
                 else:
                     new_chunks = chunker.split_text(text=doc["content"], title=doc["title"])
                     chunk_lst.extend(self.save_chunks(chunks=new_chunks, doc = doc))
-                    print(f"Đã chunk {doc["title"]} xong")
+                    print(f"Đã chunk {doc['title']} xong")
     
 
     def embed_chunks(self, chunks):
