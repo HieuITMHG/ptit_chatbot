@@ -119,6 +119,8 @@ services:
       mongo: { condition: service_healthy }
       qdrant: { condition: service_started }
       minio: { condition: service_healthy }
+    env_file:
+      - .env.prod
     restart: "no"
     profiles: ["etl"]
 
