@@ -33,7 +33,7 @@ services:
       redis: { condition: service_healthy }
       minio: { condition: service_healthy }
       mongo: { condition: service_healthy }
-      qdrant: { condition: service_healthy }
+      qdrant: { condition: service_started }
     env_file:
       - .env.prod
     restart: always
@@ -46,7 +46,7 @@ services:
       redis: { condition: service_healthy }
       mongo: { condition: service_healthy }
       minio: { condition: service_healthy }
-      qdrant: { condition: service_healthy }
+      qdrant: { condition: service_started }
     environment:
       - TOKENIZERS_PARALLELISM=false
     env_file:
@@ -117,7 +117,7 @@ services:
     command: python3 -m run ingest --crawl --parse --chunk --embed --rag rerank
     depends_on:
       mongo: { condition: service_healthy }
-      qdrant: { condition: service_healthy }
+      qdrant: { condition: service_started }
       minio: { condition: service_healthy }
     restart: "no"
     profiles: ["etl"]
