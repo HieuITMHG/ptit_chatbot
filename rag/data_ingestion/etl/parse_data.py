@@ -110,13 +110,13 @@ def parse_data(need_parse_lst: list=None):
     if need_parse_lst:
         for page in need_parse_lst:
             if convert_from_html(page):
-                url_lst.append(page["url"])
+                url_lst.append(page.url)
     else:
         pages = pages_collection.find({"is_parse": False})
 
         for page in pages:
             if convert_from_html(page):
-                url_lst.append(page["url"])
+                url_lst.append(page.url)
 
     return url_lst
 
