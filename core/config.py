@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings
 from functools import lru_cache
 from pathlib import Path
-from typing import Annotated, Any
+from typing import Annotated, Any, Optional
 from pydantic import BeforeValidator, computed_field, AnyUrl
 
 BASE_DIR = Path(__file__).resolve().parents[1] 
@@ -37,7 +37,7 @@ class Settings(BaseSettings):
     mongo_initdb_root_username: str
     mongo_initdb_root_password: str
     
-    qdrant_key:str
+    qdrant_key: Optional[str] = None
     qdrant_endpoint:str
 
     redis_url:str
@@ -63,7 +63,7 @@ class Settings(BaseSettings):
         ]
 
     class Config:
-        env_file = ".env.dev"
+        env_file = ".env.prod"
 
 @lru_cache()
 def get_settings():
