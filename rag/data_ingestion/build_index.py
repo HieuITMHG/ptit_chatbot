@@ -73,12 +73,13 @@ class IndexBuilder():
             print(len(docs))
             for doc in docs:    
                 exists = self.chunks_collection.find_one({"document_url": doc["source_url"]})
-                print(exists)
                 if exists:
+                    print(f"{doc["title"]} đã có chunk rồi")
                     continue
                 else:
                     new_chunks = chunker.split_text(text=doc["content"], title=doc["title"])
                     chunk_lst.extend(self.save_chunks(chunks=new_chunks, doc = doc))
+                    print(f"Đã chunk {doc["title"]} xong")
     
 
     def embed_chunks(self, chunks):
@@ -152,6 +153,7 @@ class IndexBuilder():
             )
 
     def embedding_pipeline(self, chunk_lst):
+        print("Bắt đầu embed")
         if client.collection_exists(collection_name=self.qdrant_collection_name):
             print("Collection đã tồn tại")
         else:
@@ -168,8 +170,11 @@ class IndexBuilder():
             print(f"Đã tạo collection {self.qdrant_collection_name}")
         
         if chunk_lst and len(chunk_lst) >= 0:
+            print("embed từ chunk mới")
             self.embed_chunks(chunks=chunk_lst)
         else:
+            print("embed từ chunk củ")
             chunks = self.chunks_collection.find({}, {"_id": 0}).batch_size(512)
             self.embed_chunks(chunks=chunks)
+        print("Embed xong")
         
