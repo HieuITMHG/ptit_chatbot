@@ -31,8 +31,8 @@ class Settings(BaseSettings):
     s3_endpoint: str
     aws_access_key_id :str
     aws_secret_access_key:str
-    mongo_initdb_root_username: str
-    mongo_initdb_root_password: str
+    minio_root_user: str
+    minio_root_password: str
 
     mongodb_uri:str
     database_name:str
