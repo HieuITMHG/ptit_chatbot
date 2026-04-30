@@ -71,6 +71,7 @@ def convert_from_html(page):
         print("Nội dung không đủ dài")
         lowcontent = LowContent(url=page["url"])
         lowcontents_collection.insert_one(lowcontent.model_dump())
+        update_page_is_parse(url=page["url"], is_parse=True)
         return False
     else:
         if is_exist:
