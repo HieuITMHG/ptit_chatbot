@@ -16,6 +16,7 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
+      - ./frontend/dist:/usr/share/nginx/html
     depends_on:
       api:
         condition: service_started 
@@ -101,16 +102,6 @@ services:
       <<: *healthcheck_base
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
     restart: always
-
-  react-app:
-    build:
-      context: .
-      dockerfile: Dockerfile.frontend
-    expose:
-      - "80"
-    command: npm run dev
-    volumes:
-      - ./frontend:/app/frontend
 
   etl:
     image: ptitbot-backend
