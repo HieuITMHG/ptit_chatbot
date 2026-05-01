@@ -7,8 +7,8 @@ x-healthcheck-defaults: &healthcheck_base
 services:
   nginx:
     build:
-      context: ./nginx
-      dockerfile: Dockerfile
+      context: .             
+      dockerfile: nginx/Dockerfile
     ports:
       - "80:80"
       - "443:443"
@@ -17,7 +17,6 @@ services:
       - ./nginx/nginx-https.conf:/etc/nginx/nginx-https.conf:ro
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-      - ./frontend/dist:/usr/share/nginx/html:ro
     depends_on:
       api:
         condition: service_started 
