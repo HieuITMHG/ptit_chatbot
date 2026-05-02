@@ -35,9 +35,12 @@ Hệ thống Chatbot RAG (Retrieval-Augmented Generation) được thiết kế 
 
 ## 📸 Hình ảnh Demo (Screenshots)
 
-*(Thêm hình ảnh demo giao diện chatbot của bạn tại đây)*
 <p align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Giao+dien+Chatbot+Demo" alt="Chatbot Demo">
+  <img src="./assets/login.png" alt="Chatbot Demo">
+</p>
+
+<p align="center">
+  <img src="./assets/chatbox.png" alt="Chatbot Demo">
 </p>
 
 ---
@@ -65,6 +68,9 @@ Hệ thống yêu cầu file `.env.prod` để chạy môi trường Production.
 ```ini
 ENV=production
 
+# Dự án này dùng openai api
+OPENAI_KEY=your-openai-api-key
+
 # Thiết lập URL kết nối qua tên service trong Docker
 S3_ENDPOINT=http://minio:9000
 MONGODB_URI=mongodb://admin:admin123@mongo:27017/PTITBOT?authSource=admin
@@ -77,35 +83,29 @@ TEST_USERNAME=admin
 TEST_PASSWORD=123456
 ```
 
+Đổi 2 giá trị trong frontend/.env thành domain của bạn:
+```ini
+VITE_API_BASE_URL=[https://your-domain.com/api](https://your-domain.com/api)
+VITE_WS_BASE_URL=wss://[your-domain.com/api](https://your-domain.com/api)
+```
+
 ### 4. Build Docker Image (Preload Model)
 Tiến hành build image. Quá trình này sẽ bao gồm việc tải các mô hình AI và build frontend + backend.
 > ⏳ *Lưu ý: Lần đầu tiên chạy sẽ mất một chút thời gian để tải model có dung lượng lớn.*
 ```bash
-docker-compose -f docker-compose.prod.yml build
+make build-prod
 ```
 
 ### 5. Chạy quá trình ETL (Chỉ chạy 1 lần duy nhất)
 Tiến hành cào dữ liệu, làm sạch, phân mảnh (chunking), nhúng (embedding) và lưu vào cơ sở dữ liệu.
 ```bash
-docker-compose -f docker-compose.prod.yml run --rm etl
+docker compose -f docker-compose.prod.yml run --rm etl
 ```
 
-### 6. Cấp phát chứng chỉ SSL (Certbot)
-> ⚠️ **Cực kỳ quan trọng:** Nếu không có chứng chỉ SSL, Nginx có thể bị crash. Hãy thay thế `suvitech.io.vn` và `your-email@gmail.com` bằng tên miền và email thật của bạn.
-```bash
-docker-compose -f docker-compose.prod.yml run --rm certbot certonly \
-  --webroot \
-  --webroot-path=/var/www/certbot \
-  -d suvitech.io.vn \
-  --email your-email@gmail.com \
-  --agree-tos \
-  --no-eff-email
-```
-
-### 7. Khởi chạy toàn bộ hệ thống
+### 6. Khởi chạy toàn bộ hệ thống
 Sau khi mọi thứ đã sẵn sàng, hãy khởi động toàn bộ các service:
 ```bash
-docker-compose -f docker-compose.prod.yml up -d
+make run
 ```
 Hệ thống hiện đã hoạt động! Bạn có thể truy cập thông qua Domain của mình.
 
