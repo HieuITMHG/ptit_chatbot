@@ -108,11 +108,3 @@ Sau khi mọi thứ đã sẵn sàng, hãy khởi động toàn bộ các servic
 make run
 ```
 Hệ thống hiện đã hoạt động! Bạn có thể truy cập thông qua Domain của mình.
-
----
-
-## 🤝 Đóng góp (Contributing)
-Mọi ý kiến đóng góp, báo lỗi (issues) và pull requests đều được hoan nghênh để làm dự án hoàn thiện hơn.
-
-## 📝 Giấy phép (License)
-Dự án được phân phối dưới giấy phép MIT. Xem file `LICENSE` để biết thêm chi tiết.
