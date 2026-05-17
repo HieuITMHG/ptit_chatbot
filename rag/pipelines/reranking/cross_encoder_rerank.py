@@ -19,7 +19,6 @@ try:
     print(f"--- Khởi tạo Ranker thành công: {MODEL_NAME} ---")
 except Exception as e:
     print(f"Lỗi khởi tạo Ranker: {e}")
-    print("Mẹo: Nếu server không có internet, hãy dùng 'scp' copy thư mục model từ máy local lên.")
     raise
 
 def cross_encoder_reranker(unordered_contexts: list, query: str) -> list:

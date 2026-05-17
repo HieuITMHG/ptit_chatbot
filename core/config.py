@@ -65,7 +65,7 @@ class Settings(BaseSettings):
         ]
 
     class Config:
-        env_file = ".env.prod"
+        env_file = ".env.dev"
 
 @lru_cache()
 def get_settings():

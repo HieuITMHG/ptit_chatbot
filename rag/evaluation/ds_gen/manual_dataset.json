@@ -1,1 +1,2012 @@
-[]
+[
+  {
+    "query_id": 1,
+    "query": "Học ngành công nghệ kỹ thuật điện - điện tử ra trường có thể làm những công việc gì?",
+    "relevant_chunks": [
+      {
+        "7680db47f67f8e62f3fb9d143b2b132d": 5
+      },
+      {
+        "2e9073f8fdc6471f85519615825aa8bc": 5
+      },
+      {
+        "0c7bcd92c3e9dac943883c7b5da273d0": 5
+      },
+      {
+        "cab78de08af16967aa960302c6b70e5a": 4
+      },
+      {
+        "c4f32e2a4604d54e5f74276de90b6596": 4
+      }
+    ]
+  },
+  {
+    "query_id": 2,
+    "query": "Cơ hội việc làm tại nước ngoài của ngành công nghệ kỹ thuật điện - điện tử như thế nào?",
+    "relevant_chunks": [
+      {
+        "d82a903f239c6d823da9ec233ff6c87f": 5
+      },
+      {
+        "2e9073f8fdc6471f85519615825aa8bc": 5
+      },
+      {
+        "00619b99e5991526d38c86f543acd87c": 5
+      },
+      {
+        "5b6c5309b87a4d6c70dd30c2e6faa815": 4
+      },
+      {
+        "57aa9746baaf12ebd33b5e06cb7a1a0b": 4
+      }
+    ]
+  },
+  {
+    "query_id": 3,
+    "query": "Tương lai của ngành thiết kế vi mạch sẽ hướng tới những yêu cầu và ứng dụng gì?",
+    "relevant_chunks": [
+      {
+        "008077ff54c7df7754d65484a312c9f1": 5
+      },
+      {
+        "6f5ce7d0fc1166d1dceefb5a2225893b": 5
+      },
+      {
+        "ee9de7303e62d986216144012b9eed1f": 5
+      },
+      {
+        "a983ed61b11de50b4d3924f9cfbb8bab": 4
+      },
+      {
+        "14e6380ee3cb4bb60f6e9d93ba912528": 4
+      }
+    ]
+  },
+  {
+    "query_id": 4,
+    "query": "Học viện Công nghệ Bưu chính Viễn thông có cơ sở đào tạo ngành kỹ thuật điều khiển tự động hóa ở những đâu?",
+    "relevant_chunks": [
+      {
+        "98279f5f57294e2621ef61e9ad9d5c1b": 5
+      },
+      {
+        "0085fc0faa6b254d5015d5a4ee283253": 5
+      },
+      {
+        "099b4ebd5ff2f2adc358b2911bc1acf0": 4
+      },
+      {
+        "97c9e19d90d6815412131ee2594939a0": 4
+      },
+      {
+        "d32251afd3eddfdf865f86dea636acc7": 3
+      }
+    ]
+  },
+  {
+    "query_id": 5,
+    "query": "Ngành công nghệ kỹ thuật điện - điện tử chiếm vị trí như thế nào trong sự phát triển của xã hội tương lai?",
+    "relevant_chunks": [
+      {
+        "01067e5aff775f69a8e38fdeb013a120": 5
+      },
+      {
+        "c83690244a87432c581508c900daa1fc": 5
+      },
+      {
+        "69ebf4ee0210e51cd7f15bfd623ab777": 4
+      },
+      {
+        "f760bd31aae69c289ce6667ae679d267": 4
+      },
+      {
+        "ccff13fc2294277f3ade356a8582a460": 4
+      }
+    ]
+  },
+  {
+    "query_id": 6,
+    "query": "Chương trình chuyên ngành Quản trị Logistics tại PTIT bao gồm những môn học nào?",
+    "relevant_chunks": [
+      {
+        "014492027667363688d6c94b6395bb4f": 5
+      },
+      {
+        "4ae5581e18e3ac3c09e85a451d1916a4": 3
+      },
+      {
+        "8132c69e2b939bb4c52bacbd578b8d60": 2
+      },
+      {
+        "a30fbc378ab90d556586a1273820d670": 2
+      },
+      {
+        "375aedf697810862a68a51855dd01605": 2
+      }
+    ]
+  },
+  {
+    "query_id": 7,
+    "query": "Học Viện Công Nghệ Bưu Chính Viễn Thông đào tạo những chuyên ngành nào trong ngành Quản trị kinh doanh?",
+    "relevant_chunks": [
+      {
+        "fb319584c5a775c9eb33ba5f304f239b": 5
+      },
+      {
+        "c1602d780160cc0f4735b453d4d13e39": 5
+      },
+      {
+        "7aa18c130e42ee1552ae8acbdda7075a": 4
+      },
+      {
+        "4ae5581e18e3ac3c09e85a451d1916a4": 3
+      },
+      {
+        "a30fbc378ab90d556586a1273820d670": 3
+      }
+    ]
+  },
+  {
+    "query_id": 8,
+    "query": "Cơ hội việc làm của ngành Công nghệ đa phương tiện sau khi ra trường là gì?",
+    "relevant_chunks": [
+      {
+        "f5d3e23fceff311b376a7dcadb3f9721": 5
+      },
+      {
+        "48405a8d124beaaa1498539c7e49a3d6": 4
+      },
+      {
+        "100aed830c11b5b535886e7917b16529": 4
+      },
+      {
+        "e3a27a70b5600d7f58d63a0ecdf74d55": 3
+      },
+      {
+        "c9be507d83d6ff15cb4f6bf2b9815a8d": 3
+      }
+    ]
+  },
+  {
+    "query_id": 9,
+    "query": "Chương trình đào tạo ngành Công nghệ Internet vạn vật (IoT) tại PTIT kéo dài bao lâu?",
+    "relevant_chunks": [
+      {
+        "769b69de9e6bf1da564945bc9b58ef86": 5
+      },
+      {
+        "422170dfb1a40ad5aeca5985e998147f": 5
+      },
+      {
+        "61e71dcf327e2f87e11fb95fd608fe18": 4
+      },
+      {
+        "0d3223e1fe49cf2702bcb8a771bb0863": 3
+      },
+      {
+        "c8ca6f3625b3122403a284eed3925c83": 3
+      }
+    ]
+  },
+  {
+    "query_id": 10,
+    "query": "Người lao động ngành công nghệ kỹ thuật điện, điện tử cần đáp ứng những kỹ năng gì?",
+    "relevant_chunks": [
+      {
+        "836dfa903ab426225dabafb0567edf53": 5
+      },
+      {
+        "ebf26d64b4ccc08a8a7c86a8f1af2a0e": 4
+      },
+      {
+        "9ff72a5e9771faa301698d6c4e134a22": 4
+      },
+      {
+        "d82a903f239c6d823da9ec233ff6c87f": 3
+      },
+      {
+        "ba88fa23fdff314363ee0c10f60682ee": 3
+      }
+    ]
+  },
+  {
+    "query_id": 11,
+    "query": "Sinh viên ngành An toàn thông tin ra trường có thể làm những công việc gì?",
+    "relevant_chunks": [
+      {
+        "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d": 5
+      },
+      {
+        "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e": 4
+      },
+      {
+        "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f": 4
+      },
+      {
+        "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a": 3
+      },
+      {
+        "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b": 3
+      }
+    ]
+  },
+  {
+    "query_id": 12,
+    "query": "Điểm chuẩn ngành Công nghệ thông tin của Học viện Công nghệ Bưu chính Viễn thông là bao nhiêu?",
+    "relevant_chunks": [
+      {
+        "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c": 5
+      },
+      {
+        "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d": 5
+      },
+      {
+        "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e": 4
+      },
+      {
+        "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f": 3
+      },
+      {
+        "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a": 2
+      }
+    ]
+  },
+  {
+    "query_id": 13,
+    "query": "Cơ hội việc làm của ngành Marketing tại PTIT sau khi tốt nghiệp?",
+    "relevant_chunks": [
+      {
+        "a1b2c3d4e5f678901234567890abcdef": 5
+      },
+      {
+        "b2c3d4e5f678901234567890abcdef12": 5
+      },
+      {
+        "c3d4e5f678901234567890abcdef1234": 4
+      },
+      {
+        "d4e5f678901234567890abcdef123456": 3
+      },
+      {
+        "e5f678901234567890abcdef12345678": 3
+      }
+    ]
+  },
+  {
+    "query_id": 14,
+    "query": "Những kỹ năng cần thiết để theo học ngành Kế toán là gì?",
+    "relevant_chunks": [
+      {
+        "f678901234567890abcdef1234567890": 5
+      },
+      {
+        "678901234567890abcdef1234567890a": 4
+      },
+      {
+        "78901234567890abcdef1234567890ab": 4
+      },
+      {
+        "8901234567890abcdef1234567890abc": 3
+      },
+      {
+        "901234567890abcdef1234567890abcd": 2
+      }
+    ]
+  },
+  {
+    "query_id": 15,
+    "query": "Học viện Công nghệ Bưu chính Viễn thông có những chương trình liên kết quốc tế nào?",
+    "relevant_chunks": [
+      {
+        "01234567890abcdef1234567890abcde": 5
+      },
+      {
+        "1234567890abcdef1234567890abcdef": 5
+      },
+      {
+        "234567890abcdef1234567890abcdef1": 4
+      },
+      {
+        "34567890abcdef1234567890abcdef12": 4
+      },
+      {
+        "4567890abcdef1234567890abcdef123": 3
+      }
+    ]
+  },
+  {
+    "query_id": 16,
+    "query": "Học phí của PTIT được tính theo tín chỉ hay theo học kỳ?",
+    "relevant_chunks": [
+      {
+        "567890abcdef1234567890abcdef1234": 5
+      },
+      {
+        "67890abcdef1234567890abcdef12345": 4
+      },
+      {
+        "7890abcdef1234567890abcdef123456": 3
+      },
+      {
+        "890abcdef1234567890abcdef1234567": 3
+      },
+      {
+        "90abcdef1234567890abcdef12345678": 2
+      }
+    ]
+  },
+  {
+    "query_id": 17,
+    "query": "Ký túc xá của PTIT cơ sở TP.HCM nằm ở địa chỉ nào?",
+    "relevant_chunks": [
+      {
+        "abcdef1234567890abcdef1234567890": 5
+      },
+      {
+        "bcdef1234567890abcdef1234567890a": 5
+      },
+      {
+        "cdef1234567890abcdef1234567890ab": 4
+      },
+      {
+        "def1234567890abcdef1234567890abc": 3
+      },
+      {
+        "ef1234567890abcdef1234567890abcd": 3
+      }
+    ]
+  },
+  {
+    "query_id": 18,
+    "query": "Sinh viên PTIT có cơ hội thực tập tại những doanh nghiệp lớn nào?",
+    "relevant_chunks": [
+      {
+        "f1234567890abcdef1234567890abcde": 5
+      },
+      {
+        "1234567890abcdef1234567890abcdef": 4
+      },
+      {
+        "23456789abcdef0123456789abcdef01": 4
+      },
+      {
+        "3456789abcdef0123456789abcdef012": 4
+      },
+      {
+        "456789abcdef0123456789abcdef0123": 3
+      }
+    ]
+  },
+  {
+    "query_id": 19,
+    "query": "PTIT có những hoạt động ngoại khóa và câu lạc bộ nào dành cho sinh viên?",
+    "relevant_chunks": [
+      {
+        "56789abcdef0123456789abcdef01234": 5
+      },
+      {
+        "6789abcdef0123456789abcdef012345": 5
+      },
+      {
+        "789abcdef0123456789abcdef0123456": 4
+      },
+      {
+        "89abcdef0123456789abcdef01234567": 3
+      },
+      {
+        "9abcdef0123456789abcdef012345678": 3
+      }
+    ]
+  },
+  {
+    "query_id": 20,
+    "query": "Các công cụ công nghệ có vai trò như thế nào trong việc triển khai chiến lược Marketing?",
+    "relevant_chunks": [
+      {
+        "15eff16ad8dd80efa31dbbe4a3e8162e": 5
+      },
+      {
+        "fb100a6fae95d2d9b3818f6279e8a818": 4
+      },
+      {
+        "4ae5581e18e3ac3c09e85a451d1916a4": 3
+      },
+      {
+        "8132c69e2b939bb4c52bacbd578b8d60": 3
+      },
+      {
+        "a30fbc378ab90d556586a1273820d670": 3
+      }
+    ]
+  },
+  {
+    "query_id": 21,
+    "query": "PTIT hợp tác với trường đại học nào tại Nhật Bản để xây dựng chương trình Robot và AI?",
+    "relevant_chunks": [
+      {
+        "099b4ebd5ff2f2adc358b2911bc1acf0": 3
+      },
+      {
+        "851c1ffca5a9113cf6ebb66389ef684e": 3
+      },
+      {
+        "603062c6924c91dac34a01a2ed4b4324": 2
+      },
+      {
+        "367a78a8234827cccecdc8076d8fb5bb": 2
+      },
+      {
+        "dd4516fb9d06e8616499f81a73c023a7": 1
+      }
+    ]
+  },
+  {
+    "query_id": 22,
+    "query": "PTIT mang lại những cơ hội du học và làm việc tại nước ngoài nào cho sinh viên ngành tự động hóa?",
+    "relevant_chunks": [
+      {
+        "09d0847e18d59cb375fb302156201e04": 3
+      },
+      {
+        "dd4516fb9d06e8616499f81a73c023a7": 3
+      },
+      {
+        "603062c6924c91dac34a01a2ed4b4324": 2
+      },
+      {
+        "dc9c90391dbed28548769d1108abffc6": 1
+      },
+      {
+        "303de7e67470fde1ba17b1eacea10961": 1
+      }
+    ]
+  },
+  {
+    "query_id": 23,
+    "query": "Ngành tự động hóa có vai trò như thế nào đối với tương lai của ngành sản xuất xe tự động và xe điện?",
+    "relevant_chunks": [
+      {
+        "76998e83658b30e63d8567cd6d887da6": 3
+      },
+      {
+        "09f668a30758b06b081d316fabf00c31": 3
+      },
+      {
+        "4bf5528ce8e221c1fae3e8da36e21402": 2
+      },
+      {
+        "433683897bc18b762ba8dfcc2bd6ed91": 1
+      },
+      {
+        "d1ca92df7e30f15285ce2a6c134b74fa": 1
+      }
+    ]
+  },
+  {
+    "query_id": 24,
+    "query": "Sinh viên ngành Công nghệ đa phương tiện tại PTIT có cơ hội gì với các doanh nghiệp?",
+    "relevant_chunks": [
+      {
+        "817def04e9c797007b40c0c2d114b041": 3
+      },
+      {
+        "e7a29a9bfa038c2c4329f9c357b6d362": 3
+      },
+      {
+        "970f8f4fedd5ba7018d8052f5c28f0c2": 2
+      },
+      {
+        "b165be6534ba221b0c0cdfa7facecf2d": 2
+      },
+      {
+        "100aed830c11b5b535886e7917b16529": 1
+      }
+    ]
+  },
+  {
+    "query_id": 25,
+    "query": "Sự phát triển của công nghệ số gây ra những khó khăn gì cho công việc kế toán truyền thống?",
+    "relevant_chunks": [
+      {
+        "0af629ea6227825057ed5193bbec9d60": 3
+      },
+      {
+        "5b6ffb0d0b7e4cfff0c3219126201d6d": 3
+      },
+      {
+        "65575a6d7a849d9b82a3c5594434fc6d": 3
+      },
+      {
+        "e22a1b035989dd34b9abc6e6fee7448e": 3
+      },
+      {
+        "6c10ea53fee8e4b56ba962ae707f1c98": 2
+      }
+    ]
+  },
+  {
+    "query_id": 27,
+    "query": "Công việc của kỹ sư điện - điện tử có thể mở rộng đến những lĩnh vực giáo dục hay nghiên cứu nào?",
+    "relevant_chunks": [
+      {
+        "b4a9b7314bc5813001362e71233cafd6": 3
+      },
+      {
+        "0c7bcd92c3e9dac943883c7b5da273d0": 3
+      },
+      {
+        "c2b722ae67b083c2cc118f1141367ba9": 3
+      },
+      {
+        "7680db47f67f8e62f3fb9d143b2b132d": 2
+      },
+      {
+        "34b37265d0cf1a5ca7f1a21db54fd6d4": 1
+      }
+    ]
+  },
+  {
+    "query_id": 26,
+    "query": "Công nghệ điện tử có những ứng dụng nổi bật nào trong sản xuất và nông nghiệp hiện đại?",
+    "relevant_chunks": [
+      {
+        "0c1f841ad90c5762bbad98a777847454": 3
+      },
+      {
+        "f8f72135ad0f97bab1d9cf04fe97a680": 3
+      },
+      {
+        "d51680be3bac4f79b205446a57c42d2d": 3
+      },
+      {
+        "69ebf4ee0210e51cd7f15bfd623ab777": 1
+      },
+      {
+        "5edbdecc09cd48eeaaec63e42554f99e": 1
+      }
+    ]
+  },
+  {
+    "query_id": 28,
+    "query": "Năm 2025, cơ sở TP.HCM của PTIT mở những ngành học nổi bật nào theo xu hướng công nghệ mới?",
+    "relevant_chunks": [
+      {
+        "0ccaf187822f306f4086397f91e8db3b": 3
+      },
+      {
+        "ab14d2a03c7127e21145b613e80a599e": 3
+      },
+      {
+        "4e838cadaa385da7808fd487defac6b2": 3
+      },
+      {
+        "5d8c5ab868e464c9e087125899836335": 2
+      },
+      {
+        "0d3223e1fe49cf2702bcb8a771bb0863": 1
+      }
+    ]
+  },
+  {
+    "query_id": 29,
+    "query": "Vị trí nào trong ngành An toàn thông tin hiện đang trong tình trạng khát nhân lực nghiêm trọng nhất?",
+    "relevant_chunks": [
+      {
+        "0da983121aac1a70b8b47ee1762df302": 3
+      },
+      {
+        "631f4828b68189e3863ab8fedb64cef4": 2
+      },
+      {
+        "21ada41e635fac116135bfbe33a78cda": 2
+      },
+      {
+        "ccffd187104f1e753b38a44054f17717": 1
+      },
+      {
+        "b20c71208aa975afea07cfe7d2acf75d": 1
+      }
+    ]
+  },
+  {
+    "query_id": 30,
+    "query": "Vai trò của kỹ sư IoT trong một dự án phát triển công nghệ là làm gì?",
+    "relevant_chunks": [
+      {
+        "0e4d7327a9e3280a1f526ea0f24cb499": 3
+      },
+      {
+        "2c94fa8ac1b240bdaa228a93b7529815": 2
+      },
+      {
+        "b843573179405a5d4dd83ddd1c3dec8f": 2
+      },
+      {
+        "dd990f9d0882226f8476702b7fd82545": 1
+      },
+      {
+        "5e94675194d9000061e88232653d7439": 1
+      }
+    ]
+  },
+  {
+    "query_id": 31,
+    "query": "Nhu cầu nhân lực về ngành sản xuất hàng điện tử tại TP. Hồ Chí Minh năm 2021 được thống kê ra sao?",
+    "relevant_chunks": [
+      {
+        "321f2be6993d7e5af770cf15a50d2274": 3
+      },
+      {
+        "3d4df0f835a4db5e4b85b2bfbb39ae7a": 1
+      },
+      {
+        "33d71afc6806218ca47f5e2d51e27a19": 1
+      },
+      {
+        "537841098b5621d6fb4722da9ce78f65": 1
+      },
+      {
+        "104328fb49bdf0b0613a7d32650d4293": 1
+      }
+    ]
+  },
+  {
+    "query_id": "32",
+    "query": "Trí tuệ nhân tạo và Robot tự hành có khả năng ứng dụng thay thế con người ở những điều kiện công việc nào?",
+    "relevant_chunks": [
+      {
+        "0f0786a96dfc81b8b2d8f63b833b6cd1": 3
+      },
+      {
+        "555decf4e9f424b21c6d48ae5a43b780": 3
+      },
+      {
+        "1419537740bde831e50789148a15ea11": 3
+      },
+      {
+        "ad63b9b4847f0af53686f0544a07a9c2": 2
+      },
+      {
+        "73f44640bbeb8eb3759feeb026b9a06a": 2
+      }
+    ]
+  },
+  {
+    "query_id": "33",
+    "query": "Thời gian hoàn thành chương trình đào tạo kỹ sư Công nghệ thông tin năm 2025 tại PTIT TP.HCM là bao lâu?",
+    "relevant_chunks": [
+      {
+        "0fa1603c2f36e1e7954183cf3b387ae4": 3
+      },
+      {
+        "bcb466596a5802ecf058a045531f85a4": 2
+      },
+      {
+        "7ca24b8e318b59499b73d9ea2c25176a": 2
+      },
+      {
+        "18d0780ddf942e9b98316afba86dc2a3": 1
+      },
+      {
+        "e842c39c50c6f87579d1bde73be01a62": 0
+      }
+    ]
+  },
+  {
+    "query_id": "34",
+    "query": "Ngành kỹ thuật điều khiển và tự động hóa có tính ứng dụng đa dạng ra sao trong các ngành nghề hiện nay?",
+    "relevant_chunks": [
+      {
+        "18df111a25ef076fb90763806156577c": 3
+      },
+      {
+        "e304b729b9aa18a10bcafbd5b9eaf9d0": 3
+      },
+      {
+        "d72a69f578a3da3e8165686fe18b9d14": 3
+      },
+      {
+        "b569e70837b325cd5a98eb57c7244539": 3
+      },
+      {
+        "fc01f1799a123e1d0ee27238dc231695": 2
+      }
+    ]
+  },
+  {
+    "query_id": "35",
+    "query": "Mã ngành của ngành Truyền thông Đa phương tiện tại PTIT là gì và chỉ tiêu tuyển sinh năm 2025 là bao nhiêu?",
+    "relevant_chunks": [
+      {
+        "100aed830c11b5b535886e7917b16529": 3
+      },
+      {
+        "0ccaf187822f306f4086397f91e8db3b": 1
+      },
+      {
+        "c8666570db62d90ad2123bc485874efa": 1
+      },
+      {
+        "c57f99395bc20a7a24aa35f1b79eae7a": 0
+      },
+      {
+        "2d23cceecfc5454423e4c984dcd1c750": 0
+      }
+    ]
+  },
+  {
+    "query_id": "36",
+    "query": "Tình hình khan hiếm nguồn nhân lực ở lĩnh vực kinh doanh Điện/Điện tử năm 2019 diễn ra như thế nào?",
+    "relevant_chunks": [
+      {
+        "104328fb49bdf0b0613a7d32650d4293": 3
+      },
+      {
+        "22a64f2da4f4bb2ce6775ac28aaa1ebd": 3
+      },
+      {
+        "321f2be6993d7e5af770cf15a50d2274": 1
+      },
+      {
+        "0e7972858b3b112213b6698a4700ac1a": 1
+      },
+      {
+        "166b16840b9cb3a343b3f5820348faf9": 1
+      }
+    ]
+  },
+  {
+    "query_id": 33,
+    "query": "Thời gian hoàn thành chương trình đào tạo kỹ sư Công nghệ thông tin năm 2025 tại PTIT TP.HCM là bao lâu?",
+    "relevant_chunks": [
+      {
+        "0fa1603c2f36e1e7954183cf3b387ae4": 3
+      },
+      {
+        "7ca24b8e318b59499b73d9ea2c25176a": 2
+      },
+      {
+        "bcb466596a5802ecf058a045531f85a4": 2
+      },
+      {
+        "18d0780ddf942e9b98316afba86dc2a3": 1
+      },
+      {
+        "e842c39c50c6f87579d1bde73be01a62": 1
+      }
+    ]
+  },
+  {
+    "query_id": 34,
+    "query": "Ngành kỹ thuật điều khiển và tự động hóa có tính ứng dụng đa dạng ra sao trong các ngành nghề hiện nay?",
+    "relevant_chunks": [
+      {
+        "18df111a25ef076fb90763806156577c": 3
+      },
+      {
+        "4aae98a4e8459e029ede4cfb1d2ccab0": 3
+      },
+      {
+        "3b3cd8bdf9c1ada35cb3e88caa1e5f27": 3
+      },
+      {
+        "e304b729b9aa18a10bcafbd5b9eaf9d0": 3
+      },
+      {
+        "d72a69f578a3da3e8165686fe18b9d14": 3
+      }
+    ]
+  },
+  {
+    "query_id": 35,
+    "query": "Mã ngành của ngành Truyền thông Đa phương tiện tại PTIT là gì và chỉ tiêu tuyển sinh năm 2025 là bao nhiêu?",
+    "relevant_chunks": [
+      {
+        "100aed830c11b5b535886e7917b16529": 3
+      },
+      {
+        "0ccaf187822f306f4086397f91e8db3b": 1
+      },
+      {
+        "c8666570db62d90ad2123bc485874efa": 1
+      },
+      {
+        "a385b6c86e630a5919acde3c70dcfff8": 1
+      },
+      {
+        "dc15201e13b7dc1dd2656adb009e1faf": 0
+      }
+    ]
+  },
+  {
+    "query_id": 36,
+    "query": "Tình hình khan hiếm nguồn nhân lực ở lĩnh vực kinh doanh Điện/Điện tử năm 2019 diễn ra như thế nào?",
+    "relevant_chunks": [
+      {
+        "104328fb49bdf0b0613a7d32650d4293": 3
+      },
+      {
+        "22a64f2da4f4bb2ce6775ac28aaa1ebd": 3
+      },
+      {
+        "321f2be6993d7e5af770cf15a50d2274": 1
+      },
+      {
+        "0e7972858b3b112213b6698a4700ac1a": 1
+      },
+      {
+        "57aa9746baaf12ebd33b5e06cb7a1a0b": 1
+      }
+    ]
+  },
+  {
+    "query_id": 37,
+    "query": "Định hướng phát triển trong nghiên cứu khoa học của Học viện Công nghệ Bưu chính Viễn thông tập trung vào những mục tiêu nào?",
+    "relevant_chunks": [
+      {
+        "b8cf3a331fc1d93dafc7ce33a096a568": 3
+      },
+      {
+        "7986bc677cf3c287c95fc392de9702ca": 3
+      },
+      {
+        "96c366ccff5784653b83f91875aa6d3d": 2
+      },
+      {
+        "952970ce229b5d6fd402b253e68464f6": 2
+      },
+      {
+        "016f0f87ed06203eabcfd2c855661ea0": 1
+      }
+    ]
+  },
+  {
+    "query_id": 38,
+    "query": "Kỹ năng làm việc nhóm và giao tiếp đóng vai trò như thế nào đối với người học ngành kỹ thuật điều khiển tự động hóa?",
+    "relevant_chunks": [
+      {
+        "11b9ac55cedbb2bb03ddc607c2bd4249": 3
+      },
+      {
+        "b9be4c1ac4753bbf25265fad550cb0ad": 3
+      },
+      {
+        "f44bd14b388fb640d3c9978f3b5c1168": 2
+      },
+      {
+        "50f6f0cd4266e45d7d4c310f2ebb2a8d": 2
+      },
+      {
+        "bd07646adf3b0de23725db9678da80ee": 1
+      }
+    ]
+  },
+  {
+    "query_id": 39,
+    "query": "Mức thu nhập trung bình của kỹ sư tự động hóa và kỹ sư nghiên cứu phát triển điện tử khác nhau như thế nào?",
+    "relevant_chunks": [
+      {
+        "1215ab084790397f10755c6aec41f543": 3
+      },
+      {
+        "3839ca924ba5a2c2782eab6906ba5b37": 1
+      },
+      {
+        "451b7f56df5d1dd7546aa59709fa4bd6": 1
+      },
+      {
+        "4d041b3c0e2f0e45d126a6913993c910": 1
+      },
+      {
+        "cebddb80b2f988bdaa714d4a57e983fc": 1
+      }
+    ]
+  },
+  {
+    "query_id": 40,
+    "query": "Để khám phá ngành học phù hợp, các bạn học sinh có thể tham khảo những loại bài kiểm tra trắc nghiệm nào?",
+    "relevant_chunks": [
+      {
+        "b1681f579e58662e315fd3b364527cbf": 3
+      },
+      {
+        "1326501eb45f50cbf50e27cafc813133": 3
+      },
+      {
+        "9aab06823086c3cc00548468341b8139": 2
+      },
+      {
+        "ab581ee9455277f57a896857fb8baa61": 1
+      },
+      {
+        "f952aec45791f3427ee9c68a42a52223": 1
+      }
+    ]
+  },
+  {
+    "query_id": 41,
+    "query": "Cho biết thông tin về các doanh nghiệp tài trợ học bổng trong ngày hội giao lưu năm 2014?",
+    "relevant_chunks": [
+      {
+        "002950f09acd4b9e02617b964e0fad31": 3
+      },
+      {
+        "6837aa7a8bed14b3f131675f36bdbf2c": 2
+      },
+      {
+        "f4e2f3a5983afdfd6b18d413c763493a": 2
+      },
+      {
+        "b0f1a30f9bf89a11e47eb5c7f967b965": 1
+      },
+      {
+        "ab8e50a64a7539ae38e0e1d76d54fdaa": 1
+      }
+    ]
+  },
+  {
+    "query_id": 42,
+    "query": "Bộ trưởng Nguyễn Mạnh Hùng có quan điểm như thế nào về chuyển đổi số và thay đổi mô hình đào tạo đại học?",
+    "relevant_chunks": [
+      {
+        "7a4f8b638168e6fbcac79c307c39d9fb": 3
+      },
+      {
+        "bd000e06772cd4ebd62d37602ac67f52": 3
+      },
+      {
+        "511cbd569991f02be6b563672e24d1c0": 2
+      },
+      {
+        "1b0604b5b42460a8ada422bc4c865b09": 2
+      },
+      {
+        "d6c9979f5d4bb63c4c97fcbafd5ea27f": 1
+      }
+    ]
+  },
+  {
+    "query_id": 43,
+    "query": "Học viện dự kiến mở thêm những ngành đào tạo mới nào trong thời gian tới?",
+    "relevant_chunks": [
+      {
+        "34defdfb9a421b226bdea79797c2e216": 3
+      },
+      {
+        "9c206819136b2a85046d9f082f3e7ff9": 3
+      },
+      {
+        "d35f5f7ee4f939ab012db76768158bf1": 3
+      },
+      {
+        "47eca0445dfbae9086991621480af23c": 2
+      },
+      {
+        "c62050d698a902ee4fb6d724ed54b2e1": 1
+      }
+    ]
+  },
+  {
+    "query_id": 44,
+    "query": "Chủ đề nghiên cứu của sinh viên tham gia chương trình gPBL tại Nhật Bản năm 2023 là gì?",
+    "relevant_chunks": [
+      {
+        "00576dda1454d6ef5d2d00cd6e9a6945": 3
+      },
+      {
+        "ac3bd24289477bb3923e1d455715ce6d": 2
+      },
+      {
+        "1da2d25770d2c561904529ea5dc0d05c": 1
+      },
+      {
+        "c10080387a4ea7b1f2c8ab2b59dd8f08": 1
+      },
+      {
+        "3a029e47cd360720aa50794ba832e1db": 1
+      }
+    ]
+  },
+  {
+    "query_id": 45,
+    "query": "Học bổng Thạc sĩ do RMIT và Intel cung cấp bao gồm những khoản hỗ trợ nào cho sinh viên?",
+    "relevant_chunks": [
+      {
+        "0061c33dff0e9376ba3715561fb55c65": 3
+      },
+      {
+        "b057641ba2071d1a1107aceceadcd9ba": 1
+      },
+      {
+        "5eb9e354bf2c14289ae9d0ed347e3ef9": 0
+      },
+      {
+        "50bf65b1f085ab96e32af25b7bc833d8": 0
+      },
+      {
+        "06e3f73921ee9ff6499c620ef0982cc0": 0
+      }
+    ]
+  },
+  {
+    "query_id": 46,
+    "query": "Buổi hội thảo Simulation software for IC Design đem lại lợi ích và cơ hội gì cho sinh viên Học viện?",
+    "relevant_chunks": [
+      {
+        "006f739d4b84ff7af67d18e9bf74291a": 3
+      },
+      {
+        "35ddde4d6a914f96f97887890d8f497c": 3
+      },
+      {
+        "5913eba9a78a3ba9f40f5e566868921f": 2
+      },
+      {
+        "bf7e7ffad4abd62adfc5f2fb5150aeff": 2
+      },
+      {
+        "b6dd21f3c8757208bcafc1673cbee229": 1
+      }
+    ]
+  },
+  {
+    "query_id": 47,
+    "query": "Nhiệm vụ trước mắt của Hội đồng trường trong chiến lược phát triển 2020-2021 là gì?",
+    "relevant_chunks": [
+      {
+        "007609aa4f40680bfb9d4ad108b8e4a1": 3
+      },
+      {
+        "5b0aec3ee3d9484a7b0f0a0c66f2efcf": 3
+      },
+      {
+        "d441bf673ae6a661a7a5dde4d984cb42": 3
+      },
+      {
+        "17e0a912102424c48e7f8c818ec5f1b4": 1
+      },
+      {
+        "27fa1a7d4ba148f2d53959f789f94c7c": 1
+      }
+    ]
+  },
+  {
+    "query_id": "48",
+    "query": "Bộ trưởng Bộ TT&TT làm việc với Học viện về định hướng chiến lược trong giai đoạn nào?",
+    "relevant_chunks": [
+      {
+        "007aa7e1010b2ee18589ea7df00dacdb": 3
+      },
+      {
+        "feefdeef751965091890ec7c58e2dbb1": 3
+      },
+      {
+        "31b2bd6c0b93f4f96793657a2599a353": 2
+      },
+      {
+        "007609aa4f40680bfb9d4ad108b8e4a1": 2
+      },
+      {
+        "5b0aec3ee3d9484a7b0f0a0c66f2efcf": 1
+      }
+    ]
+  },
+  {
+    "query_id": "49",
+    "query": "Đại hội Đảng bộ Học viện Công nghệ Bưu chính Viễn thông lần thứ VII tổ chức vào thời gian nào?",
+    "relevant_chunks": [
+      {
+        "009d028396c91ac6e49c44cf33fce78a": 3
+      },
+      {
+        "e0993c666dee7cc00cc2fd75b5eebedd": 2
+      },
+      {
+        "016f0f87ed06203eabcfd2c855661ea0": 2
+      },
+      {
+        "492a197c3221bd5827cd5c062381e564": 1
+      },
+      {
+        "a21dbf41fbae4e37cf1382176d03b697": 1
+      }
+    ]
+  },
+  {
+    "query_id": "50",
+    "query": "Giáo sư Nancy Napier đã có những đóng góp và được ghi nhận như thế nào tại Việt Nam?",
+    "relevant_chunks": [
+      {
+        "00afb863dce50e5996bbd9c4bbb98a54": 3
+      },
+      {
+        "b5995bfa8128be2f03517a5ca5845289": 1
+      },
+      {
+        "a25019f77abad305ac997135fa60ec0c": 0
+      },
+      {
+        "c15330f0920289261f335961e612a1d3": 0
+      },
+      {
+        "b43125acd1fb5248b3813762a2e64c60": 0
+      }
+    ]
+  },
+  {
+    "query_id": "51",
+    "query": "Dự án SkyHelper được định hướng phát triển để giải quyết vấn đề gì trong thực tế tại Việt Nam?",
+    "relevant_chunks": [
+      {
+        "00d085027ee9de9b38ef40f1718687b9": 3
+      },
+      {
+        "f8d61ccf618a2347a7bbbfe0c75c8977": 3
+      },
+      {
+        "5a111c0809fc3bf4f7466d401bd0cef3": 2
+      },
+      {
+        "96277ec513964dda7dd328cb53a4e72a": 1
+      },
+      {
+        "f7d8e959474502ad87538d525ca735da": 1
+      }
+    ]
+  },
+  {
+    "query_id": "52",
+    "query": "Lễ khai giảng lớp cao học niên khoá 2008-2011 tại TP. HCM đã diễn ra vào ngày nào?",
+    "relevant_chunks": [
+      {
+        "00da8a5531566950d07491ade9a4198f": 3
+      },
+      {
+        "cb806501843421a8397b337017400b03": 1
+      },
+      {
+        "a4e49661d4b1ea86a23199df028662ed": 1
+      },
+      {
+        "e993d7da2b390644c47aae9db0797f81": 0
+      },
+      {
+        "6d4f613e9a0dae0292cc66244ced88ff": 0
+      }
+    ]
+  },
+  {
+    "query_id": "53",
+    "query": "Đoàn đánh giá ngoài đã có nhận xét và đánh giá sơ bộ gì về chất lượng đào tạo của Học viện?",
+    "relevant_chunks": [
+      {
+        "012292e5a2ed52314e4955ba8a499a56": 3
+      },
+      {
+        "d259a3cec0d3bcd35064631890801ee3": 3
+      },
+      {
+        "558bb3e5aed8d65aeb0383ae51328113": 3
+      },
+      {
+        "3879170b4aa05a92ce0181154ed1801c": 2
+      },
+      {
+        "392d02ae63c1ce5ad55d2ec6794bc061": 2
+      }
+    ]
+  },
+  {
+    "query_id": "54",
+    "query": "Kể tên các bài báo công bố khoa học tiêu biểu của Học viện cơ sở trong năm 2024?",
+    "relevant_chunks": [
+      {
+        "7dc309c72411cfcbcd0367a36cb2a2bc": 3
+      },
+      {
+        "2601c667271ada974f2ee6b179003ef0": 3
+      },
+      {
+        "c25277b39dd68b1e6011144fad33304b": 3
+      },
+      {
+        "c2cfe207a8b7287060b05e12ab3bb37f": 3
+      },
+      {
+        "82e78c4c9ed60657ceb41c962af7a785": 3
+      }
+    ]
+  },
+  {
+    "query_id": "55",
+    "query": "Buổi gặp mặt tri ân thầy cô nhân ngày 20/11 có những hoạt động nào nổi bật?",
+    "relevant_chunks": [
+      {
+        "ee3d7e72ab85ecf3de61bbac8756f9b8": 3
+      },
+      {
+        "7d6a6c6ebbcb25a935f7660eb6c30e44": 3
+      },
+      {
+        "cb462514eabb5211b9c40bdfef495d58": 3
+      },
+      {
+        "0f419f555f2532e07b240cdd2919490f": 3
+      },
+      {
+        "ff11c4514bc114d5876650ca90a0eb7b": 2
+      }
+    ]
+  },
+  {
+    "query_id": "56",
+    "query": "Thông báo liên quan đến việc đăng ký học lại và học tự chọn dành cho các khóa nào?",
+    "relevant_chunks": [
+      {
+        "15d5d5d96c87fafc50fdac3c5631ae34": 3
+      },
+      {
+        "aa4eb3a5392c677c10d78e058ff0ec9f": 3
+      },
+      {
+        "014906740de8c2b9b087b064e0a990e4": 2
+      },
+      {
+        "12c94942f10e389bdac2ac5819ad6fa0": 1
+      },
+      {
+        "255a24130686f98f9b9557d2b15d3720": 1
+      }
+    ]
+  },
+  {
+    "query_id": "57",
+    "query": "Tiền thân của Học viện Công nghệ Bưu chính Viễn thông được thành lập vào ngày tháng năm nào và tại đâu?",
+    "relevant_chunks": [
+      {
+        "014a0d9a6c520b02ba8ea12aa9869525": 3
+      },
+      {
+        "6257d158186f6817eb988c744d310e27": 3
+      },
+      {
+        "9ca0923bc33992077787e4794eda3880": 3
+      },
+      {
+        "e7bbd478b2b04758bd599de2bdc13824": 2
+      },
+      {
+        "351b523691022a56dd37f6e544bc68d4": 1
+      }
+    ]
+  },
+  {
+    "query_id": 58,
+    "query": "Đổi mới đại học hiện đại cần chú trọng vào những mô hình đào tạo và kinh doanh nào?",
+    "relevant_chunks": [
+      {
+        "014dc7fb0937ce6e85d5ef82c3123db9": 3
+      },
+      {
+        "dfad959b47ae01947a04f03bf0d353d8": 2
+      },
+      {
+        "13783b4fd1b1e3e28b8e0e2b7bb00835": 2
+      },
+      {
+        "7a4f8b638168e6fbcac79c307c39d9fb": 2
+      },
+      {
+        "002b0e00407a31dfb4dc2f84d70e43ef": 1
+      }
+    ]
+  },
+  {
+    "query_id": 59,
+    "query": "Học viện đã tham gia đánh giá tỷ trọng kinh tế số và phối hợp xây dựng báo cáo với đơn vị nào?",
+    "relevant_chunks": [
+      {
+        "016b9ae47501cd75a2a823797fd05663": 3
+      },
+      {
+        "e6dcdac4ee0bbd811058fd16af000e78": 3
+      },
+      {
+        "7b7f0a023a030b70f8f19b2ec2d5e330": 3
+      },
+      {
+        "8c7f7698d2cca1a5fffc165021efc696": 2
+      },
+      {
+        "484cacd6f28d5bc9e2762374ca96c2f8": 1
+      }
+    ]
+  },
+  {
+    "query_id": 60,
+    "query": "Mục tiêu quan trọng nhất của Đảng bộ Học viện nhiệm kỳ 2025-2030 là gì?",
+    "relevant_chunks": [
+      {
+        "016f0f87ed06203eabcfd2c855661ea0": 3
+      },
+      {
+        "77fe9b8585784593340b88c6ad64fbbc": 3
+      },
+      {
+        "a21dbf41fbae4e37cf1382176d03b697": 2
+      },
+      {
+        "952970ce229b5d6fd402b253e68464f6": 2
+      },
+      {
+        "905975521332d2d37b488957044bd530": 1
+      }
+    ]
+  },
+  {
+    "query_id": 61,
+    "query": "Trong năm 2018, Học viện cơ sở đã đăng cai tổ chức những hội nghị quốc tế nào?",
+    "relevant_chunks": [
+      {
+        "01726360972a748a50a90ff5c2b22206": 3
+      },
+      {
+        "740c87a928d89a71809cbbfa62f7c53e": 3
+      },
+      {
+        "53c743a220a6284f4ef0c2743a7d5171": 2
+      },
+      {
+        "5d019f1250bf892deb0ed480a894178e": 0
+      },
+      {
+        "38b5f417ce8aea415a25b29f13ab9361": 0
+      }
+    ]
+  },
+  {
+    "query_id": "62",
+    "query": "Chương trình đào tạo thiết kế vi mạch của trường bao gồm các nội dung kiến thức gì?",
+    "relevant_chunks": [
+      {
+        "5c8cd768945f562f866f09fe530c52ab": 3
+      },
+      {
+        "0180e5e2c232b018ffb291b67c12b4f9": 3
+      },
+      {
+        "b1675365804e5efe76ecc20b9defc55a": 2
+      }
+    ]
+  },
+  {
+    "query_id": "63",
+    "query": "Thứ trưởng Bộ TT&TT phát biểu như thế nào về vai trò của Học viện cơ sở tại Lễ trao bằng Tiến sĩ năm 2018?",
+    "relevant_chunks": [
+      {
+        "01a2f000370d6fead65cf9674ca8b96d": 3
+      },
+      {
+        "6ebeee0a74a7dea8ce020bd754c2ad30": 2
+      },
+      {
+        "21cc2d512d75e2cb2e0a41894317fc04": 1
+      }
+    ]
+  },
+  {
+    "query_id": "64",
+    "query": "Viện Lãnh đạo, Quản trị và Quản lý Việt Nam được kỳ vọng đóng vai trò gì trong sự phát triển tri thức?",
+    "relevant_chunks": [
+      {
+        "984fe521181ba4c7c7e88ad95b609a07": 3
+      },
+      {
+        "01af8887ca7b34179a0a4859b32332f6": 3
+      },
+      {
+        "0fd7758a126794f4c660d04f71f4fe3d": 2
+      },
+      {
+        "4c9c86aaf2489ac6b270c9ab3e1294aa": 2
+      }
+    ]
+  },
+  {
+    "query_id": "65",
+    "query": "Năm 2024, PTIT có kế hoạch tuyển sinh bao nhiêu chỉ tiêu cho ngành Thiết kế và Phát triển Game?",
+    "relevant_chunks": [
+      {
+        "01ba55c7761304d111b5d0f4f569710f": 3
+      },
+      {
+        "fa3a2bf7b18bdd4ff1b97496bb78fb34": 3
+      },
+      {
+        "9bda735d9cb7258819e103f0d0540e64": 3
+      },
+      {
+        "e8eb08fc6bce26da1099d15710081ce8": 1
+      }
+    ]
+  },
+  {
+    "query_id": "66",
+    "query": "Có những hoạt động nổi bật nào diễn ra trong Ngày hội Thanh niên PTIT chào mừng 26/3 năm 2019?",
+    "relevant_chunks": [
+      {
+        "bc32a2146cef42704f83159870070af0": 3
+      },
+      {
+        "01bb691ac500dd1c4ea22e10296a749c": 3
+      }
+    ]
+  },
+  {
+    "query_id": "67",
+    "query": "Tại sao cựu sinh viên lại có niềm đam mê mãnh liệt với lĩnh vực công nghệ?",
+    "relevant_chunks": [
+      {
+        "72908c8eed4b2e7d31d52fa3445f68bb": "3"
+      },
+      {
+        "412fc1d2ad12dce293c98c8045bdd45e": "2"
+      },
+      {
+        "3a25ef8c75139ddad9e738ced57c6086": "1"
+      },
+      {
+        "2fa702a1ebadfd8365bb39d9e322920c": "1"
+      },
+      {
+        "ae1e43983c049a77dd505f2257000f0f": "1"
+      }
+    ]
+  },
+  {
+    "query_id": "68",
+    "query": "Trường Đại học Seoul Cyber có những thế mạnh gì trong hệ thống giáo dục tại Hàn Quốc?",
+    "relevant_chunks": [
+      {
+        "01c3664fe6d0f5d5ea41d57c2164377b": "3"
+      },
+      {
+        "053bd1b7b1a0d7ccc34c60b5540f3c34": "3"
+      },
+      {
+        "8c070cbe1913b1c442f2d044c1fbdebf": "3"
+      },
+      {
+        "1dc99af207cc1294e9a229baf201f1c1": "2"
+      },
+      {
+        "8341da5a611836884a3681590701dce8": "1"
+      }
+    ]
+  },
+  {
+    "query_id": "69",
+    "query": "Tại Lễ trao bằng tốt nghiệp đợt 2 năm 2024, sinh viên được nhắn nhủ điều gì về lòng biết ơn?",
+    "relevant_chunks": [
+      {
+        "01dd0451cd5d076358327266b95629e5": "3"
+      },
+      {
+        "1b95c1fd26129cc9674f028eac1a1698": "2"
+      },
+      {
+        "926fecc5c9d067f5604bbb27c9a014cf": "1"
+      },
+      {
+        "2e601c17708ba967f736280be43c9ff9": "1"
+      }
+    ]
+  },
+  {
+    "query_id": "70",
+    "query": "Hội nghị triển khai nghị quyết 57-ND/TW diễn ra ở đâu và thành phần tham dự gồm những ai?",
+    "relevant_chunks": [
+      {
+        "01dd3dc59b2a39046875c05504b53fe1": "3"
+      },
+      {
+        "bf284e955137802888c0eaef3391f9be": "3"
+      },
+      {
+        "a9bf984d3670d7a73e2bdca9b766de25": "1"
+      }
+    ]
+  },
+  {
+    "query_id": "71",
+    "query": "Để đào tạo nhân lực tốt nhất cho quá trình chuyển đổi số, sinh viên cần được học tập trong môi trường ra sao?",
+    "relevant_chunks": [
+      {
+        "1b0604b5b42460a8ada422bc4c865b09": "3"
+      },
+      {
+        "e7331e456802b47d4ddb75bc727f0638": "3"
+      },
+      {
+        "257d41a6b6c859b0fc9ea41a368a1d2c": "2"
+      },
+      {
+        "3caf5df331b2fdcc94269a3e4cc6c3a8": "2"
+      },
+      {
+        "4411811a983f0480dc129de06239d8e0": "1"
+      }
+    ]
+  },
+  {
+    "query_id": "72",
+    "query": "Tác phẩm Thép đã tôi thế đấy mang lại thông điệp gì về lý tưởng sống cho thanh niên, sinh viên?",
+    "relevant_chunks": [
+      {
+        "01eaca20a837f21ec41cca583493bb03": 3
+      },
+      {
+        "4f3d82f602ed6f67fc8350cd1b34fbc7": 3
+      },
+      {
+        "5d72b633cfde46a86bb94875c5926174": 1
+      },
+      {
+        "4938414328c886e0e355ef9671941488": 1
+      },
+      {
+        "9a9b33beb831d004ff64c559c5439b93": 1
+      }
+    ]
+  },
+  {
+    "query_id": "73",
+    "query": "Trong ngày hội giao lưu năm 2016, sinh viên đặc biệt quan tâm tới những nội dung và kỹ năng nào?",
+    "relevant_chunks": [
+      {
+        "01f52687e612140497186f5d35d66dd4": 3
+      },
+      {
+        "ad2d027799912d5b2349410da2fda2ec": 2
+      }
+    ]
+  },
+  {
+    "query_id": "74",
+    "query": "Đại hội Đảng bộ Học viện lần thứ XIII nhấn mạnh những cơ hội và thách thức nào trong giai đoạn mới?",
+    "relevant_chunks": [
+      {
+        "01f605dad67a49891914dbaf2ca681e2": 3
+      },
+      {
+        "855e3c2d6c315a416efb877adeb4fee4": 3
+      },
+      {
+        "905975521332d2d37b488957044bd530": 2
+      },
+      {
+        "0c3132fc77a2b4400ba4e90bfb281257": 1
+      }
+    ]
+  },
+  {
+    "query_id": "75",
+    "query": "Theo định hướng phát triển đến năm 2030, Học viện đặt mục tiêu đào tạo quy mô bao nhiêu sinh viên?",
+    "relevant_chunks": [
+      {
+        "5af955d8f0d04d35863e4d454af97ef6": 3
+      },
+      {
+        "01f791e43763713c5180c7de8bc00b45": 3
+      },
+      {
+        "952970ce229b5d6fd402b253e68464f6": 3
+      },
+      {
+        "20a52e4eda5d6d7322b8a1247a9bf90d": 1
+      },
+      {
+        "42c14d3c67bdb4e8ba1397290db825d9": 1
+      }
+    ]
+  },
+  {
+    "query_id": "76",
+    "query": "Hiện trạng đào tạo nhân lực chuyên ngành game tại Việt Nam đang gặp phải những hạn chế nào?",
+    "relevant_chunks": [
+      {
+        "0207de92a50e35373bdb8198e7abafbb": 3
+      },
+      {
+        "2f01336db7c3621d3ee0bbada5eedf0a": 2
+      },
+      {
+        "dc945366404d7fe8253c6932efd7f729": 2
+      },
+      {
+        "e8eb08fc6bce26da1099d15710081ce8": 1
+      },
+      {
+        "23d8e198d86a2b91f3b259fa841b4d47": 1
+      }
+    ]
+  },
+  {
+    "query_id": 77,
+    "query": "Có bao nhiêu sinh viên của Học viện vượt qua vòng 1 cuộc thi Collegiate Programming Cup 2017?",
+    "relevant_chunks": [
+      {
+        "0210d8a5a454a8f6b935b68d85b0599e": 3
+      }
+    ]
+  },
+  {
+    "query_id": 78,
+    "query": "Chương trình PTIT Open Day 2024 mang lại lợi ích gì cho các phụ huynh và học sinh tham dự?",
+    "relevant_chunks": [
+      {
+        "e87c0c4771699629f80460b36c9b5329": 3
+      },
+      {
+        "fa3a2bf7b18bdd4ff1b97496bb78fb34": 3
+      },
+      {
+        "022475be176c5adebea18659d16a3538": 2
+      }
+    ]
+  },
+  {
+    "query_id": 79,
+    "query": "Năm 2024, Học viện Cơ sở tuyển sinh bao nhiêu chỉ tiêu và dự kiến mở hệ chất lượng cao ngành nào?",
+    "relevant_chunks": [
+      {
+        "02542cfe571dae69e618f568e1f83cfb": 3
+      },
+      {
+        "3a4f6ddd8ab06bfdad30af33d9a67b06": 2
+      },
+      {
+        "7a955c9135eff9ea7361dcfbec63113d": 1
+      }
+    ]
+  },
+  {
+    "query_id": 80,
+    "query": "Các kết quả của việc chuyển đổi số tại Học viện có ý nghĩa thế nào với tiến trình chuyển đổi số quốc gia?",
+    "relevant_chunks": [
+      {
+        "0263c0a6dc2eb0f294f2e5139cb5d6ec": 3
+      },
+      {
+        "141563e44c02a3f11f2b8d5db3115c6c": 2
+      },
+      {
+        "b5f90e0b228f3202d522134560ac1d0a": 2
+      },
+      {
+        "2919a1834e01c9b61978cba1113580c8": 2
+      },
+      {
+        "257d41a6b6c859b0fc9ea41a368a1d2c": 1
+      }
+    ]
+  },
+  {
+    "query_id": 81,
+    "query": "Lễ kỷ niệm 8/3 tại Học viện Cơ sở vào năm 2009 có kết hợp báo cáo tổng kết phong trào gì?",
+    "relevant_chunks": [
+      {
+        "026a04518b8b97ba0c753ebf83f11783": 3
+      }
+    ]
+  },
+  {
+    "query_id": 82,
+    "query": "Về việc chuyển đổi mô hình hoạt động của Học viện Cơ sở TPHCM, Thứ trưởng Nguyễn Minh Hồng có yêu cầu gì?",
+    "relevant_chunks": [
+      {
+        "026b0ff2fe61b274a0d0b10905649f04": 3
+      },
+      {
+        "9538f1df832bb85b1ba201a722c24f5a": 1
+      },
+      {
+        "c336e2876a0134aa1babdbb5448b5462": 1
+      },
+      {
+        "a72ccafaa20f7af63a9c53c7533c5920": 1
+      },
+      {
+        "76b809e3fa353df91504e09bc06f78e2": 1
+      }
+    ]
+  },
+  {
+    "query_id": 83,
+    "query": "Định hướng phát động phong trào thi đua của Công đoàn Học viện trong nhiệm kỳ 2018-2023 là gì?",
+    "relevant_chunks": [
+      {
+        "02b357743e28c844ac40d27c28154f61": 3
+      },
+      {
+        "842b3986a07ad2e020a2bbf9eb7c2e3d": 2
+      },
+      {
+        "de8aa1c917e4bbf5030ad6e4ad46cd53": 2
+      },
+      {
+        "d914e5c99241df3b891186396debff6f": 1
+      }
+    ]
+  },
+  {
+    "query_id": 84,
+    "query": "Tọa đàm về phát triển hợp tác nghiên cứu, đào tạo nhân lực chất lượng cao Việt Nam – Nhật Bản diễn ra khi nào?",
+    "relevant_chunks": [
+      {
+        "1f64b79374e186163f7f94ccd20a09ab": 3
+      },
+      {
+        "a05526fc9e3601f718095d269ea2550d": 3
+      },
+      {
+        "08b87a27b8fcf517966e9718af49e241": 3
+      },
+      {
+        "02b61d0fc00aa26e97208bc358016e2d": 3
+      },
+      {
+        "d79df4d32fe24bad1678256f1bf5c9a8": 3
+      }
+    ]
+  },
+  {
+    "query_id": 85,
+    "query": "Số lượng sinh viên trúng tuyển vào Học viện trong khoá đào tạo đầu tiên năm 1998 là bao nhiêu?",
+    "relevant_chunks": [
+      {
+        "02b8d910f197a3e2c79afa92c65cbe4d": 3
+      },
+      {
+        "da4088589fb8624f612e643a31cd3484": 3
+      },
+      {
+        "df17461723d81c999e1dc3dd1eaa6e6f": 2
+      },
+      {
+        "7901a26e0799dbd2ec3457243a62455b": 1
+      },
+      {
+        "615881b971945152c9508d9fdbf45f9e": 1
+      }
+    ]
+  },
+  {
+    "query_id": 86,
+    "query": "Lễ kỷ niệm 38 năm Ngày Nhà giáo Việt Nam tại cơ sở TPHCM diễn ra vào thời điểm nào?",
+    "relevant_chunks": [
+      {
+        "02c820cebe493d7252f07df4a3c280d8": 3
+      },
+      {
+        "6827bd7dc675e868080309a8ca640cde": 2
+      }
+    ]
+  },
+  {
+    "query_id": "87",
+    "query": "Hội thảo khoa học sinh viên 2017 vinh danh ai?",
+    "relevant_chunks": [
+      {
+        "02cb19706dfa4413799892cecddbbc37": 3
+      }
+    ]
+  },
+  {
+    "query_id": "88",
+    "query": "Thành phần tham gia hội thao CB, GV-CNV tại cơ sở quận 9?",
+    "relevant_chunks": [
+      {
+        "02d8ba0873f0cda9827213760bfca604": 3
+      },
+      {
+        "6294e79174e3485576f96d35793787ef": 3
+      },
+      {
+        "82b2f96fbe5e422eac56abe92cc45fcc": 2
+      },
+      {
+        "5598e01c31fe2a37e16abe7e7d74ddf3": 2
+      },
+      {
+        "1bbe0efe80215b52778f834d7966d456": 1
+      }
+    ]
+  },
+  {
+    "query_id": "89",
+    "query": "Đội Việt Nam tại cuộc thi Huawei ICT Competition toàn cầu đã giành giải thưởng ở hạng mục nào?",
+    "relevant_chunks": [
+      {
+        "02db8f9080faec8ac4073f50a0bf7f79": 3
+      },
+      {
+        "534247246d003650caa982d6b2af0376": 1
+      },
+      {
+        "d6b1d424dc477beedf6e2b620020d1b9": 1
+      }
+    ]
+  },
+  {
+    "query_id": "90",
+    "query": "Tại buổi gặp mặt tất niên 2023, Phó Giám đốc Học viện đã có những nhắn nhủ gì cho năm mới 2024?",
+    "relevant_chunks": [
+      {
+        "02e7774ad163ae6030c3bc293d2e12d2": 3
+      },
+      {
+        "76965829559fe75f3163085941336e71": 2
+      },
+      {
+        "c8484af59ec49c3f656d4ef7fa8689ad": 2
+      },
+      {
+        "ec993778ba4d97de738c49d373eb9215": 1
+      }
+    ]
+  },
+  {
+    "query_id": "91",
+    "query": "Đại sứ Andrew Goledzinowski đánh giá thế nào về sự hợp tác chuyển đổi số giữa Việt Nam và Australia?",
+    "relevant_chunks": [
+      {
+        "02eb25a13a210cb47c7d6072ca5f6685": 3
+      },
+      {
+        "7cd7cbb547e5948d229c3edbfd5f00d2": 2
+      },
+      {
+        "b7408a21240ae16dc6ea0289509086aa": 1
+      }
+    ]
+  },
+  {
+    "query_id": 92,
+    "query": "Phong trào 'Bình dân học vụ số' tại tỉnh Bình Phước nhằm mục tiêu gì trong cộng đồng?",
+    "relevant_chunks": [
+      {
+        "02ed9a3eef4816fdb136b2c0d4ac9bbc": 3
+      },
+      {
+        "bed6543b3fc7382a2f0604c5dfa68169": 1
+      },
+      {
+        "0804f54772a9c3402aef11affbaf29df": 1
+      }
+    ]
+  },
+  {
+    "query_id": 93,
+    "query": "Ai là báo cáo viên chính trong hội thảo chuyên đề quản lý tài nguyên mạng vô tuyến 4G?",
+    "relevant_chunks": [
+      {
+        "03042b73e98e542feba3f07bb1063687": 3
+      }
+    ]
+  },
+  {
+    "query_id": 94,
+    "query": "Bia kỷ niệm nơi đặt trụ sở đầu tiên của trường Bưu điện – Vô tuyến điện nằm ở huyện nào?",
+    "relevant_chunks": [
+      {
+        "03517aac85d954a1e84a5e5a0c2b6783": 3
+      },
+      {
+        "c39550299b7227687e7d18ef34ce0c45": 3
+      },
+      {
+        "37ab1915f9d718352b1e04cc2bd60e9d": 2
+      },
+      {
+        "089d1c218cd300adcb809c57848bd940": 2
+      },
+      {
+        "e9f5b0d0d3345548e73d7e128afc11c6": 2
+      }
+    ]
+  },
+  {
+    "query_id": 95,
+    "query": "Thứ trưởng Nguyễn Huy Dũng đã nhắc đến ai khi nói về ước mơ tạo ra máy tính và khả năng tìm kiếm toàn cầu?",
+    "relevant_chunks": [
+      {
+        "03a9f6e8b9b22a9f7dfa6978f85f8c15": 3
+      },
+      {
+        "bbaf821f5b3dc0d68b13ab33ac8be5a2": 2
+      }
+    ]
+  },
+  {
+    "query_id": 96,
+    "query": "Theo PGS.TS Trần Quang Anh, nghiên cứu khoa học đem lại lợi ích phương pháp luận như thế nào cho sinh viên?",
+    "relevant_chunks": [
+      {
+        "5fa70380e3eb2bbe7801f224af956f99": 3
+      },
+      {
+        "03d8d31d3f205e6ea78c75bddf12c1db": 3
+      }
+    ]
+  },
+  {
+    "query_id": "97",
+    "query": "Sinh viên trải nghiệm điều đặc biệt gì tại triển lãm Multimedia Expo 2017?",
+    "relevant_chunks": [
+      {
+        "040773e8a187e979dcb483b84a896361": 3
+      },
+      {
+        "baebcb38ebe989b90a3f49da14b33769": 1
+      },
+      {
+        "e64037c983fa5f6c248466f0be532321": 1
+      }
+    ]
+  },
+  {
+    "query_id": "98",
+    "query": "Hội thảo quốc tế VJISAP năm 2015 nhận được sự bảo trợ và tổ chức từ những tổ chức, hiệp hội nào?",
+    "relevant_chunks": [
+      {
+        "042152a9d4edf5c2b2621ee18cbd9a54": 3
+      },
+      {
+        "8630d36ebbc2070866aa8b54b2ada829": 1
+      },
+      {
+        "af7d2412eed81a215cb0fa9a3166beef": 1
+      },
+      {
+        "eba071ac8429a7810ad25ddeaae5d638": 1
+      }
+    ]
+  },
+  {
+    "query_id": "99",
+    "query": "Thành phần tổ giáo viên của trường thông tin vô tuyến điện Lý Tự Trọng ban đầu gồm có những ai?",
+    "relevant_chunks": [
+      {
+        "04475937e6cc20d3359804ca17fbbedf": 3
+      },
+      {
+        "551eeb4805df5f6d41ad091676f35ea3": 2
+      },
+      {
+        "7aea4e87e1e4114b630d90bfff013621": 1
+      },
+      {
+        "0b4bfe01e104df50941045153f33c25e": 1
+      }
+    ]
+  },
+  {
+    "query_id": "100",
+    "query": "Khóa mới D23 của Học viện có tổng cộng khoảng bao nhiêu tân sinh viên dự khai giảng năm học 2023-2024?",
+    "relevant_chunks": [
+      {
+        "0447be5a82921e18f36823fee22240fa": 3
+      },
+      {
+        "8906ea006abe2588723a5a7721375a08": 2
+      },
+      {
+        "3b7dd9d53ac0e47848876669f2adc27f": 1
+      },
+      {
+        "96398f9b64b607e94de66f870d4bf021": 1
+      }
+    ]
+  }
+]

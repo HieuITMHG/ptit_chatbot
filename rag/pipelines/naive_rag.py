@@ -1,5 +1,4 @@
 from core.qdrant import client
-from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 from core.config import settings
 
@@ -7,13 +6,16 @@ openai_client = OpenAI(api_key=settings.openai_key)
 
 class NaiveRag:
     def __init__(self, embedding_model, collection_name):
-        self.embedding_model = SentenceTransformer(embedding_model)
+        self.embedding_model = embedding_model
         self.collection_name = collection_name
 
     def retrieve(self, query: str, top_k: int): 
+        encoded_output = self.embedding_model.encode(query, return_dense=True, return_sparse=False, return_colbert_vecs=False)
+        query_dense = encoded_output["dense_vecs"].tolist()
         contexts = client.query_points(collection_name=self.collection_name,
-                                       query=self.embedding_model.encode(query),
+                                       query=query_dense,
                                        with_payload=True,
+                                       using="dense",
                                        limit=top_k)
         result =  []
         for point in contexts.points:

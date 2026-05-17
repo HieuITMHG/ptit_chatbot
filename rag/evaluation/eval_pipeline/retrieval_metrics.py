@@ -89,7 +89,7 @@ class RetrievalMetric:
         return eval_data["intersection"] >= 1
 
     def evaluate(self):
-        query_lst = list(self.queries_collection.find({}, {"_id": 0}))
+        query_lst = list(self.queries_collection.find({}, {"_id": 0}).limit(100))
 
         precision_lst = []
         recall_lst = []

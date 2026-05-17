@@ -152,6 +152,8 @@ class IndexBuilder():
                 points=points
             )
 
+            
+
     def embedding_pipeline(self, chunk_lst):
         print("Bắt đầu embed")
         if client.collection_exists(collection_name=self.qdrant_collection_name):

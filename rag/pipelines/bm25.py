@@ -9,7 +9,7 @@ hybrid_chunks_collection = db["hybrid_chunks"]
 with open("rag/pipelines/vietnamese-stopwords.txt", "r", encoding="utf-8") as f:
     list_stopwords = {line.strip() for line in f if line.strip()}
 
-BM25_INDEX_PATH = "pipelines/bm25_index.pkl"
+BM25_INDEX_PATH = "rag/pipelines/bm25_index.pkl"
 
 def clean_text(text):
     text = re.sub('<.*?>', '', text).strip()
@@ -36,7 +36,6 @@ def preprocess(text):
     text = clean_text(text)
     text = normalize_text(text)
     text = word_segment(text)
-    text = remove_stopword(text)
     return text
 
 def get_docs():
@@ -46,9 +45,6 @@ def get_docs():
     doc_lst = list(hybrid_chunks_collection.find({}, {"_id": 0}))
 
     for doc in doc_lst:
-        if len(doc["chunk_content"]) < 500:
-            continue
-
         content = preprocess(doc["chunk_content"])
 
         docs.append(content)

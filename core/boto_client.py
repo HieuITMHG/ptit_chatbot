@@ -18,4 +18,4 @@ def ensure_bucket(s3, bucket_name):
     except ClientError:
         s3.create_bucket(Bucket=bucket_name)
 
-ensure_bucket(s3, settings.bucket_name)
+# ensure_bucket(s3, settings.bucket_name)

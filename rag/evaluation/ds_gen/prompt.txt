@@ -1,23 +1,20 @@
-Tôi muốn gen ra một bộ dataset benmark để tính các metric như recall, precision, ndcg, mrr. File tôi gửi là tập các chunk của tôi. Nhiệm vụ bạn là lộc ra các chunk informative và sinh ra các query, các query này có thể dựa vào context trong các chunk để trả lời:
+Tôi muốn gen ra một bộ dataset benmark để tính các metric như recall, precision, ndcg, mrr. File tôi gửi là tập các chunk của tôi.
+Nhiệm vụ của bạn là, ứng với mỗi câu hỏi hãy lộc ra max là 5 chunk liên quan nhất, có giá trị nhất từ 20 chunks tôi đã retrieve sẵn, và chấm điểm cho 5 chunks đó.
+Score để tôi tính ndcg@k, mrr các thứ, với 3 là rất liên quan, 2 là liên quan, 1 là liên quan 1 phần
 
-yêu cầu:
-- Chỉ sử dụng các context có ý nghĩa, còn những context mà chỉ có câu giới thiệu, hay là dẫn đến một link nào đó thì không cần dùng
-- Câu hỏi phải ngắn ngọn
-- Tránh cung cấp quá nhiều thông tin trong câu hỏi
-- Có thể là một câu hỏi dể, một câu hỏi chung chung, cũng có thể dùng wording khác, có thể là câu hỏi tổng hợp, đồi hỏi nhiều context
-- Một query có thể được trả lời bằng nhiều chunk
-- Do giới hạn token đầu ra của bạn tôi sẽ bảo bạn generate nhiều lần, nên mỗi lần generate ko được dùng các chunk đã dùng rồi và 
-bạn phải tự động tăng id lên
 - output là json chính xác như mẫu dưới đây
 [
   {
-    "query_id": 1,
-    "query": "Cho biết thông tin về học bổng",
+    "query_id": "lấy từ id là số nguyên có sẵn trong file",
+    "query": "Nội dung query",
     "relevant_chunks": [
-        "5550e51a36bdffdfdrdrythghgfhgg4f18",
-        "a952514e6450c4fea105856e1gfgfdg0c4"
+        {
+          "5550e51a36bdffdfdrdrythghgfhgg4f18": "score"
+        },
+        {
+          "5550e51a36bdffdfdrdrythghgfhgg4f18": "score"
+        },
     ]
   },
 ]
 
-Giờ gen cho tôi 50 query trước đi

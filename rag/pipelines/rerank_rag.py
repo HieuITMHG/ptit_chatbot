@@ -47,7 +47,7 @@ class RerankRag:
                 })
         
         reranked_contexts = cross_encoder_reranker(
-            unordered_contexts=results[:10],
+            unordered_contexts=results[:20],
             query=query
         )
 

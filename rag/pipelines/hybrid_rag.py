@@ -1,5 +1,4 @@
 from core.qdrant import client
-from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 from core.config import settings
 from rag.pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
@@ -11,14 +10,16 @@ openai_client = OpenAI(api_key=settings.openai_key)
 
 class HybirdRag:
     def __init__(self, embedding_model, collection_name):
-        self.embedding_model = SentenceTransformer(embedding_model)
+        self.embedding_model = embedding_model
         self.collection_name = collection_name
 
     def dense_retrieve(self, query: str, limit: int = 50): 
+        encoded_output = self.embedding_model.encode(query, return_dense=True, return_sparse=False, return_colbert_vecs=False)
+        query_dense = encoded_output["dense_vecs"].tolist()
         for attempt in range(5):
             try:
                 contexts = client.query_points(collection_name=self.collection_name,
-                                                query=self.embedding_model.encode(query),
+                                                query=query_dense,
                                                 with_payload=True,
                                                 limit=limit)
                 break
@@ -72,7 +73,7 @@ class HybirdRag:
 
         return results
         
-    def retrieve(self, query: str, top_k:int, search_limit:int = 50):
+    def retrieve(self, query: str, top_k:int, search_limit:int = 20):
         start_dense = time.perf_counter()
         dense_results = self.dense_retrieve(
             query=query,

@@ -13,7 +13,7 @@ with open(BM25_INDEX_PATH, "rb") as f:
 bm25 = data["bm25"]
 raw_docs = data["raw_docs"]
 
-def search(query, bm25, raw_docs, limit: int = 50):
+def search(query, bm25, raw_docs, limit: int = 20):
 
     query_tokens = preprocess(query).split()
 
@@ -40,4 +40,9 @@ def search(query, bm25, raw_docs, limit: int = 50):
         })
 
     return results
+
+results = search("Lễ kỷ niệm 38 năm Ngày Nhà giáo Việt Nam tại cơ sở TPHCM diễn ra vào thời điểm nào?", bm25=bm25, raw_docs=raw_docs, limit=20)
+
+for result in results:
+    print(result["id"])
 
