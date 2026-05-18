@@ -92,3 +92,12 @@ rerank với cùng dataset
 'ndcg@5': 0.21972888513148053, 
 'MRR': 0.3245}
 
+Rerank với mô hình rerank xịn
+{'precision@5': 0.434, 
+'recall@5': 0.7956666666666666, 
+'hit@5':   0.98, 
+'ndcg@5': 0.7967865286271888, 
+'MRR': 0.9183333333333333}
+
+
+
