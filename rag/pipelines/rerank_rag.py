@@ -12,12 +12,25 @@ class RerankRag:
         self.collection_name = collection_name
 
     def retrieve(self, query: str, top_k: int): 
-        if not query or not isinstance(query, str) or query.strip() == "":
-            print("Cảnh báo: Phát hiện Query trống hoặc không hợp lệ tại bước Evaluation!")
+        query = str(query).strip()
+
+        if len(query) == 0:
+            print("Query rỗng")
             return []
-        query = query.strip()
-        encoded_output = self.embedding_model.encode(query, return_dense=True, return_sparse=False, return_colbert_vecs=False)
-        query_dense = encoded_output["dense_vecs"].tolist()
+
+        try:
+            encoded_output = self.embedding_model.encode(
+                [query],
+                return_dense=True,
+                return_sparse=False,
+                return_colbert_vecs=False
+            )
+        except Exception as e:
+            print(f"Lỗi encode query: {query}")
+            print(e)
+            return []
+
+        query_dense = encoded_output["dense_vecs"][0].tolist()
 
         contexts = None
 
