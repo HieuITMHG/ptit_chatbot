@@ -10,7 +10,7 @@ class SemanticChunker(BaseChunker):
                  chunk_size = 500, 
                  chunk_overlap = 50, 
                  threshold = 0.5,
-                 drop = 0.12,
+                 drop = 0.20,
                  min_chunk_size = 100):
         super().__init__(chunk_size=chunk_size, tokenizer=tokenizer, chunk_overlap=chunk_overlap)
         self.threshold = threshold
@@ -159,8 +159,14 @@ class SemanticChunker(BaseChunker):
                     "token_count": token_count
                 })
 
-                chunk_sentences = [sentence]
-                current_chunk_length = sen_len
+                # Lấy câu cuối làm overlap
+                if len(chunk_sentences) > 0:
+                    overlap_sentence = chunk_sentences[-1] 
+                    chunk_sentences = [overlap_sentence, sentence]
+                    current_chunk_length = self.length_function(overlap_sentence) + sen_len
+                else:
+                    chunk_sentences = [sentence]
+                    current_chunk_length = sen_len
 
             else:
 
@@ -174,8 +180,14 @@ class SemanticChunker(BaseChunker):
                         "token_count": token_count
                     })
 
-                    chunk_sentences = [sentence]
-                    current_chunk_length = sen_len
+                    # Lấy câu cuối làm overlap
+                    if len(chunk_sentences) > 0:
+                        overlap_sentence = chunk_sentences[-1]
+                        chunk_sentences = [overlap_sentence, sentence]
+                        current_chunk_length = self.length_function(overlap_sentence) + sen_len
+                    else:
+                        chunk_sentences = [sentence]
+                        current_chunk_length = sen_len
 
                 else:
                     chunk_sentences.append(sentence)
