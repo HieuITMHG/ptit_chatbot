@@ -1,52 +1,52 @@
-import os
-import time
-from flashrank import Ranker, RerankRequest
+# import os
+# import time
+# from flashrank import Ranker, RerankRequest
 
-current_file_dir = os.path.dirname(os.path.abspath(__file__))
+# current_file_dir = os.path.dirname(os.path.abspath(__file__))
 
-base_project_dir = os.path.abspath(os.path.join(current_file_dir, "../../"))
-model_cache_path = os.path.join(base_project_dir, "models")
+# base_project_dir = os.path.abspath(os.path.join(current_file_dir, "../../"))
+# model_cache_path = os.path.join(base_project_dir, "models")
 
-if not os.path.exists(model_cache_path):
-    os.makedirs(model_cache_path)
+# if not os.path.exists(model_cache_path):
+#     os.makedirs(model_cache_path)
 
-MODEL_NAME = "ms-marco-MultiBERT-L-12"
+# MODEL_NAME = "ms-marco-MultiBERT-L-12"
 
-print(f"--- Đang kiểm tra mô hình Rerank tại: {model_cache_path} ---")
+# print(f"--- Đang kiểm tra mô hình Rerank tại: {model_cache_path} ---")
 
-try:
-    ranker = Ranker(model_name=MODEL_NAME, cache_dir=model_cache_path)
-    print(f"--- Khởi tạo Ranker thành công: {MODEL_NAME} ---")
-except Exception as e:
-    print(f"Lỗi khởi tạo Ranker: {e}")
-    raise
+# try:
+#     ranker = Ranker(model_name=MODEL_NAME, cache_dir=model_cache_path)
+#     print(f"--- Khởi tạo Ranker thành công: {MODEL_NAME} ---")
+# except Exception as e:
+#     print(f"Lỗi khởi tạo Ranker: {e}")
+#     raise
 
-def cross_encoder_reranker(unordered_contexts: list, query: str) -> list:
-    if not unordered_contexts:
-        return []
+# def cross_encoder_reranker(unordered_contexts: list, query: str) -> list:
+#     if not unordered_contexts:
+#         return []
 
-    start_time = time.perf_counter()
+#     start_time = time.perf_counter()
 
-    passages = []
-    for i, context in enumerate(unordered_contexts):
-        passages.append({
-            "id": str(i), 
-            "text": context.get("chunk_content", ""), 
-            "meta": context  
-        })
+#     passages = []
+#     for i, context in enumerate(unordered_contexts):
+#         passages.append({
+#             "id": str(i), 
+#             "text": context.get("chunk_content", ""), 
+#             "meta": context  
+#         })
 
-    req = RerankRequest(query=query, passages=passages)
+#     req = RerankRequest(query=query, passages=passages)
 
-    flashrank_results = ranker.rerank(req)
+#     flashrank_results = ranker.rerank(req)
 
-    ranked_contexts = []
-    for res in flashrank_results:
-        original_context = res["meta"]           
-        original_context["score"] = res["score"] 
-        ranked_contexts.append(original_context)
+#     ranked_contexts = []
+#     for res in flashrank_results:
+#         original_context = res["meta"]           
+#         original_context["score"] = res["score"] 
+#         ranked_contexts.append(original_context)
 
-    end_time = time.perf_counter()
-    print(f"Rerank hoàn tất: {len(ranked_contexts)} docs | Thời gian: {end_time - start_time:.4f} giây")
+#     end_time = time.perf_counter()
+#     print(f"Rerank hoàn tất: {len(ranked_contexts)} docs | Thời gian: {end_time - start_time:.4f} giây")
 
-    return ranked_contexts
+#     return ranked_contexts
 
