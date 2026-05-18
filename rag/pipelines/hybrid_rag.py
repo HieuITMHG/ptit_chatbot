@@ -1,7 +1,7 @@
 from core.qdrant import client
 from openai import OpenAI
 from core.config import settings
-from rag.pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
+from rag.pipelines.reranking.stronger_rerank import cross_encoder_reranker
 import time
 from .bm25_search import search, raw_docs, bm25
 import time
@@ -14,8 +14,25 @@ class HybirdRag:
         self.collection_name = collection_name
 
     def dense_retrieve(self, query: str, limit: int = 50): 
-        encoded_output = self.embedding_model.encode(query, return_dense=True, return_sparse=False, return_colbert_vecs=False)
-        query_dense = encoded_output["dense_vecs"].tolist()
+        query = str(query).strip()
+
+        if len(query) == 0:
+            print("Query rỗng")
+            return []
+
+        try:
+            encoded_output = self.embedding_model.encode(
+                [query],
+                return_dense=True,
+                return_sparse=False,
+                return_colbert_vecs=False
+            )
+        except Exception as e:
+            print(f"Lỗi encode query: {query}")
+            print(e)
+            return []
+
+        query_dense = encoded_output["dense_vecs"][0].tolist()
         for attempt in range(5):
             try:
                 contexts = client.query_points(collection_name=self.collection_name,
@@ -74,7 +91,7 @@ class HybirdRag:
 
         return results
         
-    def retrieve(self, query: str, top_k:int, search_limit:int = 20):
+    def retrieve(self, query: str, top_k:int, search_limit:int = 50):
         start_dense = time.perf_counter()
         dense_results = self.dense_retrieve(
             query=query,
@@ -96,7 +113,7 @@ class HybirdRag:
             sparse_results
         )
 
-        fused_results = fused_results[0: 10]
+        fused_results = fused_results[0: 20]
 
         start_rerank = time.perf_counter()
         fused_results = cross_encoder_reranker(
