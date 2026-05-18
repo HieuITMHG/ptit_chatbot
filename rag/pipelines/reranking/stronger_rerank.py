@@ -9,7 +9,7 @@ model_cache_path = os.path.join(base_project_dir, "models")
 
 MODEL_NAME = "BAAI/bge-reranker-large"
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cuda"
 print(f"--- Đang chạy Rerank trên thiết bị: {device} ---")
 
 try:
