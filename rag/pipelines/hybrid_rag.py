@@ -21,6 +21,7 @@ class HybirdRag:
                 contexts = client.query_points(collection_name=self.collection_name,
                                                 query=query_dense,
                                                 with_payload=True,
+                                                using="dense",
                                                 limit=limit)
                 break
             except Exception as e:
