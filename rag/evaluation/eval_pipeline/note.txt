@@ -78,22 +78,17 @@ hybrid bỏ remove top word
 0.3, 0.3713571428571429, 0.75, 0.33824995618719295, 0.4661666666666667
 
 
-{'rel_ids': 
-{'04475937e6cc20d3359804ca17fbbedf', 
-'551eeb4805df5f6d41ad091676f35ea3', 
-'7aea4e87e1e4114b630d90bfff013621', 
-'0b4bfe01e104df50941045153f33c25e'}, 
+Naive Rag với chunk mới (thêm overlap và tuning threshold)
+{'precision@5': 0.40399999999999997, 
+'recall@5': 0.7105, 
+'hit@5':   0.95, 
+'ndcg@5': 0.693273458118894, 
+'MRR': 0.8243333333333334}
 
-'rel_map': 
-{'04475937e6cc20d3359804ca17fbbedf': 1, 
-'551eeb4805df5f6d41ad091676f35ea3': 1, 
-'7aea4e87e1e4114b630d90bfff013621': 1, 
-'0b4bfe01e104df50941045153f33c25e': 1}, 
+rerank với cùng dataset
+{'precision@5': 0.14400000000000002, 
+'recall@5': 0.25516666666666665, 
+'hit@5':   0.55, 
+'ndcg@5': 0.21972888513148053, 
+'MRR': 0.3245}
 
-'result_ids': ['04475937e6cc20d3359804ca17fbbedf', 
-'ebf1b9e088b6d247a0f1873c20aa4235', 
-'dcaaba193729a8aeb1b399bc6096b725', 
-'725eac1c820b7f6d52329d90aeee8ef0', 
-'e440fba9be9157b2c9b9ff79360452d3'], 
-
-'total_rel': 4, 'intersection': 1}

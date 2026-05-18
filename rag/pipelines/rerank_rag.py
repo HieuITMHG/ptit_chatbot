@@ -1,7 +1,7 @@
 from core.qdrant import client
 from openai import OpenAI
 from core.config import settings
-from rag.pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
+from rag.pipelines.reranking.stronger_rerank import cross_encoder_reranker
 import time
 
 openai_client = OpenAI(api_key=settings.openai_key)

@@ -1,19 +1,13 @@
 Tôi muốn gen ra một bộ dataset benmark để tính các metric như recall, precision, ndcg, mrr. File tôi gửi là tập các chunk của tôi.
-Nhiệm vụ của bạn là, ứng với mỗi câu hỏi hãy lộc ra max là 5 chunk liên quan nhất, có giá trị nhất từ 20 chunks tôi đã retrieve sẵn, và chấm điểm cho 5 chunks đó.
-Score để tôi tính ndcg@k, mrr các thứ, với 3 là rất liên quan, 2 là liên quan, 1 là liên quan 1 phần
-
+Nhiệm vụ của bạn là, ứng với mỗi câu hỏi hãy lộc ra nhiều nhất là 5 chunk (có thế ít hơn, nếu ko có nhiều chunk liên quan)liên quan nhất, có giá trị nhất từ 20 chunks tôi đã retrieve sẵn
 - output là json chính xác như mẫu dưới đây
 [
   {
     "query_id": "lấy từ id là số nguyên có sẵn trong file",
     "query": "Nội dung query",
     "relevant_chunks": [
-        {
-          "5550e51a36bdffdfdrdrythghgfhgg4f18": "score"
-        },
-        {
-          "5550e51a36bdffdfdrdrythghgfhgg4f18": "score"
-        },
+          "5550e51a36bdffdfdrdrythghgfhgg4f18,
+          "5550e51a36bdffdfdrdrythghgfhgg4f18"
     ]
   },
 ]

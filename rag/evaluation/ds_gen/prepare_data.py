@@ -5,7 +5,7 @@ from rag.pipelines.rerank_rag import RerankRag
 from core.config_loader import PipelineConfig
 from pathlib import Path
 
-OUTPUT_PATH = Path(r"rag\evaluation\ds_gen\output.txt")
+OUTPUT_PATH = Path(r"rag\evaluation\ds_gen\output_v2.txt")
 
 queries_collection = db["hybrid_queries"]
 
@@ -14,15 +14,14 @@ rag_config = PipelineConfig("rag/configs/naive_rag.yaml")
 embedding_model = BGEM3FlagModel(rag_config.embedding["model"])
 
 rag_engine = NaiveRag(embedding_model=embedding_model, collection_name=rag_config.embedding["vector_col_name"])
-rerank_engine = RerankRag(embedding_model=embedding_model, collection_name=rag_config.embedding["vector_col_name"])
+# rerank_engine = RerankRag(embedding_model=embedding_model, collection_name=rag_config.embedding["vector_col_name"])
 
-sample_query = "Lễ kỷ niệm 38 năm Ngày Nhà giáo Việt Nam tại cơ sở TPHCM diễn ra vào thời điểm nào?"
+sample_query = "Thành phần tổ giáo viên của trường thông tin vô tuyến điện Lý Tự Trọng ban đầu gồm có những ai?"
 
 results = rag_engine.retrieve(query=sample_query, top_k=5)
 
 for result in results:
     print(result["id"])
-    # print(result["score"])
     print("==========================")
 
 # query_lst = list(queries_collection.find({}))
@@ -52,11 +51,7 @@ for result in results:
 
 #             f.write(f"ID: {chunk['id']}\n")
 #             f.write(f"Title: {chunk['title']}\n")
-#             f.write(f"Author: {chunk['author']}\n")
-#             f.write(f"Published Date: {chunk['published_date']}\n")
-#             f.write(f"Chunk Index: {chunk['chunk_index']}\n")
 #             f.write(f"Token Count: {chunk['token_count']}\n")
-#             f.write(f"Document URL: {chunk['doc_url']}\n\n")
 
 #             f.write("CONTENT:\n")
 #             f.write(chunk["chunk_content"])

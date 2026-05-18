@@ -10,7 +10,8 @@ model_cache_path = os.path.join(base_project_dir, "models")
 if not os.path.exists(model_cache_path):
     os.makedirs(model_cache_path)
 
-MODEL_NAME = "ms-marco-MultiBERT-L-12"
+MODEL_NAME_V1 = "ms-marco-MultiBERT-L-12"
+MODEL_NAME = "bge-reranker-v2-m3"
 
 print(f"--- Đang kiểm tra mô hình Rerank tại: {model_cache_path} ---")
 

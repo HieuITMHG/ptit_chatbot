@@ -8,7 +8,7 @@ chunking:
 
 evaluation:
   queries_col_name: hybrid_queries
-  qrels_col_name: hybrid_qrels
+  qrels_col_name: qrels_v2
 
 embedding:
   vector_col_name: semantic_collection_v2
@@ -20,3 +20,6 @@ versioninig:
 
   vector_col_name_v1: semantic_collecction
   vector_col_name_v2: semantic_collection_v2
+
+  qrels_col_name_v1: hybrid_qrels
+  qrels_col_name_v2: qrels_v2
