@@ -8,7 +8,7 @@
 
 Hệ thống Chatbot RAG (Retrieval-Augmented Generation) được thiết kế đặc biệt dành riêng cho Học viện Công nghệ Bưu chính Viễn thông (PTIT). Hệ thống giúp sinh viên và người dùng tra cứu thông tin nhanh chóng, chính xác dựa trên cơ sở dữ liệu thực tế từ trang chủ của trường.
 
-## ✨ Các tính năng nổi bật (Key Features)
+## Các tính năng nổi bật (Key Features)
 
 * **Tự động thu thập dữ liệu (Web Scraping):** Cào và cập nhật dữ liệu từ các bài đăng chính thức trên cổng thông tin `ptithcm.edu.vn`.
 * **Xử lý văn bản nâng cao:** Sử dụng kỹ thuật Semantic Chunking và Embedding với mô hình tối ưu `BAAI/bge-m3` (hoặc bga3).
@@ -16,7 +16,7 @@ Hệ thống Chatbot RAG (Retrieval-Augmented Generation) được thiết kế 
 * **Chống ảo giác (Anti-Hallucination):** Bot tuân thủ quy tắc nghiêm ngặt: *Chỉ trả lời dựa trên ngữ cảnh được cung cấp*. Nếu thông tin không có trong cơ sở dữ liệu, bot sẽ từ chối trả lời để đảm bảo tính xác thực.
 * **Real-time Streaming:** Xử lý RAG dưới background và trả lời người dùng mượt mà theo thời gian thực thông qua **Websocket**.
 
-## 🛠️ Công nghệ sử dụng (Tech Stack)
+## Công nghệ sử dụng (Tech Stack)
 
 **Backend & AI Pipeline:**
 * **FastAPI:** Xây dựng RESTful API và Websocket tốc độ cao.
@@ -33,7 +33,7 @@ Hệ thống Chatbot RAG (Retrieval-Augmented Generation) được thiết kế 
 * **Docker & Docker Compose:** Đóng gói và quản lý các service.
 * **Nginx:** Web server, Reverse proxy và xử lý chứng chỉ SSL.
 
-## 📸 Hình ảnh Demo (Screenshots)
+## Hình ảnh Demo (Screenshots)
 
 <p align="center">
   <img src="./assets/login.png" alt="Chatbot Demo">
@@ -45,7 +45,7 @@ Hệ thống Chatbot RAG (Retrieval-Augmented Generation) được thiết kế 
 
 ---
 
-## 🚀 Hướng dẫn Cài đặt & Triển khai (Deployment)
+## Hướng dẫn Cài đặt & Triển khai (Deployment)
 
 Yêu cầu hệ thống: Đã cài đặt sẵn `Git`, `Docker` và `Docker Compose` trên Server/VPS.
 
@@ -91,7 +91,7 @@ VITE_WS_BASE_URL=wss://[your-domain.com/api](https://your-domain.com/api)
 
 ### 4. Build Docker Image (Preload Model)
 Tiến hành build image. Quá trình này sẽ bao gồm việc tải các mô hình AI và build frontend + backend.
-> ⏳ *Lưu ý: Lần đầu tiên chạy sẽ mất một chút thời gian để tải model có dung lượng lớn.*
+> *Lưu ý: Lần đầu tiên chạy sẽ mất một chút thời gian để tải model có dung lượng lớn.*
 ```bash
 make build-prod
 ```
