@@ -12,7 +12,7 @@ Hệ thống Chatbot RAG (Retrieval-Augmented Generation) được thiết kế 
 
 * **Tự động thu thập dữ liệu (Web Scraping):** Cào và cập nhật dữ liệu từ các bài đăng chính thức trên cổng thông tin `ptithcm.edu.vn`.
 * **Xử lý văn bản nâng cao:** Sử dụng kỹ thuật Semantic Chunking và Embedding với mô hình tối ưu `BAAI/bge-m3` (hoặc bga3).
-* **Truy xuất ngữ cảnh chính xác:** Tích hợp bộ tìm kiếm Vector (Retrieve Context) và cơ chế đánh giá chéo (Cross-Encoder Rerank) sử dụng mô hình `ms-marco-MultiBERT-L-12`, giúp lọc ra các ngữ cảnh liên quan nhất.
+* **Truy xuất ngữ cảnh chính xác:** Tích hợp bộ tìm kiếm Vector (Retrieve Context) và cơ chế đánh giá chéo (Cross-Encoder Rerank) giúp lọc ra các ngữ cảnh liên quan nhất.
 * **Chống ảo giác (Anti-Hallucination):** Bot tuân thủ quy tắc nghiêm ngặt: *Chỉ trả lời dựa trên ngữ cảnh được cung cấp*. Nếu thông tin không có trong cơ sở dữ liệu, bot sẽ từ chối trả lời để đảm bảo tính xác thực.
 * **Real-time Streaming:** Xử lý RAG dưới background và trả lời người dùng mượt mà theo thời gian thực thông qua **Websocket**.
 
