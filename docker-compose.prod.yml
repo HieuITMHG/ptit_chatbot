@@ -19,10 +19,7 @@ services:
       - ./certbot/www:/var/www/certbot
     depends_on:
       api:
-        condition: service_started 
-    networks:
-      - default    
-      - chatbot_net  
+        condition: service_started  
     restart: always
 
   api:
@@ -133,7 +130,3 @@ volumes:
   redis_data:
   qdrant_data:
   minio_data:
-
-networks:
-  chatbot_net:
-    external: true

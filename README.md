@@ -56,12 +56,6 @@ git clone [https://github.com/your-username/ptit_chatbot.git](https://github.com
 cd ptit_chatbot
 ```
 
-### 2. Tạo Docker Network (Bắt buộc)
-Tạo mạng nội bộ để các container có thể giao tiếp với nhau:
-```bash
-docker network create chatbot_net
-```
-
 ### 3. Cấu hình Biến môi trường (`.env.prod`)
 Hệ thống yêu cầu file `.env.prod` để chạy môi trường Production. Hãy sửa các thông số hostname về tên của Docker Service như sau:
 
