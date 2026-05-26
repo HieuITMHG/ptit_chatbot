@@ -56,7 +56,7 @@ git clone [https://github.com/your-username/ptit_chatbot.git](https://github.com
 cd ptit_chatbot
 ```
 
-### 3. Cấu hình Biến môi trường (`.env.prod`)
+### 2. Cấu hình Biến môi trường (`.env.prod`)
 Hệ thống yêu cầu file `.env.prod` để chạy môi trường Production. Hãy sửa các thông số hostname về tên của Docker Service như sau:
 
 ```ini
@@ -83,20 +83,20 @@ VITE_API_BASE_URL=[https://your-domain.com/api](https://your-domain.com/api)
 VITE_WS_BASE_URL=wss://[your-domain.com/api](https://your-domain.com/api)
 ```
 
-### 4. Build Docker Image (Preload Model)
+### 3. Build Docker Image (Preload Model)
 Tiến hành build image. Quá trình này sẽ bao gồm việc tải các mô hình AI và build frontend + backend.
 > *Lưu ý: Lần đầu tiên chạy sẽ mất một chút thời gian để tải model có dung lượng lớn.*
 ```bash
 make build-prod
 ```
 
-### 5. Chạy quá trình ETL (Chỉ chạy 1 lần duy nhất)
+### 4. Chạy quá trình ETL (Chỉ chạy 1 lần duy nhất)
 Tiến hành cào dữ liệu, làm sạch, phân mảnh (chunking), nhúng (embedding) và lưu vào cơ sở dữ liệu.
 ```bash
 docker compose -f docker-compose.prod.yml run --rm etl
 ```
 
-### 6. Khởi chạy toàn bộ hệ thống
+### 5. Khởi chạy toàn bộ hệ thống
 Sau khi mọi thứ đã sẵn sàng, hãy khởi động toàn bộ các service:
 ```bash
 make run
