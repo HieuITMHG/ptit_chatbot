@@ -1,7 +1,7 @@
 from core.qdrant import client
 from openai import OpenAI
 from core.config import settings
-from rag.pipelines.reranking.stronger_rerank import cross_encoder_reranker
+from rag.pipelines.reranking.cross_encoder_rerank import cross_encoder_reranker
 import time
 from .bm25_search import search, raw_docs, bm25
 import time

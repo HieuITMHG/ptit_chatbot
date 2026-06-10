@@ -1,8 +1,9 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
 from pathlib import Path
 from typing import Annotated, Any, Optional
 from pydantic import BeforeValidator, computed_field, AnyUrl
+import os
 
 BASE_DIR = Path(__file__).resolve().parents[1] 
 
@@ -57,15 +58,19 @@ class Settings(BaseSettings):
         list[AnyUrl] | str, BeforeValidator(parse_cors)
     ] = []
 
-    @computed_field  # type: ignore[prop-decorator]
+    @computed_field  
     @property
     def all_cors_origins(self) -> list[str]:
         return [str(origin).rstrip("/") for origin in self.BACKEND_CORS_ORIGINS] + [
             self.FRONTEND_HOST
         ]
 
-    class Config:
-        env_file = ".env.prod"
+
+    model_config = SettingsConfigDict(
+        env_file=BASE_DIR / f".env.{os.getenv('ENV', 'dev')}",
+        env_file_encoding="utf-8",
+        extra="ignore"
+    )
 
 @lru_cache()
 def get_settings():
