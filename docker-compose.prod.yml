@@ -117,6 +117,8 @@ services:
       volumes:
         - ./certbot/conf:/etc/letsencrypt
         - ./certbot/www:/var/www/certbot
+      depends_on:
+        - nginx
 
       entrypoint: >
         /bin/sh -c "
